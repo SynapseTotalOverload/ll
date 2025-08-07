@@ -29,6 +29,16 @@
   background: url("/assets/hero-design.png") 0 0 no-repeat;
   transform: rotate(180deg);
 }
+.small-hero-bg {
+  background-image: url("/assets/hero-design.png"), url("/assets/hero-design-right.png");
+  background-repeat: no-repeat;
+  background-position:
+    10% 30%,
+    100% -80%;
+  background-size:
+    40% 120%,
+    40% 80%;
+}
 
 .blue-grad {
   background-color: #007aff4d;
