@@ -11,6 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
 
 const formSchema = z.object({
   fullName: z.string().min(1, "Full name is required"),
@@ -43,9 +44,9 @@ export default function ContactUs() {
   return (
     <div
       style={{ backgroundImage: `url(${Footer.src})` }}
-      className="cover flex h-screen w-full flex-col gap-4 px-[120px] py-[80px]"
+      className="cover flex h-screen w-full flex-col gap-4 py-[80px]"
     >
-      <div className="grid grid-cols-2">
+      <div className="container grid grid-cols-2 px-[120px]">
         <div className="flex flex-col gap-4">
           <span className="bricolage text-[50px] leading-[120%] font-[700] tracking-[-2px] normal-case">
             Contact Us
@@ -55,9 +56,9 @@ export default function ContactUs() {
             Stay up to date with the latest news and offers from LogicCraft!
           </span>
         </div>
-        <InfoCard className="p-8">
+        <InfoCard className="min-h-[600px] p-8">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="flex h-full flex-col justify-evenly">
               <FormField
                 control={form.control}
                 name="fullName"
@@ -65,11 +66,7 @@ export default function ContactUs() {
                   <FormItem>
                     <FormLabel className="font-medium text-white">Full Name</FormLabel>
                     <FormControl>
-                      <Input
-                        placeholder="Name Surname"
-                        className="border-[#292929] bg-[#1D1D1E] text-white placeholder:text-gray-400 focus:border-blue-500"
-                        {...field}
-                      />
+                      <Input variant="outline" placeholder="Name Surname" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -83,11 +80,7 @@ export default function ContactUs() {
                   <FormItem>
                     <FormLabel className="font-medium text-white">Your Email</FormLabel>
                     <FormControl>
-                      <Input
-                        placeholder="Email"
-                        className="border-[#292929] bg-[#1D1D1E] text-white placeholder:text-gray-400 focus:border-blue-500"
-                        {...field}
-                      />
+                      <Input variant="outline" placeholder="Email" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -101,11 +94,7 @@ export default function ContactUs() {
                   <FormItem>
                     <FormLabel className="font-medium text-white">Your Phone</FormLabel>
                     <FormControl>
-                      <Input
-                        placeholder="Phone"
-                        className="border-[#292929] bg-[#1D1D1E] text-white placeholder:text-gray-400 focus:border-blue-500"
-                        {...field}
-                      />
+                      <Input variant="outline" placeholder="Phone" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -119,11 +108,7 @@ export default function ContactUs() {
                   <FormItem>
                     <FormLabel className="font-medium text-white">Message</FormLabel>
                     <FormControl>
-                      <Textarea
-                        placeholder="Your message..."
-                        className="min-h-[100px] border-[#292929] bg-[#1D1D1E] text-white placeholder:text-gray-400 focus:border-blue-500"
-                        {...field}
-                      />
+                      <Textarea placeholder="Your message..." {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -156,12 +141,11 @@ export default function ContactUs() {
                 )}
               />
 
-              <Button
-                type="submit"
-                className="w-full rounded-lg border border-blue-500 bg-[#1D1D1E] py-3 text-white hover:bg-[#292929]"
-              >
-                Send
-              </Button>
+              <BackgroundGradient>
+                <Button type="submit" className="bg-opacity-100-black w-full rounded-full border py-3 text-white">
+                  Send
+                </Button>
+              </BackgroundGradient>
             </form>
           </Form>
         </InfoCard>

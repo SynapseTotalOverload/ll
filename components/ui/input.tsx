@@ -1,21 +1,72 @@
-import * as React from "react"
+import React, { forwardRef } from "react";
+import { cn } from "@/lib/utils";
+import { cva } from "class-variance-authority";
 
-import { cn } from "@/lib/utils"
+type InputWrapperProps<T extends React.ElementType> = {
+  Component?: T;
+  children?: React.ReactNode;
+  variant?: "default" | "outline";
+} & React.ComponentProps<T>;
 
-function Input({ className, type, ...props }: React.ComponentProps<"input">) {
-  return (
-    <input
-      type={type}
-      data-slot="input"
-      className={cn(
-        "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-        "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
-        "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
-        className
-      )}
-      {...props}
-    />
-  )
-}
+const inputVariants = cva("", {
+  variants: {
+    variant: {
+      default:
+        "group rounded-default outline-neutral-n150 hover:outline-neutral-n200 focus:outline-blue-b600 focus-within:!outline-blue-b600 relative bg-white px-3 py-[6px] shadow focus-within:outline-[1px] focus-visible:ring-0",
+      outline:
+        "group focus:outline-none focus-within:outline-none focus-visible:outline-none outline-none rounded-none bg-transparent border-b-[1px] border-solid border-b-charcole",
+    },
+  },
+});
 
-export { Input }
+export const InputWrapper = forwardRef<HTMLElement, InputWrapperProps<React.ElementType>>(
+  ({ className, Component = "input", children, variant = "default", ...props }, ref) => {
+    if (children) {
+      // Check if any child has the correct data-slot
+      const hasSlotInput = React.Children.toArray(children).some((child) => {
+        if (React.isValidElement(child)) {
+          // Check if the child has data-slot="input-content"
+          return child.type === InputContent;
+        }
+        return false;
+      });
+
+      // If children exist but none have the correct data-slot, throw an error
+      if (!hasSlotInput) {
+        throw new Error("If you want to use Input as Wrapper, please use Input.Content");
+      }
+    }
+
+    // Determine the final component type
+    const FinalComponent = children ? "div" : Component;
+
+    return (
+      <FinalComponent ref={ref} className={cn(inputVariants({ variant, className }))} {...props}>
+        {children}
+      </FinalComponent>
+    );
+  },
+);
+
+export const InputContent = forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
+  ({ className, ...props }, ref) => {
+    return (
+      <input
+        ref={ref}
+        data-slot="input-content"
+        className={cn(
+          "placeholder:text-neutral-n400 w-full border-none bg-transparent outline-none focus:outline-none focus-visible:outline-none",
+          className,
+        )}
+        {...props}
+      />
+    );
+  },
+);
+
+InputWrapper.displayName = "InputWrapper";
+InputContent.displayName = "InputContent";
+
+export const Input = Object.assign(InputWrapper, {
+  Content: InputContent,
+});

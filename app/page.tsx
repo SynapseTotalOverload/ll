@@ -6,6 +6,7 @@ import CaseStudies from "@/components/pages/home/case-studies";
 import ClientTestimonials from "@/components/pages/home/client-testimonials";
 import PricingModel from "@/components/pages/home/pricing-model";
 import ContactUs from "@/components/pages/home/contact-us";
+import Footer from "@/components/modules/footer";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <PricingModel />
       </div>
       <ContactUs />
+      <Footer />
     </div>
   );
 }
