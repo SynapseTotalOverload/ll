@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Button } from "./button";
-import { MoveRightIcon } from "lucide-react";
+import ArrowRight from "@/public/assets/svg/arrow-right.svg";
 import { BackgroundGradient } from "./background-gradient";
 
 export default function GoButton({
@@ -23,7 +23,7 @@ export default function GoButton({
       >
         <span>{text}</span>
         <Button size="icon" className="blue-grad">
-          <MoveRightIcon className="text-night-blue size-6" />
+          <ArrowRight className="text-night-blue size-6" />
         </Button>
       </div>
     </BackgroundGradient>
