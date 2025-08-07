@@ -1,4 +1,5 @@
 // Testimonials data array with 20 items
+import Airbnb from "@/public/assets/svg/placeholder-logo.svg";
 export const testimonials = [
   {
     id: 1,
@@ -179,5 +180,131 @@ export const testimonials = [
     fallback: "MJ",
     testimonial:
       "LogicCraft's technical consulting helped us make informed decisions about our technology stack. Their expertise is invaluable.",
+  },
+];
+
+export const items: {
+  id: number;
+  content: React.ComponentType;
+}[] = [
+  {
+    id: 1,
+    content: Airbnb,
+  },
+  {
+    id: 2,
+    content: Airbnb,
+  },
+  {
+    id: 3,
+    content: Airbnb,
+  },
+  {
+    id: 4,
+    content: Airbnb,
+  },
+  {
+    id: 5,
+    content: Airbnb,
+  },
+  {
+    id: 6,
+    content: Airbnb,
+  },
+  {
+    id: 7,
+    content: Airbnb,
+  },
+  {
+    id: 8,
+    content: Airbnb,
+  },
+  {
+    id: 9,
+    content: Airbnb,
+  },
+  {
+    id: 10,
+    content: Airbnb,
+  },
+  {
+    id: 11,
+    content: Airbnb,
+  },
+  {
+    id: 12,
+    content: Airbnb,
+  },
+  {
+    id: 13,
+    content: Airbnb,
+  },
+  {
+    id: 14,
+    content: Airbnb,
+  },
+  {
+    id: 15,
+    content: Airbnb,
+  },
+  {
+    id: 16,
+    content: Airbnb,
+  },
+  {
+    id: 17,
+    content: Airbnb,
+  },
+  {
+    id: 18,
+    content: Airbnb,
+  },
+  {
+    id: 19,
+    content: Airbnb,
+  },
+  {
+    id: 20,
+    content: Airbnb,
+  },
+  {
+    id: 21,
+    content: Airbnb,
+  },
+  {
+    id: 22,
+    content: Airbnb,
+  },
+  {
+    id: 23,
+    content: Airbnb,
+  },
+  {
+    id: 24,
+    content: Airbnb,
+  },
+  {
+    id: 25,
+    content: Airbnb,
+  },
+  {
+    id: 26,
+    content: Airbnb,
+  },
+  {
+    id: 27,
+    content: Airbnb,
+  },
+  {
+    id: 28,
+    content: Airbnb,
+  },
+  {
+    id: 29,
+    content: Airbnb,
+  },
+  {
+    id: 30,
+    content: Airbnb,
   },
 ];

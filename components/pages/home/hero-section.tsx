@@ -20,7 +20,7 @@ export default function HeroSection() {
 
       {/* Hero Content */}
       <div className="flex flex-col items-center justify-center gap-16">
-        <div className="bg-opacity-50-black flex w-fit max-w-[70%] flex-row items-center justify-center p-8 text-center text-[50px] font-[700]">
+        <div className="bg-opacity-50-black flex w-fit max-w-[70%] flex-row items-center justify-center rounded-sm p-8 text-center text-[50px] font-[700]">
           <span>Technological Innovations for Business Development</span>
         </div>
         <GoButton text="Click here to get in touch with us" onClick={() => {}} />

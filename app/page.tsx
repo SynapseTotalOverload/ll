@@ -7,6 +7,8 @@ import ClientTestimonials from "@/components/pages/home/client-testimonials";
 import PricingModel from "@/components/pages/home/pricing-model";
 import ContactUs from "@/components/pages/home/contact-us";
 import Footer from "@/components/modules/footer";
+import { InfiniteMovingCards } from "@/components/modules/moving-line";
+import { items } from "@/constants/hero/reviews";
 
 export default function Home() {
   return (
@@ -21,6 +23,7 @@ export default function Home() {
         <ClientTestimonials />
         <PricingModel />
       </div>
+      <InfiniteMovingCards direction="left" items={items} />
       <ContactUs />
       <Footer />
     </div>
