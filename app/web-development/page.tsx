@@ -5,6 +5,8 @@ import CaseStudies from "@/components/pages/web-dev/case-studies";
 import Footer from "@/components/modules/footer";
 import Technologies from "@/components/pages/web-dev/technologies";
 import FAQ from "@/components/pages/web-dev/faq";
+import Process from "@/components/pages/web-dev/how-we-work";
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center">
@@ -14,6 +16,7 @@ export default function Home() {
       <div className="container flex flex-col gap-[120px] pt-[120px]">
         <OurService />
         <Technologies />
+        <Process />
         <CaseStudies />
         <FAQ />
       </div>

@@ -23,7 +23,7 @@ export default function GoButton({
       >
         <span>{text}</span>
         <Button size="icon" className="blue-grad">
-          <ArrowRight className="text-night-blue size-6" />
+          <ArrowRight viewBox="0 0 24 24" className="text-night-blue flex size-6 items-center justify-center" />
         </Button>
       </div>
     </BackgroundGradient>
