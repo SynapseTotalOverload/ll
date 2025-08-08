@@ -11,7 +11,7 @@ export default function Process() {
         <SignTitle.Separator />
       </SignTitle>
 
-      <div className="mt-10 flex flex-col items-center justify-center">
+      <div className="small-hero-bg mt-10 flex flex-col items-center justify-center">
         {Array.from({ length: 5 }).map((_, index) => (
           <PointLine
             key={index}
