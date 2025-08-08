@@ -16,7 +16,7 @@ export default function Home() {
       <div className="container flex flex-col gap-[120px] pt-[120px]">
         <OurService />
         <Technologies />
-
+        <Process />
         <CaseStudies />
         <FAQ />
       </div>
