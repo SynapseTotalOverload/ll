@@ -6,11 +6,12 @@ import InfoCard from "@/components/modules/info-card";
 import Image from "next/image";
 import Product from "@/public/assets/placeholder.png";
 
-export default function CaseStudies() {
+export default function HomeCaseStudies() {
   return (
     <div className="flex w-full flex-col gap-8 px-20">
       <SignTitle>
-        <SignTitle.Title>Our Service</SignTitle.Title>
+        <SignTitle.Title>Product design and development case studies</SignTitle.Title>
+        <SignTitle.Description>Launched products LogicCraft assisted with.</SignTitle.Description>
         <SignTitle.Separator />
       </SignTitle>
 
@@ -28,7 +29,7 @@ export default function CaseStudies() {
         <InfoCard className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <span className="text-plastic text-[14px]">Mobile App</span>
-            <InfoCard.Title className="">UI/UX Design</InfoCard.Title>
+            <InfoCard.Title className="">TELEDYNE ISCO FlowCalc</InfoCard.Title>
           </div>
           <Image alt="product" className="w-full object-cover" src={Product} />
         </InfoCard>
@@ -36,8 +37,8 @@ export default function CaseStudies() {
         {/* Case Study Card 2 */}
         <InfoCard className="flex flex-col gap-8">
           <div className="flex flex-col gap-2">
-            <span className="text-plastic text-[14px]">Mobile App</span>
-            <InfoCard.Title className="">UI/UX Design</InfoCard.Title>
+            <span className="text-plastic text-[14px]">Platform</span>
+            <InfoCard.Title className="">Sxipher.ai</InfoCard.Title>
           </div>
           <Image alt="product" className="w-full object-cover" src={Product} />
         </InfoCard>
@@ -46,7 +47,7 @@ export default function CaseStudies() {
         <InfoCard className="flex flex-col gap-8">
           <div className="flex flex-col gap-2">
             <span className="text-plastic text-[14px]">Mobile App</span>
-            <InfoCard.Title className="">UI/UX Design</InfoCard.Title>
+            <InfoCard.Title className="">Outspeak</InfoCard.Title>
           </div>
           <Image alt="product" className="w-full object-cover" src={Product} />
         </InfoCard>

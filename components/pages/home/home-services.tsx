@@ -5,7 +5,7 @@ import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import { LampEffect } from "@/components/ui/lamp-effect";
 
-export default function OurService() {
+export default function HomeServices() {
   return (
     <div className="flex w-full flex-col gap-16 px-20">
       <SignTitle>
@@ -37,10 +37,9 @@ export default function OurService() {
           <LampEffect>
             <BedIcon className="text-night-blue size-6" />
           </LampEffect>
-          <InfoCard.Title className="mt-6">UI/UX Design</InfoCard.Title>
+          <InfoCard.Title className="mt-6">Graphic design</InfoCard.Title>
           <InfoCard.Description className="mt-4">
-            Thoughtful design based on user experience and deep analysis of business goals tailored to customer
-            requirements
+            Creative visuals and branding materials that resonate with your audience and elevate your brand identity
           </InfoCard.Description>
           <div className="flex flex-row items-center justify-end">
             <Button size="icon" className="blue-grad mt-8">
@@ -54,10 +53,9 @@ export default function OurService() {
           <LampEffect>
             <BedIcon className="text-night-blue size-6" />
           </LampEffect>
-          <InfoCard.Title className="mt-6">UI/UX Design</InfoCard.Title>
+          <InfoCard.Title className="mt-6">Mobile and web development</InfoCard.Title>
           <InfoCard.Description className="mt-4">
-            Thoughtful design based on user experience and deep analysis of business goals tailored to customer
-            requirements
+            Cutting-edge mobile applications and websites created for seamless user experiences and optimal performance
           </InfoCard.Description>
           <div className="flex flex-row items-center justify-end">
             <Button size="icon" className="blue-grad mt-8">
@@ -71,10 +69,9 @@ export default function OurService() {
           <LampEffect>
             <BedIcon className="text-night-blue size-6" />
           </LampEffect>
-          <InfoCard.Title className="mt-6">UI/UX Design</InfoCard.Title>
+          <InfoCard.Title className="mt-6">CRM Software building</InfoCard.Title>
           <InfoCard.Description className="mt-4">
-            Thoughtful design based on user experience and deep analysis of business goals tailored to customer
-            requirements
+            Individualized CRM solutions developed for the optimization and automatization of your business process
           </InfoCard.Description>
           <div className="flex flex-row items-center justify-end">
             <Button size="icon" className="blue-grad mt-8">
@@ -88,10 +85,9 @@ export default function OurService() {
           <LampEffect>
             <BedIcon className="text-night-blue size-6" />
           </LampEffect>
-          <InfoCard.Title className="mt-6">UI/UX Design</InfoCard.Title>
+          <InfoCard.Title className="mt-6">QA Automation and QA Manual</InfoCard.Title>
           <InfoCard.Description className="mt-4">
-            Thoughtful design based on user experience and deep analysis of business goals tailored to customer
-            requirements
+            Testing already deployed projects or created from scratch eliminates the possibility of wrong functionality
           </InfoCard.Description>
           <div className="flex flex-row items-center justify-end">
             <Button size="icon" className="blue-grad mt-8">

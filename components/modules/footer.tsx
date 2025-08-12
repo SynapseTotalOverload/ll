@@ -63,16 +63,16 @@ export default function Footer() {
                 UI/UX Design
               </Link>
               <Link href="/" className="text-[16px] font-[400] text-white">
-                UI/UX Design
+                Graphic design
               </Link>
               <Link href="/" className="text-[16px] font-[400] text-white">
-                UI/UX Design
+                Mobile and web development
               </Link>
               <Link href="/" className="text-[16px] font-[400] text-white">
-                UI/UX Design
+                CRM software building
               </Link>
               <Link href="/" className="text-[16px] font-[400] text-white">
-                UI/UX Design
+                QA Automation and QA Manual
               </Link>
             </div>
           </div>

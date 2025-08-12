@@ -1,11 +1,11 @@
 "use client";
-import HeroSection from "@/components/pages/home/hero-section";
-import OurClients from "@/components/pages/home/our-clients";
-import OurService from "@/components/pages/home/our-service";
-import CaseStudies from "@/components/pages/home/case-studies";
-import ClientTestimonials from "@/components/pages/home/client-testimonials";
-import PricingModel from "@/components/pages/home/pricing-model";
-import ContactUs from "@/components/pages/home/contact-us";
+import HomeHeroSection from "@/components/pages/home/home-hero-section";
+import HomeOurClients from "@/components/pages/home/home-our-clients";
+import HomeServices from "@/components/pages/home/home-services";
+import HomeCaseStudies from "@/components/pages/home/home-case-studies";
+import HomeClientTestimonials from "@/components/pages/home/home-client-testimonials";
+import HomePricingModel from "@/components/pages/home/home-pricing-model";
+import HomeContactUs from "@/components/pages/home/home-contact-us";
 import Footer from "@/components/modules/footer";
 import { InfiniteMovingCards } from "@/components/modules/moving-line";
 import { items } from "@/constants/hero/reviews";
@@ -13,18 +13,18 @@ import { items } from "@/constants/hero/reviews";
 export default function Home() {
   return (
     <div className="flex flex-col items-center">
-      <HeroSection />
+      <HomeHeroSection />
 
       {/* ===== MAIN CONTENT SECTIONS ===== */}
       <div className="container flex flex-col gap-[120px] pt-[120px]">
-        <OurClients />
-        <OurService />
-        <CaseStudies />
-        <ClientTestimonials />
-        <PricingModel />
+        <HomeOurClients />
+        <HomeServices />
+        <HomeCaseStudies />
+        <HomeClientTestimonials />
+        <HomePricingModel />
       </div>
       <InfiniteMovingCards direction="left" items={items} />
-      <ContactUs />
+      <HomeContactUs />
       <Footer />
     </div>
   );

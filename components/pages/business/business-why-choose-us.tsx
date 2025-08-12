@@ -6,7 +6,7 @@ import InfoCard from "@/components/modules/info-card";
 import { LampEffect } from "@/components/ui/lamp-effect";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 
-export default function WhyUs() {
+export default function BusinessWhyChooseUs() {
   return (
     <div className="flex w-full flex-col gap-16 px-20">
       <SignTitle>
@@ -14,41 +14,35 @@ export default function WhyUs() {
         <SignTitle.Separator />
       </SignTitle>
 
-      {/* Services Grid */}
+      {/* Why Choose Us Grid */}
       <div className="grid grid-cols-6 place-items-center gap-8">
-        {/* Service Card 1 */}
+        {/* Reason 1 */}
         <div className="col-span-2">
           <span className="text-plastic custom-font-bricolage text-[126px] font-[700] tracking-[-12px]">01</span>
-          <InfoCard.Title>UI/UX Design</InfoCard.Title>
+          <InfoCard.Title>Deep technical expertise</InfoCard.Title>
 
           <InfoCard.Description className="mt-4">
-            This collaboration model is ideal for building an MVP or the initial version of a product. It’ll allow you
-            to know exactly how much you are going to spend on the project, provided that you have an exact scope before
-            signing a contract.
+            With LogicCraft, you get to work with tech pros, award-winning specialists in their fields. Our team consists of experts in a wide array of technologies, and we offer full-cycle software product development services. We&apos;re passionate about what we do, and that is what stands behind our high-quality work.
           </InfoCard.Description>
         </div>
 
-        {/* Service Card 2 */}
+        {/* Reason 2 */}
         <div className="col-span-2">
           <span className="text-plastic custom-font-bricolage text-[126px] font-[700] tracking-[-12px]">02</span>
-          <InfoCard.Title>UI/UX Design</InfoCard.Title>
+          <InfoCard.Title>Best talents</InfoCard.Title>
 
           <InfoCard.Description className="mt-4">
-            This collaboration model is ideal for building an MVP or the initial version of a product. It’ll allow you
-            to know exactly how much you are going to spend on the project, provided that you have an exact scope before
-            signing a contract.
+            People are our greatest value. We invest in people and get rewarded with some of the best talents on the market. In the last five years, our quit rate has been close to zero, and most job offers have been accepted. Indeed, constant staff turnover is not an issue with us.
           </InfoCard.Description>
         </div>
 
-        {/* Service Card 3 */}
+        {/* Reason 3 */}
         <div className="col-span-2">
           <span className="text-plastic custom-font-bricolage text-[126px] font-[700] tracking-[-12px]">03</span>
-          <InfoCard.Title>UI/UX Design</InfoCard.Title>
+          <InfoCard.Title>Clear development process</InfoCard.Title>
 
           <InfoCard.Description className="mt-4">
-            This collaboration model is ideal for building an MVP or the initial version of a product. It’ll allow you
-            to know exactly how much you are going to spend on the project, provided that you have an exact scope before
-            signing a contract.
+            Our clients praise LogicCraft for transparent project management and communication. Whether you&apos;re tech-savvy or not, we will be reporting the progress at each step of the software development lifecycle in a way that&apos;s tailored to you and makes our process clear.
           </InfoCard.Description>
         </div>
       </div>

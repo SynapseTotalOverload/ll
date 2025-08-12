@@ -4,7 +4,7 @@ import heroBanner from "@/public/assets/bgs/mobile.png";
 import MenuBar from "@/components/modules/menu-bar";
 import GoButton from "@/components/ui/go-button";
 
-export default function HeroSection() {
+export default function MobileAppHeroSection() {
   return (
     <div
       style={{ backgroundImage: `url(${heroBanner.src})` }}
