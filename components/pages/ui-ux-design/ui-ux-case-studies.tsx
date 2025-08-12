@@ -6,23 +6,29 @@ import InfoCard from "@/components/modules/info-card";
 import Image from "next/image";
 import Product from "@/public/assets/placeholder.png";
 
-export default function CaseStudies() {
+export default function UIUXCaseStudies() {
   return (
     <div className="flex w-full flex-col gap-8 px-20">
       <SignTitle>
-        <SignTitle.Title>Mobile application development case studies</SignTitle.Title>
+        <SignTitle.Title>Design portfolio.</SignTitle.Title>
         <SignTitle.Separator />
       </SignTitle>
 
       {/* Case Studies Header */}
+      <div className="mt-8 flex cursor-pointer flex-row items-center justify-end gap-4">
+        <span className="font-[400]">All case studies</span>
+        <Button size="icon" className="blue-grad">
+          <MoveRightIcon className="text-night-blue size-6 rotate-[-45deg]" />
+        </Button>
+      </div>
 
       {/* Case Studies Grid */}
       <div className="grid grid-cols-3 gap-8">
         {/* Case Study Card 1 */}
         <InfoCard className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <span className="text-plastic text-[14px]">Mobile App</span>
-            <InfoCard.Title className="">UI/UX Design</InfoCard.Title>
+            <span className="text-plastic text-[14px]">Platform</span>
+            <InfoCard.Title className="">Track My Jobs</InfoCard.Title>
           </div>
           <Image alt="product" className="w-full object-cover" src={Product} />
         </InfoCard>
@@ -31,7 +37,7 @@ export default function CaseStudies() {
         <InfoCard className="flex flex-col gap-8">
           <div className="flex flex-col gap-2">
             <span className="text-plastic text-[14px]">Mobile App</span>
-            <InfoCard.Title className="">UI/UX Design</InfoCard.Title>
+            <InfoCard.Title className="">Outspeak</InfoCard.Title>
           </div>
           <Image alt="product" className="w-full object-cover" src={Product} />
         </InfoCard>
@@ -39,8 +45,8 @@ export default function CaseStudies() {
         {/* Case Study Card 3 */}
         <InfoCard className="flex flex-col gap-8">
           <div className="flex flex-col gap-2">
-            <span className="text-plastic text-[14px]">Mobile App</span>
-            <InfoCard.Title className="">UI/UX Design</InfoCard.Title>
+            <span className="text-plastic text-[14px]">Platform</span>
+            <InfoCard.Title className="">Tripsha</InfoCard.Title>
           </div>
           <Image alt="product" className="w-full object-cover" src={Product} />
         </InfoCard>

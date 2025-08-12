@@ -1,15 +1,14 @@
 "use client";
-import HeroSection from "@/components/pages/faq/hero-section";
-import FAQ from "@/components/pages/faq/faq";
+import FAQHeroSection from "@/components/pages/faq/faq-hero-section";
+import FAQAccordion from "@/components/pages/faq/faq-accordion";
 import Footer from "@/components/modules/footer";
 
-
-export default function Home() {
+export default function FAQPage() {
   return (
     <div className="flex flex-col items-center">
-      <HeroSection />
+      <FAQHeroSection />
       <div className="container flex flex-col gap-[120px] pt-[120px]">
-        <FAQ />
+        <FAQAccordion />
       </div>
       <Footer />
     </div>
