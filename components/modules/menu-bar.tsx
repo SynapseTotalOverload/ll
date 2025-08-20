@@ -1,27 +1,23 @@
 import { useState, useEffect } from "react";
-import {
-  Menubar,
-  MenubarCheckboxItem,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarRadioGroup,
-  MenubarRadioItem,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarSub,
-  MenubarSubContent,
-  MenubarSubTrigger,
-  MenubarTrigger,
-} from "@/components/ui/menubar";
+import { Menubar, MenubarCheckboxItem, MenubarContent, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function MenuBar({ className }: { className?: string }) {
   const [active, setActive] = useState<
-    "home" | "startups" | "business" | "web-development" | "mobile-development" | "ui-ux-design"
+    | "home"
+    | "startups"
+    | "business"
+    | "web-development"
+    | "mobile-development"
+    | "ui-ux-design"
+    | "qa"
+    | "graphic-design"
+    | "faq"
+    | "about-us"
   >("home");
   const router = useRouter();
+
   useEffect(() => {
     const path = window.location.pathname;
     if (path === "/") {
@@ -41,6 +37,14 @@ export default function MenuBar({ className }: { className?: string }) {
         setActive("ui-ux-design");
       } else if (lastSlug === "business") {
         setActive("business");
+      } else if (lastSlug === "qa") {
+        setActive("qa");
+      } else if (lastSlug === "graphic-design") {
+        setActive("graphic-design");
+      } else if (lastSlug === "faq") {
+        setActive("faq");
+      } else if (lastSlug === "about-us") {
+        setActive("about-us");
       }
     }
   }, []);
@@ -48,65 +52,89 @@ export default function MenuBar({ className }: { className?: string }) {
   return (
     <Menubar className={className}>
       <MenubarMenu>
-        <Link href="/">
-          <MenubarTrigger data-active={active === "home"}>Home</MenubarTrigger>
+        <Link href="/" className="block">
+          <MenubarTrigger data-active={active === "home"} className="font-medium transition-colors duration-200">
+            Home
+          </MenubarTrigger>
         </Link>
       </MenubarMenu>
+
       <MenubarMenu>
-        <Link href="/startups">
-          <MenubarTrigger data-active={active === "startups"}>For startups</MenubarTrigger>
-          <MenubarContent>
-            <MenubarItem>
-              Undo <MenubarShortcut>⌘Z</MenubarShortcut>
-            </MenubarItem>
-            <MenubarItem>
-              Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut>
-            </MenubarItem>
-            <MenubarSeparator />
-            <MenubarSub>
-              <MenubarSubTrigger>Find</MenubarSubTrigger>
-              <MenubarSubContent>
-                <MenubarItem>Search the web</MenubarItem>
-                <MenubarSeparator />
-                <MenubarItem>Find...</MenubarItem>
-                <MenubarItem>Find Next</MenubarItem>
-                <MenubarItem>Find Previous</MenubarItem>
-              </MenubarSubContent>
-            </MenubarSub>
-            <MenubarSeparator />
-            <MenubarItem>Cut</MenubarItem>
-            <MenubarItem>Copy</MenubarItem>
-            <MenubarItem>Paste</MenubarItem>
-          </MenubarContent>
+        <Link href="/startups" className="block">
+          <MenubarTrigger data-active={active === "startups"} className="font-medium transition-colors duration-200">
+            For startups
+          </MenubarTrigger>
         </Link>
       </MenubarMenu>
+
       <MenubarMenu>
         <MenubarTrigger
           data-active={
             active === "web-development" ||
             active === "mobile-development" ||
             active === "ui-ux-design" ||
-            active === "business"
+            active === "business" ||
+            active === "qa" ||
+            active === "graphic-design"
           }
+          className="font-medium transition-colors duration-200"
         >
           Services
         </MenubarTrigger>
         <MenubarContent>
-          <MenubarCheckboxItem onClick={() => router.push("/business")}>For business</MenubarCheckboxItem>
-          <MenubarCheckboxItem onClick={() => router.push("/web-development")}>Web Development</MenubarCheckboxItem>
-
-          <MenubarCheckboxItem onClick={() => router.push("/mobile-development")}>
+          <MenubarCheckboxItem
+            onClick={() => router.push("/business")}
+            className="cursor-pointer transition-colors duration-200"
+          >
+            For business
+          </MenubarCheckboxItem>
+          <MenubarCheckboxItem
+            onClick={() => router.push("/web-development")}
+            className="cursor-pointer transition-colors duration-200"
+          >
+            Web Development
+          </MenubarCheckboxItem>
+          <MenubarCheckboxItem
+            onClick={() => router.push("/mobile-development")}
+            className="cursor-pointer transition-colors duration-200"
+          >
             Mobile Development
           </MenubarCheckboxItem>
-
-          <MenubarCheckboxItem onClick={() => router.push("/ui-ux-design")}>UI/UX Design</MenubarCheckboxItem>
+          <MenubarCheckboxItem
+            onClick={() => router.push("/ui-ux-design")}
+            className="cursor-pointer transition-colors duration-200"
+          >
+            UI/UX Design
+          </MenubarCheckboxItem>
+          <MenubarCheckboxItem
+            onClick={() => router.push("/graphic-design")}
+            className="cursor-pointer transition-colors duration-200"
+          >
+            Graphic Design
+          </MenubarCheckboxItem>
+          <MenubarCheckboxItem
+            onClick={() => router.push("/qa")}
+            className="cursor-pointer transition-colors duration-200"
+          >
+            QA Automation & Manual
+          </MenubarCheckboxItem>
         </MenubarContent>
       </MenubarMenu>
+
       <MenubarMenu>
-        <MenubarTrigger>Case studies</MenubarTrigger>
+        <Link href="/faq" className="block">
+          <MenubarTrigger data-active={active === "faq"} className="font-medium transition-colors duration-200">
+            FAQ
+          </MenubarTrigger>
+        </Link>
       </MenubarMenu>
+
       <MenubarMenu>
-        <MenubarTrigger>About us</MenubarTrigger>
+        <Link href="/about-us" className="block">
+          <MenubarTrigger data-active={active === "about-us"} className="font-medium transition-colors duration-200">
+            About us
+          </MenubarTrigger>
+        </Link>
       </MenubarMenu>
     </Menubar>
   );
