@@ -15,6 +15,7 @@ export default function MenuBar({ className }: { className?: string }) {
     | "graphic-design"
     | "faq"
     | "about-us"
+    | "case-studies"
   >("home");
   const router = useRouter();
 
@@ -45,6 +46,8 @@ export default function MenuBar({ className }: { className?: string }) {
         setActive("faq");
       } else if (lastSlug === "about-us") {
         setActive("about-us");
+      } else if (lastSlug === "case-studies") {
+        setActive("case-studies");
       }
     }
   }, []);
@@ -125,6 +128,16 @@ export default function MenuBar({ className }: { className?: string }) {
         <Link href="/faq" className="block">
           <MenubarTrigger data-active={active === "faq"} className="font-medium transition-colors duration-200">
             FAQ
+          </MenubarTrigger>
+        </Link>
+      </MenubarMenu>
+      <MenubarMenu>
+        <Link href="/case-studies" className="block">
+          <MenubarTrigger
+            data-active={active === "case-studies"}
+            className="font-medium transition-colors duration-200"
+          >
+            Case studies
           </MenubarTrigger>
         </Link>
       </MenubarMenu>
