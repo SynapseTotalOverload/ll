@@ -1,0 +1,64 @@
+"use client";
+import SignTitle from "@/components/modules/sign-title";
+import InfoCard from "@/components/modules/info-card";
+
+export default function CompanyValues() {
+  return (
+    <div className="flex w-full flex-col gap-8 px-20">
+      <SignTitle>
+        <SignTitle.Title>Company values</SignTitle.Title>
+        <SignTitle.Separator />
+      </SignTitle>
+
+      <div className="grid-layout grid grid-cols-5 grid-rows-5 gap-[24px]">
+        {/* Innovation Card */}
+        <InfoCard style={{ gridArea: "a" }} className="">
+          <InfoCard.Title className="mt-6">Innovations</InfoCard.Title>
+          <InfoCard.Description className="mt-4">
+            We are committed to exploring innovative and creative solutions for every challenge we encounter. Our
+            approach prioritizes innovation and efficiency, focusing on delivering cutting-edge results rather than
+            opting for mere convenience.
+          </InfoCard.Description>
+        </InfoCard>
+
+        {/* Integrity Card */}
+        <InfoCard style={{ gridArea: "b" }} className="">
+          <InfoCard.Title className="mt-6">Integrity</InfoCard.Title>
+          <InfoCard.Description className="mt-4">
+            Analyzing each idea in detail enables us to develop precise estimations, establish milestones, and outline
+            the primary goal. This ensures that our clients are well-informed about every step of the project before its
+            commencement.
+          </InfoCard.Description>
+        </InfoCard>
+
+        {/* Resilience Card */}
+        <InfoCard style={{ gridArea: "c" }} className="">
+          <InfoCard.Title className="mt-6">Resilience</InfoCard.Title>
+          <InfoCard.Description className="mt-4">
+            We face challenges with dedication, creativity, and determination. Your genuine efforts reflect the values
+            we always uphold.
+          </InfoCard.Description>
+        </InfoCard>
+
+        {/* Empowerment Card */}
+        <InfoCard style={{ gridArea: "d" }} className="">
+          <InfoCard.Title className="mt-6">Empowerment</InfoCard.Title>
+          <InfoCard.Description className="mt-4">
+            In our company, we place equal importance on the success of our team members and clients. We are creating a
+            culture that values continuous learning and growth, providing ample opportunities for individuals and
+            businesses to thrive.
+          </InfoCard.Description>
+        </InfoCard>
+
+        {/* Cheerfulness Card */}
+        <InfoCard style={{ gridArea: "e" }} className="">
+          <InfoCard.Title className="mt-6">Cheerfulness</InfoCard.Title>
+          <InfoCard.Description className="mt-4">
+            We inject energy, positivity and fun into every task. We believe in actively engaging and inspiring our
+            colleagues, clients, and communities - this approach is the foundation of our work.
+          </InfoCard.Description>
+        </InfoCard>
+      </div>
+    </div>
+  );
+}
