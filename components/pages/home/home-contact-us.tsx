@@ -44,19 +44,21 @@ export default function ContactUs() {
   return (
     <div
       style={{ backgroundImage: `url(${Footer.src})` }}
-      className="cover flex h-screen w-full flex-col gap-4 py-[80px]"
+      className="cover flex min-h-screen w-full flex-col gap-4 py-8 sm:py-12 md:py-16 lg:py-[80px]"
     >
-      <div className="container grid grid-cols-2 px-[120px]">
-        <div className="flex flex-col gap-4">
-          <span className="bricolage text-[50px] leading-[120%] font-[700] tracking-[-2px] normal-case">
+      <div className="container grid grid-cols-1 gap-8 px-4 sm:px-8 md:px-12 lg:grid-cols-2 lg:gap-0 lg:px-[120px]">
+        <div className="flex flex-col gap-3 sm:gap-4">
+          <span className="bricolage text-[28px] leading-[120%] font-[700] tracking-[-2px] normal-case sm:text-[36px] md:text-[42px] lg:text-[50px]">
             Contact Us
           </span>
-          <span className="text-[24px] font-[700] text-white">Don&apos;t be left behind</span>
+          <span className="text-[18px] font-[700] text-white sm:text-[20px] md:text-[22px] lg:text-[24px]">
+            Don&apos;t be left behind
+          </span>
           <span className="font-[700] text-white">
             Stay up to date with the latest news and offers from LogicCraft!
           </span>
         </div>
-        <InfoCard className="min-h-[600px] p-8">
+        <InfoCard className="min-h-[500px] p-4 sm:min-h-[550px] sm:p-6 md:min-h-[580px] md:p-7 lg:min-h-[600px] lg:p-8">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="flex h-full flex-col justify-evenly">
               <FormField

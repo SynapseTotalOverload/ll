@@ -16,7 +16,7 @@ export default function Home() {
       <HomeHeroSection />
 
       {/* ===== MAIN CONTENT SECTIONS ===== */}
-      <div className="container flex flex-col gap-[120px] pt-[120px]">
+      <div className="container flex flex-col gap-8 pt-8 sm:gap-16 sm:pt-16 md:gap-24 md:pt-24 lg:gap-[120px] lg:pt-[120px]">
         <HomeOurClients />
         <HomeServices />
         <HomeCaseStudies />

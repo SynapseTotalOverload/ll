@@ -7,16 +7,16 @@ import { LampEffect } from "@/components/ui/lamp-effect";
 
 export default function HomeServices() {
   return (
-    <div className="flex w-full flex-col gap-16 px-20">
+    <div className="flex w-full flex-col gap-8 px-4 sm:gap-12 sm:px-8 md:gap-14 md:px-12 lg:gap-16 lg:px-20">
       <SignTitle>
         <SignTitle.Title>Our Service</SignTitle.Title>
         <SignTitle.Separator />
       </SignTitle>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-6 place-items-center gap-8">
+      <div className="grid grid-cols-1 place-items-center gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 md:gap-7 lg:grid-cols-6 lg:gap-8">
         {/* Service Card 1 */}
-        <InfoCard className="col-span-2">
+        <InfoCard className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-2">
           <LampEffect>
             <BedIcon className="text-night-blue size-6" />
           </LampEffect>
@@ -33,7 +33,7 @@ export default function HomeServices() {
         </InfoCard>
 
         {/* Service Card 2 */}
-        <InfoCard className="col-span-2">
+        <InfoCard className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-2">
           <LampEffect>
             <BedIcon className="text-night-blue size-6" />
           </LampEffect>
@@ -49,7 +49,7 @@ export default function HomeServices() {
         </InfoCard>
 
         {/* Service Card 3 */}
-        <InfoCard className="col-span-2">
+        <InfoCard className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-2">
           <LampEffect>
             <BedIcon className="text-night-blue size-6" />
           </LampEffect>
@@ -65,7 +65,7 @@ export default function HomeServices() {
         </InfoCard>
 
         {/* Service Card 4 */}
-        <InfoCard className="col-span-2 col-start-2 col-end-4">
+        <InfoCard className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-2 lg:col-start-2 lg:col-end-4">
           <LampEffect>
             <BedIcon className="text-night-blue size-6" />
           </LampEffect>
@@ -81,7 +81,7 @@ export default function HomeServices() {
         </InfoCard>
 
         {/* Service Card 5 */}
-        <InfoCard className="col-span-2">
+        <InfoCard className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-2">
           <LampEffect>
             <BedIcon className="text-night-blue size-6" />
           </LampEffect>

@@ -11,17 +11,17 @@ export default function ClientTestimonials() {
   const displayedTestimonials = showAllTestimonials ? testimonials : testimonials.slice(0, 6);
 
   return (
-    <div className="flex w-full flex-col gap-8 px-20">
+    <div className="flex w-full flex-col gap-6 sm:gap-7 md:gap-8 px-4 sm:px-8 md:px-12 lg:px-20">
       <SignTitle>
         <SignTitle.Title>Client testimonials</SignTitle.Title>
         <SignTitle.Separator />
       </SignTitle>
-      <div className="relative flex flex-col gap-8">
-        <div className={cn("grid grid-cols-3 gap-8")}>
+      <div className="relative flex flex-col gap-6 sm:gap-7 md:gap-8">
+        <div className={cn("grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8")}>
           {displayedTestimonials.map((testimonial) => (
-            <InfoCard key={testimonial.id} className="flex flex-col gap-4">
-              <div className="flex flex-row items-center gap-4">
-                <Avatar className="size-16">
+            <InfoCard key={testimonial.id} className="flex flex-col gap-3 sm:gap-4">
+              <div className="flex flex-row items-center gap-3 sm:gap-4">
+                <Avatar className="size-12 sm:size-14 md:size-16">
                   <AvatarImage src={testimonial.avatar} />
                   <AvatarFallback>{testimonial.fallback}</AvatarFallback>
                 </Avatar>

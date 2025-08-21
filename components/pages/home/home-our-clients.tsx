@@ -5,7 +5,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 export default function OurClients() {
   return (
-    <div className="flex w-full flex-col px-20">
+    <div className="flex w-full flex-col px-4 sm:px-8 md:px-12 lg:px-20">
       <SignTitle>
         <SignTitle.Title>Our Clients</SignTitle.Title>
         <SignTitle.Description>
@@ -16,10 +16,10 @@ export default function OurClients() {
 
       {/* Clients Carousel */}
       <Carousel>
-        <CarouselContent className="px-20 py-16">
+        <CarouselContent className="px-4 sm:px-8 md:px-12 lg:px-20 py-8 sm:py-12 md:py-14 lg:py-16">
           {Array.from({ length: 10 }).map((_, index) => (
             <CarouselItem key={index}>
-              <div className="grid grid-cols-3 grid-rows-2 gap-y-[80px]">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 grid-rows-3 sm:grid-rows-2 gap-y-8 sm:gap-y-12 md:gap-y-16 lg:gap-y-[80px]">
                 <div className="flex flex-col items-center justify-center">
                   <PlaceholderLogo />
                 </div>

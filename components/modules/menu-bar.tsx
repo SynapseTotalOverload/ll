@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import { Menubar, MenubarCheckboxItem, MenubarContent, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
+import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { Menu } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function MenuBar({ className }: { className?: string }) {
   const [active, setActive] = useState<
@@ -17,6 +20,7 @@ export default function MenuBar({ className }: { className?: string }) {
     | "about-us"
     | "case-studies"
   >("home");
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -52,103 +56,261 @@ export default function MenuBar({ className }: { className?: string }) {
     }
   }, []);
 
+  const handleMobileNavClick = (path: string) => {
+    router.push(path);
+    setIsDrawerOpen(false);
+  };
+
+  const isServicesActive =
+    active === "web-development" ||
+    active === "mobile-development" ||
+    active === "ui-ux-design" ||
+    active === "business" ||
+    active === "qa" ||
+    active === "graphic-design";
+
   return (
-    <Menubar className={className}>
-      <MenubarMenu>
-        <Link href="/" className="block">
-          <MenubarTrigger data-active={active === "home"} className="font-medium transition-colors duration-200">
-            Home
-          </MenubarTrigger>
-        </Link>
-      </MenubarMenu>
+    <>
+      {/* Desktop Menu - Hidden on mobile */}
+      <div className="hidden lg:block">
+        <Menubar className={`text-sm sm:text-base ${className}`}>
+          <MenubarMenu>
+            <Link href="/" className="block">
+              <MenubarTrigger
+                data-active={active === "home"}
+                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-base"
+              >
+                Home
+              </MenubarTrigger>
+            </Link>
+          </MenubarMenu>
 
-      <MenubarMenu>
-        <Link href="/startups" className="block">
-          <MenubarTrigger data-active={active === "startups"} className="font-medium transition-colors duration-200">
-            For startups
-          </MenubarTrigger>
-        </Link>
-      </MenubarMenu>
+          <MenubarMenu>
+            <Link href="/startups" className="block">
+              <MenubarTrigger
+                data-active={active === "startups"}
+                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-base"
+              >
+                For startups
+              </MenubarTrigger>
+            </Link>
+          </MenubarMenu>
 
-      <MenubarMenu>
-        <MenubarTrigger
-          data-active={
-            active === "web-development" ||
-            active === "mobile-development" ||
-            active === "ui-ux-design" ||
-            active === "business" ||
-            active === "qa" ||
-            active === "graphic-design"
-          }
-          className="font-medium transition-colors duration-200"
-        >
-          Services
-        </MenubarTrigger>
-        <MenubarContent>
-          <MenubarCheckboxItem
-            onClick={() => router.push("/business")}
-            className="cursor-pointer transition-colors duration-200"
-          >
-            For business
-          </MenubarCheckboxItem>
-          <MenubarCheckboxItem
-            onClick={() => router.push("/web-development")}
-            className="cursor-pointer transition-colors duration-200"
-          >
-            Web Development
-          </MenubarCheckboxItem>
-          <MenubarCheckboxItem
-            onClick={() => router.push("/mobile-development")}
-            className="cursor-pointer transition-colors duration-200"
-          >
-            Mobile Development
-          </MenubarCheckboxItem>
-          <MenubarCheckboxItem
-            onClick={() => router.push("/ui-ux-design")}
-            className="cursor-pointer transition-colors duration-200"
-          >
-            UI/UX Design
-          </MenubarCheckboxItem>
-          <MenubarCheckboxItem
-            onClick={() => router.push("/graphic-design")}
-            className="cursor-pointer transition-colors duration-200"
-          >
-            Graphic Design
-          </MenubarCheckboxItem>
-          <MenubarCheckboxItem
-            onClick={() => router.push("/qa")}
-            className="cursor-pointer transition-colors duration-200"
-          >
-            QA Automation & Manual
-          </MenubarCheckboxItem>
-        </MenubarContent>
-      </MenubarMenu>
+          <MenubarMenu>
+            <MenubarTrigger
+              data-active={isServicesActive}
+              className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-base"
+            >
+              Services
+            </MenubarTrigger>
+            <MenubarContent>
+              <MenubarCheckboxItem
+                onClick={() => router.push("/business")}
+                className="cursor-pointer transition-colors duration-200"
+              >
+                For business
+              </MenubarCheckboxItem>
+              <MenubarCheckboxItem
+                onClick={() => router.push("/web-development")}
+                className="cursor-pointer transition-colors duration-200"
+              >
+                Web Development
+              </MenubarCheckboxItem>
+              <MenubarCheckboxItem
+                onClick={() => router.push("/mobile-development")}
+                className="cursor-pointer transition-colors duration-200"
+              >
+                Mobile Development
+              </MenubarCheckboxItem>
+              <MenubarCheckboxItem
+                onClick={() => router.push("/ui-ux-design")}
+                className="cursor-pointer transition-colors duration-200"
+              >
+                UI/UX Design
+              </MenubarCheckboxItem>
+              <MenubarCheckboxItem
+                onClick={() => router.push("/graphic-design")}
+                className="cursor-pointer transition-colors duration-200"
+              >
+                Graphic Design
+              </MenubarCheckboxItem>
+              <MenubarCheckboxItem
+                onClick={() => router.push("/qa")}
+                className="cursor-pointer transition-colors duration-200"
+              >
+                QA Automation & Manual
+              </MenubarCheckboxItem>
+            </MenubarContent>
+          </MenubarMenu>
 
-      <MenubarMenu>
-        <Link href="/faq" className="block">
-          <MenubarTrigger data-active={active === "faq"} className="font-medium transition-colors duration-200">
-            FAQ
-          </MenubarTrigger>
-        </Link>
-      </MenubarMenu>
-      <MenubarMenu>
-        <Link href="/case-studies" className="block">
-          <MenubarTrigger
-            data-active={active === "case-studies"}
-            className="font-medium transition-colors duration-200"
-          >
-            Case studies
-          </MenubarTrigger>
-        </Link>
-      </MenubarMenu>
+          <MenubarMenu>
+            <Link href="/faq" className="block">
+              <MenubarTrigger
+                data-active={active === "faq"}
+                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-base"
+              >
+                FAQ
+              </MenubarTrigger>
+            </Link>
+          </MenubarMenu>
+          <MenubarMenu>
+            <Link href="/case-studies" className="block">
+              <MenubarTrigger
+                data-active={active === "case-studies"}
+                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-base"
+              >
+                Case studies
+              </MenubarTrigger>
+            </Link>
+          </MenubarMenu>
 
-      <MenubarMenu>
-        <Link href="/about-us" className="block">
-          <MenubarTrigger data-active={active === "about-us"} className="font-medium transition-colors duration-200">
-            About us
-          </MenubarTrigger>
-        </Link>
-      </MenubarMenu>
-    </Menubar>
+          <MenubarMenu>
+            <Link href="/about-us" className="block">
+              <MenubarTrigger
+                data-active={active === "about-us"}
+                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-base"
+              >
+                About us
+              </MenubarTrigger>
+            </Link>
+          </MenubarMenu>
+        </Menubar>
+      </div>
+
+      {/* Mobile Drawer Menu - Hidden on desktop */}
+      <div className="lg:hidden">
+        <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
+          <DrawerTrigger asChild>
+            <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+              <Menu className="h-6 w-6" />
+            </Button>
+          </DrawerTrigger>
+          <DrawerContent className="bg-night-blue border-charcole border-t">
+            <div className="mx-auto w-full max-w-sm">
+              <DrawerHeader className="border-b border-white/20">
+                <DrawerTitle className="text-lg font-semibold text-white">Menu</DrawerTitle>
+              </DrawerHeader>
+
+              <div className="p-4">
+                <nav className="flex flex-col space-y-2">
+                  <button
+                    onClick={() => handleMobileNavClick("/")}
+                    className={`rounded-md px-4 py-3 text-left transition-colors ${
+                      active === "home" ? "bg-white/20 text-white" : "text-white/80 hover:bg-white/10 hover:text-white"
+                    }`}
+                  >
+                    Home
+                  </button>
+
+                  <button
+                    onClick={() => handleMobileNavClick("/startups")}
+                    className={`rounded-md px-4 py-3 text-left transition-colors ${
+                      active === "startups"
+                        ? "bg-white/20 text-white"
+                        : "text-white/80 hover:bg-white/10 hover:text-white"
+                    }`}
+                  >
+                    For startups
+                  </button>
+
+                  <div className="mt-2 border-t border-white/20 pt-4">
+                    <div className="mb-3 px-4 text-sm font-medium text-white/60">Services</div>
+                    <button
+                      onClick={() => handleMobileNavClick("/business")}
+                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                        active === "business"
+                          ? "bg-white/20 text-white"
+                          : "text-white/80 hover:bg-white/10 hover:text-white"
+                      }`}
+                    >
+                      For business
+                    </button>
+                    <button
+                      onClick={() => handleMobileNavClick("/web-development")}
+                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                        active === "web-development"
+                          ? "bg-white/20 text-white"
+                          : "text-white/80 hover:bg-white/10 hover:text-white"
+                      }`}
+                    >
+                      Web Development
+                    </button>
+                    <button
+                      onClick={() => handleMobileNavClick("/mobile-development")}
+                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                        active === "mobile-development"
+                          ? "bg-white/20 text-white"
+                          : "text-white/80 hover:bg-white/10 hover:text-white"
+                      }`}
+                    >
+                      Mobile Development
+                    </button>
+                    <button
+                      onClick={() => handleMobileNavClick("/ui-ux-design")}
+                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                        active === "ui-ux-design"
+                          ? "bg-white/20 text-white"
+                          : "text-white/80 hover:bg-white/10 hover:text-white"
+                      }`}
+                    >
+                      UI/UX Design
+                    </button>
+                    <button
+                      onClick={() => handleMobileNavClick("/graphic-design")}
+                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                        active === "graphic-design"
+                          ? "bg-white/20 text-white"
+                          : "text-white/80 hover:bg-white/10 hover:text-white"
+                      }`}
+                    >
+                      Graphic Design
+                    </button>
+                    <button
+                      onClick={() => handleMobileNavClick("/qa")}
+                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                        active === "qa" ? "bg-white/20 text-white" : "text-white/80 hover:bg-white/10 hover:text-white"
+                      }`}
+                    >
+                      QA Automation & Manual
+                    </button>
+                  </div>
+
+                  <button
+                    onClick={() => handleMobileNavClick("/faq")}
+                    className={`rounded-md px-4 py-3 text-left transition-colors ${
+                      active === "faq" ? "bg-white/20 text-white" : "text-white/80 hover:bg-white/10 hover:text-white"
+                    }`}
+                  >
+                    FAQ
+                  </button>
+
+                  <button
+                    onClick={() => handleMobileNavClick("/case-studies")}
+                    className={`rounded-md px-4 py-3 text-left transition-colors ${
+                      active === "case-studies"
+                        ? "bg-white/20 text-white"
+                        : "text-white/80 hover:bg-white/10 hover:text-white"
+                    }`}
+                  >
+                    Case studies
+                  </button>
+
+                  <button
+                    onClick={() => handleMobileNavClick("/about-us")}
+                    className={`rounded-md px-4 py-3 text-left transition-colors ${
+                      active === "about-us"
+                        ? "bg-white/20 text-white"
+                        : "text-white/80 hover:bg-white/10 hover:text-white"
+                    }`}
+                  >
+                    About us
+                  </button>
+                </nav>
+              </div>
+            </div>
+          </DrawerContent>
+        </Drawer>
+      </div>
+    </>
   );
 }
