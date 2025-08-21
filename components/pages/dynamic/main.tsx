@@ -3,10 +3,13 @@ import DynamicHeroSection from "@/components/pages/dynamic/dynamic-hero-section"
 import Footer from "@/components/modules/footer";
 import Product from "@/public/assets/placeholder.png";
 import Test from "@/public/assets/dynamic/com-lands/main-bg.png";
+import Tes3t from "@/public/assets/dynamic/com-lands/design-bg.png";
 import Test2 from "@/public/assets/dynamic/com-lands/about-bg.png";
 import DynamicAboutProject from "@/components/pages/dynamic/dynamic-about-project";
 import DynamicServices from "@/components/pages/dynamic/dynamic-services";
 import DynamicStats from "@/components/pages/dynamic/dynamic-stats";
+import StartProject from "./start-project";
+import DynamicSmallProjectCard from "./dynamic-small-project-card";
 interface DynamicHeroProps {
   title: string;
   description: string;
@@ -32,7 +35,7 @@ export default function DynamicMain() {
         description="Community Lands is a platform offering affordable land for purchase across the United States, catering to individuals interested in nature, sustainability, and off-grid living. The site provides a marketplace for diverse land options, resources for prospective landowners, and a community space to connect with others passionate about land ownership and outdoor lifestyles."
         type="Mobile App"
         backgroundUrl={Test.src}
-        mainImage={Product.src}
+        mainImage={Tes3t.src}
         fullLink="/case-studies/truth-or-dare"
       />
 
@@ -66,7 +69,26 @@ export default function DynamicMain() {
             { title: "Design", value: "180h" },
           ]}
         />
+        <div className="grid grid-cols-2 gap-8">
+          <DynamicSmallProjectCard
+            title="Screens"
+            points={[
+              { title: "Screen 1", description: ["Description 1", "Description 2"] },
+              { title: "Screen 2", description: ["Description 3", "Description 4"] },
+            ]}
+            image={Test.src}
+          />
+          <DynamicSmallProjectCard
+            title="Screens"
+            points={[
+              { title: "Screen 1", description: ["Description 1", "Description 2"] },
+              { title: "Screen 2", description: ["Description 3", "Description 4"] },
+            ]}
+            image={Test.src}
+          />
+        </div>
       </div>
+      <StartProject link="/become-a-client" />
 
       <Footer />
     </div>
