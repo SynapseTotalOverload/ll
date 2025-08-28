@@ -1,5 +1,4 @@
 import InfoCard from "@/components/modules/info-card";
-import Image from "next/image";
 
 export default function DynamicSmallProjectCard({
   title,
@@ -30,13 +29,8 @@ export default function DynamicSmallProjectCard({
           </div>
         ))}
       </div>
-      <Image
-        className="w-full rounded-[16px] object-cover"
-        src={image}
-        alt={"small-project"}
-        width={500}
-        height={500}
-      />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img className="w-full rounded-[16px] object-cover" src={image} alt={"small-project"} />
     </InfoCard>
   );
 }

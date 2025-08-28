@@ -10,6 +10,9 @@ import DynamicServices from "@/components/pages/dynamic/dynamic-services";
 import DynamicStats from "@/components/pages/dynamic/dynamic-stats";
 import StartProject from "./start-project";
 import DynamicSmallProjectCard from "./dynamic-small-project-card";
+import DynamicProjectGoals from "./dynamic-project-goals";
+import DynamicCreationProcess from "./dynamic-creation-process";
+import PortfolioCard from "./dynamic-portfolio-card";
 interface DynamicHeroProps {
   title: string;
   description: string;
@@ -69,6 +72,31 @@ export default function DynamicMain() {
             { title: "Design", value: "180h" },
           ]}
         />
+        <DynamicCreationProcess
+          processes={[
+            {
+              title: "Team",
+              description: "We have a team of 10 people who are working on the project. .",
+            },
+            {
+              title: "UI/UX",
+              description: "We have a team of 10 people who are working on the project.g on the project.",
+            },
+            {
+              title: "Development",
+              description: "We have a team of 10 people who are working on the project. ing on the project.",
+            },
+            {
+              title: "Testing",
+              description: "We have a team of 10 people who are workeople who are working on the project.",
+            },
+          ]}
+        />
+        <PortfolioCard
+          mainImage={Tes3t.src}
+          description="We have a team of 10 people who are working on the project. We have a team of 10 people who are working on the project."
+          backgroundUrl={Test.src}
+        />
         <div className="grid grid-cols-2 gap-8">
           <DynamicSmallProjectCard
             title="Screens"
@@ -87,6 +115,42 @@ export default function DynamicMain() {
             image={Test.src}
           />
         </div>
+        <DynamicProjectGoals
+          goals={[
+            {
+              sign: "1. Creating a professional brand",
+              goal: "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity  ",
+            },
+            {
+              sign: "2. Creating a professional brand",
+              goal: "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity  ",
+            },
+            {
+              sign: "3. Creating a professional brand",
+              goal: "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity  ",
+            },
+            {
+              sign: "4. Creating a professional brand",
+              goal: "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity  ",
+            },
+            {
+              sign: "5. Creating a professional brand",
+              goal: "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity  ",
+            },
+            {
+              sign: "6. Creating a professional brand",
+              goal: "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity  ",
+            },
+            {
+              sign: "7. Creating a professional brand",
+              goal: "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity  ",
+            },
+            {
+              sign: "8. Creating a professional brand",
+              goal: "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity  ",
+            },
+          ]}
+        />
       </div>
       <StartProject link="/become-a-client" />
 

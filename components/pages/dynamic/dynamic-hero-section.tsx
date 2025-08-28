@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import MenuBar from "@/components/modules/menu-bar";
 import GoButton from "@/components/ui/go-button";
-import Image from "next/image";
+
 import Link from "next/link";
 
 export default function DynamicHeroSection({
@@ -44,7 +44,8 @@ export default function DynamicHeroSection({
             {fullLink}
           </Link>
         </div>
-        <Image className="max-h-[500px] flex-1" src={mainImage} alt={title} width={100} height={100} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="max-h-[500px] flex-1" src={mainImage} alt={title} />
       </div>
 
       {/* Hero Content */}
