@@ -1,5 +1,4 @@
 import InfoCard from "@/components/modules/info-card";
-import Image from "next/image";
 export default function PortfolioCard({
   description,
   backgroundUrl,

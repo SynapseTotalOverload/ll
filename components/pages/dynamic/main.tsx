@@ -13,22 +13,6 @@ import DynamicSmallProjectCard from "./dynamic-small-project-card";
 import DynamicProjectGoals from "./dynamic-project-goals";
 import DynamicCreationProcess from "./dynamic-creation-process";
 import PortfolioCard from "./dynamic-portfolio-card";
-interface DynamicHeroProps {
-  title: string;
-  description: string;
-  type: string;
-  backgroundUrl: string;
-  mainImage: string;
-  fullLink: string;
-}
-interface DynamicAboutProjectProps {
-  description: string;
-  image: string;
-  backgroundUrl: string;
-}
-interface DynamicStatsProps {
-  stats: string[];
-}
 
 export default function DynamicMain() {
   return (
@@ -104,7 +88,8 @@ export default function DynamicMain() {
               { title: "Screen 1", description: ["Description 1", "Description 2"] },
               { title: "Screen 2", description: ["Description 3", "Description 4"] },
             ]}
-            image={Test.src}
+            backgroundUrl={Test.src}
+            image={Tes3t.src}
           />
           <DynamicSmallProjectCard
             title="Screens"
@@ -112,7 +97,8 @@ export default function DynamicMain() {
               { title: "Screen 1", description: ["Description 1", "Description 2"] },
               { title: "Screen 2", description: ["Description 3", "Description 4"] },
             ]}
-            image={Test.src}
+            backgroundUrl={Test.src}
+            image={Tes3t.src}
           />
         </div>
         <DynamicProjectGoals
