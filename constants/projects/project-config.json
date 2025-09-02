@@ -1,0 +1,282 @@
+{
+  "projects": {
+    "com-lands": {
+      "id": "truth-or-dare",
+      "slug": "truth-or-dare",
+      "hero": {
+        "title": "Truth or Dare",
+        "description": "Community Lands is a platform offering affordable land for purchase across the United States, catering to individuals interested in nature, sustainability, and off-grid living. The site provides a marketplace for diverse land options, resources for prospective landowners, and a community space to connect with others passionate about land ownership and outdoor lifestyles.",
+        "type": "Mobile App",
+        "backgroundUrl": "/assets/dynamic/com-lands/main-bg.png",
+        "mainImage": "/assets/dynamic/com-lands/design-bg.png",
+        "fullLink": "/case-studies/truth-or-dare"
+      },
+      "aboutProject": {
+        "description": "Community Lands is a platform offering affordable land for purchase across the United States, catering to individuals interested in nature, sustainability, and off-grid living. The site provides a marketplace for diverse land options, resources for prospective landowners, and a community space to connect with others passionate about land ownership and outdoor lifestyles.",
+        "image": "/assets/dynamic/com-lands/about-bg.png",
+        "backgroundUrl": "/assets/dynamic/com-lands/main-bg.png"
+      },
+      "services": {
+        "services": [
+          "Navigation Architecture",
+          "Web design",
+          "Chrome Extension",
+          "UI/UX Design",
+          "UX Research",
+          "Style guide & Assets",
+          "Svelte",
+          "FastAPI",
+          "SQLAlchemy",
+          "CRUD",
+          "Node.js"
+        ],
+        "description": "We Used Svelte On The Frontend To Create Adaptable Interfaces With Optimized UX, Adding Features Like Dialogue Boxes For Agent Interaction And Active View Indicators On Object Pages. We Updated Filter Designs And Implemented Status Indicators Like 'reserved.' On The Backend, We Worked With FastAPI And SQLAlchemy For Reliable CRUD Operations, Developed Functionality For Offers, And Integrated Google Authentication Via Keycloak. Additionally, We Enhanced Email Formatting, Added Attachments, Improved Search Logic, And Set Up Data Filtering For A Smoother User Experience. Additionally, we enhanced email formatting, added attachments, improved search logic, and set up data filtering for a smoother user experience."
+      },
+      "stats": [
+        {
+          "title": "Screens",
+          "value": "100+"
+        },
+        {
+          "title": "Development",
+          "value": "220h"
+        },
+        {
+          "title": "Design",
+          "value": "180h"
+        }
+      ],
+      "creationProcess": [
+        {
+          "title": "Team",
+          "description": "We have a team of 10 people who are working on the project."
+        },
+        {
+          "title": "UI/UX",
+          "description": "We have a team of 10 people who are working on the project."
+        },
+        {
+          "title": "Development",
+          "description": "We have a team of 10 people who are working on the project."
+        },
+        {
+          "title": "Testing",
+          "description": "We have a team of 10 people who are working on the project."
+        }
+      ],
+      "portfolioCard": {
+        "mainImage": "/assets/dynamic/com-lands/design-bg.png",
+        "description": "We have a team of 10 people who are working on the project. We have a team of 10 people who are working on the project.",
+        "backgroundUrl": "/assets/dynamic/com-lands/main-bg.png"
+      },
+      "smallProjectCards": [
+        {
+          "title": "Screens",
+          "points": [
+            {
+              "title": "Screen 1",
+              "description": ["Description 1", "Description 2"]
+            },
+            {
+              "title": "Screen 2",
+              "description": ["Description 3", "Description 4"]
+            }
+          ],
+          "backgroundUrl": "/assets/dynamic/com-lands/main-bg.png",
+          "image": "/assets/dynamic/com-lands/design-bg.png"
+        },
+        {
+          "title": "Screens",
+          "points": [
+            {
+              "title": "Screen 1",
+              "description": ["Description 1", "Description 2"]
+            },
+            {
+              "title": "Screen 2",
+              "description": ["Description 3", "Description 4"]
+            }
+          ],
+          "backgroundUrl": "/assets/dynamic/com-lands/main-bg.png",
+          "image": "/assets/dynamic/com-lands/design-bg.png"
+        }
+      ],
+      "projectGoals": [
+        {
+          "sign": "1. Creating a professional brand",
+          "goal": "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity"
+        },
+        {
+          "sign": "2. Creating a professional brand",
+          "goal": "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity"
+        },
+        {
+          "sign": "3. Creating a professional brand",
+          "goal": "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity"
+        },
+        {
+          "sign": "4. Creating a professional brand",
+          "goal": "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity"
+        },
+        {
+          "sign": "5. Creating a professional brand",
+          "goal": "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity"
+        },
+        {
+          "sign": "6. Creating a professional brand",
+          "goal": "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity"
+        },
+        {
+          "sign": "7. Creating a professional brand",
+          "goal": "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity"
+        },
+        {
+          "sign": "8. Creating a professional brand",
+          "goal": "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity"
+        }
+      ],
+      "startProject": {
+        "link": "/become-a-client"
+      }
+    },
+    "truth-or-dare": {
+      "id": "truth-or-dare",
+      "slug": "truth-or-dare",
+      "hero": {
+        "title": "Truth or Dare",
+        "description": "Community Lands is a platform offering affordable land for purchase across the United States, catering to individuals interested in nature, sustainability, and off-grid living. The site provides a marketplace for diverse land options, resources for prospective landowners, and a community space to connect with others passionate about land ownership and outdoor lifestyles.",
+        "type": "Mobile App",
+        "backgroundUrl": "/assets/dynamic/com-lands/main-bg.png",
+        "mainImage": "/assets/dynamic/com-lands/design-bg.png",
+        "fullLink": "/case-studies/truth-or-dare"
+      },
+      "aboutProject": {
+        "description": "Community Lands is a platform offering affordable land for purchase across the United States, catering to individuals interested in nature, sustainability, and off-grid living. The site provides a marketplace for diverse land options, resources for prospective landowners, and a community space to connect with others passionate about land ownership and outdoor lifestyles.",
+        "image": "/assets/dynamic/com-lands/about-bg.png",
+        "backgroundUrl": "/assets/dynamic/com-lands/main-bg.png"
+      },
+      "services": {
+        "services": [
+          "Navigation Architecture",
+          "Web design",
+          "Chrome Extension",
+          "UI/UX Design",
+          "UX Research",
+          "Style guide & Assets",
+          "Svelte",
+          "FastAPI",
+          "SQLAlchemy",
+          "CRUD",
+          "Node.js"
+        ],
+        "description": "We Used Svelte On The Frontend To Create Adaptable Interfaces With Optimized UX, Adding Features Like Dialogue Boxes For Agent Interaction And Active View Indicators On Object Pages. We Updated Filter Designs And Implemented Status Indicators Like 'reserved.' On The Backend, We Worked With FastAPI And SQLAlchemy For Reliable CRUD Operations, Developed Functionality For Offers, And Integrated Google Authentication Via Keycloak. Additionally, We Enhanced Email Formatting, Added Attachments, Improved Search Logic, And Set Up Data Filtering For A Smoother User Experience. Additionally, we enhanced email formatting, added attachments, improved search logic, and set up data filtering for a smoother user experience."
+      },
+      "stats": [
+        {
+          "title": "Screens",
+          "value": "100+"
+        },
+        {
+          "title": "Development",
+          "value": "220h"
+        },
+        {
+          "title": "Design",
+          "value": "180h"
+        }
+      ],
+      "creationProcess": [
+        {
+          "title": "Team",
+          "description": "We have a team of 10 people who are working on the project."
+        },
+        {
+          "title": "UI/UX",
+          "description": "We have a team of 10 people who are working on the project."
+        },
+        {
+          "title": "Development",
+          "description": "We have a team of 10 people who are working on the project."
+        },
+        {
+          "title": "Testing",
+          "description": "We have a team of 10 people who are working on the project."
+        }
+      ],
+      "portfolioCard": {
+        "mainImage": "/assets/dynamic/com-lands/design-bg.png",
+        "description": "We have a team of 10 people who are working on the project. We have a team of 10 people who are working on the project.",
+        "backgroundUrl": "/assets/dynamic/com-lands/main-bg.png"
+      },
+      "smallProjectCards": [
+        {
+          "title": "Screens",
+          "points": [
+            {
+              "title": "Screen 1",
+              "description": ["Description 1", "Description 2"]
+            },
+            {
+              "title": "Screen 2",
+              "description": ["Description 3", "Description 4"]
+            }
+          ],
+          "backgroundUrl": "/assets/dynamic/com-lands/main-bg.png",
+          "image": "/assets/dynamic/com-lands/design-bg.png"
+        },
+        {
+          "title": "Screens",
+          "points": [
+            {
+              "title": "Screen 1",
+              "description": ["Description 1", "Description 2"]
+            },
+            {
+              "title": "Screen 2",
+              "description": ["Description 3", "Description 4"]
+            }
+          ],
+          "backgroundUrl": "/assets/dynamic/com-lands/main-bg.png",
+          "image": "/assets/dynamic/com-lands/design-bg.png"
+        }
+      ],
+      "projectGoals": [
+        {
+          "sign": "1. Creating a professional brand",
+          "goal": "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity"
+        },
+        {
+          "sign": "2. Creating a professional brand",
+          "goal": "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity"
+        },
+        {
+          "sign": "3. Creating a professional brand",
+          "goal": "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity"
+        },
+        {
+          "sign": "4. Creating a professional brand",
+          "goal": "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity"
+        },
+        {
+          "sign": "5. Creating a professional brand",
+          "goal": "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity"
+        },
+        {
+          "sign": "6. Creating a professional brand",
+          "goal": "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity"
+        },
+        {
+          "sign": "7. Creating a professional brand",
+          "goal": "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity"
+        },
+        {
+          "sign": "8. Creating a professional brand",
+          "goal": "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity"
+        }
+      ],
+      "startProject": {
+        "link": "/become-a-client"
+      }
+    }
+  }
+}
