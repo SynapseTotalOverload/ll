@@ -12,6 +12,7 @@ import PortfolioCard from "./dynamic-portfolio-card";
 import { Project } from "@/constants/projects/project-config.types";
 
 export default function DynamicMain({ project }: { project: Project }) {
+  console.log(project.hero);
   return (
     <div className="flex flex-col items-center">
       <DynamicHeroSection

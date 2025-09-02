@@ -11,7 +11,7 @@ export default function PortfolioCard({
   return (
     <InfoCard className="h-[90vh] p-6">
       <div
-        className="flex h-full w-full flex-col justify-between rounded-2xl p-6"
+        className="no-repeat flex h-full w-full flex-col justify-between rounded-2xl bg-cover p-6"
         style={{
           backgroundImage: `url(${backgroundUrl})`,
         }}

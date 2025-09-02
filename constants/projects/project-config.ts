@@ -1,4 +1,4 @@
-import projectConfigData from "./project-config.json";
+import projectConfigData from "./project-config-data";
 import type {
   ProjectConfig,
   Project,

@@ -44,8 +44,10 @@ export default function DynamicHeroSection({
             {fullLink}
           </Link>
         </div>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="max-h-[500px] flex-1" src={mainImage} alt={title} />
+        <div className="flex w-full flex-1 items-center justify-end">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="max-h-[500px] object-contain" src={mainImage} alt={title} />
+        </div>
       </div>
 
       {/* Hero Content */}
