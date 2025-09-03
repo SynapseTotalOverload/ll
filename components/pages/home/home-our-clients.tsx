@@ -5,48 +5,45 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 export default function OurClients() {
   return (
-    <div className="flex w-full flex-col px-4 sm:px-8 md:px-12 lg:px-20">
+    <div className="flex w-full flex-col gap-8 px-4 sm:gap-12 sm:px-6 md:gap-16 md:px-8 lg:gap-20 lg:px-12 xl:gap-24 xl:px-16">
       <SignTitle>
-        <SignTitle.Title>Our Clients</SignTitle.Title>
-        <SignTitle.Description>
+        <SignTitle.Title className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Our Clients</SignTitle.Title>
+        <SignTitle.Description className="text-sm sm:text-base md:text-lg lg:text-xl">
           80+ clients in 15 countries trust us and grow their business with LogicCraft
         </SignTitle.Description>
         <SignTitle.Separator />
       </SignTitle>
 
       {/* Clients Carousel */}
-      <Carousel>
-        <CarouselContent className="px-4 sm:px-8 md:px-12 lg:px-20 py-8 sm:py-12 md:py-14 lg:py-16">
+      <Carousel className="w-full">
+        <CarouselContent className="px-2 py-4 sm:px-4 sm:py-6 md:px-6 md:py-8 lg:px-8 lg:py-10 xl:px-10 xl:py-12">
           {Array.from({ length: 10 }).map((_, index) => (
             <CarouselItem key={index}>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 grid-rows-3 sm:grid-rows-2 gap-y-8 sm:gap-y-12 md:gap-y-16 lg:gap-y-[80px]">
-                <div className="flex flex-col items-center justify-center">
-                  <PlaceholderLogo />
+              <div className="grid grid-cols-2 grid-rows-3 gap-4 sm:grid-cols-3 sm:grid-rows-2 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
+                <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
+                  <PlaceholderLogo className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16" />
                 </div>
-                <div className="flex flex-col items-center justify-center">
-                  <PlaceholderLogo />
+                <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
+                  <PlaceholderLogo className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16" />
                 </div>
-
-                <div className="flex flex-col items-center justify-center">
-                  <PlaceholderLogo />
+                <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
+                  <PlaceholderLogo className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16" />
                 </div>
-                <div className="flex flex-col items-center justify-center">
-                  <PlaceholderLogo />
+                <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
+                  <PlaceholderLogo className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16" />
                 </div>
-
-                <div className="flex flex-col items-center justify-center">
-                  <PlaceholderLogo />
+                <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
+                  <PlaceholderLogo className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16" />
                 </div>
-
-                <div className="flex flex-col items-center justify-center">
-                  <PlaceholderLogo />
+                <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
+                  <PlaceholderLogo className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16" />
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="hidden h-10 w-10 sm:flex md:h-12 md:w-12 lg:h-14 lg:w-14" />
+        <CarouselNext className="hidden h-10 w-10 sm:flex md:h-12 md:w-12 lg:h-14 lg:w-14" />
       </Carousel>
     </div>
   );

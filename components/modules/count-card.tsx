@@ -11,13 +11,7 @@ function CountCardRoot({ children, className, ...props }: HTMLAttributes<HTMLDiv
 
 function CountCardIndex({ children, className, ...props }: HTMLAttributes<HTMLSpanElement>) {
   return (
-    <span
-      className={cn(
-        "text-plastic custom-font-bricolage self-start text-[126px] font-[700] tracking-[-12px]",
-        className,
-      )}
-      {...props}
-    >
+    <span className={cn("text-plastic custom-font-bricolage self-start text-[126px] font-[700]", className)} {...props}>
       {children}
     </span>
   );
