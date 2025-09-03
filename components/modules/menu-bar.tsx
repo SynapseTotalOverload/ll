@@ -257,7 +257,7 @@ export default function MenuBar({ className }: { className?: string }) {
                 <DrawerTitle className="text-lg font-semibold text-white">Menu</DrawerTitle>
               </DrawerHeader>
 
-              <div className="p-4">
+              <div className="max-h-[60vh] overflow-y-auto p-4">
                 <nav className="flex flex-col space-y-2">
                   <button
                     onClick={() => handleMobileNavClick("/")}
