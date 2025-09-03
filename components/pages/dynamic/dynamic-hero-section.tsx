@@ -28,7 +28,7 @@ export default function DynamicHeroSection({
       {/* Header Navigation */}
       <header className="flex flex-row items-center">
         <Button variant="link">LogicCraft</Button>
-        <div className="flex flex-1 flex-row items-center justify-center">
+        <div className="flex flex-1 flex-row items-center justify-end md:justify-center">
           <MenuBar />
         </div>
       </header>
