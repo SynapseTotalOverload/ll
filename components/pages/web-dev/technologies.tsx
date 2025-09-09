@@ -35,13 +35,13 @@ export default function Technologies() {
             <InfoCard.Description className="mt-3 text-sm sm:mt-4 sm:text-base md:text-lg">
               Modern frontend frameworks and libraries for creating responsive, interactive user interfaces
             </InfoCard.Description>
-            <div className="grid grid-cols-3 gap-4 pt-6 sm:grid-cols-4 sm:gap-6 md:gap-8 lg:gap-10 lg:pt-10">
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
+            <div className="grid min-h-[200px] grid-cols-3 gap-4 pt-6 sm:grid-cols-4 sm:gap-6 md:gap-8 lg:gap-10 lg:pt-10">
+              <JsIcon className="" />
+              <JsIcon className="" />
+              <JsIcon className="" />
+              <JsIcon className="" />
+              <JsIcon className="" />
+              <JsIcon className="" />
             </div>
           </div>
 
@@ -57,12 +57,12 @@ export default function Technologies() {
               Robust backend technologies for building scalable, secure, and high-performance web applications
             </InfoCard.Description>
             <div className="grid grid-cols-3 gap-4 pt-6 sm:grid-cols-4 sm:gap-6 md:gap-8 lg:gap-10 lg:pt-10">
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
+              <JsIcon className="" />
+              <JsIcon className="" />
+              <JsIcon className="" />
+              <JsIcon className="" />
+              <JsIcon className="" />
+              <JsIcon className="" />
             </div>
           </div>
 
@@ -78,12 +78,12 @@ export default function Technologies() {
               Modern development tools and DevOps practices for efficient deployment and continuous integration
             </InfoCard.Description>
             <div className="grid grid-cols-3 gap-4 pt-6 sm:grid-cols-4 sm:gap-6 md:gap-8 lg:gap-10 lg:pt-10">
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
-              <JsIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
+              <JsIcon className="" />
+              <JsIcon className="" />
+              <JsIcon className="" />
+              <JsIcon className="" />
+              <JsIcon className="" />
+              <JsIcon className="" />
             </div>
           </div>
         </div>
