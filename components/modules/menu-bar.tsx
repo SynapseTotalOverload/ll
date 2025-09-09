@@ -19,6 +19,7 @@ export default function MenuBar({ className }: { className?: string }) {
     | "faq"
     | "about-us"
     | "case-studies"
+    | "blog"
   >("home");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const router = useRouter();
@@ -52,6 +53,8 @@ export default function MenuBar({ className }: { className?: string }) {
         setActive("about-us");
       } else if (lastSlug === "case-studies") {
         setActive("case-studies");
+      } else if (lastSlug === "blog") {
+        setActive("blog");
       }
     }
   }, []);
@@ -141,6 +144,17 @@ export default function MenuBar({ className }: { className?: string }) {
                 QA Automation & Manual
               </MenubarCheckboxItem>
             </MenubarContent>
+          </MenubarMenu>
+
+          <MenubarMenu>
+            <Link href="/blog" className="block">
+              <MenubarTrigger
+                data-active={active === "blog"}
+                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-base"
+              >
+                Blog
+              </MenubarTrigger>
+            </Link>
           </MenubarMenu>
 
           <MenubarMenu>
@@ -340,6 +354,15 @@ export default function MenuBar({ className }: { className?: string }) {
                       QA Automation & Manual
                     </button>
                   </div>
+
+                  <button
+                    onClick={() => handleMobileNavClick("/blog")}
+                    className={`rounded-md px-4 py-3 text-left transition-colors ${
+                      active === "blog" ? "bg-white/20 text-white" : "text-white/80 hover:bg-white/10 hover:text-white"
+                    }`}
+                  >
+                    Blog
+                  </button>
 
                   <button
                     onClick={() => handleMobileNavClick("/faq")}
