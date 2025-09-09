@@ -8,74 +8,101 @@ import { BackgroundGradient } from "@/components/ui/background-gradient";
 
 export default function BusinessServices() {
   return (
-    <div className="flex w-full flex-col gap-16 px-20">
+    <div className="flex w-full flex-col gap-8 px-4 sm:gap-12 sm:px-6 md:gap-16 md:px-8 lg:gap-20 lg:px-12 xl:gap-24 xl:px-16">
       <SignTitle>
-        <SignTitle.Title>Our services for growing businesses</SignTitle.Title>
-        <SignTitle.Description>
-          Having worked with dozens of small and medium businesses, we know exactly what services they need from
-          a software development outsourcing partner.
+        <SignTitle.Title className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+          Our services for growing businesses
+        </SignTitle.Title>
+        <SignTitle.Description className="text-sm sm:text-base md:text-lg lg:text-xl">
+          Having worked with dozens of small and medium businesses, we know exactly what services they need from a
+          software development outsourcing partner.
         </SignTitle.Description>
         <SignTitle.Separator />
       </SignTitle>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-6 place-items-center gap-8">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-12">
         {/* Service Card 1 */}
-        <InfoCard className="col-span-2">
+        <InfoCard className="w-full">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6" />
+            <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
           </LampEffect>
-          <InfoCard.Title className="mt-6">Team extension</InfoCard.Title>
-          <InfoCard.Description className="mt-4">
-            Boost your capacity with our team extension services. LogicCraft&apos;s internal pool of tech pros will work alongside the in-house team on your project and do it effectively. If necessary, we&apos;ll hire the right person after the scrupulous interviews.
+          <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
+            Team extension
+          </InfoCard.Title>
+          <InfoCard.Description className="mt-3 text-sm sm:mt-4 sm:text-base md:text-lg">
+            Boost your capacity with our team extension services. LogicCraft&apos;s internal pool of tech pros will work
+            alongside the in-house team on your project and do it effectively. If necessary, we&apos;ll hire the right
+            person after the scrupulous interviews.
           </InfoCard.Description>
         </InfoCard>
 
         {/* Service Card 2 */}
-        <InfoCard className="col-span-2">
+        <InfoCard className="w-full">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6" />
+            <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
           </LampEffect>
-          <InfoCard.Title className="mt-6">Service extension</InfoCard.Title>
-          <InfoCard.Description className="mt-4">
-            If you want to extend your services but lack particular expertise in software development, LogicCraft will help you fill the gap in developing video-streaming or video analysis, device integration, e-commerce, healthcare, and other solutions.
+          <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
+            Service extension
+          </InfoCard.Title>
+          <InfoCard.Description className="mt-3 text-sm sm:mt-4 sm:text-base md:text-lg">
+            If you want to extend your services but lack particular expertise in software development, LogicCraft will
+            help you fill the gap in developing video-streaming or video analysis, device integration, e-commerce,
+            healthcare, and other solutions.
           </InfoCard.Description>
         </InfoCard>
 
         {/* Service Card 3 */}
-        <InfoCard className="col-span-2">
+        <InfoCard className="w-full">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6" />
+            <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
           </LampEffect>
-          <InfoCard.Title className="mt-6">IT project hand-over</InfoCard.Title>
-          <InfoCard.Description className="mt-4">
-            Imagine you&apos;re in the middle of the project and need to pivot. Sure, we can help you with that. Our experts will analyze the state of the project, and only with a good understanding of your needs, we&apos;ll create a roadmap and get down to development.
+          <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
+            IT project hand-over
+          </InfoCard.Title>
+          <InfoCard.Description className="mt-3 text-sm sm:mt-4 sm:text-base md:text-lg">
+            Imagine you&apos;re in the middle of the project and need to pivot. Sure, we can help you with that. Our
+            experts will analyze the state of the project, and only with a good understanding of your needs, we&apos;ll
+            create a roadmap and get down to development.
           </InfoCard.Description>
         </InfoCard>
-        <InfoCard className="col-span-2 col-start-2 col-end-4">
+
+        {/* Service Card 4 */}
+        <InfoCard className="w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6" />
+            <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
           </LampEffect>
-          <InfoCard.Title className="mt-6">Digital transformation</InfoCard.Title>
-          <InfoCard.Description className="mt-4">
-            If you&apos;re an established company that wants to keep up with the rapidly-changing environment, we&apos;re here for you. Our professional software developers, business analysts, designers, and QAs will pave your way into the digital realm.
+          <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
+            Digital transformation
+          </InfoCard.Title>
+          <InfoCard.Description className="mt-3 text-sm sm:mt-4 sm:text-base md:text-lg">
+            If you&apos;re an established company that wants to keep up with the rapidly-changing environment,
+            we&apos;re here for you. Our professional software developers, business analysts, designers, and QAs will
+            pave your way into the digital realm.
           </InfoCard.Description>
         </InfoCard>
 
         {/* Service Card 5 */}
-        <InfoCard className="col-span-2">
+        <InfoCard className="w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6" />
+            <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
           </LampEffect>
-          <InfoCard.Title className="mt-6">IT staff augmentation / CTO as a service</InfoCard.Title>
-          <InfoCard.Description className="mt-4">
-            We assemble a dedicated unit of tech specialists with diverse skills, managing recruitment, administration, and accounting for you. Additionally, we offer CTO-level support to guide your team, allowing you to focus on strategic priorities and business growth.
+          <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
+            IT staff augmentation / CTO as a service
+          </InfoCard.Title>
+          <InfoCard.Description className="mt-3 text-sm sm:mt-4 sm:text-base md:text-lg">
+            We assemble a dedicated unit of tech specialists with diverse skills, managing recruitment, administration,
+            and accounting for you. Additionally, we offer CTO-level support to guide your team, allowing you to focus
+            on strategic priorities and business growth.
           </InfoCard.Description>
         </InfoCard>
       </div>
-      <div className="flex flex-row items-center justify-center">
+
+      <div className="flex flex-row items-center justify-center pt-4 sm:pt-6 md:pt-8">
         <BackgroundGradient>
-          <Button>Book a meeting</Button>
+          <Button className="h-12 px-6 text-base font-medium sm:h-14 sm:px-8 sm:text-lg md:h-16 md:px-10 md:text-xl">
+            Book a meeting
+          </Button>
         </BackgroundGradient>
       </div>
     </div>

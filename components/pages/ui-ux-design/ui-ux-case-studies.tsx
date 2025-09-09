@@ -8,45 +8,45 @@ import Product from "@/public/assets/placeholder.png";
 
 export default function UIUXCaseStudies() {
   return (
-    <div className="flex w-full flex-col gap-8 px-20">
+    <div className="flex w-full flex-col gap-8 px-4 sm:gap-12 sm:px-6 md:gap-16 md:px-8 lg:gap-20 lg:px-12 xl:gap-24 xl:px-16">
       <SignTitle>
-        <SignTitle.Title>Design portfolio.</SignTitle.Title>
+        <SignTitle.Title className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Design portfolio.</SignTitle.Title>
         <SignTitle.Separator />
       </SignTitle>
 
       {/* Case Studies Header */}
-      <div className="mt-8 flex cursor-pointer flex-row items-center justify-end gap-4">
-        <span className="font-[400]">All case studies</span>
-        <Button size="icon" className="blue-grad">
-          <MoveRightIcon className="text-night-blue size-6 rotate-[-45deg]" />
+      <div className="mt-6 flex cursor-pointer flex-row items-center justify-end gap-4 sm:mt-8 md:mt-10">
+        <span className="text-sm font-normal sm:text-base md:text-lg">All case studies</span>
+        <Button size="icon" className="blue-grad h-10 w-10 sm:h-12 sm:w-12">
+          <MoveRightIcon className="text-night-blue size-5 rotate-[-45deg] sm:size-6" />
         </Button>
       </div>
 
       {/* Case Studies Grid */}
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-12">
         {/* Case Study Card 1 */}
-        <InfoCard className="flex flex-col gap-4">
+        <InfoCard className="flex w-full flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <span className="text-plastic text-[14px]">Platform</span>
-            <InfoCard.Title className="">Track My Jobs</InfoCard.Title>
+            <span className="text-plastic text-xs sm:text-sm md:text-base">Platform</span>
+            <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Track My Jobs</InfoCard.Title>
           </div>
           <Image alt="product" className="w-full object-cover" src={Product} />
         </InfoCard>
 
         {/* Case Study Card 2 */}
-        <InfoCard className="flex flex-col gap-8">
+        <InfoCard className="flex w-full flex-col gap-4 sm:gap-6 md:gap-8">
           <div className="flex flex-col gap-2">
-            <span className="text-plastic text-[14px]">Mobile App</span>
-            <InfoCard.Title className="">Outspeak</InfoCard.Title>
+            <span className="text-plastic text-xs sm:text-sm md:text-base">Mobile App</span>
+            <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Outspeak</InfoCard.Title>
           </div>
           <Image alt="product" className="w-full object-cover" src={Product} />
         </InfoCard>
 
         {/* Case Study Card 3 */}
-        <InfoCard className="flex flex-col gap-8">
+        <InfoCard className="flex w-full flex-col gap-4 sm:gap-6 md:gap-8 sm:col-span-1 md:col-span-2 lg:col-span-1">
           <div className="flex flex-col gap-2">
-            <span className="text-plastic text-[14px]">Platform</span>
-            <InfoCard.Title className="">Tripsha</InfoCard.Title>
+            <span className="text-plastic text-xs sm:text-sm md:text-base">Platform</span>
+            <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Tripsha</InfoCard.Title>
           </div>
           <Image alt="product" className="w-full object-cover" src={Product} />
         </InfoCard>

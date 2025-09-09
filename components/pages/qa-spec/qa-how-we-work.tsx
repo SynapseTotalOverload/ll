@@ -4,13 +4,13 @@ import SignTitle from "@/components/modules/sign-title";
 
 export default function QAHowWeWork() {
   return (
-    <div className="flex w-full flex-col px-20">
+    <div className="flex w-full flex-col gap-8 px-4 sm:gap-12 sm:px-6 md:gap-16 md:px-8 lg:gap-20 lg:px-12 xl:gap-24 xl:px-16">
       <SignTitle>
-        <SignTitle.Title>How we work</SignTitle.Title>
+        <SignTitle.Title className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">How we work</SignTitle.Title>
         <SignTitle.Separator />
       </SignTitle>
 
-      <div className="mt-10 flex flex-col items-center justify-center">
+      <div className="mt-6 flex flex-col items-center justify-center gap-6 sm:mt-8 sm:gap-8 md:mt-10 md:gap-10 lg:gap-12">
         <PointLine
           title="1. Reviewing the existing DOCUMENTATION"
           description="Receive a product presentation from the client."

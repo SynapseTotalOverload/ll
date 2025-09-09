@@ -4,40 +4,57 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 export default function GraphicDesignFAQ() {
   return (
-    <div className="flex w-full flex-col px-20">
+    <div className="flex w-full flex-col gap-8 px-4 sm:gap-12 sm:px-6 md:gap-16 md:px-8 lg:gap-20 lg:px-12 xl:gap-24 xl:px-16">
       <SignTitle>
-        <SignTitle.Title>FAQ</SignTitle.Title>
+        <SignTitle.Title className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">FAQ</SignTitle.Title>
+        <SignTitle.Description className="text-sm sm:text-base md:text-lg lg:text-xl">
+          Frequently asked questions about graphic design services
+        </SignTitle.Description>
         <SignTitle.Separator />
       </SignTitle>
 
-      <div className="mt-10 flex flex-col items-center justify-center">
-        <Accordion type="single" collapsible className="flex w-full flex-col gap-4" defaultValue="item-1">
-          <AccordionItem value="item-1">
-            <AccordionTrigger>
-              <span>What&apos;s the difference between the front-end and the back-end?</span>
+      <div className="flex w-full flex-col items-center justify-center">
+        <Accordion
+          type="single"
+          collapsible
+          className="flex w-full max-w-4xl flex-col gap-3 sm:gap-4 md:gap-5"
+          defaultValue="item-1"
+        >
+          <AccordionItem value="item-1" className="border-b border-gray-200 pb-4 sm:pb-6">
+            <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
+              <span>What services do you offer in graphic design?</span>
             </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-              <p>
-                The front-end is all about the visual side of the project, the one that users interact with. The
-                back-end is what goes behind the scenes: it collects and processes data and then transfers it back to
-                the client side. Roughly, the data do not go directly from user A to user B—they always pass through the
-                back-end first.
+            <AccordionContent className="flex flex-col gap-3 pt-2 sm:gap-4 sm:pt-3 md:gap-5 md:pt-4">
+              <p className="text-sm leading-relaxed sm:text-base md:text-lg">
+                We offer comprehensive graphic design services including logo design, brand identity, marketing
+                materials, digital assets, custom illustrations, packaging design, and more. Our team creates visually
+                compelling designs that align with your brand&apos;s vision and goals.
               </p>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger>What are your pricing models?</AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-              <p>
-                Content for pricing models question will be added here.
+
+          <AccordionItem value="item-2" className="border-b border-gray-200 pb-4 sm:pb-6">
+            <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
+              How long does a typical design project take?
+            </AccordionTrigger>
+            <AccordionContent className="flex flex-col gap-3 pt-2 sm:gap-4 sm:pt-3 md:gap-5 md:pt-4">
+              <p className="text-sm leading-relaxed sm:text-base md:text-lg">
+                Project timelines vary based on complexity and scope. A simple logo design might take 1-2 weeks, while a
+                comprehensive brand identity package could take 3-4 weeks. We&apos;ll provide a detailed timeline during
+                our initial consultation and keep you updated throughout the process.
               </p>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger>How long does it take to get started?</AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-              <p>
-                Content for getting started question will be added here.
+
+          <AccordionItem value="item-3" className="border-b border-gray-200 pb-4 sm:pb-6">
+            <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
+              Do you provide source files with the final designs?
+            </AccordionTrigger>
+            <AccordionContent className="flex flex-col gap-3 pt-2 sm:gap-4 sm:pt-3 md:gap-5 md:pt-4">
+              <p className="text-sm leading-relaxed sm:text-base md:text-lg">
+                Yes, we provide all source files including editable formats like Adobe Illustrator (.ai), Photoshop
+                (.psd), and other industry-standard formats. You&apos;ll also receive web-ready formats (PNG, JPG, SVG)
+                and print-ready files (PDF, EPS) for maximum flexibility.
               </p>
             </AccordionContent>
           </AccordionItem>
