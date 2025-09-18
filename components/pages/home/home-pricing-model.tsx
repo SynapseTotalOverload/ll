@@ -45,7 +45,7 @@ export default function PricingModel() {
           </div>
           <div>
             <span className="bricolage text-[16px] font-[600] sm:text-[18px] md:text-[19px] lg:text-[20px]">
-              What you'll get:
+              What you&apos;ll get:
             </span>
             <ul className="mt-4 flex flex-col gap-3">
               {Array.from({ length: 6 }).map((_, index) => (
@@ -82,7 +82,7 @@ export default function PricingModel() {
           </div>
           <div>
             <span className="bricolage text-[16px] font-[600] sm:text-[18px] md:text-[19px] lg:text-[20px]">
-              What you'll get:
+              What you&apos;ll get:
             </span>
             <ul className="mt-4 flex flex-col gap-3">
               {Array.from({ length: 6 }).map((_, index) => (
@@ -119,7 +119,7 @@ export default function PricingModel() {
           </div>
           <div>
             <span className="bricolage text-[16px] font-[600] sm:text-[18px] md:text-[19px] lg:text-[20px]">
-              What you'll get:
+              What you&apos;ll get:
             </span>
             <ul className="mt-4 flex flex-col gap-3">
               {Array.from({ length: 6 }).map((_, index) => (

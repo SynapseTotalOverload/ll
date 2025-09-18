@@ -7,11 +7,13 @@ export function NamedSwitcher({
   options,
   active,
   onChange,
+  remderOptions,
   ...props
 }: Omit<React.HTMLAttributes<HTMLDivElement>, "onChange"> & {
   options: string[];
   active: string;
   onChange: (option: string) => void;
+  remderOptions?: (option: string) => React.ReactNode;
 }) {
   return (
     <div className={cn("light-grad flex w-fit flex-row rounded-full p-2", className)} {...props}>
@@ -25,7 +27,7 @@ export function NamedSwitcher({
             )}
             onClick={() => onChange(option)}
           >
-            <span>{option}</span>
+            {remderOptions ? remderOptions(option) : <span>{option}</span>}
           </div>
         );
 

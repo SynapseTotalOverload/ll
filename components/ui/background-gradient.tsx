@@ -7,11 +7,13 @@ export const BackgroundGradient = ({
   className,
   containerClassName,
   animate = false,
+  rounded = "rounded-full",
 }: {
   children?: React.ReactNode;
   className?: string;
   containerClassName?: string;
   animate?: boolean;
+  rounded?: string;
 }) => {
   const variants = {
     initial: {
@@ -40,7 +42,7 @@ export const BackgroundGradient = ({
           backgroundSize: animate ? "400% 400%" : undefined,
           background: "linear-gradient(96.01deg, #4BBFE9 16.66%, #4BBFE9 52.05%, #007AFF 84.06%)",
         }}
-        className={cn("absolute inset-0 z-[1] rounded-full opacity-60 transition duration-500 will-change-transform")}
+        className={cn("absolute inset-0 z-[1] opacity-60 transition duration-500 will-change-transform", rounded)}
       />
       <motion.div
         variants={animate ? variants : undefined}
@@ -59,10 +61,10 @@ export const BackgroundGradient = ({
           backgroundSize: animate ? "400% 400%" : undefined,
           background: "linear-gradient(96.01deg, #4BBFE9 16.66%, #4BBFE9 52.05%, #007AFF 84.06%)",
         }}
-        className={cn("absolute inset-0 z-[1] rounded-full will-change-transform")}
+        className={cn("absolute inset-0 z-[1] will-change-transform", rounded)}
       />
 
-      <div className={cn("relative z-10", className)}>{children}</div>
+      <div className={cn("relative h-full z-10", className)}>{children}</div>
     </div>
   );
 };

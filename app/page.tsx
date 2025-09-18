@@ -9,6 +9,7 @@ import HomeContactUs from "@/components/pages/home/home-contact-us";
 import Footer from "@/components/modules/footer";
 import { InfiniteMovingCards } from "@/components/modules/moving-line";
 import { items } from "@/constants/hero/reviews";
+import HomeCalculator from "@/components/pages/home/home-calculator";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <HomeServices />
         <HomeCaseStudies />
         <HomeClientTestimonials />
+        <HomeCalculator />
         <HomePricingModel />
       </div>
       <InfiniteMovingCards direction="left" items={items} />
