@@ -21,22 +21,22 @@ export default function OurClients() {
             <CarouselItem key={index}>
               <div className="grid grid-cols-2 grid-rows-3 gap-4 sm:grid-cols-3 sm:grid-rows-2 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
                 <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
-                  <PlaceholderLogo className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16" />
+                  <PlaceholderLogo className="" />
                 </div>
                 <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
-                  <PlaceholderLogo className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16" />
+                  <PlaceholderLogo className="" />
                 </div>
                 <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
-                  <PlaceholderLogo className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16" />
+                  <PlaceholderLogo className="" />
                 </div>
                 <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
-                  <PlaceholderLogo className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16" />
+                  <PlaceholderLogo className="" />
                 </div>
                 <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
-                  <PlaceholderLogo className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16" />
+                  <PlaceholderLogo className="" />
                 </div>
                 <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
-                  <PlaceholderLogo className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16" />
+                  <PlaceholderLogo className="" />
                 </div>
               </div>
             </CarouselItem>
