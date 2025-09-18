@@ -21,7 +21,7 @@ export function PointLine({
   }, [title, description]); // Recalculate when content changes
 
   return (
-    <div className={cn("flex max-w-[60%] flex-row gap-[12px]", className)}>
+    <div className={cn("flex max-w-[90%] flex-row gap-[12px] md:max-w-[60%]", className)}>
       <div className="flex flex-col items-center">
         <div className="bg-night-blue outline-night-blue mt-2 aspect-square size-4 rounded-full outline-[1px] outline-offset-[4px]" />
         <div className="relative flex w-full flex-col items-center">

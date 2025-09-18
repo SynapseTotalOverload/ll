@@ -10,7 +10,42 @@ export default function GraphicDesignWhyUs() {
         <SignTitle.Separator />
       </SignTitle>
 
-      <div className="mt-6 flex flex-col items-center justify-center gap-6 sm:mt-8 sm:gap-8 md:mt-10 md:gap-10 lg:gap-12">
+      {/* Mobile: Horizontal scroll */}
+      <div className="mt-6 overflow-x-auto pb-4 sm:hidden">
+        <div className="flex gap-6 px-4" style={{ width: "max-content" }}>
+          <div className="w-80 flex-shrink-0">
+            <PointLine
+              title="1. PROJECTS SPANNING THE GLOBE"
+              description="LogicCraft is a global company committed to providing tailored solutions that meet the diverse needs of clients, wherever they are."
+              index={1}
+            />
+          </div>
+          <div className="w-80 flex-shrink-0">
+            <PointLine
+              title="2. SATISFIED CLIENTS"
+              description="From startups to global corporations, we work with companies of all sizes. Our expertise helps every business achieve success through creative design solutions."
+              index={2}
+            />
+          </div>
+          <div className="w-80 flex-shrink-0">
+            <PointLine
+              title="3. TOP-TIER DESIGN TALENT"
+              description="LogicCraft is home to over 100 skilled designers. Our flexibility allows us to deliver quality solutions that meet your needs."
+              index={3}
+            />
+          </div>
+          <div className="w-80 flex-shrink-0">
+            <PointLine
+              title="4. INDUSTRY LEADERS"
+              description="LogicCraft actively participates in prestigious design competitions, highlighting our creativity and commitment to excellence in the industry."
+              index={4}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop: Vertical layout */}
+      <div className="mt-6 hidden flex-col items-center justify-center gap-6 sm:mt-8 sm:flex sm:gap-8 md:mt-10 md:gap-10 lg:gap-12">
         <PointLine
           title="1. PROJECTS SPANNING THE GLOBE"
           description="LogicCraft is a global company committed to providing tailored solutions that meet the diverse needs of clients, wherever they are."
