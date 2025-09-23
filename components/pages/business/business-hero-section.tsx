@@ -26,14 +26,14 @@ export default function HeroSection() {
           <p className="text-base leading-relaxed font-normal sm:text-lg md:text-xl lg:text-2xl">
             Yes, running a business can be overwhelming. Especially when your company has reached a pivotal point and
             needs to extend its business model. Digital transformation can help you make headway, while successful
-            scaling will fulfill your organization's potential.
+            scaling will fulfill your organization&apos;s potential.
           </p>
           <p className="text-sm leading-relaxed font-normal sm:text-base md:text-lg lg:text-xl">
-            To focus on your growing business, you'll need a proficient technology partner to delegate your software
-            woes. We at LogicCraft are experts in product design, web, and mobile development. Additionally, we empower
-            your endeavors by providing a fractional CTO service, ensuring strategic technical leadership. So let us
-            offer full-cycle software product development services and augment your in-house tech team with our software
-            pros.
+            To focus on your growing business, you&apos;ll need a proficient technology partner to delegate your
+            software woes. We at LogicCraft are experts in product design, web, and mobile development. Additionally, we
+            empower your endeavors by providing a fractional CTO service, ensuring strategic technical leadership. So
+            let us offer full-cycle software product development services and augment your in-house tech team with our
+            software pros.
           </p>
         </div>
       </div>

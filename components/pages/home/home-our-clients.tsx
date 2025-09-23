@@ -24,7 +24,7 @@ export default function OurClients() {
                   <PlaceholderLogo className="" />
                 </div>
                 <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
-                  <PlaceholderLogo className="" />
+                  <PlaceholderLogo className="" />np
                 </div>
                 <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
                   <PlaceholderLogo className="" />

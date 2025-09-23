@@ -10,7 +10,7 @@ export default function AreYouReady() {
         </h2>
         <BackgroundGradient>
           <Button className="h-12 px-6 text-base font-medium sm:h-14 sm:px-8 sm:text-lg md:h-16 md:px-10 md:text-xl">
-            Let's talk
+            Let&apos;s talk
           </Button>
         </BackgroundGradient>
       </div>
