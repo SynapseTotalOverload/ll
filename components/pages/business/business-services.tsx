@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { BedIcon, MoveRightIcon } from "lucide-react";
+import { ChartSpline, LaptopMinimalCheckIcon, NetworkIcon, RecycleIcon, UserIcon } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import { LampEffect } from "@/components/ui/lamp-effect";
@@ -21,11 +21,11 @@ export default function BusinessServices() {
       </SignTitle>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-12">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-6 md:gap-10 lg:gap-12">
         {/* Service Card 1 */}
-        <InfoCard className="w-full">
+        <InfoCard className="w-full md:col-span-2">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+            <UserIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
           </LampEffect>
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Team extension
@@ -38,9 +38,9 @@ export default function BusinessServices() {
         </InfoCard>
 
         {/* Service Card 2 */}
-        <InfoCard className="w-full">
+        <InfoCard className="w-full md:col-span-2">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+            <LaptopMinimalCheckIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
           </LampEffect>
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Service extension
@@ -53,9 +53,9 @@ export default function BusinessServices() {
         </InfoCard>
 
         {/* Service Card 3 */}
-        <InfoCard className="w-full">
+        <InfoCard className="w-full md:col-span-2">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+            <NetworkIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
           </LampEffect>
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             IT project hand-over
@@ -68,9 +68,9 @@ export default function BusinessServices() {
         </InfoCard>
 
         {/* Service Card 4 */}
-        <InfoCard className="w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
+        <InfoCard className="w-full md:col-span-3">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+            <RecycleIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
           </LampEffect>
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Digital transformation
@@ -83,9 +83,9 @@ export default function BusinessServices() {
         </InfoCard>
 
         {/* Service Card 5 */}
-        <InfoCard className="w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
+        <InfoCard className="w-full md:col-span-3">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+            <ChartSpline className="text-night-blue size-6 sm:size-7 md:size-8" />
           </LampEffect>
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             IT staff augmentation / CTO as a service
