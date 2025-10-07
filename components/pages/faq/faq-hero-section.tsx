@@ -19,7 +19,7 @@ export default function HeroSection() {
       {/* Hero Content */}
       <div className="flex flex-1 flex-col items-center justify-center px-2 sm:px-4 md:px-6 lg:px-8">
         <div className="flex w-full max-w-[95%] flex-col items-center justify-center gap-4 text-center sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[75%]">
-          <h1 className="brig custom-font-bricolage text-xl leading-tight font-bold tracking-tight sm:text-2xl sm:leading-snug md:text-3xl md:leading-normal lg:text-4xl lg:leading-relaxed xl:text-5xl xl:leading-loose">
+          <h1 className="brig custom-font-bricolage text-xl leading-tight font-bold tracking-tight sm:text-2xl sm:leading-snug md:text-3xl md:leading-normal lg:text-[50px] lg:leading-relaxed xl:text-5xl xl:leading-loose">
             FAQ
           </h1>
           <p className="text-xs leading-relaxed font-normal sm:text-sm md:text-base lg:text-lg">

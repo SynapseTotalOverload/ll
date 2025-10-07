@@ -22,7 +22,7 @@ export default function FAQAccordion() {
           className="flex w-full max-w-4xl flex-col gap-3 sm:gap-4 md:gap-5"
           defaultValue="item-1"
         >
-          <AccordionItem value="item-1" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-1" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               <span>What&apos;s the difference between the front-end and the back-end?</span>
             </AccordionTrigger>
@@ -36,7 +36,7 @@ export default function FAQAccordion() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-2" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-2" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               What are your pricing models?
             </AccordionTrigger>
@@ -47,7 +47,7 @@ export default function FAQAccordion() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-3" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-3" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               How long does it take to get started?
             </AccordionTrigger>
@@ -58,7 +58,7 @@ export default function FAQAccordion() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-4" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-4" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               Do you offer any discounts for long-term contracts?
             </AccordionTrigger>
@@ -69,7 +69,7 @@ export default function FAQAccordion() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-5" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-5" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               What are the payment methods available?
             </AccordionTrigger>
@@ -80,7 +80,7 @@ export default function FAQAccordion() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-6" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-6" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               Can I customize my plan based on my needs?
             </AccordionTrigger>
@@ -91,7 +91,7 @@ export default function FAQAccordion() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-7" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-7" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               Are there any additional fees for extra features?
             </AccordionTrigger>
@@ -102,7 +102,7 @@ export default function FAQAccordion() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-8" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-8" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               Is there a trial period available for testing the service?
             </AccordionTrigger>
@@ -113,7 +113,7 @@ export default function FAQAccordion() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-9" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-9" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               Do you provide customer support during weekends?
             </AccordionTrigger>
@@ -124,7 +124,7 @@ export default function FAQAccordion() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-10" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-10" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               Are there any restrictions on the number of users per plan?
             </AccordionTrigger>
@@ -135,7 +135,7 @@ export default function FAQAccordion() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-11" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-11" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               What happens if I exceed the usage limits of my plan?
             </AccordionTrigger>
@@ -146,7 +146,7 @@ export default function FAQAccordion() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-12" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-12" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               How secure is my data with your service?
             </AccordionTrigger>
@@ -157,7 +157,7 @@ export default function FAQAccordion() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-13" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-13" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               Can I downgrade or upgrade my plan at any time?
             </AccordionTrigger>
@@ -168,7 +168,7 @@ export default function FAQAccordion() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-14" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-14" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               Are there any integrations with third-party tools available?
             </AccordionTrigger>
@@ -179,7 +179,7 @@ export default function FAQAccordion() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-15" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-15" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               What is your policy on data privacy and GDPR compliance?
             </AccordionTrigger>
@@ -190,7 +190,7 @@ export default function FAQAccordion() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-16" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-16" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               Do you have a mobile app for accessing the service on the go?
             </AccordionTrigger>
