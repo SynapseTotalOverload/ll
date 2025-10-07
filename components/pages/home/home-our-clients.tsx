@@ -1,6 +1,10 @@
 "use client";
 import SignTitle from "@/components/modules/sign-title";
-import PlaceholderLogo from "@/public/assets/svg/placeholder-logo.svg";
+import PlaceholderLogo1 from "@/public/assets/mocks/home/cp1.svg";
+import PlaceholderLogo2 from "@/public/assets/mocks/home/cp2.svg";
+import PlaceholderLogo3 from "@/public/assets/mocks/home/cp3.svg";
+import PlaceholderLogo4 from "@/public/assets/mocks/home/cp4.svg";
+
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 export default function OurClients() {
@@ -19,24 +23,30 @@ export default function OurClients() {
         <CarouselContent className="px-2 py-4 sm:px-4 sm:py-6 md:px-6 md:py-8 lg:px-8 lg:py-10 xl:px-10 xl:py-12">
           {Array.from({ length: 10 }).map((_, index) => (
             <CarouselItem key={index}>
-              <div className="grid grid-cols-2 grid-rows-3 gap-4 sm:grid-cols-3 sm:grid-rows-2 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
+              <div className="grid grid-cols-2 grid-rows-3 gap-4 sm:grid-cols-3 sm:grid-rows-2 sm:gap-6 md:grid-cols-4 md:gap-8 lg:gap-10 xl:gap-12">
                 <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
-                  <PlaceholderLogo className="" />
+                  <PlaceholderLogo1 className="" />
                 </div>
                 <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
-                  <PlaceholderLogo className="" />np
+                  <PlaceholderLogo2 className="" />
                 </div>
                 <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
-                  <PlaceholderLogo className="" />
+                  <PlaceholderLogo3 className="" />
                 </div>
                 <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
-                  <PlaceholderLogo className="" />
+                  <PlaceholderLogo4 className="" />
                 </div>
                 <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
-                  <PlaceholderLogo className="" />
+                  <PlaceholderLogo2 className="" />
                 </div>
                 <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
-                  <PlaceholderLogo className="" />
+                  <PlaceholderLogo1 className="" />
+                </div>
+                <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
+                  <PlaceholderLogo3 className="" />
+                </div>
+                <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
+                  <PlaceholderLogo4 className="" />
                 </div>
               </div>
             </CarouselItem>

@@ -5,8 +5,8 @@ import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import Image from "next/image";
 import Product from "@/public/assets/placeholder.png";
-import Product1 from "@/public/assets/mocks/1.png";
-import Product3 from "@/public/assets/mocks/2.png";
+import Product1 from "@/public/assets/mocks/home/1.png";
+import Product3 from "@/public/assets/mocks/home/2.png";
 
 export default function HomeCaseStudies() {
   return (

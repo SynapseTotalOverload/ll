@@ -1,4 +1,7 @@
-import BgTest from "@/public/assets/home-hero.png";
+import Bg1 from "@/public/assets/mocks/startups/1.png";
+import Bg2 from "@/public/assets/mocks/startups/2.png";
+import Bg3 from "@/public/assets/mocks/startups/3.png";
+
 export const portfolio: {
   tags: string[];
   id: string;
@@ -16,7 +19,7 @@ export const portfolio: {
     platform: "Platform",
     description:
       "Boat Export USA was created to simplify the process of purchasing and exporting boats, yachts, and marine equipment from the United States to buyers worldwide. It connects international clients with U.S. sellers, offering support with selection, payment, and global shipping logistics.",
-    backgroundUrl: BgTest.src,
+    backgroundUrl: Bg1.src,
   },
   {
     tags: ["Shipping", "Yachts", "Logistics", "Sellers", "Buyers"],
@@ -26,7 +29,7 @@ export const portfolio: {
     platform: "Platform",
     description:
       "Boat Export USA was created to simplify the process of purchasing and exporting boats, yachts, and marine equipment from the United States to buyers worldwide. It connects international clients with U.S. sellers, offering support with selection, payment, and global shipping logistics.",
-    backgroundUrl: BgTest.src,
+    backgroundUrl: Bg1.src,
   },
   {
     tags: ["Shipping", "Yachts", "Logistics", "Sellers", "Buyers"],
@@ -36,7 +39,7 @@ export const portfolio: {
     platform: "Platform",
     description:
       "Boat Export USA was created to simplify the process of purchasing and exporting boats, yachts, and marine equipment from the United States to buyers worldwide. It connects international clients with U.S. sellers, offering support with selection, payment, and global shipping logistics.",
-    backgroundUrl: BgTest.src,
+    backgroundUrl: Bg1.src,
   },
   {
     tags: ["Shipping", "Yachts", "Logistics", "Sellers", "Buyers"],
@@ -46,6 +49,6 @@ export const portfolio: {
     platform: "Platform",
     description:
       "Boat Export USA was created to simplify the process of purchasing and exporting boats, yachts, and marine equipment from the United States to buyers worldwide. It connects international clients with U.S. sellers, offering support with selection, payment, and global shipping logistics.",
-    backgroundUrl: BgTest.src,
+    backgroundUrl: Bg1.src,
   },
 ];
