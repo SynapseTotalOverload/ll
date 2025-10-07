@@ -5,7 +5,7 @@ import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import { LampEffect } from "@/components/ui/lamp-effect";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
-import { portfolio } from "@/constants/portfolio/portfolio";
+import { portfolioBusiness as portfolio } from "@/constants/portfolio/portfolio";
 import PortfolioCard from "@/components/modules/portfolio-card";
 import DynamicSmallProjectCard from "@/components/pages/dynamic/dynamic-small-project-card";
 

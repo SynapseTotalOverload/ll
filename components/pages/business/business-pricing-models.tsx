@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { BedIcon, MoveRightIcon } from "lucide-react";
+import { BedIcon, ClockIcon, MoveRightIcon, Receipt, Users2Icon } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import { LampEffect } from "@/components/ui/lamp-effect";
@@ -24,8 +24,8 @@ export default function BusinessPricingModels() {
         {/* Pricing Model 1 */}
         <div className="w-full">
           <div className="flex flex-row items-center gap-3 sm:gap-4">
-            <BedIcon className="text-night-blue h-5 w-5 sm:h-6 sm:w-6" />
-            <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Fixed price</InfoCard.Title>
+            <Receipt className="text-night-blue h-5 w-5 sm:h-6 sm:w-6" />
+            <InfoCard.Title className="text-lg sm:text-xl md:text-xl">Fixed price</InfoCard.Title>
           </div>
           <InfoCard.Description className="mt-3 text-sm sm:mt-4 sm:text-base md:text-lg">
             This collaboration model is ideal for building an MVP or the initial version of a product. It&apos;ll allow
@@ -37,10 +37,8 @@ export default function BusinessPricingModels() {
         {/* Pricing Model 2 */}
         <div className="w-full">
           <div className="flex flex-row items-center gap-3 sm:gap-4">
-            <BedIcon className="text-night-blue h-5 w-5 sm:h-6 sm:w-6" />
-            <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
-              Dedicated development team
-            </InfoCard.Title>
+            <Users2Icon className="text-night-blue h-5 w-5 sm:h-6 sm:w-6" />
+            <InfoCard.Title className="text-lg sm:text-xl md:text-xl">Dedicated development team</InfoCard.Title>
           </div>
           <InfoCard.Description className="mt-3 text-sm sm:mt-4 sm:text-base md:text-lg">
             A go-to option if you have a ready solution that needs scaling. With this pricing model, you&apos;ll have a
@@ -52,8 +50,8 @@ export default function BusinessPricingModels() {
         {/* Pricing Model 3 */}
         <div className="w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
           <div className="flex flex-row items-center gap-3 sm:gap-4">
-            <BedIcon className="text-night-blue h-5 w-5 sm:h-6 sm:w-6" />
-            <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Time and material</InfoCard.Title>
+            <ClockIcon className="text-night-blue h-5 w-5 sm:h-6 sm:w-6" />
+            <InfoCard.Title className="text-lg sm:text-xl md:text-xl">Time and material</InfoCard.Title>
           </div>
           <InfoCard.Description className="mt-3 text-sm sm:mt-4 sm:text-base md:text-lg">
             With this model, you&apos;ll pay only for hours spent and materials used during the project. This flexible

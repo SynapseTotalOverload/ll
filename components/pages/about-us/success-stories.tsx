@@ -4,7 +4,9 @@ import { MoveRightIcon } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import Image from "next/image";
-import Product from "@/public/assets/placeholder.png";
+import bgA2 from "@/public/assets/mocks/about-us/1.png";
+import bgA3 from "@/public/assets/mocks/about-us/2.png";
+import bgA1 from "@/public/assets/mocks/about-us/3.png";
 
 export default function SuccessStories() {
   return (
@@ -30,7 +32,7 @@ export default function SuccessStories() {
             <span className="text-plastic text-[14px]">Mobile App</span>
             <InfoCard.Title className="">TELEDYNE ISCO FlowCalc</InfoCard.Title>
           </div>
-          <Image alt="product" className="w-full object-cover" src={Product} />
+          <Image alt="product" className="w-full object-cover" src={bgA1} />
         </InfoCard>
 
         {/* Case Study Card 2 */}
@@ -39,7 +41,7 @@ export default function SuccessStories() {
             <span className="text-plastic text-[14px]">Platform</span>
             <InfoCard.Title className="">Sxipher.AI</InfoCard.Title>
           </div>
-          <Image alt="product" className="w-full object-cover" src={Product} />
+          <Image alt="product" className="w-full object-cover" src={bgA2} />
         </InfoCard>
 
         {/* Case Study Card 3 */}
@@ -48,7 +50,7 @@ export default function SuccessStories() {
             <span className="text-plastic text-[14px]">Mobile App</span>
             <InfoCard.Title className="">Outspeak</InfoCard.Title>
           </div>
-          <Image alt="product" className="w-full object-cover" src={Product} />
+          <Image alt="product" className="w-full object-cover" src={bgA3} />
         </InfoCard>
       </div>
     </div>
