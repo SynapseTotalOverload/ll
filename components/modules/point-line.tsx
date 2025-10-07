@@ -29,10 +29,10 @@ export function PointLine({
         </div>
       </div>
       <div ref={containerRef} className="mb-8 flex flex-col gap-2">
-        <span className="text-plastic text-[20px] font-[700]">
+        <span className="text-plastic text-[16px] font-[700]">
           {index}. {title}
         </span>
-        <p className="text-[24px] font-[400] text-white">{description}</p>
+        <p className="text-[20px] font-[400] text-white">{description}</p>
       </div>
     </div>
   );

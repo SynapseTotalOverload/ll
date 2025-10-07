@@ -30,8 +30,8 @@ export default function PortfolioCard({
       >
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-col gap-2">
-            <span className="text-charcole text-[14px]">{platform}</span>
-            <span className="bricolage text-[42px] font-[700]">{fullName}</span>
+            <span className="text-charcole text-[12px]">{platform}</span>
+            <span className="bricolage text-[36px] font-[700]">{fullName}</span>
           </div>
           <span className="max-w-[36%] font-[400] text-white">{description}</span>
         </div>
@@ -39,14 +39,14 @@ export default function PortfolioCard({
           <div className="bg-opacity-50-black border-border-black flex flex-row gap-6 rounded-full p-4 px-6">
             {tags.map((item, id) => {
               return (
-                <span className="text-[14px] font-[300] text-white capitalize" key={item + id}>
+                <span className="text-[12px] font-[300] text-white capitalize" key={item + id}>
                   {"#" + item}
                 </span>
               );
             })}
           </div>
           <Link href={fullLink} className="flex flex-row items-center">
-            <span className="font-[700]">Check out the full story and results here</span>
+            <span className="text-sm font-[700]">Check out the full story and results here</span>
             <Button size="icon" className="blue-grad">
               <ArrowRight className="text-night-blue size-6" />
             </Button>

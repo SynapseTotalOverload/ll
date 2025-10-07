@@ -18,7 +18,7 @@ export function SmallCaseStudies({
   return (
     <InfoCard className="flex h-full flex-1 flex-col gap-4">
       <div className="flex flex-col gap-2">
-        <span className="text-plastic text-[14px]">{type}</span>
+        <span className="text-plastic text-[12px]">{type}</span>
         <InfoCard.Title className="">{title}</InfoCard.Title>
       </div>
       <Image alt="product" className="h-[100px] w-full flex-1 object-cover" src={image} width={300} height={100} />

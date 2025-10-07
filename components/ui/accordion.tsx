@@ -20,7 +20,7 @@ function AccordionTrigger({ className, children, ...props }: React.ComponentProp
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
         className={cn(
-          "focus-visible:border-ring bg-opacity-60-black focus-visible:ring-ring/50 flex flex-1 items-center justify-between gap-4 rounded-t-md px-8 py-4 text-left text-sm font-medium transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:rounded-b-md disabled:opacity-50 [&[data-state=open]>svg]:rotate-90",
+          "focus-visible:border-ring bg-opacity-60-black focus-visible:ring-ring/50 flex flex-1 items-center justify-between gap-4 rounded-t-md px-8 py-4 text-left text-xs font-medium transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:rounded-b-md disabled:opacity-50 [&[data-state=open]>svg]:rotate-90",
           className,
         )}
         {...props}
@@ -36,7 +36,7 @@ function AccordionContent({ className, children, ...props }: React.ComponentProp
   return (
     <AccordionPrimitive.Content
       data-slot="accordion-content"
-      className="data-[state=closed]:animate-accordion-up bg-opacity-60-black data-[state=open]:animate-accordion-down overflow-hidden rounded-b-md px-8 text-sm"
+      className="data-[state=closed]:animate-accordion-up bg-opacity-60-black data-[state=open]:animate-accordion-down overflow-hidden rounded-b-md px-8 text-xs"
       {...props}
     >
       <div className={cn("pt-0 pb-4", className)}>{children}</div>

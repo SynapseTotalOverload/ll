@@ -76,12 +76,12 @@ export default function MenuBar({ className }: { className?: string }) {
     <>
       {/* Desktop Menu - Hidden on mobile */}
       <div className="hidden lg:block">
-        <Menubar className={`text-sm sm:text-base ${className}`}>
+        <Menubar className={`text-xs sm:text-sm ${className}`}>
           <MenubarMenu>
             <Link href="/" className="block">
               <MenubarTrigger
                 data-active={active === "home"}
-                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-base"
+                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-sm"
               >
                 Home
               </MenubarTrigger>
@@ -92,7 +92,7 @@ export default function MenuBar({ className }: { className?: string }) {
             <Link href="/startups" className="block">
               <MenubarTrigger
                 data-active={active === "startups"}
-                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-base"
+                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-sm"
               >
                 For startups
               </MenubarTrigger>
@@ -150,7 +150,7 @@ export default function MenuBar({ className }: { className?: string }) {
             <Link href="/blog" className="block">
               <MenubarTrigger
                 data-active={active === "blog"}
-                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-base"
+                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-sm"
               >
                 Blog
               </MenubarTrigger>
@@ -161,7 +161,7 @@ export default function MenuBar({ className }: { className?: string }) {
             <Link href="/faq" className="block">
               <MenubarTrigger
                 data-active={active === "faq"}
-                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-base"
+                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-sm"
               >
                 FAQ
               </MenubarTrigger>
@@ -248,7 +248,7 @@ export default function MenuBar({ className }: { className?: string }) {
             <Link href="/about-us" className="block">
               <MenubarTrigger
                 data-active={active === "about-us"}
-                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-base"
+                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-sm"
               >
                 About us
               </MenubarTrigger>
@@ -268,7 +268,7 @@ export default function MenuBar({ className }: { className?: string }) {
           <DrawerContent className="border-charcole border-t bg-transparent backdrop-blur-lg">
             <div className="mx-auto w-full max-w-sm">
               <DrawerHeader className="border-b border-white/20">
-                <DrawerTitle className="text-lg font-semibold text-white">Menu</DrawerTitle>
+                <DrawerTitle className="text-base font-semibold text-white">Menu</DrawerTitle>
               </DrawerHeader>
 
               <div className="max-h-[60vh] overflow-y-auto p-4">

@@ -8,7 +8,7 @@ export default function HeroSection() {
     <div className="hero-bg flex min-h-screen w-full flex-col justify-between bg-cover bg-center px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-20 lg:py-12">
       {/* Header Navigation */}
       <header className="flex flex-row items-center justify-between">
-        <Button variant="link" className="text-sm font-medium sm:text-base md:text-lg">
+        <Button variant="link" className="text-xs font-medium sm:text-sm md:text-base">
           LogicCraft
         </Button>
         <div className="flex flex-1 flex-row items-center justify-end md:justify-center">
@@ -19,13 +19,13 @@ export default function HeroSection() {
       {/* Hero Content */}
       <div className="flex flex-1 flex-col items-center justify-center px-2 sm:px-4 md:px-6 lg:px-8">
         <div className="flex w-full max-w-[95%] flex-col items-center justify-center gap-4 text-center sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[75%]">
-          <h1 className="brig custom-font-bricolage text-3xl leading-tight font-bold tracking-tight sm:text-4xl sm:leading-snug md:text-5xl md:leading-normal lg:text-6xl lg:leading-relaxed xl:text-7xl xl:leading-loose">
+          <h1 className="brig custom-font-bricolage text-xl leading-tight font-bold tracking-tight sm:text-2xl sm:leading-snug md:text-3xl md:leading-normal lg:text-4xl lg:leading-relaxed xl:text-5xl xl:leading-loose">
             FAQ
           </h1>
-          <p className="text-base leading-relaxed font-normal sm:text-lg md:text-xl lg:text-2xl">
+          <p className="text-xs leading-relaxed font-normal sm:text-sm md:text-base lg:text-lg">
             Hi! Explore answers to the questions we get asked the most.
           </p>
-          <p className="text-sm leading-relaxed font-normal sm:text-base md:text-lg lg:text-xl">
+          <p className="text-xs leading-relaxed font-normal sm:text-sm md:text-base lg:text-lg">
             We do our best to provide you with the exceptional quality of software development, make the process smooth
             and transparent and answer all your questions.
           </p>

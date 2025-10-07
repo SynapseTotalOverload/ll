@@ -11,7 +11,7 @@ function CountCardRoot({ children, className, ...props }: HTMLAttributes<HTMLDiv
 
 function CountCardIndex({ children, className, ...props }: HTMLAttributes<HTMLSpanElement>) {
   return (
-    <span className={cn("text-plastic custom-font-bricolage self-start text-[126px] font-[700]", className)} {...props}>
+    <span className={cn("text-plastic custom-font-bricolage self-start text-[100px] font-[700]", className)} {...props}>
       {children}
     </span>
   );
@@ -25,7 +25,7 @@ function CountCardSeparator({ className, ...props }: Omit<HTMLAttributes<HTMLSpa
 
 function CountCardTitle({ children, className, ...props }: HTMLAttributes<HTMLSpanElement>) {
   return (
-    <span className={cn("text-[20px] font-[700] capitalize", className)} {...props}>
+    <span className={cn("text-[16px] font-[700] capitalize", className)} {...props}>
       {children}
     </span>
   );

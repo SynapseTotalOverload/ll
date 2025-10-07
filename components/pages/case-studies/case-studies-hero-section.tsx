@@ -17,7 +17,7 @@ export default function CaseStudiesHeroSection() {
 
       {/* Hero Title */}
       <div className="flex flex-col items-center justify-center">
-        <h1 className="bricolage max-w-[70%] text-center text-[64px] font-[700] text-white">
+        <h1 className="bricolage max-w-[70%] text-center text-[48px] font-[700] text-white">
           We take products and brands to the next level
         </h1>
       </div>

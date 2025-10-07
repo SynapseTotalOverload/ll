@@ -14,7 +14,7 @@ function SignTitleTitle({ className, children, ...props }: HTMLAttributes<HTMLSp
     <span
       className={cn(
         "flex w-fit",
-        "bricolage align-middle text-[50px] leading-[120%] font-bold tracking-[-3%] capitalize",
+        "bricolage align-middle text-[40px] leading-[120%] font-bold tracking-[-3%] capitalize",
         className,
       )}
       {...props}
@@ -29,7 +29,7 @@ function SignTitleDescription({ className, children, ...props }: HTMLAttributes<
     <span
       className={cn(
         "flex w-fit",
-        "align-middle font-['Apple_SD_Gothic_Neo'] text-[24px] leading-[150%] font-normal tracking-[-3%] lowercase",
+        "align-middle font-['Apple_SD_Gothic_Neo'] text-[20px] leading-[150%] font-normal tracking-[-3%] lowercase",
         className,
       )}
       {...props}

@@ -20,7 +20,7 @@ function InfoCardTitle({ className, children, ...props }: HTMLAttributes<HTMLSpa
     <span
       className={cn(
         "flex flex-col",
-        "align-middle font-['Apple_SD_Gothic_Neo'] text-[20px] leading-[100%] font-bold tracking-[0%] uppercase",
+        "align-middle font-['Apple_SD_Gothic_Neo'] text-[16px] leading-[100%] font-bold tracking-[0%] uppercase",
         className,
       )}
       {...props}
@@ -35,7 +35,7 @@ function InfoCardDescription({ className, children, ...props }: HTMLAttributes<H
     <span
       className={cn(
         "flex flex-col",
-        "font-['Apple_SD_Gothic_Neo'] text-[16px] leading-[150%] font-medium tracking-[0%]",
+        "font-['Apple_SD_Gothic_Neo'] text-[14px] leading-[150%] font-medium tracking-[0%]",
         className,
       )}
       {...props}

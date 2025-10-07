@@ -9,7 +9,7 @@ export default function HeroSection() {
     <div className="hero-bg flex min-h-screen w-full flex-col justify-between bg-cover bg-center px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-20 lg:py-12">
       {/* Header Navigation */}
       <header className="flex flex-row items-center justify-between">
-        <Button variant="link" className="text-sm font-medium sm:text-base md:text-lg">
+        <Button variant="link" className="text-xs font-medium sm:text-sm md:text-base">
           LogicCraft
         </Button>
         <div className="flex flex-1 flex-row items-center justify-end md:justify-center">
@@ -20,15 +20,15 @@ export default function HeroSection() {
       {/* Hero Content */}
       <div className="flex flex-1 flex-col items-center justify-center px-2 sm:px-4 md:px-6 lg:px-8">
         <div className="flex w-full max-w-[95%] flex-col items-center justify-center gap-4 text-center sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[75%]">
-          <h1 className="brig  custom-font-bricolage text-3xl leading-tight font-bold tracking-tight sm:text-4xl sm:leading-snug md:text-5xl lg:text-6xl  xl:text-7xl ">
+          <h1 className="brig custom-font-bricolage text-2xl leading-tight font-bold tracking-tight sm:text-3xl sm:leading-snug md:text-4xl lg:text-5xl xl:text-6xl">
             Software team extension services for scaling projects never seen before!
           </h1>
-          <p className="text-base leading-relaxed font-normal sm:text-lg md:text-xl lg:text-xl">
+          <p className="text-sm leading-relaxed font-normal sm:text-base md:text-lg lg:text-lg">
             Yes, running a business can be overwhelming. Especially when your company has reached a pivotal point and
             needs to extend its business model. Digital transformation can help you make headway, while successful
             scaling will fulfill your organization&apos;s potential.
           </p>
-          <p className="text-sm leading-relaxed font-normal sm:text-base md:text-lg lg:text-lg">
+          <p className="text-xs leading-relaxed font-normal sm:text-sm md:text-base lg:text-base">
             To focus on your growing business, you&apos;ll need a proficient technology partner to delegate your
             software woes. We at LogicCraft are experts in product design, web, and mobile development. Additionally, we
             empower your endeavors by providing a fractional CTO service, ensuring strategic technical leadership. So

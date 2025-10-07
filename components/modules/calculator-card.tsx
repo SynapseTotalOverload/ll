@@ -30,7 +30,7 @@ export default function CalculatorCard({
       {...props}
     >
       <LampEffect className="">{icon}</LampEffect>
-      <span className="text-lg font-bold">{title}</span>
+      <span className="text-base font-bold">{title}</span>
       {active && <TickCircle className="text-night-blue absolute top-0 right-0 size-6 sm:size-7 md:size-8" />}
     </div>
   );
