@@ -20,7 +20,7 @@ export default function QAFAQ() {
           className="flex w-full max-w-4xl flex-col gap-3 sm:gap-4 md:gap-5"
           defaultValue="item-1"
         >
-          <AccordionItem value="item-1" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-1" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               <span>What is the difference between QA Automation and Manual Testing?</span>
             </AccordionTrigger>
@@ -33,7 +33,7 @@ export default function QAFAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-2" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-2" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               How long does it take to set up a QA process?
             </AccordionTrigger>
@@ -46,7 +46,7 @@ export default function QAFAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-3" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-3" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               What tools do you use for QA testing?
             </AccordionTrigger>

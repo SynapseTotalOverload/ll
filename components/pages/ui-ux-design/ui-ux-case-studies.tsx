@@ -23,7 +23,7 @@ export default function UIUXCaseStudies() {
       </div>
 
       {/* Case Studies Grid */}
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-12">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-8">
         {/* Case Study Card 1 */}
         <InfoCard className="flex w-full flex-col gap-4">
           <div className="flex flex-col gap-2">
@@ -43,7 +43,7 @@ export default function UIUXCaseStudies() {
         </InfoCard>
 
         {/* Case Study Card 3 */}
-        <InfoCard className="flex w-full flex-col gap-4 sm:gap-6 md:gap-8 sm:col-span-1 md:col-span-2 lg:col-span-1">
+        <InfoCard className="flex w-full flex-col gap-4 sm:col-span-1 sm:gap-6 md:col-span-2 md:gap-8 lg:col-span-1">
           <div className="flex flex-col gap-2">
             <span className="text-plastic text-xs sm:text-sm md:text-base">Platform</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Tripsha</InfoCard.Title>

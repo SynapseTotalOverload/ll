@@ -10,7 +10,7 @@ export default function QAHowWeWork() {
         <SignTitle.Separator />
       </SignTitle>
 
-      <div className="mt-6 flex flex-col items-center justify-center gap-6 sm:mt-8 sm:gap-8 md:mt-10 md:gap-10 lg:gap-12">
+      <div className="mt-6 flex flex-col items-center justify-center gap-6 sm:mt-8 sm:gap-8 md:mt-10 md:gap-10 lg:gap-8">
         <PointLine
           title="1. Reviewing the existing DOCUMENTATION"
           description="Receive a product presentation from the client."

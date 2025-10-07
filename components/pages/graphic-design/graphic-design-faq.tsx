@@ -20,7 +20,7 @@ export default function GraphicDesignFAQ() {
           className="flex w-full max-w-4xl flex-col gap-3 sm:gap-4 md:gap-5"
           defaultValue="item-1"
         >
-          <AccordionItem value="item-1" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-1" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               <span>What services do you offer in graphic design?</span>
             </AccordionTrigger>
@@ -33,7 +33,7 @@ export default function GraphicDesignFAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-2" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-2" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               How long does a typical design project take?
             </AccordionTrigger>
@@ -46,7 +46,7 @@ export default function GraphicDesignFAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-3" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-3" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               Do you provide source files with the final designs?
             </AccordionTrigger>

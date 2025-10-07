@@ -1,6 +1,8 @@
 "use client";
-import { PointLine } from "@/components/modules/point-line";
+import { Dna, Lamp, Ruler, MessageSquare, CheckCircle } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
+import InfoCard from "@/components/modules/info-card";
+import { LampEffect } from "@/components/ui/lamp-effect";
 
 export default function GraphicDesignHowWeWork() {
   return (
@@ -14,74 +16,77 @@ export default function GraphicDesignHowWeWork() {
         <SignTitle.Separator />
       </SignTitle>
 
-      {/* Mobile: Horizontal scroll */}
-      <div className="mt-6 overflow-x-auto pb-4 sm:hidden">
-        <div className="flex gap-6 px-4" style={{ width: "max-content" }}>
-          <div className="w-80 flex-shrink-0">
-            <PointLine
-              title="Understanding Your Brand"
-              description="We start by immersing ourselves in your brand identity, values, and target audience to ensure our designs align with your goals."
-              index={1}
-            />
-          </div>
-          <div className="w-80 flex-shrink-0">
-            <PointLine
-              title="Concept Development"
-              description="Our designers brainstorm and create concepts that reflect your vision, ensuring every element is meaningful and cohesive."
-              index={2}
-            />
-          </div>
-          <div className="w-80 flex-shrink-0">
-            <PointLine
-              title="Design Execution"
-              description="Using modern tools and techniques, we craft high-quality visuals, from logos and marketing materials to digital assets and custom illustrations."
-              index={3}
-            />
-          </div>
-          <div className="w-80 flex-shrink-0">
-            <PointLine
-              title="Feedback & Refinement"
-              description="Collaboration is key. We gather your feedback to fine-tune designs, ensuring the final product exceeds your expectations."
-              index={4}
-            />
-          </div>
-          <div className="w-80 flex-shrink-0">
-            <PointLine
-              title="Delivery & Support"
-              description="We deliver ready-to-use assets in all required formats and offer ongoing support to keep your visuals fresh and relevant."
-              index={5}
-            />
-          </div>
-        </div>
-      </div>
+      {/* How We Work Grid */}
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-6 md:gap-10 lg:gap-8">
+        {/* Step 1 */}
+        <InfoCard className="w-full md:col-span-2">
+          <LampEffect>
+            <Dna className="text-night-blue size-6 sm:size-7 md:size-8" />
+          </LampEffect>
+          <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
+            Understanding Your Brand
+          </InfoCard.Title>
+          <InfoCard.Description className="mt-3 text-sm sm:mt-4 sm:text-base md:text-lg">
+            We start by immersing ourselves in your brand identity, values, and target audience to ensure our designs
+            align with your goals.
+          </InfoCard.Description>
+        </InfoCard>
 
-      {/* Desktop: Vertical layout */}
-      <div className="mt-6 hidden flex-col items-center justify-center gap-6 sm:mt-8 sm:flex sm:gap-8 md:mt-10 md:gap-10 lg:gap-12">
-        <PointLine
-          title="Understanding Your Brand"
-          description="We start by immersing ourselves in your brand identity, values, and target audience to ensure our designs align with your goals."
-          index={1}
-        />
-        <PointLine
-          title="Concept Development"
-          description="Our designers brainstorm and create concepts that reflect your vision, ensuring every element is meaningful and cohesive."
-          index={2}
-        />
-        <PointLine
-          title="Design Execution"
-          description="Using modern tools and techniques, we craft high-quality visuals, from logos and marketing materials to digital assets and custom illustrations."
-          index={3}
-        />
-        <PointLine
-          title="Feedback & Refinement"
-          description="Collaboration is key. We gather your feedback to fine-tune designs, ensuring the final product exceeds your expectations."
-          index={4}
-        />
-        <PointLine
-          title="Delivery & Support"
-          description="We deliver ready-to-use assets in all required formats and offer ongoing support to keep your visuals fresh and relevant."
-          index={5}
-        />
+        {/* Step 2 */}
+        <InfoCard className="w-full md:col-span-2">
+          <LampEffect>
+            <Lamp className="text-night-blue size-6 sm:size-7 md:size-8" />
+          </LampEffect>
+          <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
+            Concept Development
+          </InfoCard.Title>
+          <InfoCard.Description className="mt-3 text-sm sm:mt-4 sm:text-base md:text-lg">
+            Our designers brainstorm and create concepts that reflect your vision, ensuring every element is meaningful
+            and cohesive.
+          </InfoCard.Description>
+        </InfoCard>
+
+        {/* Step 3 */}
+        <InfoCard className="w-full md:col-span-2">
+          <LampEffect>
+            <Ruler className="text-night-blue size-6 sm:size-7 md:size-8" />
+          </LampEffect>
+          <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
+            Design Execution
+          </InfoCard.Title>
+          <InfoCard.Description className="mt-3 text-sm sm:mt-4 sm:text-base md:text-lg">
+            Using modern tools and techniques, we craft high-quality visuals, from logos and marketing materials to
+            digital assets and custom illustrations.
+          </InfoCard.Description>
+        </InfoCard>
+
+        {/* Step 4 */}
+        <InfoCard className="w-full md:col-span-3">
+          <LampEffect>
+            <MessageSquare className="text-night-blue size-6 sm:size-7 md:size-8" />
+          </LampEffect>
+          <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
+            Feedback & Refinement
+          </InfoCard.Title>
+          <InfoCard.Description className="mt-3 text-sm sm:mt-4 sm:text-base md:text-lg">
+            Collaboration is key. We gather your feedback to fine-tune designs, ensuring the final product exceeds your
+            expectations.
+          </InfoCard.Description>
+        </InfoCard>
+
+        {/* Step 5 */}
+        <InfoCard className="w-full md:col-span-3">
+          <LampEffect>
+            <CheckCircle className="text-night-blue size-6 sm:size-7 md:size-8" />
+          </LampEffect>
+          <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
+            Delivery & Support
+          </InfoCard.Title>
+          <InfoCard.Description className="mt-3 text-sm sm:mt-4 sm:text-base md:text-lg">
+            We deliver ready-to-use assets in all required formats and offer ongoing support to keep your visuals fresh
+            and relevant.
+          </InfoCard.Description>
+        </InfoCard>
       </div>
     </div>
   );

@@ -18,7 +18,7 @@ export default function BusinessSoftwareProcess() {
       </SignTitle>
 
       {/* Process Steps - Horizontal on small screens, alternating on larger screens */}
-      <div className="flex w-full flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+      <div className="flex w-full flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-8">
         {/* Small screens: Single line horizontal layout */}
         <div className="flex w-full flex-row gap-4 overflow-x-auto pb-4 sm:hidden">
           <CountCard className="min-w-[280px] flex-shrink-0">
@@ -77,7 +77,7 @@ export default function BusinessSoftwareProcess() {
         </div>
 
         {/* Larger screens: Alternating layout */}
-        <div className="hidden w-full flex-col gap-6 sm:flex sm:gap-8 md:gap-10 lg:gap-12">
+        <div className="hidden w-full flex-col gap-6 sm:flex sm:gap-8 md:gap-10 lg:gap-8">
           <CountCard className="w-full self-start sm:w-[95%] md:w-[90%] lg:w-[85%]">
             <CountCard.Index className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">01</CountCard.Index>
             <CountCard.Separator />

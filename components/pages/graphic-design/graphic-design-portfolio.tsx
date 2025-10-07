@@ -4,7 +4,10 @@ import { MoveRightIcon } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import Image from "next/image";
-import Product from "@/public/assets/placeholder.png";
+import BgG1 from '@/public/assets/mocks/graphic/1.png'
+import BgG2 from '@/public/assets/mocks/graphic/2.png'
+import BgG3 from '@/public/assets/mocks/graphic/3.png'
+
 
 export default function GraphicDesignPortfolio() {
   return (
@@ -23,14 +26,14 @@ export default function GraphicDesignPortfolio() {
       </div>
 
       {/* Portfolio Grid */}
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-12">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-6">
         {/* Portfolio Card 1 */}
         <InfoCard className="flex w-full flex-col gap-4">
           <div className="flex flex-col gap-2">
             <span className="text-plastic text-xs sm:text-sm md:text-base">Mobile App</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Truth or Dare</InfoCard.Title>
           </div>
-          <Image alt="product" className="w-full object-cover" src={Product} />
+          <Image alt="product" className="w-full object-cover" src={BgG1} />
         </InfoCard>
 
         {/* Portfolio Card 2 */}
@@ -39,7 +42,7 @@ export default function GraphicDesignPortfolio() {
             <span className="text-plastic text-xs sm:text-sm md:text-base">Mobile App</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Chill Bill</InfoCard.Title>
           </div>
-          <Image alt="product" className="w-full object-cover" src={Product} />
+          <Image alt="product" className="w-full object-cover" src={BgG2} />
         </InfoCard>
 
         {/* Portfolio Card 3 */}
@@ -48,7 +51,7 @@ export default function GraphicDesignPortfolio() {
             <span className="text-plastic text-xs sm:text-sm md:text-base">Platform</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">DigiBdr</InfoCard.Title>
           </div>
-          <Image alt="product" className="w-full object-cover" src={Product} />
+          <Image alt="product" className="w-full object-cover" src={BgG3} />
         </InfoCard>
       </div>
     </div>

@@ -23,7 +23,7 @@ export default function QAPortfolio() {
       </div>
 
       {/* Portfolio Grid */}
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-12">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-8">
         {/* Portfolio Card 1 */}
         <InfoCard className="flex w-full flex-col gap-4">
           <div className="flex flex-col gap-2">

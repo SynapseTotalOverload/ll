@@ -41,7 +41,7 @@ export default function MobileAppTechnologies() {
         </div>
 
         {/* Desktop: Grid layout */}
-        <div className="hidden w-full max-w-[90%] grid-cols-2 place-items-center gap-8 sm:grid sm:max-w-[80%] md:grid-cols-4 md:gap-10 lg:max-w-[70%] lg:gap-12 xl:max-w-[60%]">
+        <div className="hidden w-full max-w-[90%] grid-cols-2 place-items-center gap-8 sm:grid sm:max-w-[80%] md:grid-cols-4 md:gap-10 lg:max-w-[70%] lg:gap-8 xl:max-w-[60%]">
           <div className="text-center">
             <JsIcon className="" />
             <span className="mt-2 block text-sm text-white sm:text-base md:text-lg">Java</span>

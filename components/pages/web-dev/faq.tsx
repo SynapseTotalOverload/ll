@@ -20,7 +20,7 @@ export default function FAQ() {
           className="flex w-full max-w-4xl flex-col gap-3 sm:gap-4 md:gap-5"
           defaultValue="item-1"
         >
-          <AccordionItem value="item-1" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-1" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               <span>What&apos;s the difference between the front-end and the back-end?</span>
             </AccordionTrigger>
@@ -34,7 +34,7 @@ export default function FAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-2" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-2" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               How long does it take to develop a web application?
             </AccordionTrigger>
@@ -47,7 +47,7 @@ export default function FAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="item-3" className="border-b border-gray-200 pb-4 sm:pb-6">
+          <AccordionItem value="item-3" className="">
             <AccordionTrigger className="text-left text-base font-semibold sm:text-lg md:text-xl lg:text-2xl">
               What technologies do you use for web development?
             </AccordionTrigger>

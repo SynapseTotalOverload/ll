@@ -45,7 +45,7 @@ export default function GraphicDesignWhyUs() {
       </div>
 
       {/* Desktop: Vertical layout */}
-      <div className="mt-6 hidden flex-col items-center justify-center gap-6 sm:mt-8 sm:flex sm:gap-8 md:mt-10 md:gap-10 lg:gap-12">
+      <div className="mt-6 hidden flex-col items-center justify-center gap-6 sm:mt-8 sm:flex sm:gap-8 md:mt-10 md:gap-10 lg:gap-8">
         <PointLine
           title="1. PROJECTS SPANNING THE GLOBE"
           description="LogicCraft is a global company committed to providing tailored solutions that meet the diverse needs of clients, wherever they are."

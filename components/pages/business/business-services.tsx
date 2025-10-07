@@ -21,7 +21,7 @@ export default function BusinessServices() {
       </SignTitle>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-6 md:gap-10 lg:gap-12">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-6 md:gap-10 lg:gap-8">
         {/* Service Card 1 */}
         <InfoCard className="w-full md:col-span-2">
           <LampEffect>

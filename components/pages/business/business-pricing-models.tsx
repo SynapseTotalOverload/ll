@@ -20,7 +20,7 @@ export default function BusinessPricingModels() {
       </SignTitle>
 
       {/* Pricing Models Grid */}
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-12">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-8">
         {/* Pricing Model 1 */}
         <div className="w-full">
           <div className="flex flex-row items-center gap-3 sm:gap-4">

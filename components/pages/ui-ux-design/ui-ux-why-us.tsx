@@ -11,22 +11,22 @@ export default function UIUXWhyUs() {
         <SignTitle.Separator />
       </SignTitle>
 
-      <div className="mt-6 flex flex-col items-center justify-center gap-6 sm:mt-8 sm:gap-8 md:mt-10 md:gap-10 lg:gap-12">
+      <div className="mt-6 flex flex-col items-center justify-center gap-6 sm:mt-8 sm:gap-8 md:mt-10 md:gap-10 lg:gap-8">
         <PointLine
           title="Appealing design that works"
-          description="The secret to our work is that we don&apos;t just create appealing designs — we create designs that work. We use product design as a tool to reach your business goals and solve your end users&apos; problems."
+          description="The secret to our work is that we don't just create appealing designs — we create designs that work. We use product design as a tool to reach your business goals and solve your end users' problems."
           index={1}
           className="w-full max-w-full sm:max-w-[95%] md:max-w-[90%] lg:max-w-[85%]"
         />
         <PointLine
           title="Your go-to team"
-          description="While digital product design is our passion, we also offer our clients full-cycle software development services. Our team handles new product design and development at all stages. From idea evaluation through polished product design and software development and maintenance, you can count on our technological experience. Besides that, we strive for outperformance – one of LogicCraft&apos;s core values. By applying a proactive approach to software solutions, we manage to exceed client&apos;s expectations for professional product design services."
+          description="While digital product design is our passion, we also offer our clients full-cycle software development services. Our team handles new product design and development at all stages. From idea evaluation through polished product design and software development and maintenance, you can count on our technological experience. Besides that, we strive for outperformance – one of LogicCraft's core values. By applying a proactive approach to software solutions, we manage to exceed client's expectations for professional product design services."
           index={2}
           className="w-full max-w-full sm:max-w-[95%] md:max-w-[90%] lg:max-w-[85%]"
         />
         <PointLine
           title="Partnership"
-          description="Partnership occupies a very special place among our company&apos;s values. We consider our clients partners and treat them as such. Our collaborative approach is guided by transparency and trust, and we&apos;re always ready to consult and support you should you have any questions regarding our process. We also follow flexible pricing models and make sure that every detail is tailored exclusively for your project."
+          description="Partnership occupies a very special place among our company's values. We consider our clients partners and treat them as such. Our collaborative approach is guided by transparency and trust, and we're always ready to consult and support you should you have any questions regarding our process. We also follow flexible pricing models and make sure that every detail is tailored exclusively for your project."
           index={3}
           className="w-full max-w-full sm:max-w-[95%] md:max-w-[90%] lg:max-w-[85%]"
         />
