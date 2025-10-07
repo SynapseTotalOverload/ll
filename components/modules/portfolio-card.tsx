@@ -18,13 +18,16 @@ export default function PortfolioCard({
   backgroundUrl: string;
 }) {
   return (
-    <InfoCard
-      style={{
-        backgroundImage: `url(${backgroundUrl})`,
-      }}
-      className="h-[90vh] bg-cover bg-center bg-no-repeat"
-    >
-      <div className="flex h-full w-full flex-col p-6 justify-between rounded-2xl bg-cover bg-center bg-no-repeat">
+    <InfoCard className="h-[90vh] bg-no-repeat">
+      <div
+        style={{
+          backgroundImage: `url(${backgroundUrl})`,
+          backgroundOrigin: "content-box",
+          backgroundSize: "140%",
+          backgroundPosition: "center",
+        }}
+        className="flex h-full w-full flex-col justify-between rounded-2xl bg-no-repeat p-6"
+      >
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-col gap-2">
             <span className="text-charcole text-[14px]">{platform}</span>

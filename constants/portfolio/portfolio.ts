@@ -12,43 +12,33 @@ export const portfolio: {
   backgroundUrl: string;
 }[] = [
   {
-    tags: ["Shipping", "Yachts", "Logistics", "Sellers", "Buyers"],
-    id: "jfdhgkdsfbgkllkdsnlgfjjsdfnjgl3415hoh3ou845h9823h94h5og",
+    tags: ["Cybersecurity", "Testing", "Business", "Solutions", "Platform"],
+    id: "sxipher-1",
     fullLink: "/",
-    fullName: "Boat Export USA",
+    fullName: "Sxipher.AI",
     platform: "Platform",
     description:
-      "Boat Export USA was created to simplify the process of purchasing and exporting boats, yachts, and marine equipment from the United States to buyers worldwide. It connects international clients with U.S. sellers, offering support with selection, payment, and global shipping logistics.",
+      "Sxipher.ai provides cybersecurity solutions focused on advanced penetration testing and security assessments to uncover and address digital vulnerabilities. The platform helps organizations protect their infrastructures by delivering custom security evaluations and risk mitigation strategies.",
     backgroundUrl: Bg1.src,
   },
   {
-    tags: ["Shipping", "Yachts", "Logistics", "Sellers", "Buyers"],
-    id: "2jfdhgkdsfbgkllkdsnlgfjjsdfnjgl3415hoh3ou845h9823h94h5og",
+    tags: ["Land", "Nature", "Investment", "Marketplace", "Landowner"],
+    id: "community-lands-2",
     fullLink: "/",
-    fullName: "Boat Export USA",
-    platform: "Platform",
+    fullName: "Community Lands",
+    platform: "Business",
     description:
-      "Boat Export USA was created to simplify the process of purchasing and exporting boats, yachts, and marine equipment from the United States to buyers worldwide. It connects international clients with U.S. sellers, offering support with selection, payment, and global shipping logistics.",
-    backgroundUrl: Bg1.src,
+      "Community Lands is a platform offering affordable land for purchase across the United States, catering to individuals interested in nature, sustainability, and off-grid living. The site provides a marketplace for diverse land options, resources for prospective landowners, and a community space to connect with others passionate about land ownership and outdoor lifestyles.",
+    backgroundUrl: Bg2.src,
   },
   {
-    tags: ["Shipping", "Yachts", "Logistics", "Sellers", "Buyers"],
-    id: "jfdhgk3dsfbgkllkdsnlgfjjsdfnjgl3415hoh3ou845h9823h94h5og",
+    tags: ["Mobile app", "Audio", "Social Media", "Podcast", "Platforms"],
+    id: "outspeak-3",
     fullLink: "/",
-    fullName: "Boat Export USA",
-    platform: "Platform",
+    fullName: "Outspeak",
+    platform: "Mobile App",
     description:
-      "Boat Export USA was created to simplify the process of purchasing and exporting boats, yachts, and marine equipment from the United States to buyers worldwide. It connects international clients with U.S. sellers, offering support with selection, payment, and global shipping logistics.",
-    backgroundUrl: Bg1.src,
-  },
-  {
-    tags: ["Shipping", "Yachts", "Logistics", "Sellers", "Buyers"],
-    id: "jfdhgkd2345sfbgkllkdsnlgfjjsdfnjgl3415hoh3ou845h9823h94h5og",
-    fullLink: "/",
-    fullName: "Boat Export USA",
-    platform: "Platform",
-    description:
-      "Boat Export USA was created to simplify the process of purchasing and exporting boats, yachts, and marine equipment from the United States to buyers worldwide. It connects international clients with U.S. sellers, offering support with selection, payment, and global shipping logistics.",
-    backgroundUrl: Bg1.src,
+      "OutSpeak is a mobile app for effortless audio creation, enabling users to express themselves through voice. It offers tools for quick recording, editing, and sharing of engaging audio content. With personalized insights and a community of creators, OutSpeak fosters authentic connections and growth through voice.",
+    backgroundUrl: Bg3.src,
   },
 ];
