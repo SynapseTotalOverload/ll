@@ -13,7 +13,7 @@ export default function Process() {
         <SignTitle.Separator />
       </SignTitle>
 
-      <div className="small-hero-bg mt-6 flex flex-col items-center justify-center gap-4 rounded-lg p-4 backdrop-blur-2xl sm:mt-8 sm:gap-6 sm:p-6 md:mt-10 md:gap-8 md:p-8 md:backdrop-blur-none lg:gap-10 lg:p-10">
+      <div className="small-hero-bg mt-6 flex flex-col items-center justify-center rounded-lg p-4 backdrop-blur-2xl sm:mt-8 sm:p-6 md:mt-10 md:p-8 md:backdrop-blur-none lg:p-10">
         {Array.from({ length: 5 }).map((_, index) => (
           <PointLine
             key={index}

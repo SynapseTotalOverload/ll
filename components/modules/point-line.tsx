@@ -25,7 +25,7 @@ export function PointLine({
       <div className="flex flex-col items-center">
         <div className="bg-night-blue outline-night-blue mt-2 aspect-square size-4 rounded-full outline-[1px] outline-offset-[4px]" />
         <div className="relative flex w-full flex-col items-center">
-          <div className="bg-night-blue mt-0 w-[1px]" style={{ height: `${lineHeight}px` }} />
+          <div className="bg-night-blue mt-0 w-[1px]" style={{ height: `${lineHeight + 10}px` }} />
         </div>
       </div>
       <div ref={containerRef} className="mb-8 flex flex-col gap-2">

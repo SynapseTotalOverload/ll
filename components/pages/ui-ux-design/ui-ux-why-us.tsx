@@ -11,7 +11,7 @@ export default function UIUXWhyUs() {
         <SignTitle.Separator />
       </SignTitle>
 
-      <div className="mt-6 flex flex-col items-center justify-center gap-6 sm:mt-8 sm:gap-8 md:mt-10 md:gap-10 lg:gap-8">
+      <div className="mt-6 flex flex-col items-center justify-center sm:mt-8 md:mt-10">
         <PointLine
           title="Appealing design that works"
           description="The secret to our work is that we don't just create appealing designs — we create designs that work. We use product design as a tool to reach your business goals and solve your end users' problems."

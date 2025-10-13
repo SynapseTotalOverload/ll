@@ -5,6 +5,9 @@ import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import Image from "next/image";
 import Product from "@/public/assets/placeholder.png";
+import BgM1 from "@/public/assets/mocks/mob/1.png";
+import BgM2 from "@/public/assets/mocks/mob/2.png";
+import BgM3 from "@/public/assets/mocks/mob/3.png";
 
 export default function MobileAppCaseStudies() {
   return (
@@ -26,7 +29,7 @@ export default function MobileAppCaseStudies() {
               <span className="text-plastic text-xs">Mobile App</span>
               <InfoCard.Title className="text-lg">TELEDYNE ISCO FlowCalc</InfoCard.Title>
             </div>
-            <Image alt="product" className="h-48 w-full object-cover" src={Product} />
+            <Image alt="product" className="h-48 w-full object-contain" src={BgM1} />
           </InfoCard>
 
           {/* Case Study Card 2 */}
@@ -35,7 +38,7 @@ export default function MobileAppCaseStudies() {
               <span className="text-plastic text-xs">Mobile App</span>
               <InfoCard.Title className="text-lg">Pixy</InfoCard.Title>
             </div>
-            <Image alt="product" className="h-48 w-full object-cover" src={Product} />
+            <Image alt="product" className="h-48 w-full object-contain" src={BgM2} />
           </InfoCard>
 
           {/* Case Study Card 3 */}
@@ -44,7 +47,7 @@ export default function MobileAppCaseStudies() {
               <span className="text-plastic text-xs">Mobile App</span>
               <InfoCard.Title className="text-lg">Outspeak</InfoCard.Title>
             </div>
-            <Image alt="product" className="h-48 w-full object-cover" src={Product} />
+            <Image alt="product" className="h-48 w-full object-contain" src={BgM3} />
           </InfoCard>
         </div>
       </div>
@@ -52,32 +55,32 @@ export default function MobileAppCaseStudies() {
       {/* Desktop: Grid layout */}
       <div className="hidden grid-cols-1 gap-6 sm:grid sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-8">
         {/* Case Study Card 1 */}
-        <InfoCard className="flex w-full flex-col gap-4">
+        <InfoCard className="flex w-full flex-col justify-between gap-4">
           <div className="flex flex-col gap-2">
             <span className="text-plastic text-xs sm:text-sm md:text-base">Mobile App</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
               TELEDYNE ISCO FlowCalc
             </InfoCard.Title>
           </div>
-          <Image alt="product" className="h-48 w-full object-cover sm:h-56 md:h-64 lg:h-72" src={Product} />
+          <Image alt="product" className="h-48 w-full object-contain sm:h-56 md:h-64" src={BgM1} />
         </InfoCard>
 
         {/* Case Study Card 2 */}
-        <InfoCard className="flex w-full flex-col gap-4 sm:col-span-1 md:col-span-1 lg:col-span-1">
+        <InfoCard className="flex w-full flex-col justify-between gap-4 sm:col-span-1 md:col-span-1 lg:col-span-1">
           <div className="flex flex-col gap-2">
             <span className="text-plastic text-xs sm:text-sm md:text-base">Mobile App</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Pixy</InfoCard.Title>
           </div>
-          <Image alt="product" className="h-48 w-full object-cover sm:h-56 md:h-64 lg:h-72" src={Product} />
+          <Image alt="product" className="h-48 w-full object-contain sm:h-56 md:h-64" src={BgM2} />
         </InfoCard>
 
         {/* Case Study Card 3 */}
-        <InfoCard className="flex w-full flex-col gap-4 sm:col-span-1 md:col-span-2 lg:col-span-1">
+        <InfoCard className="flex w-full flex-col justify-between gap-4 sm:col-span-1 md:col-span-2 lg:col-span-1">
           <div className="flex flex-col gap-2">
             <span className="text-plastic text-xs sm:text-sm md:text-base">Mobile App</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Outspeak</InfoCard.Title>
           </div>
-          <Image alt="product" className="h-48 w-full object-cover sm:h-56 md:h-64 lg:h-72" src={Product} />
+          <Image alt="product" className="h-48 w-full object-contain sm:h-56 md:h-64" src={BgM3} />
         </InfoCard>
       </div>
     </div>

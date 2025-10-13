@@ -23,7 +23,7 @@ export default function MobileAppHeroSection() {
       {/* Hero Content */}
       <div className="flex flex-1 flex-col items-center justify-center px-2 sm:px-4 md:px-6 lg:px-8">
         <div className="flex w-full max-w-[95%] flex-col items-center justify-center gap-4 rounded-sm p-4 text-center sm:max-w-[90%] sm:p-6 md:max-w-[85%] md:p-8 lg:max-w-[80%] lg:p-10 xl:max-w-[75%] xl:p-12">
-          <h1 className="custom-font-bricolage text-2xl leading-tight font-bold tracking-tight sm:text-3xl sm:leading-snug md:text-4xl md:leading-normal lg:text-5xl lg:leading-relaxed xl:text-6xl xl:leading-loose">
+          <h1 className="custom-font-bricolage text-2xl leading-tight font-bold tracking-tight sm:text-3xl sm:leading-snug md:text-4xl md:leading-normal lg:text-5xl lg:leading-relaxed xl:text-[50px] xl:leading-loose">
             Mobile application development services
           </h1>
           <p className="text-xs leading-relaxed font-normal sm:text-sm md:text-base lg:text-lg xl:text-xl">
