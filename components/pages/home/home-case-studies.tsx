@@ -12,7 +12,7 @@ export default function HomeCaseStudies() {
   return (
     <div className="flex w-full flex-col gap-6 px-4 sm:gap-7 sm:px-8 md:gap-8 md:px-12 lg:px-20">
       <SignTitle>
-        <SignTitle.Title>Product design and development case studies</SignTitle.Title>
+        <SignTitle.Title>Our successful stories</SignTitle.Title>
         <SignTitle.Description>Launched products LogicCraft assisted with.</SignTitle.Description>
         <SignTitle.Separator />
       </SignTitle>
