@@ -1,36 +1,12 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Instagram } from "lucide-react";
+import Logo from "../ui/logo";
 
 export default function Footer() {
   return (
     <div className="container flex flex-col items-center px-4 sm:px-6 md:px-8 lg:px-0">
-      <span className="bricolage text-[10vw] font-[800] text-white sm:text-[12vw] md:text-[13vw] lg:text-[14vw]">
-        Logi
-        <div className="inline-flex flex-row items-center">
-          <span
-            style={{
-              background: "linear-gradient(40.01deg, #4BBFE9 16.66%, #4BBFE9 52.05%, #007AFF 84.06%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-            className="text-night-blue -mr-2 rotate-180 sm:-mr-3 md:-mr-4"
-          >
-            C
-          </span>
-          <span
-            style={{
-              background: "linear-gradient(38.01deg, #4BBFE9 16.66%, #4BBFE9 52.05%, #007AFF 84.06%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-            className="text-night-blue -ml-2 sm:-ml-3 md:-ml-4"
-          >
-            C
-          </span>
-        </div>
-        raft
-      </span>
+      <Logo />
 
       <div className="grid w-full grid-cols-1 items-center gap-6 py-6 sm:gap-8 sm:py-8 lg:grid-cols-[1fr_4fr_1fr] lg:gap-4">
         {/* Contact Info - Full width on mobile, left column on desktop */}
@@ -86,7 +62,7 @@ export default function Footer() {
 
         {/* Social Media - Full width on mobile, right column on desktop */}
         <div className="order-2 flex h-full flex-row justify-center gap-4 sm:gap-6 lg:order-3 lg:justify-start lg:self-start">
-          <Button className="aspect-square size-8 rounded-xl bg-white p-2 sm:size-9 lg:size-10">
+          {/* <Button className="aspect-square size-8 rounded-xl bg-white p-2 sm:size-9 lg:size-10">
             <Instagram className="h-4 w-4 text-black sm:h-5 sm:w-5" />
           </Button>
           <Button className="aspect-square size-8 rounded-xl bg-white p-2 sm:size-9 lg:size-10">
@@ -97,7 +73,7 @@ export default function Footer() {
           </Button>
           <Button className="aspect-square size-8 rounded-xl bg-white p-2 sm:size-9 lg:size-10">
             <Instagram className="h-4 w-4 text-black sm:h-5 sm:w-5" />
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>

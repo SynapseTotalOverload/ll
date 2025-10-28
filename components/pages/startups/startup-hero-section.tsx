@@ -3,15 +3,28 @@ import { Button } from "@/components/ui/button";
 import heroBanner from "@/public/assets/hero-design.png";
 import MenuBar from "@/components/modules/menu-bar";
 import GoButton from "@/components/ui/go-button";
+import Logo from "@/components/ui/logo";
 
 export default function HeroSection() {
+  const handleScrollToContactUs = () => {
+    const contactUsSection = document.getElementById("contact-us-home");
+    if (contactUsSection) {
+      contactUsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleScrollToEstimateProject = () => {
+    const estimateProjectSection = document.getElementById("estimate-project-home");
+    if (estimateProjectSection) {
+      estimateProjectSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="hero-bg flex min-h-screen w-full flex-col justify-between bg-cover bg-center px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-20 lg:py-12">
       {/* Header Navigation */}
       <header className="flex flex-row items-center justify-between">
-        <Button variant="link" className="text-xs font-medium sm:text-sm md:text-base">
-          LogicCraft
-        </Button>
+        <Logo className="h-[5vh] origin-top-left scale-[-10%] rotate-180 pt-20" />
         <div className="flex flex-1 flex-row items-center justify-end md:justify-center">
           <MenuBar />
         </div>
@@ -34,11 +47,16 @@ export default function HeroSection() {
       </div>
 
       {/* CTA Section */}
-      <div className="flex flex-col items-center justify-center gap-8 px-4 sm:gap-12 md:gap-16 lg:gap-20">
+      <div className="flex flex-row items-center justify-center gap-4 px-4 sm:gap-12 md:gap-16 lg:gap-20">
         <GoButton
           text="Click here to get in touch with us"
-          onClick={() => {}}
-          className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl"
+          onClick={handleScrollToContactUs}
+          className="w-[20vw] max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl"
+        />
+        <GoButton
+          text="Estimate my project"
+          onClick={handleScrollToEstimateProject}
+          className="w-[20vw] max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl"
         />
       </div>
     </div>

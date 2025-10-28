@@ -22,6 +22,8 @@ export default function MenuBar({ className }: { className?: string }) {
     | "blog"
   >("home");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const router = useRouter();
 
   useEffect(() => {
@@ -59,6 +61,28 @@ export default function MenuBar({ className }: { className?: string }) {
     }
   }, []);
 
+  // Scroll detection for sticky menu
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Show menu when scrolling up, hide when scrolling down
+      if (currentScrollY < lastScrollY || currentScrollY < 10) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   const handleMobileNavClick = (path: string) => {
     router.push(path);
     setIsDrawerOpen(false);
@@ -75,8 +99,14 @@ export default function MenuBar({ className }: { className?: string }) {
   return (
     <>
       {/* Desktop Menu - Hidden on mobile */}
-      <div className="hidden lg:block">
-        <Menubar className={`text-xs sm:text-sm ${className}`}>
+      <div
+        className={`fixed top-10 left-1/2 z-50 hidden -translate-x-1/2 transform transition-transform duration-300 lg:block ${
+          isVisible ? "translate-y-0" : "-translate-y-[calc(100%+2.5rem)]"
+        }`}
+      >
+        <Menubar
+          className={`text-xs sm:text-sm ${className} bg-background/95 supports-[backdrop-filter]:bg-background/60 backdrop-blur`}
+        >
           <MenubarMenu>
             <Link href="/" className="block">
               <MenubarTrigger
@@ -258,250 +288,262 @@ export default function MenuBar({ className }: { className?: string }) {
       </div>
 
       {/* Mobile Drawer Menu - Hidden on desktop */}
-      <div className="lg:hidden">
-        <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
-          <DrawerTrigger asChild>
-            <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
-              <Menu className="h-6 w-6" />
-            </Button>
-          </DrawerTrigger>
-          <DrawerContent className="border-charcole border-t bg-transparent backdrop-blur-lg">
-            <div className="mx-auto w-full max-w-sm">
-              <DrawerHeader className="border-b border-white/20">
-                <DrawerTitle className="text-base font-semibold text-white">Menu</DrawerTitle>
-              </DrawerHeader>
+      <div
+        className={`fixed top-10 left-1/2 z-50 -translate-x-1/2 transform transition-transform duration-300 lg:hidden ${
+          isVisible ? "translate-y-0" : "-translate-y-[calc(100%+2.5rem)]"
+        }`}
+      >
+        <div className="bg-background/95 supports-[backdrop-filter]:bg-background/60 p-4 backdrop-blur">
+          <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
+            <DrawerTrigger asChild>
+              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </DrawerTrigger>
+            <DrawerContent className="border-charcole border-t bg-transparent backdrop-blur-lg">
+              <div className="mx-auto w-full max-w-sm">
+                <DrawerHeader className="border-b border-white/20">
+                  <DrawerTitle className="text-base font-semibold text-white">Menu</DrawerTitle>
+                </DrawerHeader>
 
-              <div className="max-h-[60vh] overflow-y-auto p-4">
-                <nav className="flex flex-col space-y-2">
-                  <button
-                    onClick={() => handleMobileNavClick("/")}
-                    className={`rounded-md px-4 py-3 text-left transition-colors ${
-                      active === "home" ? "bg-white/20 text-white" : "text-white/80 hover:bg-white/10 hover:text-white"
-                    }`}
-                  >
-                    Home
-                  </button>
+                <div className="max-h-[60vh] overflow-y-auto p-4">
+                  <nav className="flex flex-col space-y-2">
+                    <button
+                      onClick={() => handleMobileNavClick("/")}
+                      className={`rounded-md px-4 py-3 text-left transition-colors ${
+                        active === "home"
+                          ? "bg-white/20 text-white"
+                          : "text-white/80 hover:bg-white/10 hover:text-white"
+                      }`}
+                    >
+                      Home
+                    </button>
 
-                  <button
-                    onClick={() => handleMobileNavClick("/startups")}
-                    className={`rounded-md px-4 py-3 text-left transition-colors ${
-                      active === "startups"
-                        ? "bg-white/20 text-white"
-                        : "text-white/80 hover:bg-white/10 hover:text-white"
-                    }`}
-                  >
-                    For startups
-                  </button>
+                    <button
+                      onClick={() => handleMobileNavClick("/startups")}
+                      className={`rounded-md px-4 py-3 text-left transition-colors ${
+                        active === "startups"
+                          ? "bg-white/20 text-white"
+                          : "text-white/80 hover:bg-white/10 hover:text-white"
+                      }`}
+                    >
+                      For startups
+                    </button>
 
-                  <div className="mt-2 border-t border-white/20 pt-4">
-                    <div className="mb-3 px-4 text-sm font-medium text-white/60">Services</div>
-                    <button
-                      onClick={() => handleMobileNavClick("/business")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "business"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      For business
-                    </button>
-                    <button
-                      onClick={() => handleMobileNavClick("/web-development")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "web-development"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      Web Development
-                    </button>
-                    <button
-                      onClick={() => handleMobileNavClick("/mobile-development")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "mobile-development"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      Mobile Development
-                    </button>
-                    <button
-                      onClick={() => handleMobileNavClick("/ui-ux-design")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "ui-ux-design"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      UI/UX Design
-                    </button>
-                    <button
-                      onClick={() => handleMobileNavClick("/graphic-design")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "graphic-design"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      Graphic Design
-                    </button>
-                    <button
-                      onClick={() => handleMobileNavClick("/qa")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "qa" ? "bg-white/20 text-white" : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      QA Automation & Manual
-                    </button>
-                  </div>
+                    <div className="mt-2 border-t border-white/20 pt-4">
+                      <div className="mb-3 px-4 text-sm font-medium text-white/60">Services</div>
+                      <button
+                        onClick={() => handleMobileNavClick("/business")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "business"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        For business
+                      </button>
+                      <button
+                        onClick={() => handleMobileNavClick("/web-development")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "web-development"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        Web Development
+                      </button>
+                      <button
+                        onClick={() => handleMobileNavClick("/mobile-development")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "mobile-development"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        Mobile Development
+                      </button>
+                      <button
+                        onClick={() => handleMobileNavClick("/ui-ux-design")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "ui-ux-design"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        UI/UX Design
+                      </button>
+                      <button
+                        onClick={() => handleMobileNavClick("/graphic-design")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "graphic-design"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        Graphic Design
+                      </button>
+                      <button
+                        onClick={() => handleMobileNavClick("/qa")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "qa"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        QA Automation & Manual
+                      </button>
+                    </div>
 
-                  <button
-                    onClick={() => handleMobileNavClick("/blog")}
-                    className={`rounded-md px-4 py-3 text-left transition-colors ${
-                      active === "blog" ? "bg-white/20 text-white" : "text-white/80 hover:bg-white/10 hover:text-white"
-                    }`}
-                  >
-                    Blog
-                  </button>
+                    <button
+                      onClick={() => handleMobileNavClick("/blog")}
+                      className={`rounded-md px-4 py-3 text-left transition-colors ${
+                        active === "blog"
+                          ? "bg-white/20 text-white"
+                          : "text-white/80 hover:bg-white/10 hover:text-white"
+                      }`}
+                    >
+                      Blog
+                    </button>
 
-                  <button
-                    onClick={() => handleMobileNavClick("/faq")}
-                    className={`rounded-md px-4 py-3 text-left transition-colors ${
-                      active === "faq" ? "bg-white/20 text-white" : "text-white/80 hover:bg-white/10 hover:text-white"
-                    }`}
-                  >
-                    FAQ
-                  </button>
+                    <button
+                      onClick={() => handleMobileNavClick("/faq")}
+                      className={`rounded-md px-4 py-3 text-left transition-colors ${
+                        active === "faq" ? "bg-white/20 text-white" : "text-white/80 hover:bg-white/10 hover:text-white"
+                      }`}
+                    >
+                      FAQ
+                    </button>
 
-                  <div className="mt-2 border-t border-white/20 pt-4">
-                    <div className="mb-3 px-4 text-sm font-medium text-white/60">Case Studies</div>
-                    <button
-                      onClick={() => handleMobileNavClick("/case-studies")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "case-studies"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      All Projects
-                    </button>
-                    <button
-                      onClick={() => handleMobileNavClick("/case-studies/com-lands")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "case-studies"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      Com Lands
-                    </button>
-                    <button
-                      onClick={() => handleMobileNavClick("/case-studies/truth-or-dare")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "case-studies"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      Truth or Dare
-                    </button>
-                    <button
-                      onClick={() => handleMobileNavClick("/case-studies/boat-export")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "case-studies"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      Boat Export
-                    </button>
-                    <button
-                      onClick={() => handleMobileNavClick("/case-studies/chillbill")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "case-studies"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      Chillbill
-                    </button>
-                    <button
-                      onClick={() => handleMobileNavClick("/case-studies/digibdr")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "case-studies"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      Digibdr
-                    </button>
-                    <button
-                      onClick={() => handleMobileNavClick("/case-studies/reachfi")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "case-studies"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      Reachfi
-                    </button>
-                    <button
-                      onClick={() => handleMobileNavClick("/case-studies/sxipher-ai")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "case-studies"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      Sxipher AI
-                    </button>
-                    <button
-                      onClick={() => handleMobileNavClick("/case-studies/teledyne-isco-flowcalc")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "case-studies"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      Teledyne ISCO Flowcalc
-                    </button>
-                    <button
-                      onClick={() => handleMobileNavClick("/case-studies/trackmyjobs")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "case-studies"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      Track My Jobs
-                    </button>
-                    <button
-                      onClick={() => handleMobileNavClick("/case-studies/tripsha")}
-                      className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "case-studies"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      Tripsha
-                    </button>
-                  </div>
+                    <div className="mt-2 border-t border-white/20 pt-4">
+                      <div className="mb-3 px-4 text-sm font-medium text-white/60">Case Studies</div>
+                      <button
+                        onClick={() => handleMobileNavClick("/case-studies")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "case-studies"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        All Projects
+                      </button>
+                      <button
+                        onClick={() => handleMobileNavClick("/case-studies/com-lands")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "case-studies"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        Com Lands
+                      </button>
+                      <button
+                        onClick={() => handleMobileNavClick("/case-studies/truth-or-dare")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "case-studies"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        Truth or Dare
+                      </button>
+                      <button
+                        onClick={() => handleMobileNavClick("/case-studies/boat-export")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "case-studies"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        Boat Export
+                      </button>
+                      <button
+                        onClick={() => handleMobileNavClick("/case-studies/chillbill")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "case-studies"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        Chillbill
+                      </button>
+                      <button
+                        onClick={() => handleMobileNavClick("/case-studies/digibdr")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "case-studies"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        Digibdr
+                      </button>
+                      <button
+                        onClick={() => handleMobileNavClick("/case-studies/reachfi")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "case-studies"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        Reachfi
+                      </button>
+                      <button
+                        onClick={() => handleMobileNavClick("/case-studies/sxipher-ai")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "case-studies"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        Sxipher AI
+                      </button>
+                      <button
+                        onClick={() => handleMobileNavClick("/case-studies/teledyne-isco-flowcalc")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "case-studies"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        Teledyne ISCO Flowcalc
+                      </button>
+                      <button
+                        onClick={() => handleMobileNavClick("/case-studies/trackmyjobs")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "case-studies"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        Track My Jobs
+                      </button>
+                      <button
+                        onClick={() => handleMobileNavClick("/case-studies/tripsha")}
+                        className={`w-full rounded-md px-4 py-3 text-left transition-colors ${
+                          active === "case-studies"
+                            ? "bg-white/20 text-white"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
+                        }`}
+                      >
+                        Tripsha
+                      </button>
+                    </div>
 
-                  <button
-                    onClick={() => handleMobileNavClick("/about-us")}
-                    className={`rounded-md px-4 py-3 text-left transition-colors ${
-                      active === "about-us"
-                        ? "bg-white/20 text-white"
-                        : "text-white/80 hover:bg-white/10 hover:text-white"
-                    }`}
-                  >
-                    About us
-                  </button>
-                </nav>
+                    <button
+                      onClick={() => handleMobileNavClick("/about-us")}
+                      className={`rounded-md px-4 py-3 text-left transition-colors ${
+                        active === "about-us"
+                          ? "bg-white/20 text-white"
+                          : "text-white/80 hover:bg-white/10 hover:text-white"
+                      }`}
+                    >
+                      About us
+                    </button>
+                  </nav>
+                </div>
               </div>
-            </div>
-          </DrawerContent>
-        </Drawer>
+            </DrawerContent>
+          </Drawer>
+        </div>
       </div>
     </>
   );
