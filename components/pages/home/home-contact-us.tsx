@@ -43,8 +43,9 @@ export default function ContactUs() {
 
   return (
     <div
+      id="contact-us-home"
       style={{ backgroundImage: `url(${Footer.src})` }}
-      className="cover flex min-h-screen w-full flex-col gap-4 py-8 sm:py-12 md:py-16 lg:py-[80px]"
+      className="cover flex min-h-screen w-full flex-1 flex-col gap-4 py-8 sm:py-12 md:py-16 lg:py-[80px]"
     >
       <div className="container grid grid-cols-1 gap-8 px-4 sm:px-8 md:px-12 lg:grid-cols-2 lg:gap-0 lg:px-[120px]">
         <div className="flex flex-col gap-3 sm:gap-4">

@@ -37,7 +37,9 @@ export default function HeroSection() {
       <div className="flex flex-col items-center justify-center gap-8 px-4 sm:gap-12 md:gap-16 lg:gap-20">
         <GoButton
           text="Click here to get in touch with us"
-          onClick={() => {}}
+          onClick={() => {
+            window.location.href = "/contact-us";
+          }}
           className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl"
         />
       </div>

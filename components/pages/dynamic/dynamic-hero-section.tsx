@@ -52,7 +52,12 @@ export default function DynamicHeroSection({
 
       {/* Hero Content */}
       <div className="flex flex-col items-center justify-center gap-16">
-        <GoButton text="Click here to get in touch with us" onClick={() => {}} />
+        <GoButton
+          text="Click here to get in touch with us"
+          onClick={() => {
+            window.location.href = "/contact-us";
+          }}
+        />
       </div>
     </div>
   );

@@ -23,7 +23,15 @@ export default function HeroSection() {
         <div className="bg-opacity-50-black flex w-fit max-w-[90%] flex-row items-center justify-center rounded-sm p-4 text-center text-[20px] font-[700] sm:max-w-[80%] sm:p-6 sm:text-[26px] md:max-w-[75%] md:p-7 md:text-[32px] lg:max-w-[70%] lg:p-8 lg:text-[40px]">
           <span>Technological Innovations for Business Development</span>
         </div>
-        <GoButton text="Click here to get in touch with us" onClick={() => {}} />
+        <GoButton
+          text="Click here to get in touch with us"
+          onClick={() => {
+            const el = document.getElementById("home-contact-us-section");
+            if (el) {
+              el.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        />
       </div>
     </div>
   );

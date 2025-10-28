@@ -63,7 +63,13 @@ export default function PricingModel() {
             6000+
           </span>
           <div className="flex flex-row items-center justify-center">
-            <GoButton className="w-full" text="Click here to get in touch with us" onClick={() => {}} />
+            <GoButton
+              className="w-full"
+              text="Click here to get in touch with us"
+              onClick={() => {
+                window.location.href = "/contact-us";
+              }}
+            />
           </div>
         </InfoCard>
         <InfoCard className="bg-opacity-20-black border-charcole border">
@@ -100,7 +106,13 @@ export default function PricingModel() {
             6000+
           </span>
           <div className="flex flex-row items-center justify-center">
-            <GoButton className="w-full" text="Click here to get in touch with us" onClick={() => {}} />
+            <GoButton
+              className="w-full"
+              text="Click here to get in touch with us"
+              onClick={() => {
+                window.location.href = "/contact-us";
+              }}
+            />
           </div>
         </InfoCard>
         <InfoCard>
@@ -137,7 +149,13 @@ export default function PricingModel() {
             6000+
           </span>
           <div className="flex flex-row items-center justify-center">
-            <GoButton className="w-full" text="Click here to get in touch with us" onClick={() => {}} />
+            <GoButton
+              className="w-full"
+              text="Click here to get in touch with us"
+              onClick={() => {
+                window.location.href = "/contact-us";
+              }}
+            />
           </div>
         </InfoCard>
       </div>
