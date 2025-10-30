@@ -119,17 +119,6 @@ export default function MenuBar({ className }: { className?: string }) {
           </MenubarMenu>
 
           <MenubarMenu>
-            <Link href="/startups" className="block">
-              <MenubarTrigger
-                data-active={active === "startups"}
-                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-sm"
-              >
-                For startups
-              </MenubarTrigger>
-            </Link>
-          </MenubarMenu>
-
-          <MenubarMenu>
             <MenubarTrigger
               data-active={isServicesActive}
               className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-base"
