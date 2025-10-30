@@ -10,7 +10,7 @@ export function getProject(projectName: string): Project {
     chillbill: "chillbill",
     digibdr: "digibdr",
     reachfi: "reachfi",
-    "sxipher-ai": "sxipher_ai",
+    "sxipher-ai": "sxipher-ai",
     "teledyne-isco-flowcalc": "teledyne_isco_flowcalc",
     trackmyjobs: "trackmyjobs",
     tripsha: "tripsha",
@@ -131,7 +131,7 @@ export function getProject(projectName: string): Project {
       },
     ],
     startProject: {
-      link: "/become-a-client",
+      link: "/contact-us",
     },
   };
 
@@ -147,7 +147,7 @@ export function updateProjectWithCorrectPaths(projectName: string, existingData:
     chillbill: "chillbill",
     digibdr: "digibdr",
     reachfi: "reachfi",
-    "sxipher-ai": "sxipher_ai",
+    "sxipher-ai": "sxipher-ai",
     "teledyne-isco-flowcalc": "teledyne_isco_flowcalc",
     trackmyjobs: "trackmyjobs",
     tripsha: "tripsha",
@@ -360,7 +360,7 @@ export const data: ProjectConfig = {
         },
       ],
       startProject: {
-        link: "/become-a-client",
+        link: "/contact-us",
       },
     },
     trackmyjobs: {
@@ -536,7 +536,7 @@ export const data: ProjectConfig = {
         },
       ],
       startProject: {
-        link: "/become-a-client",
+        link: "/contact-us",
       },
     },
     "boat-export": {
@@ -692,7 +692,7 @@ export const data: ProjectConfig = {
         },
       ],
       startProject: {
-        link: "/become-a-client",
+        link: "/contact-us",
       },
     },
     "truth-or-dare": {
@@ -820,7 +820,7 @@ export const data: ProjectConfig = {
         },
       ],
       startProject: {
-        link: "/become-a-client",
+        link: "/contact-us",
       },
     },
     digibdr: {
@@ -970,7 +970,7 @@ export const data: ProjectConfig = {
         },
       ],
       startProject: {
-        link: "/become-a-client",
+        link: "/contact-us",
       },
     },
     "teledyne-isco-flowcalc": {
@@ -1113,7 +1113,7 @@ export const data: ProjectConfig = {
         },
       ],
       startProject: {
-        link: "/become-a-client",
+        link: "/contact-us",
       },
     },
     "sxipher-ai": {
@@ -1262,7 +1262,7 @@ export const data: ProjectConfig = {
         },
       ],
       startProject: {
-        link: "/become-a-client",
+        link: "/contact-us",
       },
     },
     reachfi: {
@@ -1402,7 +1402,7 @@ export const data: ProjectConfig = {
         },
       ],
       startProject: {
-        link: "/become-a-client",
+        link: "/contact-us",
       },
     },
     chillbill: {
@@ -1543,7 +1543,7 @@ export const data: ProjectConfig = {
         },
       ],
       startProject: {
-        link: "/become-a-client",
+        link: "/contact-us",
       },
     },
   },
