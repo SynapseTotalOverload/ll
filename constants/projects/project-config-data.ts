@@ -17,6 +17,7 @@ export function getProject(projectName: string): Project {
   };
 
   const folderName = projectFolderMap[projectName];
+  console.log(projectName, folderName);
   if (!folderName) {
     throw new Error(`Project "${projectName}" not found in folder mapping`);
   }
@@ -134,7 +135,7 @@ export function getProject(projectName: string): Project {
     },
   };
 
-  return baseConfig;
+  return data.projects[projectName as keyof typeof data] || baseConfig;
 }
 
 // Function to update existing project data with correct image paths
@@ -209,7 +210,7 @@ export function getAvailableProjectNames(): string[] {
   ];
 }
 
-const data: ProjectConfig = {
+export const data: ProjectConfig = {
   projects: {
     "com-lands": {
       id: "com-lands",

@@ -11,6 +11,7 @@ export default function CaseStudiesPage({ params }: { params: Promise<{ id: stri
 
   try {
     const project = getProject(id);
+    console.log("Project Data:", project);
     return <DynamicMain project={project} />;
   } catch (error) {
     notFound();
