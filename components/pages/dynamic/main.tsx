@@ -12,7 +12,6 @@ import PortfolioCard from "./dynamic-portfolio-card";
 import { Project } from "@/constants/projects/project-config.types";
 
 export default function DynamicMain({ project }: { project: Project }) {
- 
   return (
     <div className="flex flex-col items-center">
       <DynamicHeroSection
@@ -25,7 +24,7 @@ export default function DynamicMain({ project }: { project: Project }) {
       />
 
       {/* ===== MAIN CONTENT SECTIONS ===== */}
-      <div className="container flex flex-col gap-[32px] pt-[120px]">
+      <div className="container flex flex-col gap-8 px-4 pt-8 sm:gap-16 sm:px-6 sm:pt-16 md:gap-24 md:px-8 md:pt-24 lg:gap-[120px] lg:px-12 lg:pt-[120px]">
         <DynamicAboutProject
           description={project.aboutProject.description}
           image={project.aboutProject.image}
@@ -40,7 +39,7 @@ export default function DynamicMain({ project }: { project: Project }) {
           backgroundUrl={project.portfolioCard.backgroundUrl}
         />
 
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 md:gap-8 lg:gap-10">
           <DynamicSmallProjectCard
             title={project.smallProjectCards[0].title}
             points={project.smallProjectCards[0].points}

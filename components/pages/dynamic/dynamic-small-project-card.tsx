@@ -16,13 +16,13 @@ export default function DynamicSmallProjectCard({
   backgroundUrl: string;
 }) {
   return (
-    <InfoCard className="flex flex-col gap-4">
-      <span className="bricolage text-[20px] font-bold">{title}</span>
-      <div className="flex flex-col gap-2">
+    <InfoCard className="flex flex-col gap-3 sm:gap-4 md:gap-5">
+      <span className="bricolage text-[18px] font-bold sm:text-[20px] md:text-[24px]">{title}</span>
+      <div className="flex flex-col gap-2 sm:gap-3">
         {points.map((point, index) => (
           <div className="flex flex-col gap-2" key={index}>
-            <span className="text-[16px] font-bold text-white">{point.title}</span>
-            <ul className="list-inside list-disc text-[16px] font-normal text-white">
+            <span className="text-[14px] font-bold text-white sm:text-[16px]">{point.title}</span>
+            <ul className="list-inside list-disc text-[12px] font-normal text-white sm:text-[14px] md:text-[16px]">
               {point.description.map((description, index) => (
                 <li key={index}>{description}</li>
               ))}
