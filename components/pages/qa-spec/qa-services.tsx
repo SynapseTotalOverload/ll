@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { BedIcon } from "lucide-react";
+import { ClipboardCheck, Zap, Users, Smartphone, Globe } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import { LampEffect } from "@/components/ui/lamp-effect";
@@ -24,7 +24,7 @@ export default function QAServices() {
           {/* Service Card 1 */}
           <InfoCard className="w-full">
             <LampEffect>
-              <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+              <ClipboardCheck className="text-night-blue size-6 sm:size-7 md:size-8" />
             </LampEffect>
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               QA Audit and Consulting
@@ -38,7 +38,7 @@ export default function QAServices() {
           {/* Service Card 2 */}
           <InfoCard className="w-full">
             <LampEffect>
-              <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+              <Zap className="text-night-blue size-6 sm:size-7 md:size-8" />
             </LampEffect>
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Setting Up QA Process
@@ -52,7 +52,7 @@ export default function QAServices() {
           {/* Service Card 3 */}
           <InfoCard className="w-full">
             <LampEffect>
-              <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+              <Users className="text-night-blue size-6 sm:size-7 md:size-8" />
             </LampEffect>
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               QA Staffing
@@ -66,7 +66,7 @@ export default function QAServices() {
           {/* Service Card 4 */}
           <InfoCard className="w-full">
             <LampEffect>
-              <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+              <Smartphone className="text-night-blue size-6 sm:size-7 md:size-8" />
             </LampEffect>
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Mobile App Testing
@@ -80,7 +80,7 @@ export default function QAServices() {
           {/* Service Card 5 */}
           <InfoCard className="w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
             <LampEffect>
-              <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+              <Globe className="text-night-blue size-6 sm:size-7 md:size-8" />
             </LampEffect>
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Web App Testing

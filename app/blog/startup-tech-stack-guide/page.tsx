@@ -228,7 +228,7 @@ const blogPost = {
   readTime: "12 min read",
   category: "Startups",
   author: "LogicCraft Team",
-  image: "/assets/placeholder.png",
+  image: "https://picsum.photos/200?random=5",
   tags: ["Startups", "Technology Stack", "Development", "Tech Guide", "Full-Stack"],
 };
 

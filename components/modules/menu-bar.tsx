@@ -57,6 +57,8 @@ export default function MenuBar({ className }: { className?: string }) {
         setActive("case-studies");
       } else if (lastSlug === "blog") {
         setActive("blog");
+      } else if (pathSlugs.includes("case-studies")) {
+        setActive("case-studies");
       }
     }
   }, []);

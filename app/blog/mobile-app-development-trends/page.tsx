@@ -136,7 +136,7 @@ const blogPost = {
   readTime: "6 min read",
   category: "Mobile Development",
   author: "LogicCraft Team",
-  image: "/assets/placeholder.png",
+  image: "https://picsum.photos/200?random=2",
   tags: ["Mobile Development", "Technology", "Trends", "UX", "Cross-Platform"],
 };
 

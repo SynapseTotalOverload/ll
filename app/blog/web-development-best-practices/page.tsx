@@ -157,7 +157,7 @@ const blogPost = {
   readTime: "10 min read",
   category: "Web Development",
   author: "LogicCraft Team",
-  image: "/assets/placeholder.png",
+  image: "https://picsum.photos/200?random=3",
   tags: ["Web Development", "Best Practices", "Security", "Performance", "Scalability"],
 };
 

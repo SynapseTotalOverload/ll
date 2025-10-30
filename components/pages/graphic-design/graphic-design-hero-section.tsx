@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import heroBanner from "@/public/assets/bgs/graphic-design.png";
 import MenuBar from "@/components/modules/menu-bar";
 import GoButton from "@/components/ui/go-button";
+import Logo from "@/components/ui/logo";
 
 export default function GraphicDesignHeroSection() {
   return (
@@ -12,9 +13,7 @@ export default function GraphicDesignHeroSection() {
     >
       {/* Header Navigation */}
       <header className="flex flex-row items-center justify-between">
-        <Button variant="link" className="text-xs font-medium sm:text-sm md:text-base">
-          LogicCraft
-        </Button>
+        <Logo className="h-[5vh] origin-top-left scale-[-10%] rotate-180 pt-20" />
         <div className="flex flex-1 flex-row items-center justify-end md:justify-center">
           <MenuBar />
         </div>

@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { BedIcon, MoveRightIcon } from "lucide-react";
+import { Zap, Server, Wrench, MoveRightIcon } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import { LampEffect } from "@/components/ui/lamp-effect";
@@ -27,7 +27,7 @@ export default function Technologies() {
           {/* Technology Category 1 */}
           <div className="w-full">
             <LampEffect>
-              <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+              <Zap className="text-night-blue size-6 sm:size-7 md:size-8" />
             </LampEffect>
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Frontend Technologies
@@ -48,7 +48,7 @@ export default function Technologies() {
           {/* Technology Category 2 */}
           <div className="w-full">
             <LampEffect>
-              <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+              <Server className="text-night-blue size-6 sm:size-7 md:size-8" />
             </LampEffect>
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Backend Technologies
@@ -69,7 +69,7 @@ export default function Technologies() {
           {/* Technology Category 3 */}
           <div className="w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
             <LampEffect>
-              <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+              <Wrench className="text-night-blue size-6 sm:size-7 md:size-8" />
             </LampEffect>
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               DevOps & Tools

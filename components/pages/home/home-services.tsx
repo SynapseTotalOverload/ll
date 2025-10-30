@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { BedIcon, MoveRightIcon } from "lucide-react";
+import { Palette, Brush, Code, Database, TestTube, MoveRightIcon } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import { LampEffect } from "@/components/ui/lamp-effect";
@@ -18,7 +18,7 @@ export default function HomeServices() {
         {/* Service Card 1 */}
         <InfoCard className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-2">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6" />
+            <Palette className="text-night-blue size-6" />
           </LampEffect>
           <InfoCard.Title className="mt-6">UI/UX Design</InfoCard.Title>
           <InfoCard.Description className="mt-4">
@@ -35,7 +35,7 @@ export default function HomeServices() {
         {/* Service Card 2 */}
         <InfoCard className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-2">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6" />
+            <Brush className="text-night-blue size-6" />
           </LampEffect>
           <InfoCard.Title className="mt-6">Graphic design</InfoCard.Title>
           <InfoCard.Description className="mt-4">
@@ -51,7 +51,7 @@ export default function HomeServices() {
         {/* Service Card 3 */}
         <InfoCard className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-2">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6" />
+            <Code className="text-night-blue size-6" />
           </LampEffect>
           <InfoCard.Title className="mt-6">Mobile and web development</InfoCard.Title>
           <InfoCard.Description className="mt-4">
@@ -67,7 +67,7 @@ export default function HomeServices() {
         {/* Service Card 4 */}
         <InfoCard className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-2 lg:col-start-2 lg:col-end-4">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6" />
+            <Database className="text-night-blue size-6" />
           </LampEffect>
           <InfoCard.Title className="mt-6">CRM Software building</InfoCard.Title>
           <InfoCard.Description className="mt-4">
@@ -83,7 +83,7 @@ export default function HomeServices() {
         {/* Service Card 5 */}
         <InfoCard className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-2">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6" />
+            <TestTube className="text-night-blue size-6" />
           </LampEffect>
           <InfoCard.Title className="mt-6">QA Automation and QA Manual</InfoCard.Title>
           <InfoCard.Description className="mt-4">

@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { BedIcon, MoveRightIcon } from "lucide-react";
+import { Lightbulb, Rocket, Compass, MoveRightIcon } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import { LampEffect } from "@/components/ui/lamp-effect";
@@ -23,7 +23,7 @@ export default function StartupServices() {
         {/* Service Card 1 */}
         <InfoCard className="w-full">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+            <Lightbulb className="text-night-blue size-6 sm:size-7 md:size-8" />
           </LampEffect>
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             MVP web and mobile software development
@@ -38,7 +38,7 @@ export default function StartupServices() {
         {/* Service Card 2 */}
         <InfoCard className="w-full">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+            <Rocket className="text-night-blue size-6 sm:size-7 md:size-8" />
           </LampEffect>
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Full-cycle software product development
@@ -53,7 +53,7 @@ export default function StartupServices() {
         {/* Service Card 3 */}
         <InfoCard className="w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
           <LampEffect>
-            <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+            <Compass className="text-night-blue size-6 sm:size-7 md:size-8" />
           </LampEffect>
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Product strategy

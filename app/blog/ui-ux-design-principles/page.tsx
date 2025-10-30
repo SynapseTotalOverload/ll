@@ -208,7 +208,7 @@ const blogPost = {
   readTime: "7 min read",
   category: "Design",
   author: "LogicCraft Team",
-  image: "/assets/placeholder.png",
+  image: "https://picsum.photos/200?random=4",
   tags: ["UI/UX Design", "Design Principles", "User Experience", "Interface Design", "Usability"],
 };
 

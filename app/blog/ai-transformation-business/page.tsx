@@ -103,7 +103,7 @@ const blogPost = {
   readTime: "8 min read",
   category: "Technology",
   author: "LogicCraft Team",
-  image: "/assets/placeholder.png",
+  image: "https://picsum.photos/200?random=1",
   tags: ["AI", "Technology", "Business", "Automation", "Machine Learning"],
 };
 

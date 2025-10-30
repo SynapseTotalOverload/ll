@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { BedIcon, MoveRightIcon } from "lucide-react";
+import { Receipt, Users2, Clock, MoveRightIcon } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import { LampEffect } from "@/components/ui/lamp-effect";
@@ -24,7 +24,7 @@ export default function StartupPricingModels() {
         {/* Pricing Model 1 */}
         <div className="w-full">
           <div className="flex flex-row items-center gap-3 sm:gap-4">
-            <BedIcon className="text-night-blue h-5 w-5 sm:h-6 sm:w-6" />
+            <Receipt className="text-night-blue h-5 w-5 sm:h-6 sm:w-6" />
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Fixed price</InfoCard.Title>
           </div>
           <InfoCard.Description className="mt-3 text-sm sm:mt-4 sm:text-base md:text-lg">
@@ -37,7 +37,7 @@ export default function StartupPricingModels() {
         {/* Pricing Model 2 */}
         <div className="w-full">
           <div className="flex flex-row items-center gap-3 sm:gap-4">
-            <BedIcon className="text-night-blue h-5 w-5 sm:h-6 sm:w-6" />
+            <Users2 className="text-night-blue h-5 w-5 sm:h-6 sm:w-6" />
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
               Dedicated development team
             </InfoCard.Title>
@@ -52,7 +52,7 @@ export default function StartupPricingModels() {
         {/* Pricing Model 3 */}
         <div className="w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
           <div className="flex flex-row items-center gap-3 sm:gap-4">
-            <BedIcon className="text-night-blue h-5 w-5 sm:h-6 sm:w-6" />
+            <Clock className="text-night-blue h-5 w-5 sm:h-6 sm:w-6" />
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Time and material</InfoCard.Title>
           </div>
           <InfoCard.Description className="mt-3 text-sm sm:mt-4 sm:text-base md:text-lg">

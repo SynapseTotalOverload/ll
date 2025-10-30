@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { BedIcon, MoveRightIcon } from "lucide-react";
+import { Palette, Code, Server, TestTube, Wrench, Gauge, MoveRightIcon } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import { LampEffect } from "@/components/ui/lamp-effect";
@@ -27,7 +27,7 @@ export default function OurService() {
           {/* Service Card 1 */}
           <InfoCard className="w-full">
             <LampEffect>
-              <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+              <Palette className="text-night-blue size-6 sm:size-7 md:size-8" />
             </LampEffect>
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               UI/UX Design
@@ -41,7 +41,7 @@ export default function OurService() {
           {/* Service Card 2 */}
           <InfoCard className="w-full">
             <LampEffect>
-              <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+              <Code className="text-night-blue size-6 sm:size-7 md:size-8" />
             </LampEffect>
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Frontend Development
@@ -55,7 +55,7 @@ export default function OurService() {
           {/* Service Card 3 */}
           <InfoCard className="w-full">
             <LampEffect>
-              <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+              <Server className="text-night-blue size-6 sm:size-7 md:size-8" />
             </LampEffect>
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Backend Development
@@ -68,7 +68,7 @@ export default function OurService() {
           {/* Service Card 4 */}
           <InfoCard className="w-full">
             <LampEffect>
-              <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+              <TestTube className="text-night-blue size-6 sm:size-7 md:size-8" />
             </LampEffect>
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Testing & QA
@@ -81,7 +81,7 @@ export default function OurService() {
           {/* Service Card 5 */}
           <InfoCard className="w-full">
             <LampEffect>
-              <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+              <Wrench className="text-night-blue size-6 sm:size-7 md:size-8" />
             </LampEffect>
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Maintenance & Support
@@ -94,7 +94,7 @@ export default function OurService() {
           {/* Service Card 6 */}
           <InfoCard className="w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
             <LampEffect>
-              <BedIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+              <Gauge className="text-night-blue size-6 sm:size-7 md:size-8" />
             </LampEffect>
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Performance Optimization

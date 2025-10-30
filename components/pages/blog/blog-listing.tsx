@@ -13,7 +13,7 @@ const blogPosts = [
     date: "2024-01-15",
     readTime: "8 min read",
     category: "Technology",
-    image: "/assets/placeholder.png",
+    image: "https://picsum.photos/200?random=1",
   },
   {
     id: "mobile-app-development-trends",
@@ -23,7 +23,7 @@ const blogPosts = [
     date: "2024-01-10",
     readTime: "6 min read",
     category: "Mobile Development",
-    image: "/assets/placeholder.png",
+    image: "https://picsum.photos/200?random=2",
   },
   {
     id: "web-development-best-practices",
@@ -33,7 +33,7 @@ const blogPosts = [
     date: "2024-01-05",
     readTime: "10 min read",
     category: "Web Development",
-    image: "/assets/placeholder.png",
+    image: "https://picsum.photos/200?random=3",
   },
   {
     id: "ui-ux-design-principles",
@@ -43,7 +43,7 @@ const blogPosts = [
     date: "2024-01-01",
     readTime: "7 min read",
     category: "Design",
-    image: "/assets/placeholder.png",
+    image: "https://picsum.photos/200?random=4",
   },
   {
     id: "startup-tech-stack-guide",
@@ -53,7 +53,7 @@ const blogPosts = [
     date: "2023-12-28",
     readTime: "12 min read",
     category: "Startups",
-    image: "/assets/placeholder.png",
+    image: "https://picsum.photos/200?random=5",
   },
 ];
 
