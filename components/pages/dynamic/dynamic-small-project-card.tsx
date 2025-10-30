@@ -17,7 +17,7 @@ export default function DynamicSmallProjectCard({
 }) {
   return (
     <InfoCard className="flex flex-col gap-3 sm:gap-4 md:gap-5">
-      <span className="bricolage text-[18px] font-bold sm:text-[20px] md:text-[24px]">{title}</span>
+      <span className="bricolage max-h-[60vh] text-[18px] font-bold sm:text-[20px] md:text-[24px]">{title}</span>
       <div className="flex flex-col gap-2 sm:gap-3">
         {points.map((point, index) => (
           <div className="flex flex-col gap-2" key={index}>
@@ -30,13 +30,13 @@ export default function DynamicSmallProjectCard({
           </div>
         ))}
       </div>
-      {}
+
       <div
         style={{ backgroundImage: `url(${backgroundUrl})` }}
-        className="flex w-full flex-1 items-center justify-center rounded-[16px] bg-cover"
+        className="flex w-full flex-1 items-center justify-center rounded-[16px] bg-cover py-4"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="w-full rounded-[16px] object-contain" src={image} alt={"small-project"} />
+        <img className="h-[50vh] w-full rounded-[16px] object-contain" src={image} alt={"small-project"} />
       </div>
     </InfoCard>
   );
