@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
 import InfoCard from "./info-card";
 import ArrowRight from "@/public/assets/svg/arrow-right.svg";
@@ -9,6 +10,7 @@ export default function PortfolioCard({
   platform,
   description,
   backgroundUrl,
+  classNameBg,
 }: {
   tags: string[];
   fullLink: string;
@@ -16,6 +18,7 @@ export default function PortfolioCard({
   platform: string;
   description: string;
   backgroundUrl: string;
+  classNameBg?: string;
 }) {
   return (
     <InfoCard className="h-[90vh] bg-no-repeat">
@@ -26,7 +29,7 @@ export default function PortfolioCard({
           backgroundSize: "140%",
           backgroundPosition: "center",
         }}
-        className="flex h-full w-full flex-col justify-between rounded-2xl bg-no-repeat p-6"
+        className={cn("flex h-full w-full flex-col justify-between rounded-2xl bg-no-repeat p-6", classNameBg)}
       >
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-col gap-2">
