@@ -2,7 +2,7 @@
 
 import SignTitle from "@/components/modules/sign-title";
 import { NamedSwitcher } from "@/components/ui/named-switcher";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import WebIcon from "@/public/assets/svg/monitor.svg";
 import MobileIcon from "@/public/assets/svg/mobile.svg";
 import CalculatorCard from "@/components/modules/calculator-card";
@@ -10,222 +10,347 @@ import { Accordion, AccordionTrigger, AccordionContent, AccordionItem } from "@/
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import GoButton from "@/components/ui/go-button";
 
-const accordionItems = [
-  {
-    title: "App field",
-    cards: [
-      {
-        cardTitle: "E-Commerce",
-        cardIcon: <WebIcon />,
-      },
-      {
-        cardTitle: "Logistics",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "HealthCare",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "Education",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "Custom",
-        cardIcon: <MobileIcon />,
-      },
-    ],
+/**
+ * Feature Definition Interface
+ * Defines the structure for each feature with cost and time estimates
+ */
+interface FeatureDefinition {
+  title: string;
+  icon: "web" | "mobile";
+  cost: {
+    web: number; // Cost in USD for web platform
+    mobile: number; // Cost in USD for mobile platform
+    backend: number; // Backend cost component
+    design: number; // Design cost component
+  };
+  time: {
+    web: number; // Time in days for web platform
+    mobile: number; // Time in days for mobile platform
+    backend: number; // Backend time component
+    design: number; // Design time component
+  };
+}
+
+/**
+ * App Size Configuration
+ * Base costs and timelines for different app complexity levels
+ */
+interface AppSizeConfig {
+  cost: {
+    web: number;
+    mobile: number;
+    backend: number;
+    design: number;
+  };
+  time: {
+    web: number;
+    mobile: number;
+    backend: number;
+    design: number;
+  };
+}
+
+const APP_SIZE_CONFIGS: Record<string, AppSizeConfig> = {
+  MVP: {
+    cost: { web: 5000, mobile: 8000, backend: 10000, design: 5000 },
+    time: { web: 30, mobile: 45, backend: 60, design: 20 },
   },
-  {
-    title: "Users & Accounts",
-    cards: [
-      {
-        cardTitle: "User Registration",
-        cardIcon: <WebIcon />,
-      },
-      {
-        cardTitle: "Social Login",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "User Profiles",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "Password Reset",
-        cardIcon: <MobileIcon />,
-      },
-    ],
+  Basic: {
+    cost: { web: 8000, mobile: 12000, backend: 15000, design: 8000 },
+    time: { web: 45, mobile: 60, backend: 90, design: 30 },
   },
-  {
-    title: "App content",
-    cards: [
-      {
-        cardTitle: "Content Management",
-        cardIcon: <WebIcon />,
-      },
-      {
-        cardTitle: "Media Upload",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "Search & Filter",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "Content Categorization",
-        cardIcon: <MobileIcon />,
-      },
-    ],
+  Refined: {
+    cost: { web: 15000, mobile: 20000, backend: 25000, design: 15000 },
+    time: { web: 90, mobile: 120, backend: 150, design: 60 },
   },
-  {
-    title: "Geolocation",
-    cards: [
-      {
-        cardTitle: "Location Services",
-        cardIcon: <WebIcon />,
-      },
-      {
-        cardTitle: "Maps Integration",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "Geofencing",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "Location Tracking",
-        cardIcon: <MobileIcon />,
-      },
-    ],
-  },
-  {
-    title: "Scheduling / Booking",
-    cards: [
-      {
-        cardTitle: "Calendar Integration",
-        cardIcon: <WebIcon />,
-      },
-      {
-        cardTitle: "Booking System",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "Appointment Management",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "Time Slots",
-        cardIcon: <MobileIcon />,
-      },
-    ],
-  },
-  {
-    title: "User interactions",
-    cards: [
-      {
-        cardTitle: "Chat & Messaging",
-        cardIcon: <WebIcon />,
-      },
-      {
-        cardTitle: "Push Notifications",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "In-App Communication",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "User Feedback",
-        cardIcon: <MobileIcon />,
-      },
-    ],
-  },
-  {
-    title: "eCommerce",
-    cards: [
-      {
-        cardTitle: "Product Catalog",
-        cardIcon: <WebIcon />,
-      },
-      {
-        cardTitle: "Shopping Cart",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "Payment Processing",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "Order Management",
-        cardIcon: <MobileIcon />,
-      },
-    ],
-  },
-  {
-    title: "Admin, Feedback & Analytics",
-    cards: [
-      {
-        cardTitle: "Admin Dashboard",
-        cardIcon: <WebIcon />,
-      },
-      {
-        cardTitle: "Analytics Dashboard",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "User Analytics",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "Performance Monitoring",
-        cardIcon: <MobileIcon />,
-      },
-    ],
-  },
-  {
-    title: "External APIs and Integrations",
-    cards: [
-      {
-        cardTitle: "Third-party APIs",
-        cardIcon: <WebIcon />,
-      },
-      {
-        cardTitle: "Social Media Integration",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "Payment Gateways",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "Cloud Services",
-        cardIcon: <MobileIcon />,
-      },
-    ],
-  },
-  {
-    title: "Security",
-    cards: [
-      {
-        cardTitle: "Authentication",
-        cardIcon: <WebIcon />,
-      },
-      {
-        cardTitle: "Data Encryption",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "Security Monitoring",
-        cardIcon: <MobileIcon />,
-      },
-      {
-        cardTitle: "Compliance",
-        cardIcon: <MobileIcon />,
-      },
-    ],
-  },
-];
+};
+
+/**
+ * Feature Definitions JSON
+ * Centralized data structure containing all available features with costs and timelines
+ * To add or modify features, simply update this JSON structure
+ */
+const FEATURE_DEFINITIONS: Record<string, FeatureDefinition[]> = {
+  "App field": [
+    {
+      title: "E-Commerce",
+      icon: "web",
+      cost: { web: 8000, mobile: 10000, backend: 12000, design: 5000 },
+      time: { web: 45, mobile: 60, backend: 75, design: 30 },
+    },
+    {
+      title: "Logistics",
+      icon: "mobile",
+      cost: { web: 7000, mobile: 12000, backend: 10000, design: 4000 },
+      time: { web: 40, mobile: 70, backend: 65, design: 25 },
+    },
+    {
+      title: "HealthCare",
+      icon: "mobile",
+      cost: { web: 10000, mobile: 15000, backend: 15000, design: 6000 },
+      time: { web: 50, mobile: 80, backend: 90, design: 35 },
+    },
+    {
+      title: "Education",
+      icon: "mobile",
+      cost: { web: 6000, mobile: 9000, backend: 8000, design: 4000 },
+      time: { web: 35, mobile: 55, backend: 50, design: 25 },
+    },
+    {
+      title: "Custom",
+      icon: "mobile",
+      cost: { web: 5000, mobile: 8000, backend: 7000, design: 3500 },
+      time: { web: 30, mobile: 45, backend: 45, design: 20 },
+    },
+  ],
+  "Users & Accounts": [
+    {
+      title: "User Registration",
+      icon: "web",
+      cost: { web: 2000, mobile: 3000, backend: 3000, design: 1000 },
+      time: { web: 10, mobile: 15, backend: 15, design: 5 },
+    },
+    {
+      title: "Social Login",
+      icon: "mobile",
+      cost: { web: 1500, mobile: 2500, backend: 2000, design: 800 },
+      time: { web: 8, mobile: 12, backend: 10, design: 4 },
+    },
+    {
+      title: "User Profiles",
+      icon: "mobile",
+      cost: { web: 2500, mobile: 3500, backend: 2500, design: 1200 },
+      time: { web: 12, mobile: 18, backend: 15, design: 6 },
+    },
+    {
+      title: "Password Reset",
+      icon: "mobile",
+      cost: { web: 1000, mobile: 1500, backend: 1500, design: 500 },
+      time: { web: 5, mobile: 8, backend: 8, design: 3 },
+    },
+  ],
+  "App content": [
+    {
+      title: "Content Management",
+      icon: "web",
+      cost: { web: 4000, mobile: 5000, backend: 5000, design: 2000 },
+      time: { web: 20, mobile: 25, backend: 25, design: 10 },
+    },
+    {
+      title: "Media Upload",
+      icon: "mobile",
+      cost: { web: 2500, mobile: 3500, backend: 3000, design: 1000 },
+      time: { web: 12, mobile: 18, backend: 15, design: 5 },
+    },
+    {
+      title: "Search & Filter",
+      icon: "mobile",
+      cost: { web: 3000, mobile: 4000, backend: 3500, design: 1500 },
+      time: { web: 15, mobile: 20, backend: 18, design: 8 },
+    },
+    {
+      title: "Content Categorization",
+      icon: "mobile",
+      cost: { web: 2000, mobile: 3000, backend: 2500, design: 1000 },
+      time: { web: 10, mobile: 15, backend: 12, design: 5 },
+    },
+  ],
+  Geolocation: [
+    {
+      title: "Location Services",
+      icon: "web",
+      cost: { web: 3000, mobile: 5000, backend: 3500, design: 1500 },
+      time: { web: 15, mobile: 25, backend: 18, design: 8 },
+    },
+    {
+      title: "Maps Integration",
+      icon: "mobile",
+      cost: { web: 3500, mobile: 6000, backend: 4000, design: 2000 },
+      time: { web: 18, mobile: 30, backend: 20, design: 10 },
+    },
+    {
+      title: "Geofencing",
+      icon: "mobile",
+      cost: { web: 4000, mobile: 7000, backend: 5000, design: 2000 },
+      time: { web: 20, mobile: 35, backend: 25, design: 10 },
+    },
+    {
+      title: "Location Tracking",
+      icon: "mobile",
+      cost: { web: 3000, mobile: 5500, backend: 4000, design: 1800 },
+      time: { web: 15, mobile: 28, backend: 20, design: 9 },
+    },
+  ],
+  "Scheduling / Booking": [
+    {
+      title: "Calendar Integration",
+      icon: "web",
+      cost: { web: 3500, mobile: 5000, backend: 4000, design: 1800 },
+      time: { web: 18, mobile: 25, backend: 20, design: 9 },
+    },
+    {
+      title: "Booking System",
+      icon: "mobile",
+      cost: { web: 5000, mobile: 7000, backend: 6000, design: 2500 },
+      time: { web: 25, mobile: 35, backend: 30, design: 12 },
+    },
+    {
+      title: "Appointment Management",
+      icon: "mobile",
+      cost: { web: 4000, mobile: 6000, backend: 5000, design: 2200 },
+      time: { web: 20, mobile: 30, backend: 25, design: 11 },
+    },
+    {
+      title: "Time Slots",
+      icon: "mobile",
+      cost: { web: 2500, mobile: 4000, backend: 3000, design: 1500 },
+      time: { web: 12, mobile: 20, backend: 15, design: 7 },
+    },
+  ],
+  "User interactions": [
+    {
+      title: "Chat & Messaging",
+      icon: "web",
+      cost: { web: 6000, mobile: 8000, backend: 7000, design: 3000 },
+      time: { web: 30, mobile: 40, backend: 35, design: 15 },
+    },
+    {
+      title: "Push Notifications",
+      icon: "mobile",
+      cost: { web: 2000, mobile: 3500, backend: 2500, design: 1000 },
+      time: { web: 10, mobile: 18, backend: 12, design: 5 },
+    },
+    {
+      title: "In-App Communication",
+      icon: "mobile",
+      cost: { web: 4000, mobile: 6000, backend: 5000, design: 2000 },
+      time: { web: 20, mobile: 30, backend: 25, design: 10 },
+    },
+    {
+      title: "User Feedback",
+      icon: "mobile",
+      cost: { web: 1500, mobile: 2500, backend: 2000, design: 800 },
+      time: { web: 8, mobile: 12, backend: 10, design: 4 },
+    },
+  ],
+  eCommerce: [
+    {
+      title: "Product Catalog",
+      icon: "web",
+      cost: { web: 3000, mobile: 4000, backend: 3500, design: 1800 },
+      time: { web: 15, mobile: 20, backend: 18, design: 9 },
+    },
+    {
+      title: "Shopping Cart",
+      icon: "mobile",
+      cost: { web: 4000, mobile: 5500, backend: 4500, design: 2000 },
+      time: { web: 20, mobile: 28, backend: 22, design: 10 },
+    },
+    {
+      title: "Payment Processing",
+      icon: "mobile",
+      cost: { web: 5000, mobile: 7000, backend: 6000, design: 2500 },
+      time: { web: 25, mobile: 35, backend: 30, design: 12 },
+    },
+    {
+      title: "Order Management",
+      icon: "mobile",
+      cost: { web: 4500, mobile: 6000, backend: 5500, design: 2200 },
+      time: { web: 22, mobile: 30, backend: 28, design: 11 },
+    },
+  ],
+  "Admin, Feedback & Analytics": [
+    {
+      title: "Admin Dashboard",
+      icon: "web",
+      cost: { web: 6000, mobile: 8000, backend: 7000, design: 3500 },
+      time: { web: 30, mobile: 40, backend: 35, design: 18 },
+    },
+    {
+      title: "Analytics Dashboard",
+      icon: "mobile",
+      cost: { web: 5000, mobile: 7000, backend: 6000, design: 3000 },
+      time: { web: 25, mobile: 35, backend: 30, design: 15 },
+    },
+    {
+      title: "User Analytics",
+      icon: "mobile",
+      cost: { web: 4000, mobile: 5500, backend: 5000, design: 2500 },
+      time: { web: 20, mobile: 28, backend: 25, design: 12 },
+    },
+    {
+      title: "Performance Monitoring",
+      icon: "mobile",
+      cost: { web: 3500, mobile: 5000, backend: 4500, design: 2000 },
+      time: { web: 18, mobile: 25, backend: 22, design: 10 },
+    },
+  ],
+  "External APIs and Integrations": [
+    {
+      title: "Third-party APIs",
+      icon: "web",
+      cost: { web: 3000, mobile: 4000, backend: 4000, design: 1000 },
+      time: { web: 15, mobile: 20, backend: 20, design: 5 },
+    },
+    {
+      title: "Social Media Integration",
+      icon: "mobile",
+      cost: { web: 2500, mobile: 4000, backend: 3000, design: 1500 },
+      time: { web: 12, mobile: 20, backend: 15, design: 7 },
+    },
+    {
+      title: "Payment Gateways",
+      icon: "mobile",
+      cost: { web: 4000, mobile: 5500, backend: 5000, design: 2000 },
+      time: { web: 20, mobile: 28, backend: 25, design: 10 },
+    },
+    {
+      title: "Cloud Services",
+      icon: "mobile",
+      cost: { web: 3500, mobile: 5000, backend: 4500, design: 1800 },
+      time: { web: 18, mobile: 25, backend: 22, design: 9 },
+    },
+  ],
+  Security: [
+    {
+      title: "Authentication",
+      icon: "web",
+      cost: { web: 4000, mobile: 5000, backend: 5000, design: 1500 },
+      time: { web: 20, mobile: 25, backend: 25, design: 7 },
+    },
+    {
+      title: "Data Encryption",
+      icon: "mobile",
+      cost: { web: 3500, mobile: 5000, backend: 4500, design: 1500 },
+      time: { web: 18, mobile: 25, backend: 22, design: 7 },
+    },
+    {
+      title: "Security Monitoring",
+      icon: "mobile",
+      cost: { web: 3000, mobile: 4500, backend: 4000, design: 1200 },
+      time: { web: 15, mobile: 22, backend: 20, design: 6 },
+    },
+    {
+      title: "Compliance",
+      icon: "mobile",
+      cost: { web: 5000, mobile: 7000, backend: 6000, design: 2000 },
+      time: { web: 25, mobile: 35, backend: 30, design: 10 },
+    },
+  ],
+};
+
+/**
+ * Transform feature definitions into accordion items format
+ * This maintains the existing UI structure while using the new data-driven approach
+ */
+const accordionItems = Object.entries(FEATURE_DEFINITIONS).map(([title, features]) => ({
+  title,
+  cards: features.map((feature) => ({
+    cardTitle: feature.title,
+    cardIcon: feature.icon === "web" ? <WebIcon /> : <MobileIcon />,
+    featureDefinition: feature, // Store reference to the feature definition
+  })),
+}));
 
 export default function HomeCalculator() {
   const [activeSwitcher, setActiveSwitcher] = useState("Web");
@@ -240,6 +365,89 @@ export default function HomeCalculator() {
   useEffect(() => {
     setActiveAccordion(accordionItems.map((item) => ({ title: item.title, active: null })));
   }, []);
+
+  /**
+   * Get all selected features from accordions
+   * Returns an array of FeatureDefinition objects
+   */
+  const getSelectedFeatures = useMemo((): FeatureDefinition[] => {
+    const selected: FeatureDefinition[] = [];
+
+    accordionItems.forEach((accordionItem, index) => {
+      const activeFeatureTitle = activeAccordion[index]?.active;
+      if (activeFeatureTitle) {
+        const card = accordionItem.cards.find((c) => c.cardTitle === activeFeatureTitle);
+        if (card?.featureDefinition) {
+          selected.push(card.featureDefinition);
+        }
+      }
+    });
+
+    return selected;
+  }, [activeAccordion]);
+
+  /**
+   * Calculate costs and timelines based on selected features and app size
+   * Returns breakdown by category (web, mobile, backend, design) and totals
+   */
+  const calculations = useMemo(() => {
+    // Base costs and time from app size selection
+    const baseConfig = APP_SIZE_CONFIGS[activeCard] || APP_SIZE_CONFIGS["MVP"];
+
+    // Initialize totals with base values
+    let webCost = baseConfig.cost.web;
+    let mobileCost = baseConfig.cost.mobile;
+    let backendCost = baseConfig.cost.backend;
+    let designCost = baseConfig.cost.design;
+
+    let webTime = baseConfig.time.web;
+    let mobileTime = baseConfig.time.mobile;
+    let backendTime = baseConfig.time.backend;
+    let designTime = baseConfig.time.design;
+
+    // Add selected features
+    getSelectedFeatures.forEach((feature) => {
+      webCost += feature.cost.web;
+      mobileCost += feature.cost.mobile;
+      backendCost += feature.cost.backend;
+      designCost += feature.cost.design;
+
+      webTime += feature.time.web;
+      mobileTime += feature.time.mobile;
+      backendTime += feature.time.backend;
+      designTime += feature.time.design;
+    });
+
+    // Calculate total cost and time
+    const totalCost = webCost + mobileCost + backendCost + designCost;
+    const totalTime = Math.max(webTime, mobileTime) + backendTime + designTime; // Time is not additive, use max for parallel work
+
+    return {
+      web: { cost: webCost, time: webTime },
+      mobile: { cost: mobileCost, time: mobileTime },
+      backend: { cost: backendCost, time: backendTime },
+      design: { cost: designCost, time: designTime },
+      total: { cost: totalCost, time: totalTime },
+    };
+  }, [activeCard, getSelectedFeatures]);
+
+  /**
+   * Format currency for display
+   */
+  const formatCurrency = (amount: number): string => {
+    return `$${amount.toLocaleString()}`;
+  };
+
+  /**
+   * Format time for display (days or weeks)
+   */
+  const formatTime = (days: number): string => {
+    if (days >= 14) {
+      const weeks = Math.round(days / 7);
+      return weeks === 1 ? "1 week" : `${weeks} weeks`;
+    }
+    return days === 1 ? "1 day" : `${days} days`;
+  };
 
   return (
     <div className="flex w-full flex-col gap-6 px-4 sm:gap-7 sm:px-8 md:gap-8 md:px-12 lg:px-20">
@@ -300,9 +508,13 @@ export default function HomeCalculator() {
                         icon={card.cardIcon}
                         title={card.cardTitle}
                         onClick={() => {
-                          console.log("clicked");
+                          // Toggle feature selection (allow deselecting)
                           setActiveAccordion((prev) =>
-                            prev.map((item, i) => (i === index ? { ...item, active: card.cardTitle } : item)),
+                            prev.map((item, i) =>
+                              i === index
+                                ? { ...item, active: item.active === card.cardTitle ? null : card.cardTitle }
+                                : item,
+                            ),
                           );
                         }}
                       />
@@ -321,28 +533,32 @@ export default function HomeCalculator() {
                   {" "}
                   <WebIcon /> Web
                 </span>
-                <span className="text-2xl">$1000</span>
+                <span className="text-2xl">{formatCurrency(calculations.web.cost)}</span>
               </div>
               <div className="bg-opacity-100-black/95 border-charcole flex flex-col justify-between gap-3 rounded-[20px] border p-4">
                 <span className="flex items-center gap-2 text-lg">
                   {" "}
                   <MobileIcon /> Mobile
                 </span>
-                <span className="text-2xl">$1000</span>
+                <span className="text-2xl">{formatCurrency(calculations.mobile.cost)}</span>
               </div>
               <div className="bricolage grid grid-cols-2 gap-3 font-bold text-white">
                 <div className="bg-opacity-100-black/95 border-charcole flex flex-col justify-between gap-3 rounded-[20px] border p-4">
                   <span className="text-lg">Backend</span>
-                  <span className="text-2xl">$1000</span>
+                  <span className="text-2xl">{formatCurrency(calculations.backend.cost)}</span>
                 </div>
                 <div className="bg-opacity-100-black/95 border-charcole flex flex-col justify-between gap-3 rounded-[20px] border p-4">
                   <span className="text-lg">Design</span>
-                  <span className="text-2xl">$1000</span>
+                  <span className="text-2xl">{formatCurrency(calculations.design.cost)}</span>
                 </div>
               </div>
               <div className="flex flex-col justify-center gap-2">
                 <span className="text-xl">Total Cost</span>
-                <span className="text-[42px]">$6000</span>
+                <span className="text-[42px]">{formatCurrency(calculations.total.cost)}</span>
+              </div>
+              <div className="flex flex-col justify-center gap-2">
+                <span className="text-xl">Estimated Timeline</span>
+                <span className="text-[32px]">{formatTime(calculations.total.time)}</span>
               </div>
               <GoButton className="w-full" text="Send me a free detailed estimation" onClick={() => {}} />
             </div>
