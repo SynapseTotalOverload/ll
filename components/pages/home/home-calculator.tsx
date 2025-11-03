@@ -9,6 +9,47 @@ import CalculatorCard from "@/components/modules/calculator-card";
 import { Accordion, AccordionTrigger, AccordionContent, AccordionItem } from "@/components/ui/calc-accordion";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import GoButton from "@/components/ui/go-button";
+import {
+  ShoppingCart,
+  Truck,
+  Heart,
+  GraduationCap,
+  Settings,
+  UserPlus,
+  LogIn,
+  User,
+  Key,
+  FileText,
+  Upload,
+  Search,
+  MapPin,
+  Map,
+  Shield,
+  Navigation,
+  Calendar,
+  BookOpen,
+  Clock,
+  MessageSquare,
+  Bell,
+  Mail,
+  MessageCircle,
+  Package,
+  ShoppingBag,
+  CreditCard,
+  ClipboardList,
+  LayoutDashboard,
+  BarChart,
+  Users,
+  Activity,
+  Webhook,
+  Share2,
+  Wallet,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Eye,
+  FileCheck,
+} from "lucide-react";
 
 /**
  * Feature Definition Interface
@@ -16,7 +57,7 @@ import GoButton from "@/components/ui/go-button";
  */
 interface FeatureDefinition {
   title: string;
-  icon: "web" | "mobile";
+  icon: React.ReactNode; // Icon component from lucide-react
   cost: {
     web: number; // Cost in USD for web platform
     mobile: number; // Cost in USD for mobile platform
@@ -69,36 +110,37 @@ const APP_SIZE_CONFIGS: Record<string, AppSizeConfig> = {
  * Feature Definitions JSON
  * Centralized data structure containing all available features with costs and timelines
  * To add or modify features, simply update this JSON structure
+ * Categories have varying numbers of features (3, 4, 5, 6) for visual variety
  */
 const FEATURE_DEFINITIONS: Record<string, FeatureDefinition[]> = {
   "App field": [
     {
       title: "E-Commerce",
-      icon: "web",
+      icon: <ShoppingCart className="size-6" />,
       cost: { web: 8000, mobile: 10000, backend: 12000, design: 5000 },
       time: { web: 45, mobile: 60, backend: 75, design: 30 },
     },
     {
       title: "Logistics",
-      icon: "mobile",
+      icon: <Truck className="size-6" />,
       cost: { web: 7000, mobile: 12000, backend: 10000, design: 4000 },
       time: { web: 40, mobile: 70, backend: 65, design: 25 },
     },
     {
       title: "HealthCare",
-      icon: "mobile",
+      icon: <Heart className="size-6" />,
       cost: { web: 10000, mobile: 15000, backend: 15000, design: 6000 },
       time: { web: 50, mobile: 80, backend: 90, design: 35 },
     },
     {
       title: "Education",
-      icon: "mobile",
+      icon: <GraduationCap className="size-6" />,
       cost: { web: 6000, mobile: 9000, backend: 8000, design: 4000 },
       time: { web: 35, mobile: 55, backend: 50, design: 25 },
     },
     {
       title: "Custom",
-      icon: "mobile",
+      icon: <Settings className="size-6" />,
       cost: { web: 5000, mobile: 8000, backend: 7000, design: 3500 },
       time: { web: 30, mobile: 45, backend: 45, design: 20 },
     },
@@ -106,129 +148,135 @@ const FEATURE_DEFINITIONS: Record<string, FeatureDefinition[]> = {
   "Users & Accounts": [
     {
       title: "User Registration",
-      icon: "web",
+      icon: <UserPlus className="size-6" />,
       cost: { web: 2000, mobile: 3000, backend: 3000, design: 1000 },
       time: { web: 10, mobile: 15, backend: 15, design: 5 },
     },
     {
       title: "Social Login",
-      icon: "mobile",
+      icon: <LogIn className="size-6" />,
       cost: { web: 1500, mobile: 2500, backend: 2000, design: 800 },
       time: { web: 8, mobile: 12, backend: 10, design: 4 },
     },
     {
       title: "User Profiles",
-      icon: "mobile",
+      icon: <User className="size-6" />,
       cost: { web: 2500, mobile: 3500, backend: 2500, design: 1200 },
       time: { web: 12, mobile: 18, backend: 15, design: 6 },
     },
     {
       title: "Password Reset",
-      icon: "mobile",
+      icon: <Key className="size-6" />,
       cost: { web: 1000, mobile: 1500, backend: 1500, design: 500 },
       time: { web: 5, mobile: 8, backend: 8, design: 3 },
+    },
+    {
+      title: "Two-Factor Auth",
+      icon: <Shield className="size-6" />,
+      cost: { web: 3000, mobile: 4000, backend: 3500, design: 1500 },
+      time: { web: 15, mobile: 20, backend: 18, design: 8 },
     },
   ],
   "App content": [
     {
       title: "Content Management",
-      icon: "web",
+      icon: <FileText className="size-6" />,
       cost: { web: 4000, mobile: 5000, backend: 5000, design: 2000 },
       time: { web: 20, mobile: 25, backend: 25, design: 10 },
     },
     {
       title: "Media Upload",
-      icon: "mobile",
+      icon: <Upload className="size-6" />,
       cost: { web: 2500, mobile: 3500, backend: 3000, design: 1000 },
       time: { web: 12, mobile: 18, backend: 15, design: 5 },
     },
     {
       title: "Search & Filter",
-      icon: "mobile",
+      icon: <Search className="size-6" />,
       cost: { web: 3000, mobile: 4000, backend: 3500, design: 1500 },
       time: { web: 15, mobile: 20, backend: 18, design: 8 },
-    },
-    {
-      title: "Content Categorization",
-      icon: "mobile",
-      cost: { web: 2000, mobile: 3000, backend: 2500, design: 1000 },
-      time: { web: 10, mobile: 15, backend: 12, design: 5 },
     },
   ],
   Geolocation: [
     {
       title: "Location Services",
-      icon: "web",
+      icon: <MapPin className="size-6" />,
       cost: { web: 3000, mobile: 5000, backend: 3500, design: 1500 },
       time: { web: 15, mobile: 25, backend: 18, design: 8 },
     },
     {
       title: "Maps Integration",
-      icon: "mobile",
+      icon: <Map className="size-6" />,
       cost: { web: 3500, mobile: 6000, backend: 4000, design: 2000 },
       time: { web: 18, mobile: 30, backend: 20, design: 10 },
     },
     {
       title: "Geofencing",
-      icon: "mobile",
+      icon: <Shield className="size-6" />,
       cost: { web: 4000, mobile: 7000, backend: 5000, design: 2000 },
       time: { web: 20, mobile: 35, backend: 25, design: 10 },
     },
     {
       title: "Location Tracking",
-      icon: "mobile",
+      icon: <Navigation className="size-6" />,
       cost: { web: 3000, mobile: 5500, backend: 4000, design: 1800 },
       time: { web: 15, mobile: 28, backend: 20, design: 9 },
+    },
+    {
+      title: "Route Optimization",
+      icon: <Map className="size-6" />,
+      cost: { web: 4500, mobile: 7000, backend: 5500, design: 2200 },
+      time: { web: 22, mobile: 35, backend: 28, design: 11 },
+    },
+    {
+      title: "Delivery Tracking",
+      icon: <Truck className="size-6" />,
+      cost: { web: 3500, mobile: 6000, backend: 4500, design: 1800 },
+      time: { web: 18, mobile: 30, backend: 22, design: 9 },
     },
   ],
   "Scheduling / Booking": [
     {
       title: "Calendar Integration",
-      icon: "web",
+      icon: <Calendar className="size-6" />,
       cost: { web: 3500, mobile: 5000, backend: 4000, design: 1800 },
       time: { web: 18, mobile: 25, backend: 20, design: 9 },
     },
     {
       title: "Booking System",
-      icon: "mobile",
+      icon: <BookOpen className="size-6" />,
       cost: { web: 5000, mobile: 7000, backend: 6000, design: 2500 },
       time: { web: 25, mobile: 35, backend: 30, design: 12 },
     },
     {
       title: "Appointment Management",
-      icon: "mobile",
+      icon: <Clock className="size-6" />,
       cost: { web: 4000, mobile: 6000, backend: 5000, design: 2200 },
       time: { web: 20, mobile: 30, backend: 25, design: 11 },
-    },
-    {
-      title: "Time Slots",
-      icon: "mobile",
-      cost: { web: 2500, mobile: 4000, backend: 3000, design: 1500 },
-      time: { web: 12, mobile: 20, backend: 15, design: 7 },
     },
   ],
   "User interactions": [
     {
       title: "Chat & Messaging",
-      icon: "web",
+      icon: <MessageSquare className="size-6" />,
       cost: { web: 6000, mobile: 8000, backend: 7000, design: 3000 },
       time: { web: 30, mobile: 40, backend: 35, design: 15 },
     },
     {
       title: "Push Notifications",
-      icon: "mobile",
+      icon: <Bell className="size-6" />,
       cost: { web: 2000, mobile: 3500, backend: 2500, design: 1000 },
       time: { web: 10, mobile: 18, backend: 12, design: 5 },
     },
     {
       title: "In-App Communication",
-      icon: "mobile",
+      icon: <Mail className="size-6" />,
       cost: { web: 4000, mobile: 6000, backend: 5000, design: 2000 },
       time: { web: 20, mobile: 30, backend: 25, design: 10 },
     },
     {
       title: "User Feedback",
-      icon: "mobile",
+      icon: <MessageCircle className="size-6" />,
       cost: { web: 1500, mobile: 2500, backend: 2000, design: 800 },
       time: { web: 8, mobile: 12, backend: 10, design: 4 },
     },
@@ -236,105 +284,123 @@ const FEATURE_DEFINITIONS: Record<string, FeatureDefinition[]> = {
   eCommerce: [
     {
       title: "Product Catalog",
-      icon: "web",
+      icon: <Package className="size-6" />,
       cost: { web: 3000, mobile: 4000, backend: 3500, design: 1800 },
       time: { web: 15, mobile: 20, backend: 18, design: 9 },
     },
     {
       title: "Shopping Cart",
-      icon: "mobile",
+      icon: <ShoppingBag className="size-6" />,
       cost: { web: 4000, mobile: 5500, backend: 4500, design: 2000 },
       time: { web: 20, mobile: 28, backend: 22, design: 10 },
     },
     {
       title: "Payment Processing",
-      icon: "mobile",
+      icon: <CreditCard className="size-6" />,
       cost: { web: 5000, mobile: 7000, backend: 6000, design: 2500 },
       time: { web: 25, mobile: 35, backend: 30, design: 12 },
     },
     {
       title: "Order Management",
-      icon: "mobile",
+      icon: <ClipboardList className="size-6" />,
       cost: { web: 4500, mobile: 6000, backend: 5500, design: 2200 },
       time: { web: 22, mobile: 30, backend: 28, design: 11 },
+    },
+    {
+      title: "Inventory System",
+      icon: <Package className="size-6" />,
+      cost: { web: 3500, mobile: 5000, backend: 4500, design: 1800 },
+      time: { web: 18, mobile: 25, backend: 22, design: 9 },
     },
   ],
   "Admin, Feedback & Analytics": [
     {
       title: "Admin Dashboard",
-      icon: "web",
+      icon: <LayoutDashboard className="size-6" />,
       cost: { web: 6000, mobile: 8000, backend: 7000, design: 3500 },
       time: { web: 30, mobile: 40, backend: 35, design: 18 },
     },
     {
       title: "Analytics Dashboard",
-      icon: "mobile",
+      icon: <BarChart className="size-6" />,
       cost: { web: 5000, mobile: 7000, backend: 6000, design: 3000 },
       time: { web: 25, mobile: 35, backend: 30, design: 15 },
     },
     {
       title: "User Analytics",
-      icon: "mobile",
+      icon: <Users className="size-6" />,
       cost: { web: 4000, mobile: 5500, backend: 5000, design: 2500 },
       time: { web: 20, mobile: 28, backend: 25, design: 12 },
-    },
-    {
-      title: "Performance Monitoring",
-      icon: "mobile",
-      cost: { web: 3500, mobile: 5000, backend: 4500, design: 2000 },
-      time: { web: 18, mobile: 25, backend: 22, design: 10 },
     },
   ],
   "External APIs and Integrations": [
     {
       title: "Third-party APIs",
-      icon: "web",
+      icon: <Webhook className="size-6" />,
       cost: { web: 3000, mobile: 4000, backend: 4000, design: 1000 },
       time: { web: 15, mobile: 20, backend: 20, design: 5 },
     },
     {
       title: "Social Media Integration",
-      icon: "mobile",
+      icon: <Share2 className="size-6" />,
       cost: { web: 2500, mobile: 4000, backend: 3000, design: 1500 },
       time: { web: 12, mobile: 20, backend: 15, design: 7 },
     },
     {
       title: "Payment Gateways",
-      icon: "mobile",
+      icon: <Wallet className="size-6" />,
       cost: { web: 4000, mobile: 5500, backend: 5000, design: 2000 },
       time: { web: 20, mobile: 28, backend: 25, design: 10 },
     },
     {
       title: "Cloud Services",
-      icon: "mobile",
+      icon: <Cloud className="size-6" />,
       cost: { web: 3500, mobile: 5000, backend: 4500, design: 1800 },
       time: { web: 18, mobile: 25, backend: 22, design: 9 },
+    },
+    {
+      title: "Email Service",
+      icon: <Mail className="size-6" />,
+      cost: { web: 2000, mobile: 3000, backend: 2500, design: 1000 },
+      time: { web: 10, mobile: 15, backend: 12, design: 5 },
     },
   ],
   Security: [
     {
       title: "Authentication",
-      icon: "web",
+      icon: <Lock className="size-6" />,
       cost: { web: 4000, mobile: 5000, backend: 5000, design: 1500 },
       time: { web: 20, mobile: 25, backend: 25, design: 7 },
     },
     {
       title: "Data Encryption",
-      icon: "mobile",
+      icon: <ShieldCheck className="size-6" />,
       cost: { web: 3500, mobile: 5000, backend: 4500, design: 1500 },
       time: { web: 18, mobile: 25, backend: 22, design: 7 },
     },
     {
       title: "Security Monitoring",
-      icon: "mobile",
+      icon: <Eye className="size-6" />,
       cost: { web: 3000, mobile: 4500, backend: 4000, design: 1200 },
       time: { web: 15, mobile: 22, backend: 20, design: 6 },
     },
     {
       title: "Compliance",
-      icon: "mobile",
+      icon: <FileCheck className="size-6" />,
       cost: { web: 5000, mobile: 7000, backend: 6000, design: 2000 },
       time: { web: 25, mobile: 35, backend: 30, design: 10 },
+    },
+    {
+      title: "Performance Monitoring",
+      icon: <Activity className="size-6" />,
+      cost: { web: 3500, mobile: 5000, backend: 4500, design: 2000 },
+      time: { web: 18, mobile: 25, backend: 22, design: 10 },
+    },
+    {
+      title: "Backup & Recovery",
+      icon: <Cloud className="size-6" />,
+      cost: { web: 4000, mobile: 5500, backend: 5000, design: 1500 },
+      time: { web: 20, mobile: 28, backend: 25, design: 8 },
     },
   ],
 };
@@ -347,7 +413,7 @@ const accordionItems = Object.entries(FEATURE_DEFINITIONS).map(([title, features
   title,
   cards: features.map((feature) => ({
     cardTitle: feature.title,
-    cardIcon: feature.icon === "web" ? <WebIcon /> : <MobileIcon />,
+    cardIcon: feature.icon, // Use the lucide-react icon directly
     featureDefinition: feature, // Store reference to the feature definition
   })),
 }));
