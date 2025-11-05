@@ -8,6 +8,14 @@ import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { portfolio } from "@/constants/portfolio/portfolio";
 import PortfolioCard from "@/components/modules/portfolio-card";
 import DynamicSmallProjectCard from "@/components/pages/dynamic/dynamic-small-project-card";
+import { getProject } from "@/constants/projects/project-config";
+
+// Map portfolio items to project slugs
+const portfolioToProjectMap: Record<string, string> = {
+  "sxipher-1": "sxipher-ai",
+  "community-lands-2": "com-lands",
+  "outspeak-3": "tripsha", // Using tripsha as fallback for OutSpeak
+};
 
 export default function PortfolioStartups() {
   return (
@@ -22,6 +30,24 @@ export default function PortfolioStartups() {
       {/* Mobile: Small Project Cards */}
       <div className="grid grid-cols-1 gap-4 sm:hidden">
         {portfolio.map((item) => {
+          const projectSlug = portfolioToProjectMap[item.id];
+          const project = projectSlug ? getProject(projectSlug) : null;
+          const hasSmallCard = project && project.smallProjectCards && project.smallProjectCards.length > 0;
+          
+          if (hasSmallCard) {
+            const smallCard = project.smallProjectCards[0];
+            return (
+              <DynamicSmallProjectCard
+                key={item.id}
+                title={smallCard.title}
+                points={smallCard.points}
+                image={smallCard.image}
+                backgroundUrl={smallCard.backgroundUrl}
+              />
+            );
+          }
+          
+          // Fallback to portfolio data if no project found
           return (
             <DynamicSmallProjectCard
               key={item.id}

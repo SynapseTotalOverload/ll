@@ -47,16 +47,16 @@ export default function HeroSection() {
       </div>
 
       {/* CTA Section */}
-      <div className="flex flex-row items-center justify-center gap-4 px-4 sm:gap-12 md:gap-16 lg:gap-20">
+      <div className="flex flex-col items-center justify-center gap-4 px-4 sm:flex-row sm:gap-12 md:gap-16 lg:gap-20">
         <GoButton
           text="Click here to get in touch with us"
           onClick={handleScrollToContactUs}
-          className="w-[20vw] max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl"
+          className="w-full max-w-sm sm:w-auto sm:max-w-md md:max-w-lg lg:max-w-xl"
         />
         <GoButton
           text="Estimate my project"
           onClick={handleScrollToEstimateProject}
-          className="w-[20vw] max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl"
+          className="w-full max-w-sm sm:w-auto sm:max-w-md md:max-w-lg lg:max-w-xl"
         />
       </div>
     </div>

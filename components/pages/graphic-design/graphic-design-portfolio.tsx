@@ -4,12 +4,13 @@ import { MoveRightIcon } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import Image from "next/image";
-import BgG1 from '@/public/assets/mocks/graphic/1.png'
-import BgG2 from '@/public/assets/mocks/graphic/2.png'
-import BgG3 from '@/public/assets/mocks/graphic/3.png'
-
+import { getProject } from "@/constants/projects/project-config";
 
 export default function GraphicDesignPortfolio() {
+  const truthOrDareProject = getProject("truth-or-dare");
+  const chillbillProject = getProject("chillbill");
+  const digibdrProject = getProject("digibdr");
+
   return (
     <div className="flex w-full flex-col gap-8 px-4 sm:gap-12 sm:px-6 md:gap-16 md:px-8 lg:gap-20 lg:px-12 xl:gap-24 xl:px-16">
       <SignTitle>
@@ -33,7 +34,13 @@ export default function GraphicDesignPortfolio() {
             <span className="text-plastic text-xs sm:text-sm md:text-base">Mobile App</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Truth or Dare</InfoCard.Title>
           </div>
-          <Image alt="product" className="w-full object-cover" src={BgG1} />
+          <Image 
+            alt="product" 
+            className="w-full object-cover" 
+            src={truthOrDareProject?.portfolioCard?.mainImage || "/assets/mocks/graphic/1.png"} 
+            width={300} 
+            height={200} 
+          />
         </InfoCard>
 
         {/* Portfolio Card 2 */}
@@ -42,7 +49,13 @@ export default function GraphicDesignPortfolio() {
             <span className="text-plastic text-xs sm:text-sm md:text-base">Mobile App</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Chill Bill</InfoCard.Title>
           </div>
-          <Image alt="product" className="w-full object-cover" src={BgG2} />
+          <Image 
+            alt="product" 
+            className="w-full object-cover" 
+            src={chillbillProject?.portfolioCard?.mainImage || "/assets/mocks/graphic/2.png"} 
+            width={300} 
+            height={200} 
+          />
         </InfoCard>
 
         {/* Portfolio Card 3 */}
@@ -51,7 +64,13 @@ export default function GraphicDesignPortfolio() {
             <span className="text-plastic text-xs sm:text-sm md:text-base">Platform</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">DigiBdr</InfoCard.Title>
           </div>
-          <Image alt="product" className="w-full object-cover" src={BgG3} />
+          <Image 
+            alt="product" 
+            className="w-full object-cover" 
+            src={digibdrProject?.portfolioCard?.mainImage || "/assets/mocks/graphic/3.png"} 
+            width={300} 
+            height={200} 
+          />
         </InfoCard>
       </div>
     </div>

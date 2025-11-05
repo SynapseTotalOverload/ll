@@ -516,7 +516,7 @@ export default function HomeCalculator() {
   };
 
   return (
-    <div className="flex w-full flex-col gap-6 px-4 sm:gap-7 sm:px-8 md:gap-8 md:px-12 lg:px-20">
+    <div className="flex w-full flex-col gap-4 px-4 sm:gap-6 sm:px-6 md:gap-7 md:px-8 lg:gap-8 lg:px-12 xl:px-20">
       <SignTitle>
         <SignTitle.Title>Estimate my Project</SignTitle.Title>
         <SignTitle.Description>
@@ -531,18 +531,20 @@ export default function HomeCalculator() {
           active={activeSwitcher}
           onChange={(option) => setActiveSwitcher(option)}
           remderOptions={(option) => (
-            <span className="inline-flex min-w-[200px] items-center justify-center gap-2">
+            <span className="inline-flex min-w-[100px] items-center justify-center gap-2 sm:min-w-[150px] md:min-w-[200px]">
               {" "}
               {getIconByName(option)} {option}
             </span>
           )}
         />
       </div>
-      <div className="grid grid-cols-[1.6fr_1fr] gap-8">
+      <div className="grid grid-cols-1 gap-4 md:gap-6 lg:grid-cols-[1.6fr_1fr] lg:gap-8">
         <div>
-          <div className="flex flex-col gap-2">
-            <span className="text-plastic text-xl font-bold uppercase">How big is your app</span>
-            <div className="grid grid-cols-3 gap-x-8 gap-y-4">
+          <div className="flex flex-col gap-2 sm:gap-3">
+            <span className="text-plastic text-sm font-bold uppercase sm:text-base md:text-lg lg:text-xl">
+              How big is your app
+            </span>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4 md:gap-x-8 md:gap-y-4">
               <CalculatorCard
                 onClick={() => setActiveCard("MVP")}
                 icon={<WebIcon />}
@@ -566,7 +568,7 @@ export default function HomeCalculator() {
               {accordionItems.map((item, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
                   <AccordionTrigger>{item.title}</AccordionTrigger>
-                  <AccordionContent className="grid grid-cols-3 gap-x-8 gap-y-4">
+                  <AccordionContent className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 md:gap-x-6 md:gap-y-4 lg:grid-cols-3 lg:gap-x-8">
                     {item.cards.map((card) => (
                       <CalculatorCard
                         active={activeAccordion[index]?.active === card.cardTitle}
@@ -593,38 +595,42 @@ export default function HomeCalculator() {
         </div>
         <div className="flex flex-col">
           <BackgroundGradient rounded="rounded-[20px]">
-            <div className="bg-opacity-100-black/90 bricolage flex h-full flex-1 flex-col gap-3 rounded-[20px] p-6 font-[700]">
-              <div className="bg-opacity-100-black/95 border-charcole flex flex-col justify-between gap-3 rounded-[20px] border p-4">
-                <span className="flex items-center gap-2 text-lg">
+            <div className="bg-opacity-100-black/90 bricolage flex h-full flex-1 flex-col gap-2 rounded-[20px] p-3 font-[700] sm:gap-3 sm:p-4 md:p-5 lg:p-6">
+              <div className="bg-opacity-100-black/95 border-charcole flex flex-col justify-between gap-2 rounded-[20px] border p-2.5 sm:gap-3 sm:p-3 md:p-4">
+                <span className="flex items-center gap-2 text-sm sm:text-base md:text-lg">
                   {" "}
                   <WebIcon /> Web
                 </span>
-                <span className="text-2xl">{formatCurrency(calculations.web.cost)}</span>
+                <span className="text-lg sm:text-xl md:text-2xl">{formatCurrency(calculations.web.cost)}</span>
               </div>
-              <div className="bg-opacity-100-black/95 border-charcole flex flex-col justify-between gap-3 rounded-[20px] border p-4">
-                <span className="flex items-center gap-2 text-lg">
+              <div className="bg-opacity-100-black/95 border-charcole flex flex-col justify-between gap-2 rounded-[20px] border p-2.5 sm:gap-3 sm:p-3 md:p-4">
+                <span className="flex items-center gap-2 text-sm sm:text-base md:text-lg">
                   {" "}
                   <MobileIcon /> Mobile
                 </span>
-                <span className="text-2xl">{formatCurrency(calculations.mobile.cost)}</span>
+                <span className="text-lg sm:text-xl md:text-2xl">{formatCurrency(calculations.mobile.cost)}</span>
               </div>
-              <div className="bricolage grid grid-cols-2 gap-3 font-bold text-white">
-                <div className="bg-opacity-100-black/95 border-charcole flex flex-col justify-between gap-3 rounded-[20px] border p-4">
-                  <span className="text-lg">Backend</span>
-                  <span className="text-2xl">{formatCurrency(calculations.backend.cost)}</span>
+              <div className="bricolage grid grid-cols-1 gap-2 font-bold text-white sm:grid-cols-2 sm:gap-3">
+                <div className="bg-opacity-100-black/95 border-charcole flex flex-col justify-between gap-2 rounded-[20px] border p-2.5 sm:gap-3 sm:p-3 md:p-4">
+                  <span className="text-sm sm:text-base md:text-lg">Backend</span>
+                  <span className="text-lg sm:text-xl md:text-2xl">{formatCurrency(calculations.backend.cost)}</span>
                 </div>
-                <div className="bg-opacity-100-black/95 border-charcole flex flex-col justify-between gap-3 rounded-[20px] border p-4">
-                  <span className="text-lg">Design</span>
-                  <span className="text-2xl">{formatCurrency(calculations.design.cost)}</span>
+                <div className="bg-opacity-100-black/95 border-charcole flex flex-col justify-between gap-2 rounded-[20px] border p-2.5 sm:gap-3 sm:p-3 md:p-4">
+                  <span className="text-sm sm:text-base md:text-lg">Design</span>
+                  <span className="text-lg sm:text-xl md:text-2xl">{formatCurrency(calculations.design.cost)}</span>
                 </div>
               </div>
-              <div className="flex flex-col justify-center gap-2">
-                <span className="text-xl">Total Cost</span>
-                <span className="text-[42px]">{formatCurrency(calculations.total.cost)}</span>
+              <div className="flex flex-col justify-center gap-1.5 sm:gap-2">
+                <span className="text-base sm:text-lg md:text-xl">Total Cost</span>
+                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px]">
+                  {formatCurrency(calculations.total.cost)}
+                </span>
               </div>
-              <div className="flex flex-col justify-center gap-2">
-                <span className="text-xl">Estimated Timeline</span>
-                <span className="text-[32px]">{formatTime(calculations.total.time)}</span>
+              <div className="flex flex-col justify-center gap-1.5 sm:gap-2">
+                <span className="text-base sm:text-lg md:text-xl">Estimated Timeline</span>
+                <span className="text-xl sm:text-2xl md:text-3xl lg:text-[32px]">
+                  {formatTime(calculations.total.time)}
+                </span>
               </div>
               <GoButton className="w-full" text="Send me a free detailed estimation" onClick={() => {}} />
             </div>

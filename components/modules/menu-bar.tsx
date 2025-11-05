@@ -280,11 +280,11 @@ export default function MenuBar({ className }: { className?: string }) {
 
       {/* Mobile Drawer Menu - Hidden on desktop */}
       <div
-        className={`fixed top-10 left-1/2 z-50 -translate-x-1/2 transform transition-transform duration-300 lg:hidden ${
+        className={`fixed top-10 right-4 z-50 transform transition-transform duration-300 lg:hidden ${
           isVisible ? "translate-y-0" : "-translate-y-[calc(100%+2.5rem)]"
         }`}
       >
-        <div className="bg-background/95 supports-[backdrop-filter]:bg-background/60 p-4 backdrop-blur">
+        <div className="bg-background/95 supports-[backdrop-filter]:bg-background/60 backdrop-blur">
           <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
             <DrawerTrigger asChild>
               <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">

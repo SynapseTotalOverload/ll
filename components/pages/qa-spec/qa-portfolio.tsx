@@ -4,9 +4,13 @@ import { MoveRightIcon } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import Image from "next/image";
-import Product from "@/public/assets/placeholder.png";
+import { getProject } from "@/constants/projects/project-config";
 
 export default function QAPortfolio() {
+  const sxipherProject = getProject("sxipher-ai");
+  const truthOrDareProject = getProject("truth-or-dare");
+  const tripshaProject = getProject("tripsha");
+
   return (
     <div className="flex w-full flex-col gap-8 px-4 sm:gap-12 sm:px-6 md:gap-16 md:px-8 lg:gap-20 lg:px-12 xl:gap-24 xl:px-16">
       <SignTitle>
@@ -30,7 +34,13 @@ export default function QAPortfolio() {
             <span className="text-plastic text-xs sm:text-sm md:text-base">Platform</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Sxipher.AI</InfoCard.Title>
           </div>
-          <Image alt="product" className="w-full object-cover" src={Product} />
+          <Image 
+            alt="product" 
+            className="w-full object-cover" 
+            src={sxipherProject?.portfolioCard?.mainImage || "/assets/placeholder.png"} 
+            width={300} 
+            height={200} 
+          />
         </InfoCard>
 
         {/* Portfolio Card 2 */}
@@ -39,7 +49,13 @@ export default function QAPortfolio() {
             <span className="text-plastic text-xs sm:text-sm md:text-base">Mobile App</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Truth or Dare</InfoCard.Title>
           </div>
-          <Image alt="product" className="w-full object-cover" src={Product} />
+          <Image 
+            alt="product" 
+            className="w-full object-cover" 
+            src={truthOrDareProject?.portfolioCard?.mainImage || "/assets/placeholder.png"} 
+            width={300} 
+            height={200} 
+          />
         </InfoCard>
 
         {/* Portfolio Card 3 */}
@@ -48,7 +64,13 @@ export default function QAPortfolio() {
             <span className="text-plastic text-xs sm:text-sm md:text-base">Platform</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Tripsha</InfoCard.Title>
           </div>
-          <Image alt="product" className="w-full object-cover" src={Product} />
+          <Image 
+            alt="product" 
+            className="w-full object-cover" 
+            src={tripshaProject?.portfolioCard?.mainImage || "/assets/placeholder.png"} 
+            width={300} 
+            height={200} 
+          />
         </InfoCard>
       </div>
     </div>
