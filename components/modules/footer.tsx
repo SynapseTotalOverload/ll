@@ -25,9 +25,6 @@ export default function Footer() {
                 Home
               </Link>
               <Link href="/" className="text-[16px] font-[700] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]">
-                For startups
-              </Link>
-              <Link href="/" className="text-[16px] font-[700] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]">
                 For businesses
               </Link>
               <Link href="/" className="text-[16px] font-[700] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]">

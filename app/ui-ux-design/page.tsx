@@ -1,25 +1,30 @@
-"use client";
-import UIUXHeroSection from "@/components/pages/ui-ux-design/ui-ux-hero-section";
-import UIUXHowWeWork from "@/components/pages/ui-ux-design/ui-ux-how-we-work";
-import UIUXCaseStudies from "@/components/pages/ui-ux-design/ui-ux-case-studies";
-import Footer from "@/components/modules/footer";
-import UIUXWhyUs from "@/components/pages/ui-ux-design/ui-ux-why-us";
-import UIUXFAQ from "@/components/pages/ui-ux-design/ui-ux-faq";
+import type { Metadata } from "next";
+import UIUXDesignClient from "./ui-ux-design-client";
+
+export const metadata: Metadata = {
+  title: "UI/UX Design Services - User Experience Design | LogicCraft",
+  description:
+    "Professional UI/UX design services creating intuitive, user-centered digital experiences. Expert design for web and mobile applications with focus on usability and conversion.",
+  keywords:
+    "UI/UX design, user experience design, user interface design, UX services, UI design services, design thinking, user-centered design, interface design, usability design",
+  authors: [{ name: "LogicCraft Team" }],
+  openGraph: {
+    title: "UI/UX Design Services - User Experience Design | LogicCraft",
+    description:
+      "Professional UI/UX design services creating intuitive, user-centered digital experiences for web and mobile applications.",
+    type: "website",
+    url: "https://logiccraft.com/ui-ux-design",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UI/UX Design Services - User Experience Design | LogicCraft",
+    description: "Professional UI/UX design services creating intuitive, user-centered digital experiences.",
+  },
+  alternates: {
+    canonical: "https://logiccraft.com/ui-ux-design",
+  },
+};
 
 export default function UIUXDesign() {
-  return (
-    <div className="flex min-h-screen flex-col items-center">
-      <UIUXHeroSection />
-
-      {/* ===== MAIN CONTENT SECTIONS ===== */}
-      <div className="container flex w-full flex-col gap-16 px-4 py-8 sm:gap-20 sm:px-6 sm:py-12 md:gap-24 md:px-8 md:py-16 lg:gap-32 lg:px-12 lg:py-20 xl:gap-40 xl:px-16 xl:py-24">
-        <UIUXHowWeWork />
-        <UIUXWhyUs />
-        <UIUXCaseStudies />
-        <UIUXFAQ />
-      </div>
-
-      <Footer />
-    </div>
-  );
+  return <UIUXDesignClient />;
 }

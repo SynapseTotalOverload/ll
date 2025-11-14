@@ -1,25 +1,30 @@
-"use client";
-import MobileAppHeroSection from "@/components/pages/mobile-app/mobile-app-hero-section";
-import MobileAppServices from "@/components/pages/mobile-app/mobile-app-services";
-import MobileAppCaseStudies from "@/components/pages/mobile-app/mobile-app-case-studies";
-import Footer from "@/components/modules/footer";
-import MobileAppTechnologies from "@/components/pages/mobile-app/mobile-app-technologies";
-import MobileAppFAQ from "@/components/pages/mobile-app/mobile-app-faq";
+import type { Metadata } from "next";
+import MobileDevelopmentClient from "./mobile-development-client";
+
+export const metadata: Metadata = {
+  title: "Mobile App Development Services - iOS & Android Apps | LogicCraft",
+  description:
+    "Expert mobile app development services for iOS and Android using React Native, TypeScript, and modern mobile technologies. Build scalable, high-performance mobile applications.",
+  keywords:
+    "mobile app development, iOS app development, Android app development, React Native, mobile app services, cross-platform apps, native app development, mobile applications",
+  authors: [{ name: "LogicCraft Team" }],
+  openGraph: {
+    title: "Mobile App Development Services - iOS & Android Apps | LogicCraft",
+    description:
+      "Expert mobile app development services for iOS and Android using React Native, TypeScript, and modern mobile technologies.",
+    type: "website",
+    url: "https://logiccraft.com/mobile-development",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mobile App Development Services - iOS & Android Apps | LogicCraft",
+    description: "Expert mobile app development services for iOS and Android using React Native and modern technologies.",
+  },
+  alternates: {
+    canonical: "https://logiccraft.com/mobile-development",
+  },
+};
 
 export default function Home() {
-  return (
-    <div className="flex min-h-screen flex-col items-center">
-      <MobileAppHeroSection />
-
-      {/* ===== MAIN CONTENT SECTIONS ===== */}
-      <div className="container flex w-full flex-col gap-16 px-4 py-8 sm:gap-20 sm:px-6 sm:py-12 md:gap-24 md:px-8 md:py-16 lg:gap-32 lg:px-12 lg:py-20 xl:gap-40 xl:px-16 xl:py-24">
-        <MobileAppServices />
-        <MobileAppTechnologies />
-        <MobileAppCaseStudies />
-        <MobileAppFAQ />
-      </div>
-
-      <Footer />
-    </div>
-  );
+  return <MobileDevelopmentClient />;
 }

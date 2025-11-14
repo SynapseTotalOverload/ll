@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import { MoveRightIcon } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
-import Image from "next/image";
-import Product from "@/public/assets/placeholder.png";
 
 export default function UIUXCaseStudies() {
   return (
@@ -30,16 +28,26 @@ export default function UIUXCaseStudies() {
             <span className="text-plastic text-xs sm:text-sm md:text-base">Platform</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Track My Jobs</InfoCard.Title>
           </div>
-          <Image alt="product" className="w-full object-cover" src={Product} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            alt="Track My Jobs project"
+            className="w-full object-cover"
+            src="/assets/dynamic/trackmyjobs/img_home_page.png"
+          />
         </InfoCard>
 
         {/* Case Study Card 2 */}
         <InfoCard className="flex w-full flex-col gap-4 sm:gap-6 md:gap-8">
           <div className="flex flex-col gap-2">
             <span className="text-plastic text-xs sm:text-sm md:text-base">Mobile App</span>
-            <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Outspeak</InfoCard.Title>
+            <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Chillbill</InfoCard.Title>
           </div>
-          <Image alt="product" className="w-full object-cover" src={Product} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            alt="Chillbill project"
+            className="w-full object-cover"
+            src="/assets/dynamic/chillbill/img_home_page.png"
+          />
         </InfoCard>
 
         {/* Case Study Card 3 */}
@@ -48,7 +56,8 @@ export default function UIUXCaseStudies() {
             <span className="text-plastic text-xs sm:text-sm md:text-base">Platform</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Tripsha</InfoCard.Title>
           </div>
-          <Image alt="product" className="w-full object-cover" src={Product} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img alt="Tripsha project" className="w-full object-cover" src="/assets/dynamic/tripsha/img_home_page.png" />
         </InfoCard>
       </div>
     </div>

@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 export default function MenuBar({ className }: { className?: string }) {
   const [active, setActive] = useState<
     | "home"
-    | "startups"
     | "business"
     | "web-development"
     | "mobile-development"
@@ -35,9 +34,7 @@ export default function MenuBar({ className }: { className?: string }) {
       const lastSlug = pathSlugs[pathSlugs.length - 1];
 
       // Map the last slug to the active state
-      if (lastSlug === "startups") {
-        setActive("startups");
-      } else if (lastSlug === "web-development") {
+      if (lastSlug === "web-development") {
         setActive("web-development");
       } else if (lastSlug === "mobile-development") {
         setActive("mobile-development");
@@ -308,17 +305,6 @@ export default function MenuBar({ className }: { className?: string }) {
                       }`}
                     >
                       Home
-                    </button>
-
-                    <button
-                      onClick={() => handleMobileNavClick("/startups")}
-                      className={`rounded-md px-4 py-3 text-left transition-colors ${
-                        active === "startups"
-                          ? "bg-white/20 text-white"
-                          : "text-white/80 hover:bg-white/10 hover:text-white"
-                      }`}
-                    >
-                      For startups
                     </button>
 
                     <div className="mt-2 border-t border-white/20 pt-4">

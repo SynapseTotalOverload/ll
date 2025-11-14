@@ -33,7 +33,7 @@ export default function PortfolioStartups() {
           const projectSlug = portfolioToProjectMap[item.id];
           const project = projectSlug ? getProject(projectSlug) : null;
           const hasSmallCard = project && project.smallProjectCards && project.smallProjectCards.length > 0;
-          
+
           if (hasSmallCard) {
             const smallCard = project.smallProjectCards[0];
             return (
@@ -46,7 +46,7 @@ export default function PortfolioStartups() {
               />
             );
           }
-          
+
           // Fallback to portfolio data if no project found
           return (
             <DynamicSmallProjectCard

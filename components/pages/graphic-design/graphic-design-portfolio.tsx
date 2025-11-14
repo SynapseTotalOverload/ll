@@ -10,7 +10,7 @@ export default function GraphicDesignPortfolio() {
   const truthOrDareProject = getProject("truth-or-dare");
   const chillbillProject = getProject("chillbill");
   const digibdrProject = getProject("digibdr");
-
+  console.log(digibdrProject);
   return (
     <div className="flex w-full flex-col gap-8 px-4 sm:gap-12 sm:px-6 md:gap-16 md:px-8 lg:gap-20 lg:px-12 xl:gap-24 xl:px-16">
       <SignTitle>
@@ -34,12 +34,12 @@ export default function GraphicDesignPortfolio() {
             <span className="text-plastic text-xs sm:text-sm md:text-base">Mobile App</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Truth or Dare</InfoCard.Title>
           </div>
-          <Image 
-            alt="product" 
-            className="w-full object-cover" 
-            src={truthOrDareProject?.portfolioCard?.mainImage || "/assets/mocks/graphic/1.png"} 
-            width={300} 
-            height={200} 
+          <Image
+            alt="product"
+            className="w-full object-cover"
+            src={truthOrDareProject?.portfolioCard?.mainImage || "/assets/mocks/graphic/1.png"}
+            width={300}
+            height={200}
           />
         </InfoCard>
 
@@ -49,12 +49,12 @@ export default function GraphicDesignPortfolio() {
             <span className="text-plastic text-xs sm:text-sm md:text-base">Mobile App</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Chill Bill</InfoCard.Title>
           </div>
-          <Image 
-            alt="product" 
-            className="w-full object-cover" 
-            src={chillbillProject?.portfolioCard?.mainImage || "/assets/mocks/graphic/2.png"} 
-            width={300} 
-            height={200} 
+          <Image
+            alt="product"
+            className="w-full object-cover"
+            src={chillbillProject?.portfolioCard?.mainImage || "/assets/mocks/graphic/2.png"}
+            width={300}
+            height={200}
           />
         </InfoCard>
 
@@ -64,12 +64,15 @@ export default function GraphicDesignPortfolio() {
             <span className="text-plastic text-xs sm:text-sm md:text-base">Platform</span>
             <InfoCard.Title className="text-lg sm:text-xl md:text-2xl lg:text-3xl">DigiBdr</InfoCard.Title>
           </div>
-          <Image 
-            alt="product" 
-            className="w-full object-cover" 
-            src={digibdrProject?.portfolioCard?.mainImage || "/assets/mocks/graphic/3.png"} 
-            width={300} 
-            height={200} 
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            alt="DigiBdr project"
+            className="w-full object-cover"
+            src={
+              digibdrProject?.smallProjectCards?.[0]?.image ||
+              "/assets/dynamic/digibdr/img_home_page_1_block.png" ||
+              "/assets/mocks/graphic/3.png"
+            }
           />
         </InfoCard>
       </div>

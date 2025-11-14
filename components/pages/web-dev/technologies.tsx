@@ -1,11 +1,8 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { Zap, Server, Wrench, MoveRightIcon } from "lucide-react";
+import { Zap, Server, Wrench } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import { LampEffect } from "@/components/ui/lamp-effect";
-import { BackgroundGradient } from "@/components/ui/background-gradient";
-import JsIcon from "@/public/assets/svg/javascript-original.svg";
 
 export default function Technologies() {
   return (
@@ -36,12 +33,24 @@ export default function Technologies() {
               Modern frontend frameworks and libraries for creating responsive, interactive user interfaces
             </InfoCard.Description>
             <div className="grid min-h-[200px] grid-cols-3 gap-4 pt-6 sm:grid-cols-4 sm:gap-6 md:gap-8 lg:gap-10 lg:pt-10">
-              <JsIcon className="" />
-              <JsIcon className="" />
-              <JsIcon className="" />
-              <JsIcon className="" />
-              <JsIcon className="" />
-              <JsIcon className="" />
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                React
+              </div>
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                Next.js
+              </div>
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                Vue.js
+              </div>
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                Angular
+              </div>
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                TypeScript
+              </div>
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                JavaScript
+              </div>
             </div>
           </div>
 
@@ -57,12 +66,24 @@ export default function Technologies() {
               Robust backend technologies for building scalable, secure, and high-performance web applications
             </InfoCard.Description>
             <div className="grid grid-cols-3 gap-4 pt-6 sm:grid-cols-4 sm:gap-6 md:gap-8 lg:gap-10 lg:pt-10">
-              <JsIcon className="" />
-              <JsIcon className="" />
-              <JsIcon className="" />
-              <JsIcon className="" />
-              <JsIcon className="" />
-              <JsIcon className="" />
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                Node.js
+              </div>
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                Python
+              </div>
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                Django
+              </div>
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                Express
+              </div>
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                PostgreSQL
+              </div>
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                MongoDB
+              </div>
             </div>
           </div>
 
@@ -78,12 +99,24 @@ export default function Technologies() {
               Modern development tools and DevOps practices for efficient deployment and continuous integration
             </InfoCard.Description>
             <div className="grid grid-cols-3 gap-4 pt-6 sm:grid-cols-4 sm:gap-6 md:gap-8 lg:gap-10 lg:pt-10">
-              <JsIcon className="" />
-              <JsIcon className="" />
-              <JsIcon className="" />
-              <JsIcon className="" />
-              <JsIcon className="" />
-              <JsIcon className="" />
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                Docker
+              </div>
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                Kubernetes
+              </div>
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                AWS
+              </div>
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                GitHub Actions
+              </div>
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                CI/CD
+              </div>
+              <div className="flex items-center justify-center rounded-lg bg-white/5 p-3 text-center text-xs font-medium text-white backdrop-blur-sm sm:text-sm md:text-base">
+                Git
+              </div>
             </div>
           </div>
         </div>

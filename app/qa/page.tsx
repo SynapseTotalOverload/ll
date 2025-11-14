@@ -1,27 +1,30 @@
-"use client";
-import QAHeroSection from "@/components/pages/qa-spec/qa-hero-section";
-import QAServices from "@/components/pages/qa-spec/qa-services";
-import QAMethodology from "@/components/pages/qa-spec/qa-methodology";
-import QAHowWeWork from "@/components/pages/qa-spec/qa-how-we-work";
-import QAPortfolio from "@/components/pages/qa-spec/qa-portfolio";
-import QAFAQ from "@/components/pages/qa-spec/qa-faq";
-import Footer from "@/components/modules/footer";
+import type { Metadata } from "next";
+import QAPageClient from "./qa-client";
+
+export const metadata: Metadata = {
+  title: "QA Testing Services - Quality Assurance & Testing | LogicCraft",
+  description:
+    "Comprehensive QA testing services including automated testing, manual testing, quality assurance, software testing, and test automation for web and mobile applications.",
+  keywords:
+    "QA testing, quality assurance, software testing, automated testing, manual testing, test automation, QA services, software quality assurance, testing services",
+  authors: [{ name: "LogicCraft Team" }],
+  openGraph: {
+    title: "QA Testing Services - Quality Assurance & Testing | LogicCraft",
+    description:
+      "Comprehensive QA testing services including automated testing, manual testing, and quality assurance for web and mobile applications.",
+    type: "website",
+    url: "https://logiccraft.com/qa",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "QA Testing Services - Quality Assurance & Testing | LogicCraft",
+    description: "Comprehensive QA testing services including automated and manual testing for web and mobile applications.",
+  },
+  alternates: {
+    canonical: "https://logiccraft.com/qa",
+  },
+};
 
 export default function QAPage() {
-  return (
-    <div className="flex min-h-screen flex-col items-center">
-      <QAHeroSection />
-
-      {/* ===== MAIN CONTENT SECTIONS ===== */}
-      <div className="container flex w-full flex-col gap-16 px-4 py-8 sm:gap-20 sm:px-6 sm:py-12 md:gap-24 md:px-8 md:py-16 lg:gap-32 lg:px-12 lg:py-20 xl:gap-40 xl:px-16 xl:py-24">
-        <QAServices />
-        <QAMethodology />
-        <QAHowWeWork />
-        <QAPortfolio />
-        <QAFAQ />
-      </div>
-
-      <Footer />
-    </div>
-  );
+  return <QAPageClient />;
 }

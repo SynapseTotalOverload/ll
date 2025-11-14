@@ -1,38 +1,31 @@
-"use client";
-import HomeHeroSection from "@/components/pages/home/home-hero-section";
-import HomeOurClients from "@/components/pages/home/home-our-clients";
-import HomeServices from "@/components/pages/home/home-services";
-import HomeCaseStudies from "@/components/pages/home/home-case-studies";
-import HomeClientTestimonials from "@/components/pages/home/home-client-testimonials";
-import HomePricingModel from "@/components/pages/home/home-pricing-model";
-import HomeContactUs from "@/components/pages/home/home-contact-us";
-import Footer from "@/components/modules/footer";
-import { InfiniteMovingCards } from "@/components/modules/moving-line";
-import { items } from "@/constants/hero/reviews";
-import HomeCalculator from "@/components/pages/home/home-calculator";
-import StartupHeroSection from "@/components/pages/startups/startup-hero-section";
-import StartupJourneySteps from "@/components/pages/startups/startup-journey-steps";
-import { HomeStatistic } from "@/components/pages/home/home-statistic";
+import type { Metadata } from "next";
+import HomePageClient from "./home-client";
+
+export const metadata: Metadata = {
+  title: "LogicCraft - Custom Software Development & Digital Solutions",
+  description:
+    "LogicCraft specializes in custom software development, web development, mobile apps, UI/UX design, and digital transformation solutions for businesses and startups.",
+  keywords:
+    "software development, web development, mobile app development, UI/UX design, custom software, digital solutions, software company, app development",
+  authors: [{ name: "LogicCraft Team" }],
+  openGraph: {
+    title: "LogicCraft - Custom Software Development & Digital Solutions",
+    description:
+      "LogicCraft specializes in custom software development, web development, mobile apps, UI/UX design, and digital transformation solutions for businesses and startups.",
+    type: "website",
+    url: "https://logiccraft.com",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LogicCraft - Custom Software Development & Digital Solutions",
+    description:
+      "LogicCraft specializes in custom software development, web development, mobile apps, UI/UX design, and digital transformation solutions.",
+  },
+  alternates: {
+    canonical: "https://logiccraft.com",
+  },
+};
 
 export default function Home() {
-  return (
-    <div className="flex flex-col items-center">
-      <StartupHeroSection />
-
-      {/* ===== MAIN CONTENT SECTIONS ===== */}
-      <div className="container flex flex-col gap-8 pt-8 sm:gap-16 sm:pt-16 md:gap-24 md:pt-24 lg:gap-[120px] lg:pt-[120px]">
-        <HomeStatistic />
-        {/* <HomeOurClients /> */}
-        <StartupJourneySteps />
-        {/*  <HomeServices /> */}
-        <HomeCaseStudies />
-        {/* <HomeClientTestimonials /> */}
-        <HomeCalculator />
-        <HomePricingModel />
-      </div>
-      <InfiniteMovingCards direction="left" items={items} />
-      <HomeContactUs />
-      <Footer />
-    </div>
-  );
+  return <HomePageClient />;
 }

@@ -1,25 +1,30 @@
-"use client";
-import GraphicDesignHeroSection from "@/components/pages/graphic-design/graphic-design-hero-section";
-import GraphicDesignHowWeWork from "@/components/pages/graphic-design/graphic-design-how-we-work";
-import GraphicDesignWhyUs from "@/components/pages/graphic-design/graphic-design-why-us";
-import GraphicDesignPortfolio from "@/components/pages/graphic-design/graphic-design-portfolio";
-import GraphicDesignFAQ from "@/components/pages/graphic-design/graphic-design-faq";
-import Footer from "@/components/modules/footer";
+import type { Metadata } from "next";
+import GraphicDesignClient from "./graphic-design-client";
+
+export const metadata: Metadata = {
+  title: "Graphic Design Services - Brand Identity & Visual Design | LogicCraft",
+  description:
+    "Professional graphic design services including brand identity, logo design, visual branding, marketing materials, and creative design solutions for businesses.",
+  keywords:
+    "graphic design, brand identity, logo design, visual branding, marketing design, creative design services, brand design, corporate identity design",
+  authors: [{ name: "LogicCraft Team" }],
+  openGraph: {
+    title: "Graphic Design Services - Brand Identity & Visual Design | LogicCraft",
+    description:
+      "Professional graphic design services including brand identity, logo design, visual branding, and marketing materials.",
+    type: "website",
+    url: "https://logiccraft.com/graphic-design",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Graphic Design Services - Brand Identity & Visual Design | LogicCraft",
+    description: "Professional graphic design services for brand identity, logo design, and visual branding.",
+  },
+  alternates: {
+    canonical: "https://logiccraft.com/graphic-design",
+  },
+};
 
 export default function GraphicDesignPage() {
-  return (
-    <div className="flex min-h-screen flex-col items-center">
-      <GraphicDesignHeroSection />
-
-      {/* ===== MAIN CONTENT SECTIONS ===== */}
-      <div className="container flex w-full flex-col gap-16 px-4 py-8 sm:gap-20 sm:px-6 sm:py-12 md:gap-24 md:px-8 md:py-16 lg:gap-32 lg:px-12 lg:py-20 xl:gap-40 xl:px-16 xl:py-24">
-        <GraphicDesignHowWeWork />
-        <GraphicDesignWhyUs />
-        <GraphicDesignPortfolio />
-        <GraphicDesignFAQ />
-      </div>
-
-      <Footer />
-    </div>
-  );
+  return <GraphicDesignClient />;
 }

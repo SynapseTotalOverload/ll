@@ -36,7 +36,7 @@ export default function DynamicSmallProjectCard({
         className="flex w-full flex-1 items-center justify-center rounded-[16px] bg-cover py-4"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="h-[50vh] w-full rounded-[16px] object-contain" src={image} alt={"small-project"} />
+        <img className="h-[50vh] w-full rounded-[16px] object-contain bg-no-repeat" src={image} alt={"small-project"} />
       </div>
     </InfoCard>
   );
