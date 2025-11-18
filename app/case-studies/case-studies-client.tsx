@@ -9,109 +9,192 @@ import Link from "next/link";
 export default function CaseStudiesPageClient() {
   const projects = getAllProjects();
 
-  // Create a map for easy lookup
-  const projectsMap = new Map(projects.map((p) => [p.slug, p]));
+  // Define grid pattern: 'large' for PortfolioCard, 'small' for DynamicSmallProjectCard
+  // Pattern creates an interesting asymmetric layout
+  const gridPattern = [
+    { type: "large", span: "full" }, // Row 1: Large card
+    { type: "small-duo", span: "half" }, // Row 2: Two small cards
+    { type: "small-duo", span: "half" }, // Row 3: Two small cards
+    { type: "large", span: "full" }, // Row 4: Large card
+    { type: "small-trio", span: "third" }, // Row 5: Three small cards
+    { type: "large", span: "full" }, // Row 6: Large card
+  ];
 
-  // Helper function to get project data or fallback
-  const getProject = (slug: string) => projectsMap.get(slug);
+  // Distribute projects based on pattern
+  let projectIndex = 0;
+  const gridItems: Array<{
+    type: string;
+    span: string;
+    project: (typeof projects)[0] | null;
+  }> = [];
+
+  for (const pattern of gridPattern) {
+    if (projectIndex >= projects.length) break;
+
+    if (pattern.type === "large") {
+      gridItems.push({
+        type: "large",
+        span: "full",
+        project: projects[projectIndex],
+      });
+      projectIndex++;
+    } else if (pattern.type === "small-duo") {
+      // Add two small cards
+      for (let i = 0; i < 2 && projectIndex < projects.length; i++) {
+        gridItems.push({
+          type: "small",
+          span: "half",
+          project: projects[projectIndex],
+        });
+        projectIndex++;
+      }
+    } else if (pattern.type === "small-trio") {
+      // Add three small cards
+      for (let i = 0; i < 3 && projectIndex < projects.length; i++) {
+        gridItems.push({
+          type: "small",
+          span: "third",
+          project: projects[projectIndex],
+        });
+        projectIndex++;
+      }
+    }
+  }
+
+  // Continue with remaining projects in a repeating pattern
+  while (projectIndex < projects.length) {
+    const remainingCount = projects.length - projectIndex;
+
+    if (remainingCount >= 3) {
+      // Add a large card
+      gridItems.push({
+        type: "large",
+        span: "full",
+        project: projects[projectIndex],
+      });
+      projectIndex++;
+
+      // Add two small cards if available
+      if (projectIndex < projects.length) {
+        for (let i = 0; i < 2 && projectIndex < projects.length; i++) {
+          gridItems.push({
+            type: "small",
+            span: "half",
+            project: projects[projectIndex],
+          });
+          projectIndex++;
+        }
+      }
+    } else {
+      // Add remaining as small cards
+      gridItems.push({
+        type: "small",
+        span: remainingCount === 2 ? "half" : "full",
+        project: projects[projectIndex],
+      });
+      projectIndex++;
+    }
+  }
+
+  // Group items by rows for proper rendering
+  const rows: Array<Array<(typeof gridItems)[0]>> = [];
+  let currentRow: Array<(typeof gridItems)[0]> = [];
+
+  for (const item of gridItems) {
+    if (item.span === "full" && currentRow.length > 0) {
+      rows.push(currentRow);
+      currentRow = [];
+    }
+
+    currentRow.push(item);
+
+    if (item.span === "full") {
+      rows.push(currentRow);
+      currentRow = [];
+    } else if (item.span === "half" && currentRow.length === 2) {
+      rows.push(currentRow);
+      currentRow = [];
+    } else if (item.span === "third" && currentRow.length === 3) {
+      rows.push(currentRow);
+      currentRow = [];
+    }
+  }
+
+  if (currentRow.length > 0) {
+    rows.push(currentRow);
+  }
 
   return (
     <div className="flex flex-col items-center">
       <CaseStudiesHeroSection />
 
-      {/* ===== MAIN CONTENT SECTIONS ===== */}
-      <div className="container flex flex-col gap-[32px] pt-[120px]">
-        {getProject("com-lands") && (
-          <Link href={getProject("com-lands")!.hero.fullLink}>
-            <PortfolioCard
-              description={getProject("com-lands")!.portfolioCard.description}
-              backgroundUrl={getProject("com-lands")!.portfolioCard.backgroundUrl}
-              mainImage={getProject("com-lands")!.portfolioCard.mainImage}
-            />
-          </Link>
-        )}
-        <div className="flex flex-row gap-8">
-          {getProject("truth-or-dare") && getProject("truth-or-dare")!.smallProjectCards[0] && (
-            <Link href={getProject("truth-or-dare")!.hero.fullLink} className="flex-1">
-              <DynamicSmallProjectCard
-                title={getProject("truth-or-dare")!.smallProjectCards[0].title}
-                points={getProject("truth-or-dare")!.smallProjectCards[0].points}
-                image={getProject("truth-or-dare")!.smallProjectCards[0].image}
-                backgroundUrl={getProject("truth-or-dare")!.smallProjectCards[0].backgroundUrl}
-              />
-            </Link>
-          )}
-          {getProject("chillbill") && getProject("chillbill")!.smallProjectCards[0] && (
-            <Link href={getProject("chillbill")!.hero.fullLink} className="flex-1">
-              <DynamicSmallProjectCard
-                title={getProject("chillbill")!.smallProjectCards[0].title}
-                points={getProject("chillbill")!.smallProjectCards[0].points}
-                image={getProject("chillbill")!.smallProjectCards[0].image}
-                backgroundUrl={getProject("chillbill")!.smallProjectCards[0].backgroundUrl}
-              />
-            </Link>
-          )}
-        </div>
-        <div className="flex max-h-[1200px] flex-row gap-8">
-          <div className="w-[50%] flex-1">
-            {getProject("teledyne-isco-flowcalc") && getProject("teledyne-isco-flowcalc")!.smallProjectCards[0] && (
-              <Link href={getProject("teledyne-isco-flowcalc")!.hero.fullLink} className="h-full">
-                <DynamicSmallProjectCard
-                  title={getProject("teledyne-isco-flowcalc")!.smallProjectCards[0].title}
-                  points={getProject("teledyne-isco-flowcalc")!.smallProjectCards[0].points}
-                  image={getProject("teledyne-isco-flowcalc")!.smallProjectCards[0].image}
-                  backgroundUrl={getProject("teledyne-isco-flowcalc")!.smallProjectCards[0].backgroundUrl}
-                />
-              </Link>
-            )}
+      {/* ===== DYNAMIC GRID LAYOUT ===== */}
+      <div className="container flex flex-col gap-4 pt-16 pb-16 sm:gap-6 md:gap-8 md:pt-24 lg:pt-[120px]">
+        {rows.map((row, rowIndex) => (
+          <div
+            key={rowIndex}
+            className={`flex flex-col gap-4 sm:gap-6 md:gap-8 ${
+              row.length === 1
+                ? "flex-col"
+                : row.length === 2
+                  ? "md:flex-row"
+                  : row.length === 3
+                    ? "md:flex-row md:flex-wrap lg:flex-row"
+                    : "flex-col"
+            }`}
+          >
+            {row.map((item, itemIndex) => {
+              if (!item.project) return null;
+
+              const project = item.project;
+              const key = `${rowIndex}-${itemIndex}`;
+
+              if (item.type === "large") {
+                return (
+                  <Link
+                    key={key}
+                    href={project.hero.fullLink}
+                    className="w-full transition-transform duration-300 hover:scale-[1.02]"
+                  >
+                    <PortfolioCard
+                      description={project.portfolioCard.description}
+                      backgroundUrl={project.portfolioCard.backgroundUrl}
+                      mainImage={project.portfolioCard.mainImage}
+                    />
+                  </Link>
+                );
+              } else {
+                // Small card
+                const cardData = project.smallProjectCards[0];
+                if (!cardData) return null;
+
+                return (
+                  <Link
+                    key={key}
+                    href={project.hero.fullLink}
+                    className={`w-full transition-transform duration-300 hover:scale-[1.02] ${
+                      item.span === "third"
+                        ? "md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.333rem)]"
+                        : item.span === "half"
+                          ? "md:w-[calc(50%-1rem)]"
+                          : "w-full"
+                    } `}
+                  >
+                    <DynamicSmallProjectCard
+                      title={cardData.title}
+                      points={cardData.points}
+                      image={cardData.image}
+                      backgroundUrl={cardData.backgroundUrl}
+                    />
+                  </Link>
+                );
+              }
+            })}
           </div>
-          <div className="flex-1">
-            {getProject("trackmyjobs") && getProject("trackmyjobs")!.smallProjectCards[0] && (
-              <Link href={getProject("trackmyjobs")!.hero.fullLink} className="h-full">
-                <DynamicSmallProjectCard
-                  title={getProject("trackmyjobs")!.smallProjectCards[0].title}
-                  points={getProject("trackmyjobs")!.smallProjectCards[0].points}
-                  image={getProject("trackmyjobs")!.smallProjectCards[0].image}
-                  backgroundUrl={getProject("trackmyjobs")!.smallProjectCards[0].backgroundUrl}
-                />
-              </Link>
-            )}
-          </div>
-        </div>
-        {getProject("sxipher-ai") && (
-          <Link href={getProject("sxipher-ai")!.hero.fullLink}>
-            <PortfolioCard
-              description={getProject("sxipher-ai")!.portfolioCard.description}
-              backgroundUrl={getProject("sxipher-ai")!.portfolioCard.backgroundUrl}
-              mainImage={getProject("sxipher-ai")!.portfolioCard.mainImage}
-            />
-          </Link>
-        )}
-        <div className="flex flex-row gap-8">
-          {getProject("reachfi") && getProject("reachfi")!.smallProjectCards[0] && (
-            <Link href={getProject("reachfi")!.hero.fullLink} className="flex-1">
-              <DynamicSmallProjectCard
-                title={getProject("reachfi")!.smallProjectCards[0].title}
-                points={getProject("reachfi")!.smallProjectCards[0].points}
-                image={getProject("reachfi")!.smallProjectCards[0].image}
-                backgroundUrl={getProject("reachfi")!.smallProjectCards[0].backgroundUrl}
-              />
-            </Link>
-          )}
-        </div>
-        {getProject("boat-export") && (
-          <Link href={getProject("boat-export")!.hero.fullLink}>
-            <PortfolioCard
-              description={getProject("boat-export")!.portfolioCard.description}
-              backgroundUrl={getProject("boat-export")!.portfolioCard.backgroundUrl}
-              mainImage={getProject("boat-export")!.portfolioCard.mainImage}
-            />
-          </Link>
-        )}
+        ))}
       </div>
 
       <Footer />
     </div>
   );
 }
-
