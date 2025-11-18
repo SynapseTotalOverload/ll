@@ -27,12 +27,12 @@ export default function StartupJourneySteps() {
             <CountCard.Content className="gap-0.5">
               <CountCard.Title className="text-xs">Interview</CountCard.Title>
               <CountCard.Description className="text-[10px] leading-tight">
-                With LogicCraft, you don&apos;t need to hire developers on your own, have tech know-how, or guess
-                whether your project will work out or not. We&apos;ll handle all things tech while you do business.
+                We start by learning about your ideas, goals, and expectations. You don&apos;t need technical knowledge,
+                we&apos;ll ask the right questions, clarify risks, and help shape a clear product vision.
               </CountCard.Description>
               <div className="flex flex-row items-center gap-0.5">
                 <Timer className="text-night-blue h-2 w-2" />
-                <span className="text-[10px] text-white">Timeline: 1-2 calls</span>
+                <span className="text-[10px] text-white">Timeline: 1–2 short calls</span>
               </div>
             </CountCard.Content>
           </CountCard>
@@ -41,15 +41,14 @@ export default function StartupJourneySteps() {
             <CountCard.Index className="text-sm">02</CountCard.Index>
             <CountCard.Separator />
             <CountCard.Content className="gap-0.5">
-              <CountCard.Title className="text-xs">Discovery and research</CountCard.Title>
+              <CountCard.Title className="text-xs">Discovery & Research</CountCard.Title>
               <CountCard.Description className="text-[10px] leading-tight">
-                Just like you, we are interested in building a product that will bring a unique value to its audience
-                and win a competitive edge. We&apos;ll help you achieve this with a failure-proof product strategy based
-                on a thorough customer and competitor analysis.
+                We analyze your market, audience, and competitors to define the core value of your product. This stage
+                ensures we build something that people actually need, not just something that sounds good.
               </CountCard.Description>
               <div className="flex flex-row items-center gap-0.5">
                 <Timer className="text-night-blue h-2 w-2" />
-                <span className="text-[10px] text-white">Timeline: 1-2 Weeks</span>
+                <span className="text-[10px] text-white">Timeline: 1–2 weeks</span>
               </div>
             </CountCard.Content>
           </CountCard>
@@ -60,13 +59,12 @@ export default function StartupJourneySteps() {
             <CountCard.Content className="gap-0.5">
               <CountCard.Title className="text-xs">Requirements</CountCard.Title>
               <CountCard.Description className="text-[10px] leading-tight">
-                You already know what you are going to build and how. Let&apos;s finalize all the requirements, develop
-                a detailed product roadmap, discuss the timeline and the pricing model, sign a contract, and get down to
-                work.
+                We finalize the feature list, create detailed specifications, and outline the full product roadmap. We
+                also agree on budget and timeline, sign the contract, and prepare everything for development.
               </CountCard.Description>
               <div className="flex flex-row items-center gap-0.5">
                 <Timer className="text-night-blue h-2 w-2" />
-                <span className="text-[10px] text-white">Timeline: 1 week</span>
+                <span className="text-[10px] text-white">Timeline: ~1 week</span>
               </div>
             </CountCard.Content>
           </CountCard>
@@ -77,13 +75,12 @@ export default function StartupJourneySteps() {
             <CountCard.Content className="gap-0.5">
               <CountCard.Title className="text-xs">Design</CountCard.Title>
               <CountCard.Description className="text-[10px] leading-tight">
-                The product&apos;s look and feel are crucial for getting initial user growth. We&apos;ll support you
-                with mind maps, wireframes, prototypes, and everything you need for a seamless user experience. We can
-                also build a product based on the ready-made design concept you provide.
+                We create UX flows, wireframes, and clean UI concepts focused on clarity and usability. If you already
+                have design assets, we can adapt or refine them to fit your product.
               </CountCard.Description>
               <div className="flex flex-row items-center gap-0.5">
                 <Timer className="text-night-blue h-2 w-2" />
-                <span className="text-[10px] text-white">Timeline: 1-2 month</span>
+                <span className="text-[10px] text-white">Timeline: 1–2 months</span>
               </div>
             </CountCard.Content>
           </CountCard>
@@ -92,15 +89,14 @@ export default function StartupJourneySteps() {
             <CountCard.Index className="text-sm">05</CountCard.Index>
             <CountCard.Separator />
             <CountCard.Content className="gap-0.5">
-              <CountCard.Title className="text-xs">MVP development</CountCard.Title>
+              <CountCard.Title className="text-xs">MVP Development</CountCard.Title>
               <CountCard.Description className="text-[10px] leading-tight">
-                Want to test your idea first before building your product from start to finish? Or perhaps you need to
-                demonstrate the validity of your solution to get funding? We can help you build a minimum viable product
-                (MVP).
+                We build a functional, test-ready MVP that you can show to early users or investors. Development runs in
+                short sprints, with visible weekly progress and transparent communication.
               </CountCard.Description>
               <div className="flex flex-row items-center gap-0.5">
                 <Timer className="text-night-blue h-2 w-2" />
-                <span className="text-[10px] text-white">Timeline: 1-3 month</span>
+                <span className="text-[10px] text-white">Timeline: 1–3 months</span>
               </div>
             </CountCard.Content>
           </CountCard>
@@ -114,12 +110,12 @@ export default function StartupJourneySteps() {
             <CountCard.Content className="gap-1 sm:gap-1.5 md:gap-2">
               <CountCard.Title className="text-sm sm:text-base md:text-lg lg:text-xl">Interview</CountCard.Title>
               <CountCard.Description className="text-xs leading-tight sm:text-sm md:text-base">
-                With LogicCraft, you don&apos;t need to hire developers on your own, have tech know-how, or guess
-                whether your project will work out or not. We&apos;ll handle all things tech while you do business.
+                We start by learning about your ideas, goals, and expectations. You don&apos;t need technical knowledge,
+                we&apos;ll ask the right questions, clarify risks, and help shape a clear product vision.
               </CountCard.Description>
               <div className="flex flex-row items-center gap-1">
                 <Timer className="text-night-blue h-2.5 w-2.5 sm:h-3 sm:w-3" />
-                <span className="text-xs text-white sm:text-sm">Timeline: 1-2 calls</span>
+                <span className="text-xs text-white sm:text-sm">Timeline: 1–2 short calls</span>
               </div>
             </CountCard.Content>
           </CountCard>
@@ -129,16 +125,15 @@ export default function StartupJourneySteps() {
             <CountCard.Separator />
             <CountCard.Content className="gap-1 sm:gap-1.5 md:gap-2">
               <CountCard.Title className="text-sm sm:text-base md:text-lg lg:text-xl">
-                Discovery and research
+                Discovery & Research
               </CountCard.Title>
               <CountCard.Description className="text-xs leading-tight sm:text-sm md:text-base">
-                Just like you, we are interested in building a product that will bring a unique value to its audience
-                and win a competitive edge. We&apos;ll help you achieve this with a failure-proof product strategy based
-                on a thorough customer and competitor analysis.
+                We analyze your market, audience, and competitors to define the core value of your product. This stage
+                ensures we build something that people actually need, not just something that sounds good.
               </CountCard.Description>
               <div className="flex flex-row items-center gap-1">
                 <Timer className="text-night-blue h-2.5 w-2.5 sm:h-3 sm:w-3" />
-                <span className="text-xs text-white sm:text-sm">Timeline: 1-2 Weeks</span>
+                <span className="text-xs text-white sm:text-sm">Timeline: 1–2 weeks</span>
               </div>
             </CountCard.Content>
           </CountCard>
@@ -149,13 +144,12 @@ export default function StartupJourneySteps() {
             <CountCard.Content className="gap-1 sm:gap-1.5 md:gap-2">
               <CountCard.Title className="text-sm sm:text-base md:text-lg lg:text-xl">Requirements</CountCard.Title>
               <CountCard.Description className="text-xs leading-tight sm:text-sm md:text-base">
-                You already know what you are going to build and how. Let&apos;s finalize all the requirements, develop
-                a detailed product roadmap, discuss the timeline and the pricing model, sign a contract, and get down to
-                work.
+                We finalize the feature list, create detailed specifications, and outline the full product roadmap. We
+                also agree on budget and timeline, sign the contract, and prepare everything for development.
               </CountCard.Description>
               <div className="flex flex-row items-center gap-1">
                 <Timer className="text-night-blue h-2.5 w-2.5 sm:h-3 sm:w-3" />
-                <span className="text-xs text-white sm:text-sm">Timeline: 1 week</span>
+                <span className="text-xs text-white sm:text-sm">Timeline: ~1 week</span>
               </div>
             </CountCard.Content>
           </CountCard>
@@ -166,13 +160,12 @@ export default function StartupJourneySteps() {
             <CountCard.Content className="gap-1 sm:gap-1.5 md:gap-2">
               <CountCard.Title className="text-sm sm:text-base md:text-lg lg:text-xl">Design</CountCard.Title>
               <CountCard.Description className="text-xs leading-tight sm:text-sm md:text-base">
-                The product&apos;s look and feel are crucial for getting initial user growth. We&apos;ll support you
-                with mind maps, wireframes, prototypes, and everything you need for a seamless user experience. We can
-                also build a product based on the ready-made design concept you provide.
+                We create UX flows, wireframes, and clean UI concepts focused on clarity and usability. If you already
+                have design assets, we can adapt or refine them to fit your product.
               </CountCard.Description>
               <div className="flex flex-row items-center gap-1">
                 <Timer className="text-night-blue h-2.5 w-2.5 sm:h-3 sm:w-3" />
-                <span className="text-xs text-white sm:text-sm">Timeline: 1-2 month</span>
+                <span className="text-xs text-white sm:text-sm">Timeline: 1–2 months</span>
               </div>
             </CountCard.Content>
           </CountCard>
@@ -181,15 +174,14 @@ export default function StartupJourneySteps() {
             <CountCard.Index className="text-lg sm:text-xl md:text-2xl lg:text-3xl">05</CountCard.Index>
             <CountCard.Separator />
             <CountCard.Content className="gap-1 sm:gap-1.5 md:gap-2">
-              <CountCard.Title className="text-sm sm:text-base md:text-lg lg:text-xl">MVP development</CountCard.Title>
+              <CountCard.Title className="text-sm sm:text-base md:text-lg lg:text-xl">MVP Development</CountCard.Title>
               <CountCard.Description className="text-xs leading-tight sm:text-sm md:text-base">
-                Want to test your idea first before building your product from start to finish? Or perhaps you need to
-                demonstrate the validity of your solution to get funding? We can help you build a minimum viable product
-                (MVP).
+                We build a functional, test-ready MVP that you can show to early users or investors. Development runs in
+                short sprints, with visible weekly progress and transparent communication.
               </CountCard.Description>
               <div className="flex flex-row items-center gap-1">
                 <Timer className="text-night-blue h-2.5 w-2.5 sm:h-3 sm:w-3" />
-                <span className="text-xs text-white sm:text-sm">Timeline: 1-3 month</span>
+                <span className="text-xs text-white sm:text-sm">Timeline: 1–3 months</span>
               </div>
             </CountCard.Content>
           </CountCard>

@@ -516,7 +516,10 @@ export default function HomeCalculator() {
   };
 
   return (
-    <div className="flex w-full flex-col gap-4 px-4 sm:gap-6 sm:px-6 md:gap-7 md:px-8 lg:gap-8 lg:px-12 xl:px-20">
+    <div
+      id="estimate-project-home"
+      className="flex w-full flex-col gap-4 px-4 sm:gap-6 sm:px-6 md:gap-7 md:px-8 lg:gap-8 lg:px-12 xl:px-20"
+    >
       <SignTitle>
         <SignTitle.Title>Estimate my Project</SignTitle.Title>
         <SignTitle.Description>

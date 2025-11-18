@@ -1,10 +1,10 @@
 export function HomeStatistic() {
   return (
     <div className="grid grid-cols-1 gap-20 px-20 sm:grid-cols-2 lg:grid-cols-4">
-      <HomeStatisticItem title="3 MO." description="average MVP time-to-market" />
-      <HomeStatisticItem title="$20k" description="minimum MVP budget" />
-      <HomeStatisticItem title="2012" description="helping businesses since" />
-      <HomeStatisticItem title="$117M" description="total amount of money raised by our clients" />
+      <HomeStatisticItem title="1,5 MO." description="average MVP time-to-market" />
+      <HomeStatisticItem title="8k" description="minimum MVP budget" />
+      <HomeStatisticItem title="2019" description="helping businesses since" />
+      <HomeStatisticItem title="50+" description="projects delivered" />
     </div>
   );
 }

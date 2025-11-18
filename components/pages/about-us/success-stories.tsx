@@ -4,6 +4,7 @@ import { MoveRightIcon } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import Image from "next/image";
+import Link from "next/link";
 import bgA2 from "@/public/assets/mocks/about-us/1.png";
 import bgA3 from "@/public/assets/mocks/about-us/2.png";
 import bgA1 from "@/public/assets/mocks/about-us/3.png";
@@ -17,12 +18,12 @@ export default function SuccessStories() {
       </SignTitle>
 
       {/* Case Studies Header */}
-      <div className="mt-8 flex cursor-pointer flex-row items-center justify-end gap-4">
+      <Link href="/case-studies" className="mt-8 flex cursor-pointer flex-row items-center justify-end gap-4">
         <span className="font-[400]">All case studies</span>
         <Button size="icon" className="blue-grad">
           <MoveRightIcon className="text-night-blue size-6 rotate-[-45deg]" />
         </Button>
-      </div>
+      </Link>
 
       {/* Case Studies Grid */}
       <div className="grid grid-cols-3 gap-8">

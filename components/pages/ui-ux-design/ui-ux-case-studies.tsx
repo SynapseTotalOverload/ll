@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { MoveRightIcon } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
+import Link from "next/link";
 
 export default function UIUXCaseStudies() {
   return (
@@ -13,12 +14,12 @@ export default function UIUXCaseStudies() {
       </SignTitle>
 
       {/* Case Studies Header */}
-      <div className="mt-6 flex cursor-pointer flex-row items-center justify-end gap-4 sm:mt-8 md:mt-10">
+      <Link href="/case-studies" className="mt-6 flex cursor-pointer flex-row items-center justify-end gap-4 sm:mt-8 md:mt-10">
         <span className="text-sm font-normal sm:text-base md:text-lg">All case studies</span>
         <Button size="icon" className="blue-grad h-10 w-10 sm:h-12 sm:w-12">
           <MoveRightIcon className="text-night-blue size-5 rotate-[-45deg] sm:size-6" />
         </Button>
-      </div>
+      </Link>
 
       {/* Case Studies Grid */}
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-8">

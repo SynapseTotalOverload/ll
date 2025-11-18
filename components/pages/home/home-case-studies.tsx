@@ -4,6 +4,7 @@ import { MoveRightIcon } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import Image from "next/image";
+import Link from "next/link";
 import Product from "@/public/assets/placeholder.png";
 import Product1 from "@/public/assets/mocks/home/1.png";
 import Product3 from "@/public/assets/mocks/home/2.png";
@@ -18,12 +19,12 @@ export default function HomeCaseStudies() {
       </SignTitle>
 
       {/* Case Studies Header */}
-      <div className="mt-6 flex cursor-pointer flex-row items-center justify-end gap-3 sm:mt-7 sm:gap-4 md:mt-8">
+      <Link href="/case-studies" className="mt-6 flex cursor-pointer flex-row items-center justify-end gap-3 sm:mt-7 sm:gap-4 md:mt-8">
         <span className="font-[400]">All case studies</span>
         <Button size="icon" className="blue-grad">
           <MoveRightIcon className="text-night-blue size-6 rotate-[-45deg]" />
         </Button>
-      </div>
+      </Link>
 
       {/* Case Studies Grid */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 md:gap-8">
