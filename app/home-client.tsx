@@ -30,10 +30,9 @@ export default function HomePageClient() {
         <HomeCalculator />
         <HomePricingModel />
       </div>
-      <InfiniteMovingCards direction="left" items={items} />
+
       <HomeContactUs />
       <Footer />
     </div>
   );
 }
-
