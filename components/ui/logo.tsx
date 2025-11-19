@@ -1,3 +1,5 @@
+"use client";
+
 import { useRouter } from "next/navigation";
 
 export default function Logo({ className }: { className?: string }) {

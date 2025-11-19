@@ -86,7 +86,7 @@ export default function FAQAccordion() {
             </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-3 pt-2 sm:gap-4 sm:pt-3 md:gap-5 md:pt-4">
               <p className="text-sm leading-relaxed sm:text-base md:text-lg">
-                Absolutely! We believe every project is unique, and we work closely with you to create a customized plan that fits your specific requirements, budget, and timeline. During our discovery phase, we analyze your needs and propose a tailored solution that may include specific features, development approaches, team composition, and pricing structures. Whether you need a simple MVP or a complex enterprise solution, we'll design a plan that aligns perfectly with your goals.
+                Absolutely! We believe every project is unique, and we work closely with you to create a customized plan that fits your specific requirements, budget, and timeline. During our discovery phase, we analyze your needs and propose a tailored solution that may include specific features, development approaches, team composition, and pricing structures. Whether you need a simple MVP or a complex enterprise solution, we&apos;ll design a plan that aligns perfectly with your goals.
               </p>
             </AccordionContent>
           </AccordionItem>
@@ -97,7 +97,7 @@ export default function FAQAccordion() {
             </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-3 pt-2 sm:gap-4 sm:pt-3 md:gap-5 md:pt-4">
               <p className="text-sm leading-relaxed sm:text-base md:text-lg">
-                Any features or changes beyond the initially agreed scope will be discussed and quoted separately. We always provide transparent pricing before implementing additional features, so you'll know exactly what you're paying for. If you want to add features during development, we'll provide a detailed estimate and timeline impact. There are no hidden fees—everything is clearly documented in our contracts and change orders. We believe in transparent communication about costs throughout the project.
+                Any features or changes beyond the initially agreed scope will be discussed and quoted separately. We always provide transparent pricing before implementing additional features, so you&apos;ll know exactly what you&apos;re paying for. If you want to add features during development, we&apos;ll provide a detailed estimate and timeline impact. There are no hidden fees—everything is clearly documented in our contracts and change orders. We believe in transparent communication about costs throughout the project.
               </p>
             </AccordionContent>
           </AccordionItem>
@@ -108,7 +108,7 @@ export default function FAQAccordion() {
             </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-3 pt-2 sm:gap-4 sm:pt-3 md:gap-5 md:pt-4">
               <p className="text-sm leading-relaxed sm:text-base md:text-lg">
-                While we don't offer a traditional "trial period" for development services, we provide several ways to evaluate our work before committing to a full project. We offer a discovery phase where we analyze your needs and provide detailed proposals. For larger projects, we can start with an MVP or proof of concept. Additionally, we provide portfolio examples and case studies, and we're happy to schedule a consultation call to discuss your project and answer any questions. This approach ensures you understand our capabilities before making a commitment.
+                While we don&apos;t offer a traditional &quot;trial period&quot; for development services, we provide several ways to evaluate our work before committing to a full project. We offer a discovery phase where we analyze your needs and provide detailed proposals. For larger projects, we can start with an MVP or proof of concept. Additionally, we provide portfolio examples and case studies, and we&apos;re happy to schedule a consultation call to discuss your project and answer any questions. This approach ensures you understand our capabilities before making a commitment.
               </p>
             </AccordionContent>
           </AccordionItem>
@@ -119,7 +119,7 @@ export default function FAQAccordion() {
             </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-3 pt-2 sm:gap-4 sm:pt-3 md:gap-5 md:pt-4">
               <p className="text-sm leading-relaxed sm:text-base md:text-lg">
-                Our standard support hours are Monday through Friday, but we understand that urgent issues can arise at any time. For critical production issues, we provide emergency support during weekends and holidays. This is typically included in our maintenance and support packages. For clients with dedicated teams or ongoing projects, we can arrange weekend support as part of a custom agreement. Regular development work follows standard business hours, but we're flexible and can accommodate urgent needs when necessary.
+                Our standard support hours are Monday through Friday, but we understand that urgent issues can arise at any time. For critical production issues, we provide emergency support during weekends and holidays. This is typically included in our maintenance and support packages. For clients with dedicated teams or ongoing projects, we can arrange weekend support as part of a custom agreement. Regular development work follows standard business hours, but we&apos;re flexible and can accommodate urgent needs when necessary.
               </p>
             </AccordionContent>
           </AccordionItem>
@@ -130,7 +130,7 @@ export default function FAQAccordion() {
             </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-3 pt-2 sm:gap-4 sm:pt-3 md:gap-5 md:pt-4">
               <p className="text-sm leading-relaxed sm:text-base md:text-lg">
-                Since we're a custom software development company, we don't operate on a traditional "plan" system with user limits. Instead, we build solutions tailored to your specific needs, whether that's for 10 users or 10,000 users. The architecture and infrastructure we design will scale according to your requirements. If you're asking about our development team access or project stakeholders, we typically work with your core team and can accommodate multiple stakeholders through our communication channels and project management tools.
+                Since we&apos;re a custom software development company, we don&apos;t operate on a traditional &quot;plan&quot; system with user limits. Instead, we build solutions tailored to your specific needs, whether that&apos;s for 10 users or 10,000 users. The architecture and infrastructure we design will scale according to your requirements. If you&apos;re asking about our development team access or project stakeholders, we typically work with your core team and can accommodate multiple stakeholders through our communication channels and project management tools.
               </p>
             </AccordionContent>
           </AccordionItem>
@@ -141,7 +141,7 @@ export default function FAQAccordion() {
             </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-3 pt-2 sm:gap-4 sm:pt-3 md:gap-5 md:pt-4">
               <p className="text-sm leading-relaxed sm:text-base md:text-lg">
-                As a custom development company, we don't impose usage limits on the software we build for you. However, if your application experiences unexpected growth or increased usage that requires infrastructure scaling, we'll work with you to optimize performance and scale resources accordingly. This may involve additional costs for hosting, cloud services, or performance optimization work. We always discuss these scenarios proactively and provide solutions that align with your growth trajectory and budget.
+                As a custom development company, we don&apos;t impose usage limits on the software we build for you. However, if your application experiences unexpected growth or increased usage that requires infrastructure scaling, we&apos;ll work with you to optimize performance and scale resources accordingly. This may involve additional costs for hosting, cloud services, or performance optimization work. We always discuss these scenarios proactively and provide solutions that align with your growth trajectory and budget.
               </p>
             </AccordionContent>
           </AccordionItem>
@@ -163,7 +163,7 @@ export default function FAQAccordion() {
             </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-3 pt-2 sm:gap-4 sm:pt-3 md:gap-5 md:pt-4">
               <p className="text-sm leading-relaxed sm:text-base md:text-lg">
-                Since we work with custom development projects rather than subscription plans, changes to project scope are handled through our change management process. You can always request to add features (upgrade) or reduce scope (downgrade), and we'll provide updated timelines and pricing. For ongoing maintenance and support contracts, you can adjust the level of support or team size as your needs change. We're flexible and work with you to find solutions that match your evolving requirements and budget.
+                Since we work with custom development projects rather than subscription plans, changes to project scope are handled through our change management process. You can always request to add features (upgrade) or reduce scope (downgrade), and we&apos;ll provide updated timelines and pricing. For ongoing maintenance and support contracts, you can adjust the level of support or team size as your needs change. We&apos;re flexible and work with you to find solutions that match your evolving requirements and budget.
               </p>
             </AccordionContent>
           </AccordionItem>
@@ -174,7 +174,7 @@ export default function FAQAccordion() {
             </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-3 pt-2 sm:gap-4 sm:pt-3 md:gap-5 md:pt-4">
               <p className="text-sm leading-relaxed sm:text-base md:text-lg">
-                Yes, we can integrate your software with a wide range of third-party tools and services. Common integrations include payment gateways (Stripe, PayPal), authentication services (Auth0, Firebase), cloud storage (AWS S3, Google Cloud), analytics tools (Google Analytics, Mixpanel), CRM systems (Salesforce, HubSpot), email services (SendGrid, Mailchimp), and many others. We'll work with you to identify which integrations are needed for your project and implement them securely using APIs and webhooks. If you have specific tools in mind, let us know during the discovery phase.
+                Yes, we can integrate your software with a wide range of third-party tools and services. Common integrations include payment gateways (Stripe, PayPal), authentication services (Auth0, Firebase), cloud storage (AWS S3, Google Cloud), analytics tools (Google Analytics, Mixpanel), CRM systems (Salesforce, HubSpot), email services (SendGrid, Mailchimp), and many others. We&apos;ll work with you to identify which integrations are needed for your project and implement them securely using APIs and webhooks. If you have specific tools in mind, let us know during the discovery phase.
               </p>
             </AccordionContent>
           </AccordionItem>
@@ -196,7 +196,7 @@ export default function FAQAccordion() {
             </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-3 pt-2 sm:gap-4 sm:pt-3 md:gap-5 md:pt-4">
               <p className="text-sm leading-relaxed sm:text-base md:text-lg">
-                We specialize in building mobile applications for our clients, but we don't have our own mobile app for project management. Instead, we use industry-standard project management tools that are accessible via web browsers and mobile-responsive interfaces. You can access project updates, communicate with our team, and track progress through our project management platform on any device. If you need a custom mobile app built for your business, that's exactly what we do—we can develop native iOS, Android, or cross-platform mobile applications tailored to your specific needs.
+                We specialize in building mobile applications for our clients, but we don&apos;t have our own mobile app for project management. Instead, we use industry-standard project management tools that are accessible via web browsers and mobile-responsive interfaces. You can access project updates, communicate with our team, and track progress through our project management platform on any device. If you need a custom mobile app built for your business, that&apos;s exactly what we do—we can develop native iOS, Android, or cross-platform mobile applications tailored to your specific needs.
               </p>
             </AccordionContent>
           </AccordionItem>
