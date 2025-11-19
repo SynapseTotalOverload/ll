@@ -1,7 +1,13 @@
+import { useRouter } from "next/navigation";
+
 export default function Logo({ className }: { className?: string }) {
+  const router = useRouter();
   return (
-    <span className={`bricolage text-[10vw] font-[800] sm:text-[12vw] md:text-[13vw] lg:text-[14vw] ${className}`}>
-      Logi
+    <span
+      onClick={() => router.push("/")}
+      className={`bricolage cursor-pointer text-[64px] font-[800] sm:text-[12vw] md:text-[13vw] lg:text-[14vw] ${className}`}
+    >
+      Logic
       <div className="inline-flex flex-row items-center">
         <span
           style={{

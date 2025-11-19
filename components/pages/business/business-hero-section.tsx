@@ -9,7 +9,7 @@ export default function HeroSection() {
     <div className="hero-bg flex min-h-screen w-full flex-col justify-between bg-cover bg-center px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-20 lg:py-12">
       {/* Header Navigation */}
       <header className="flex flex-row items-center justify-between">
-        <Logo className="h-[5vh] origin-top-left scale-[-10%] rotate-180 pt-20" />
+        <Logo className="h-[5vh] origin-top-left scale-[-30%] rotate-180 pt-20 md:scale-[-10%]" />
         <div className="flex flex-1 flex-row items-center justify-end md:justify-center">
           <MenuBar />
         </div>

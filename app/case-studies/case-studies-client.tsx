@@ -129,7 +129,7 @@ export default function CaseStudiesPageClient() {
       <CaseStudiesHeroSection />
 
       {/* ===== DYNAMIC GRID LAYOUT ===== */}
-      <div className="container flex flex-col gap-4 pt-16 pb-16 sm:gap-6 md:gap-8 md:pt-24 lg:pt-[120px]">
+      <div className="container flex flex-col gap-4 px-4 pt-12 pb-12 sm:gap-6 sm:px-6 sm:pt-16 sm:pb-16 md:gap-8 md:px-8 md:pt-20 md:pb-20 lg:px-12 lg:pt-24 lg:pb-24">
         {rows.map((row, rowIndex) => (
           <div
             key={rowIndex}
@@ -154,7 +154,7 @@ export default function CaseStudiesPageClient() {
                   <Link
                     key={key}
                     href={project.hero.fullLink}
-                    className="w-full transition-transform duration-300 hover:scale-[1.02]"
+                    className="w-full transition-transform duration-300 active:scale-[0.98] md:hover:scale-[1.02]"
                   >
                     <PortfolioCard
                       description={project.portfolioCard.description}
@@ -172,13 +172,13 @@ export default function CaseStudiesPageClient() {
                   <Link
                     key={key}
                     href={project.hero.fullLink}
-                    className={`w-full transition-transform duration-300 hover:scale-[1.02] ${
+                    className={`w-full transition-transform duration-300 active:scale-[0.98] md:hover:scale-[1.02] ${
                       item.span === "third"
-                        ? "md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.333rem)]"
+                        ? "md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1.333rem)]"
                         : item.span === "half"
                           ? "md:w-[calc(50%-1rem)]"
                           : "w-full"
-                    } `}
+                    }`}
                   >
                     <DynamicSmallProjectCard
                       title={cardData.title}

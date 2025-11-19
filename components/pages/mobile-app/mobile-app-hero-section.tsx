@@ -12,7 +12,7 @@ export default function MobileAppHeroSection() {
     >
       {/* Header Navigation */}
       <header className="flex flex-row items-center justify-between">
-        <Logo className="h-[5vh] origin-top-left scale-[-10%] rotate-180 pt-20" />
+        <Logo className="h-[5vh] origin-top-left scale-[-30%] rotate-180 pt-20 md:scale-[-10%]" />
         <div className="flex flex-1 flex-row items-center justify-end md:justify-center">
           <MenuBar />
         </div>

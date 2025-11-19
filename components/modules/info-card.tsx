@@ -7,7 +7,7 @@ export function InfoCardRoot({ className, children, ...props }: HTMLAttributes<H
       style={{
         boxShadow: "0px 32px 58px 0px #00B7FF0D, 0px -15px 67px 0px #364AFF0D",
       }}
-      className={cn("bg-opacity-60-black flex flex-col rounded-2xl p-6", className)}
+      className={cn("bg-opacity-60-black flex flex-col rounded-xl p-4 sm:rounded-2xl sm:p-5 md:p-6", className)}
       {...props}
     >
       {children}
