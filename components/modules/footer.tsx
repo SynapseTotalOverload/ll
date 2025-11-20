@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { Instagram } from "lucide-react";
+import { Instagram, Mail, MapPin } from "lucide-react";
 import Logo from "../ui/logo";
+import { LampEffect } from "../ui/lamp-effect";
 
 export default function Footer() {
   return (
@@ -11,8 +12,18 @@ export default function Footer() {
       <div className="grid w-full grid-cols-1 items-center gap-6 py-6 sm:gap-8 sm:py-8 lg:grid-cols-[1fr_4fr_1fr] lg:gap-4">
         {/* Contact Info - Full width on mobile, left column on desktop */}
         <div className="order-1 flex flex-col gap-4 sm:gap-6 lg:order-1 lg:gap-8 lg:self-start">
-          <span className="text-[12px] text-white sm:text-[13px] lg:text-[14px]">marketing@logiccrft.com</span>
-          <span className="text-[12px] text-white sm:text-[13px] lg:text-[14px]">Lviv, George Washington str,6</span>
+          <div className="flex items-center gap-3">
+            <LampEffect>
+              <Mail className="text-night-blue size-5" />
+            </LampEffect>
+            <span className="text-[12px] text-white sm:text-[13px] lg:text-[14px]">marketing@logiccrft.com</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <LampEffect>
+              <MapPin className="text-night-blue size-5" />
+            </LampEffect>
+            <span className="text-[12px] text-white sm:text-[13px] lg:text-[14px]">Lviv, George Washington str,6</span>
+          </div>
         </div>
 
         {/* Navigation - Full width on mobile, center column on desktop */}
@@ -65,20 +76,24 @@ export default function Footer() {
         </div>
 
         {/* Social Media - Full width on mobile, right column on desktop */}
-        <div className="order-2 flex h-full flex-row justify-center gap-4 sm:gap-6 lg:order-3 lg:justify-start lg:self-start">
-          {/* <Button className="aspect-square size-8 rounded-xl bg-white p-2 sm:size-9 lg:size-10">
-            <Instagram className="h-4 w-4 text-black sm:h-5 sm:w-5" />
-          </Button>
-          <Button className="aspect-square size-8 rounded-xl bg-white p-2 sm:size-9 lg:size-10">
-            <Instagram className="h-4 w-4 text-black sm:h-5 sm:w-5" />
-          </Button>
-          <Button className="aspect-square size-8 rounded-xl bg-white p-2 sm:size-9 lg:size-10">
-            <Instagram className="h-4 w-4 text-black sm:h-5 sm:w-5" />
-          </Button>
-          <Button className="aspect-square size-8 rounded-xl bg-white p-2 sm:size-9 lg:size-10">
-            <Instagram className="h-4 w-4 text-black sm:h-5 sm:w-5" />
-          </Button> */}
-        </div>
+        <div className="order-2 flex h-full flex-row justify-center gap-4 sm:gap-6 lg:order-3 lg:justify-start lg:self-start"></div>
+      </div>
+
+      {/* Legal Links */}
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-4 border-t border-white/20 pt-6 sm:gap-6 sm:pt-8">
+        <Link
+          href="/terms-of-usage"
+          className="text-[12px] text-white/70 hover:text-white sm:text-[13px] lg:text-[14px]"
+        >
+          Terms of Usage
+        </Link>
+        <span className="text-[12px] text-white/50 sm:text-[13px] lg:text-[14px]">|</span>
+        <Link
+          href="/privacy-policy"
+          className="text-[12px] text-white/70 hover:text-white sm:text-[13px] lg:text-[14px]"
+        >
+          Privacy Policy
+        </Link>
       </div>
     </div>
   );
