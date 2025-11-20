@@ -2,7 +2,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { PaperclipIcon } from "lucide-react";
 import InfoCard from "@/components/modules/info-card";
 import Footer from "@/public/assets/footer-hero.png";
 import { Button } from "@/components/ui/button";
@@ -18,7 +17,6 @@ const formSchema = z.object({
   email: z.string().email("Invalid email address"),
   phone: z.string().min(1, "Phone number is required"),
   message: z.string().min(1, "Message is required"),
-  attachment: z.any().optional(),
   privacyPolicy: z.boolean().refine((val) => val === true, {
     message: "You must agree to the privacy policy",
   }),
@@ -117,11 +115,6 @@ export default function ContactUs() {
                   </FormItem>
                 )}
               />
-
-              <div className="flex cursor-pointer items-center gap-2 text-white">
-                <PaperclipIcon className="h-4 w-4" />
-                <span className="text-sm">Add an attachment (pdf, doc, docx)</span>
-              </div>
 
               <FormField
                 control={form.control}
