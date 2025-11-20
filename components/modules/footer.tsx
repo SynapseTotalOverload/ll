@@ -11,12 +11,10 @@ export default function Footer() {
       <div className="grid w-full grid-cols-1 items-center gap-6 py-6 sm:gap-8 sm:py-8 lg:grid-cols-[1fr_4fr_1fr] lg:gap-4">
         {/* Contact Info - Full width on mobile, left column on desktop */}
         <div className="order-1 flex flex-col gap-4 sm:gap-6 lg:order-1 lg:gap-8 lg:self-start">
-          <Button className="w-fit" variant="link">
-            LogicCraft
-          </Button>
+          
           <span className="text-[12px] text-white sm:text-[13px] lg:text-[14px]">marketing@logiccrft.com</span>
           <span className="text-[12px] text-white sm:text-[13px] lg:text-[14px]">
-            Lviv, George Washington str, number 6
+            Lviv, George Washington str,6
           </span>
         </div>
 
