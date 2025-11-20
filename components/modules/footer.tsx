@@ -11,11 +11,8 @@ export default function Footer() {
       <div className="grid w-full grid-cols-1 items-center gap-6 py-6 sm:gap-8 sm:py-8 lg:grid-cols-[1fr_4fr_1fr] lg:gap-4">
         {/* Contact Info - Full width on mobile, left column on desktop */}
         <div className="order-1 flex flex-col gap-4 sm:gap-6 lg:order-1 lg:gap-8 lg:self-start">
-          
           <span className="text-[12px] text-white sm:text-[13px] lg:text-[14px]">marketing@logiccrft.com</span>
-          <span className="text-[12px] text-white sm:text-[13px] lg:text-[14px]">
-            Lviv, George Washington str,6
-          </span>
+          <span className="text-[12px] text-white sm:text-[13px] lg:text-[14px]">Lviv, George Washington str,6</span>
         </div>
 
         {/* Navigation - Full width on mobile, center column on desktop */}
@@ -25,13 +22,22 @@ export default function Footer() {
               <Link href="/" className="text-[16px] font-[700] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]">
                 Home
               </Link>
-              <Link href="/" className="text-[16px] font-[700] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]">
+              <Link
+                href="/business"
+                className="text-[16px] font-[700] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]"
+              >
                 For businesses
               </Link>
-              <Link href="/" className="text-[16px] font-[700] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]">
+              <Link
+                href="/case-studies"
+                className="text-[16px] font-[700] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]"
+              >
                 Case studies
               </Link>
-              <Link href="/" className="text-[16px] font-[700] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]">
+              <Link
+                href="/about-us"
+                className="text-[16px] font-[700] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]"
+              >
                 About Us
               </Link>
             </div>
@@ -39,19 +45,19 @@ export default function Footer() {
               <span className="text-[16px] font-[700] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]">
                 Services
               </span>
-              <Link href="/" className="text-[12px] font-[400] text-white sm:text-[13px] lg:text-[14px]">
+              <Link href="/ui-ux-design" className="text-[12px] font-[400] text-white sm:text-[13px] lg:text-[14px]">
                 UI/UX Design
               </Link>
-              <Link href="/" className="text-[12px] font-[400] text-white sm:text-[13px] lg:text-[14px]">
+              <Link href="/graphic-design" className="text-[12px] font-[400] text-white sm:text-[13px] lg:text-[14px]">
                 Graphic design
               </Link>
-              <Link href="/" className="text-[12px] font-[400] text-white sm:text-[13px] lg:text-[14px]">
+              <Link href="/web-development" className="text-[12px] font-[400] text-white sm:text-[13px] lg:text-[14px]">
                 Mobile and web development
               </Link>
-              <Link href="/" className="text-[12px] font-[400] text-white sm:text-[13px] lg:text-[14px]">
+              <Link href="/business" className="text-[12px] font-[400] text-white sm:text-[13px] lg:text-[14px]">
                 CRM software building
               </Link>
-              <Link href="/" className="text-[12px] font-[400] text-white sm:text-[13px] lg:text-[14px]">
+              <Link href="/qa" className="text-[12px] font-[400] text-white sm:text-[13px] lg:text-[14px]">
                 QA Automation and QA Manual
               </Link>
             </div>
