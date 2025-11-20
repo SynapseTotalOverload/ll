@@ -1,19 +1,20 @@
 "use client";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function AboutUsStatistics() {
   return (
     <div className="flex w-full flex-row justify-between pt-[120px]">
       <div className="flex min-w-[500px] flex-col justify-between gap-20 pl-20">
         <div className="bricolage flex flex-row justify-between border-b-2 border-b-white">
-          <span className="text-night-blue text-[64px] font-[400]">120+</span>
+          <span className="text-night-blue text-[64px] font-[400]">50+</span>
           <div className="flex flex-col justify-center">
             <span className="text-[22px] font-[700]">Professionals</span>
           </div>
         </div>
         <div className="bricolage flex flex-row justify-between border-b-2 border-b-white">
-          <span className="text-night-blue text-[64px] font-[400]">500+</span>
+          <span className="text-night-blue text-[64px] font-[400]">200+</span>
           <div className="flex flex-col justify-center">
             <span className="text-[22px] font-[700]">Success projects</span>
           </div>
@@ -28,9 +29,11 @@ export default function AboutUsStatistics() {
           </span>
           <div className="w-fit">
             <BackgroundGradient>
-              <Button type="submit" className="bg-opacity-100-black w-full rounded-full border py-3 text-white">
-                Get in touch with us
-              </Button>
+              <Link href="/contact-us">
+                <Button type="submit" className="bg-opacity-100-black w-full rounded-full border py-3 text-white">
+                  Get in touch with us
+                </Button>
+              </Link>
             </BackgroundGradient>
           </div>
         </div>

@@ -14,7 +14,10 @@ export default function Footer() {
           <Button className="w-fit" variant="link">
             LogicCraft
           </Button>
-          <span className="text-[12px] text-white sm:text-[13px] lg:text-[14px]">logicCraft333@gmail.com</span>
+          <span className="text-[12px] text-white sm:text-[13px] lg:text-[14px]">marketing@logiccrft.com</span>
+          <span className="text-[12px] text-white sm:text-[13px] lg:text-[14px]">
+            Lviv, George Washington str, number 6
+          </span>
         </div>
 
         {/* Navigation - Full width on mobile, center column on desktop */}
