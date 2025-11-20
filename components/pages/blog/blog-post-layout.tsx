@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import heroBanner from "@/public/assets/bgs/about-us.png";
 import MenuBar from "@/components/modules/menu-bar";
 import Footer from "@/components/modules/footer";
+import Logo from "@/components/ui/logo";
 import { Calendar, Clock, ArrowLeft, Share2, Tag } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -33,8 +34,8 @@ export default function BlogPostLayout({ post }: BlogPostLayoutProps) {
         className="flex h-screen w-full flex-col justify-between bg-cover bg-center px-4 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 lg:px-20 lg:py-10"
       >
         {/* Header Navigation */}
-        <header className="flex flex-row items-center">
-          <Button variant="link">LogicCraft</Button>
+        <header className="flex flex-row items-center justify-between">
+          <Logo className="h-[5vh] origin-top-left scale-[-30%] rotate-180 pt-20 md:scale-[-10%]" />
           <div className="flex flex-1 flex-row items-center justify-end md:justify-center">
             <MenuBar />
           </div>
