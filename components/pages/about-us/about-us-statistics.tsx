@@ -10,7 +10,7 @@ export default function AboutUsStatistics() {
         <div className="bricolage flex flex-row justify-between border-b-2 border-b-white">
           <span className="text-night-blue text-[64px] font-[400]">50+</span>
           <div className="flex flex-col justify-center">
-            <span className="text-[22px] font-[700]">Professionals</span>
+            <span className="text-[22px] font-[700]">Projects</span>
           </div>
         </div>
       </div>
