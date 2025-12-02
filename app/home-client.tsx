@@ -21,7 +21,7 @@ export default function HomePageClient() {
 
       {/* ===== MAIN CONTENT SECTIONS ===== */}
       <div className="container flex flex-col gap-8 pt-8 sm:gap-16 sm:pt-16 md:gap-24 md:pt-24 lg:gap-[120px] lg:pt-[120px]">
-        <HomeStatistic />
+     
         {/* <HomeOurClients /> */}
         <StartupJourneySteps />
         {/*  <HomeServices /> */}

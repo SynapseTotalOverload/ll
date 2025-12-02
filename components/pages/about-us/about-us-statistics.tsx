@@ -13,12 +13,6 @@ export default function AboutUsStatistics() {
             <span className="text-[22px] font-[700]">Professionals</span>
           </div>
         </div>
-        <div className="bricolage flex flex-row justify-between border-b-2 border-b-white">
-          <span className="text-night-blue text-[64px] font-[400]">200+</span>
-          <div className="flex flex-col justify-center">
-            <span className="text-[22px] font-[700]">Success projects</span>
-          </div>
-        </div>
       </div>
       <div className="nice-grad flex flex-col items-center justify-center">
         <div className="flex max-w-[500px] flex-col gap-8 pr-20">
