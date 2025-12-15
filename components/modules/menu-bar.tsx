@@ -19,6 +19,7 @@ export default function MenuBar({ className }: { className?: string }) {
     | "about-us"
     | "case-studies"
     | "blog"
+    | "team"
   >("home");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -56,6 +57,8 @@ export default function MenuBar({ className }: { className?: string }) {
         setActive("blog");
       } else if (pathSlugs.includes("case-studies")) {
         setActive("case-studies");
+      } else if (lastSlug === "our-team") {
+        setActive("team");
       }
     }
   }, []);
@@ -116,7 +119,6 @@ export default function MenuBar({ className }: { className?: string }) {
               </MenubarTrigger>
             </Link>
           </MenubarMenu>
-
           <MenubarMenu>
             <MenubarTrigger
               data-active={isServicesActive}
@@ -162,8 +164,17 @@ export default function MenuBar({ className }: { className?: string }) {
                 QA Automation & Manual
               </MenubarCheckboxItem>
             </MenubarContent>
+          </MenubarMenu>{" "}
+          <MenubarMenu>
+            <Link href="/our-team" className="block">
+              <MenubarTrigger
+                data-active={active === "team"}
+                className="text-xs font-medium transition-colors duration-200 sm:text-sm md:text-sm"
+              >
+                Team
+              </MenubarTrigger>
+            </Link>
           </MenubarMenu>
-
           <MenubarMenu>
             <Link href="/blog" className="block">
               <MenubarTrigger
@@ -174,7 +185,6 @@ export default function MenuBar({ className }: { className?: string }) {
               </MenubarTrigger>
             </Link>
           </MenubarMenu>
-
           <MenubarMenu>
             <Link href="/faq" className="block">
               <MenubarTrigger
@@ -261,7 +271,6 @@ export default function MenuBar({ className }: { className?: string }) {
               </MenubarCheckboxItem>
             </MenubarContent>
           </MenubarMenu>
-
           <MenubarMenu>
             <Link href="/about-us" className="block">
               <MenubarTrigger
