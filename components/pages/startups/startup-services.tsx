@@ -22,9 +22,8 @@ export default function StartupServices() {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-8">
         {/* Service Card 1 */}
         <InfoCard className="w-full">
-          <LampEffect>
-            <Lightbulb className="text-night-blue size-6 sm:size-7 md:size-8" />
-          </LampEffect>
+          <Lightbulb className="text-night-blue size-6 sm:size-7 md:size-8" />
+
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             MVP web and mobile software development
           </InfoCard.Title>
@@ -37,9 +36,8 @@ export default function StartupServices() {
 
         {/* Service Card 2 */}
         <InfoCard className="w-full">
-          <LampEffect>
-            <Rocket className="text-night-blue size-6 sm:size-7 md:size-8" />
-          </LampEffect>
+          <Rocket className="text-night-blue size-6 sm:size-7 md:size-8" />
+
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Full-cycle software product development
           </InfoCard.Title>
@@ -52,9 +50,8 @@ export default function StartupServices() {
 
         {/* Service Card 3 */}
         <InfoCard className="w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
-          <LampEffect>
-            <Compass className="text-night-blue size-6 sm:size-7 md:size-8" />
-          </LampEffect>
+          <Compass className="text-night-blue size-6 sm:size-7 md:size-8" />
+
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Product strategy
           </InfoCard.Title>

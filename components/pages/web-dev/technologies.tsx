@@ -23,9 +23,8 @@ export default function Technologies() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-1 sm:gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-3 lg:gap-16">
           {/* Technology Category 1 */}
           <div className="w-full">
-            <LampEffect>
-              <Zap className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <Zap className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Frontend Technologies
             </InfoCard.Title>
@@ -56,9 +55,8 @@ export default function Technologies() {
 
           {/* Technology Category 2 */}
           <div className="w-full">
-            <LampEffect>
-              <Server className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <Server className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Backend Technologies
             </InfoCard.Title>
@@ -89,9 +87,8 @@ export default function Technologies() {
 
           {/* Technology Category 3 */}
           <div className="w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
-            <LampEffect>
-              <Wrench className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <Wrench className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               DevOps & Tools
             </InfoCard.Title>

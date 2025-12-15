@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { MoveRightIcon } from "lucide-react";
+import ArrowRight from "@/public/assets/svg/arrow-right.svg";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import Image from "next/image";
@@ -20,7 +20,10 @@ export default function GraphicDesignPortfolio() {
       </SignTitle>
 
       {/* Portfolio Header */}
-      <Link href="/case-studies" className="mt-6 flex cursor-pointer flex-row items-center justify-end gap-4 sm:mt-8 md:mt-10">
+      <Link
+        href="/case-studies"
+        className="mt-6 flex cursor-pointer flex-row items-center justify-end gap-4 sm:mt-8 md:mt-10"
+      >
         <span className="text-sm font-normal sm:text-base md:text-lg">All case studies</span>
         <Button size="icon" className="blue-grad h-10 w-10 sm:h-12 sm:w-12">
           <MoveRightIcon className="text-night-blue size-5 rotate-[-45deg] sm:size-6" />

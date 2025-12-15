@@ -6,6 +6,7 @@ import InfoCard from "@/components/modules/info-card";
 import { LampEffect } from "@/components/ui/lamp-effect";
 import PixelTransition from "@/components/ui/card-pixel";
 import Image from "next/image";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
 
 interface OurTeamData {
   id: number;
@@ -91,35 +92,37 @@ export default function HomeServices() {
 
 export function PixelTransitionCard({ id }: { id: string }) {
   return (
-    <PixelTransition
-      firstContent={
-        ourTeamData[id as keyof typeof ourTeamData]?.image ? (
-          <WithImageFirstContent
-            name={ourTeamData[id as keyof typeof ourTeamData].name}
-            position={ourTeamData[id as keyof typeof ourTeamData].position}
-            image={ourTeamData[id as keyof typeof ourTeamData]?.image || ""}
-          />
-        ) : (
-          <FirstContent
-            name={ourTeamData[id as keyof typeof ourTeamData].name}
-            position={ourTeamData[id as keyof typeof ourTeamData].position}
-          />
-        )
-      }
-      secondContent={
-        ourTeamData[id as keyof typeof ourTeamData]?.image ? (
-          <SecondImageContent text={ourTeamData[id as keyof typeof ourTeamData].description || ""} />
-        ) : (
-          <SecondContent stack={ourTeamData[id as keyof typeof ourTeamData].stack} />
-        )
-      }
-      gridSize={12}
-      pixelColor="#00b7ff"
-      once={false}
-      aspectRatio="60%"
-      animationStepDuration={0.2}
-      className="custom-pixel-card"
-    />
+    <BackgroundGradient rounded="rounded-[18px]">
+      <PixelTransition
+        firstContent={
+          ourTeamData[id as keyof typeof ourTeamData]?.image ? (
+            <WithImageFirstContent
+              name={ourTeamData[id as keyof typeof ourTeamData].name}
+              position={ourTeamData[id as keyof typeof ourTeamData].position}
+              image={ourTeamData[id as keyof typeof ourTeamData]?.image || ""}
+            />
+          ) : (
+            <FirstContent
+              name={ourTeamData[id as keyof typeof ourTeamData].name}
+              position={ourTeamData[id as keyof typeof ourTeamData].position}
+            />
+          )
+        }
+        secondContent={
+          ourTeamData[id as keyof typeof ourTeamData]?.image ? (
+            <SecondImageContent text={ourTeamData[id as keyof typeof ourTeamData].description || ""} />
+          ) : (
+            <SecondContent stack={ourTeamData[id as keyof typeof ourTeamData].stack} />
+          )
+        }
+        gridSize={12}
+        pixelColor="#00b7ff"
+        once={false}
+        aspectRatio="60%"
+        animationStepDuration={0.2}
+        className="custom-pixel-card"
+      />
+    </BackgroundGradient>
   );
 }
 

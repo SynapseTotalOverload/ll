@@ -15,9 +15,8 @@ export default function QAMethodology() {
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-1 sm:gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-3 lg:gap-16">
         {/* Methodology Card 1 */}
         <InfoCard className="w-full">
-          <LampEffect>
-            <div className="text-night-blue text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">01</div>
-          </LampEffect>
+          <div className="text-night-blue text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">01</div>
+
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Risk management
           </InfoCard.Title>
@@ -29,9 +28,8 @@ export default function QAMethodology() {
 
         {/* Methodology Card 2 */}
         <InfoCard className="w-full">
-          <LampEffect>
-            <div className="text-night-blue text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">02</div>
-          </LampEffect>
+          <div className="text-night-blue text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">02</div>
+
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Test strategy
           </InfoCard.Title>
@@ -43,9 +41,8 @@ export default function QAMethodology() {
 
         {/* Methodology Card 3 */}
         <InfoCard className="w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
-          <LampEffect>
-            <div className="text-night-blue text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">03</div>
-          </LampEffect>
+          <div className="text-night-blue text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">03</div>
+
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Defect Management
           </InfoCard.Title>

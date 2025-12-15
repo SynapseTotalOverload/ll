@@ -24,9 +24,8 @@ export default function BusinessServices() {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-6 md:gap-10 lg:gap-8">
         {/* Service Card 1 */}
         <InfoCard className="w-full md:col-span-2">
-          <LampEffect>
-            <UserIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
-          </LampEffect>
+          <UserIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Team extension
           </InfoCard.Title>
@@ -39,9 +38,8 @@ export default function BusinessServices() {
 
         {/* Service Card 2 */}
         <InfoCard className="w-full md:col-span-2">
-          <LampEffect>
-            <LaptopMinimalCheckIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
-          </LampEffect>
+          <LaptopMinimalCheckIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Service extension
           </InfoCard.Title>
@@ -54,9 +52,8 @@ export default function BusinessServices() {
 
         {/* Service Card 3 */}
         <InfoCard className="w-full md:col-span-2">
-          <LampEffect>
-            <NetworkIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
-          </LampEffect>
+          <NetworkIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             IT project hand-over
           </InfoCard.Title>
@@ -68,10 +65,9 @@ export default function BusinessServices() {
         </InfoCard>
 
         {/* Service Card 4 */}
-        <InfoCard className="w-full md:col-span-3">
-          <LampEffect>
-            <RecycleIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
-          </LampEffect>
+        <InfoCard className="w-full md:col-span-2">
+          <RecycleIcon className="text-night-blue size-6 sm:size-7 md:size-8" />
+
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Digital transformation
           </InfoCard.Title>
@@ -83,10 +79,9 @@ export default function BusinessServices() {
         </InfoCard>
 
         {/* Service Card 5 */}
-        <InfoCard className="w-full md:col-span-3">
-          <LampEffect>
-            <ChartSpline className="text-night-blue size-6 sm:size-7 md:size-8" />
-          </LampEffect>
+        <InfoCard className="w-full md:col-span-2">
+          <ChartSpline className="text-night-blue size-6 sm:size-7 md:size-8" />
+
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             IT staff augmentation / CTO as a service
           </InfoCard.Title>

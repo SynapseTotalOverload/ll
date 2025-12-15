@@ -23,9 +23,8 @@ export default function QAServices() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-8">
           {/* Service Card 1 */}
           <InfoCard className="w-full">
-            <LampEffect>
-              <ClipboardCheck className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <ClipboardCheck className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               QA Audit and Consulting
             </InfoCard.Title>
@@ -37,9 +36,8 @@ export default function QAServices() {
 
           {/* Service Card 2 */}
           <InfoCard className="w-full">
-            <LampEffect>
-              <Zap className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <Zap className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Setting Up QA Process
             </InfoCard.Title>
@@ -51,9 +49,8 @@ export default function QAServices() {
 
           {/* Service Card 3 */}
           <InfoCard className="w-full">
-            <LampEffect>
-              <Users className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <Users className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               QA Staffing
             </InfoCard.Title>
@@ -65,9 +62,8 @@ export default function QAServices() {
 
           {/* Service Card 4 */}
           <InfoCard className="w-full">
-            <LampEffect>
-              <Smartphone className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <Smartphone className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Mobile App Testing
             </InfoCard.Title>
@@ -79,9 +75,8 @@ export default function QAServices() {
 
           {/* Service Card 5 */}
           <InfoCard className="w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
-            <LampEffect>
-              <Globe className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <Globe className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Web App Testing
             </InfoCard.Title>

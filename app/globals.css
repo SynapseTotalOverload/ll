@@ -136,6 +136,8 @@ body {
   --color-opacity-20-black: var(--opacity-20-black);
   --color-opacity-50-black: var(--opacity-50-black);
   --color-opacity-60-black: var(--opacity-60-black);
+  --color-opacity-80-black: var(--opacity-80-black);
+  --color-opacity-90-black: var(--opacity-90-black);
 }
 
 :root {
@@ -147,6 +149,8 @@ body {
   --opacity-20-black: oklch(0.2064 0.0079 285.69 / 50.2%);
   --opacity-50-black: oklch(0.1498 0.0067 270.98 / 50.2%);
   --opacity-60-black: oklch(0.2809 0 0 / 60%);
+  --opacity-80-black: oklch(0.2809 0 0 / 80%);
+  --opacity-90-black: oklch(0.2809 0 0 / 90%);
   --plastic: #9d9fa1;
   --charcole: #292929;
   --card: oklch(0.9821 0 0);

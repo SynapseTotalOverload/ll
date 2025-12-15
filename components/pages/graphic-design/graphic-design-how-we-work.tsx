@@ -20,9 +20,8 @@ export default function GraphicDesignHowWeWork() {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-6 md:gap-10 lg:gap-8">
         {/* Step 1 */}
         <InfoCard className="w-full md:col-span-2">
-          <LampEffect>
-            <Dna className="text-night-blue size-6 sm:size-7 md:size-8" />
-          </LampEffect>
+          <Dna className="text-night-blue size-6 sm:size-7 md:size-8" />
+
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Understanding Your Brand
           </InfoCard.Title>
@@ -34,9 +33,8 @@ export default function GraphicDesignHowWeWork() {
 
         {/* Step 2 */}
         <InfoCard className="w-full md:col-span-2">
-          <LampEffect>
-            <Lamp className="text-night-blue size-6 sm:size-7 md:size-8" />
-          </LampEffect>
+          <Lamp className="text-night-blue size-6 sm:size-7 md:size-8" />
+
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Concept Development
           </InfoCard.Title>
@@ -48,9 +46,8 @@ export default function GraphicDesignHowWeWork() {
 
         {/* Step 3 */}
         <InfoCard className="w-full md:col-span-2">
-          <LampEffect>
-            <Ruler className="text-night-blue size-6 sm:size-7 md:size-8" />
-          </LampEffect>
+          <Ruler className="text-night-blue size-6 sm:size-7 md:size-8" />
+
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Design Execution
           </InfoCard.Title>
@@ -62,9 +59,8 @@ export default function GraphicDesignHowWeWork() {
 
         {/* Step 4 */}
         <InfoCard className="w-full md:col-span-3">
-          <LampEffect>
-            <MessageSquare className="text-night-blue size-6 sm:size-7 md:size-8" />
-          </LampEffect>
+          <MessageSquare className="text-night-blue size-6 sm:size-7 md:size-8" />
+
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Feedback & Refinement
           </InfoCard.Title>
@@ -76,9 +72,8 @@ export default function GraphicDesignHowWeWork() {
 
         {/* Step 5 */}
         <InfoCard className="w-full md:col-span-3">
-          <LampEffect>
-            <CheckCircle className="text-night-blue size-6 sm:size-7 md:size-8" />
-          </LampEffect>
+          <CheckCircle className="text-night-blue size-6 sm:size-7 md:size-8" />
+
           <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
             Delivery & Support
           </InfoCard.Title>

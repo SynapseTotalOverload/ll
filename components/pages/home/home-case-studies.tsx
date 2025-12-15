@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { MoveRightIcon } from "lucide-react";
+import ArrowRight from "@/public/assets/svg/arrow-right.svg";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import Image from "next/image";
@@ -14,17 +14,21 @@ export default function HomeCaseStudies() {
     <div className="flex w-full flex-col gap-6 px-4 sm:gap-7 sm:px-8 md:gap-8 md:px-12 lg:px-20">
       <SignTitle>
         <SignTitle.Title>Our successful stories</SignTitle.Title>
-        <SignTitle.Description>Launched products LogicCraft assisted with.</SignTitle.Description>
-        <SignTitle.Separator />
+        <div className="flex flex-row items-center justify-between gap-2">
+          <SignTitle.Description>Launched products LogicCraft assisted with.</SignTitle.Description>
+          <Link
+            href="/case-studies"
+            className="mt-6 flex cursor-pointer flex-row items-center justify-end gap-3 sm:mt-7 sm:gap-4 md:mt-8"
+          >
+            <span className="font-[400]">All case studies</span>
+            <Button size="icon" className="blue-grad">
+              <ArrowRight className="text-night-blue flex size-6 items-center justify-center" />
+            </Button>
+          </Link>
+        </div>
       </SignTitle>
 
       {/* Case Studies Header */}
-      <Link href="/case-studies" className="mt-6 flex cursor-pointer flex-row items-center justify-end gap-3 sm:mt-7 sm:gap-4 md:mt-8">
-        <span className="font-[400]">All case studies</span>
-        <Button size="icon" className="blue-grad">
-          <MoveRightIcon className="text-night-blue size-6 rotate-[-45deg]" />
-        </Button>
-      </Link>
 
       {/* Case Studies Grid */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 md:gap-8">

@@ -13,15 +13,13 @@ export default function Footer() {
         {/* Contact Info - Full width on mobile, left column on desktop */}
         <div className="order-1 flex flex-col gap-4 sm:gap-6 lg:order-1 lg:gap-8 lg:self-start">
           <div className="flex items-center gap-3">
-            <LampEffect>
-              <Mail className="text-night-blue size-5" />
-            </LampEffect>
+            <Mail className="text-night-blue size-5" />
+
             <span className="text-[12px] text-white sm:text-[13px] lg:text-[14px]">marketing@logiccrft.com</span>
           </div>
           <div className="flex items-center gap-3">
-            <LampEffect>
-              <MapPin className="text-night-blue size-5" />
-            </LampEffect>
+            <MapPin className="text-night-blue size-5" />
+
             <span className="text-[12px] text-white sm:text-[13px] lg:text-[14px]">Lviv, George Washington str,6</span>
           </div>
         </div>

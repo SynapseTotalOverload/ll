@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { MoveRightIcon } from "lucide-react";
+import ArrowRight from "@/public/assets/svg/arrow-right.svg";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import Image from "next/image";
@@ -21,7 +21,7 @@ export default function SuccessStories() {
       <Link href="/case-studies" className="mt-8 flex cursor-pointer flex-row items-center justify-end gap-4">
         <span className="font-[400]">All case studies</span>
         <Button size="icon" className="blue-grad">
-          <MoveRightIcon className="text-night-blue size-6 rotate-[-45deg]" />
+          <ArrowRight className="text-night-blue flex size-6 items-center justify-center" />
         </Button>
       </Link>
 

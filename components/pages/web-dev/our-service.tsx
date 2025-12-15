@@ -26,9 +26,8 @@ export default function OurService() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-8">
           {/* Service Card 1 */}
           <InfoCard className="w-full">
-            <LampEffect>
-              <Palette className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <Palette className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               UI/UX Design
             </InfoCard.Title>
@@ -40,9 +39,8 @@ export default function OurService() {
 
           {/* Service Card 2 */}
           <InfoCard className="w-full">
-            <LampEffect>
-              <Code className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <Code className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Frontend Development
             </InfoCard.Title>
@@ -54,9 +52,8 @@ export default function OurService() {
 
           {/* Service Card 3 */}
           <InfoCard className="w-full">
-            <LampEffect>
-              <Server className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <Server className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Backend Development
             </InfoCard.Title>
@@ -67,9 +64,8 @@ export default function OurService() {
 
           {/* Service Card 4 */}
           <InfoCard className="w-full">
-            <LampEffect>
-              <TestTube className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <TestTube className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Testing & QA
             </InfoCard.Title>
@@ -80,9 +76,8 @@ export default function OurService() {
 
           {/* Service Card 5 */}
           <InfoCard className="w-full">
-            <LampEffect>
-              <Wrench className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <Wrench className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Maintenance & Support
             </InfoCard.Title>
@@ -93,9 +88,8 @@ export default function OurService() {
 
           {/* Service Card 6 */}
           <InfoCard className="w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
-            <LampEffect>
-              <Gauge className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <Gauge className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Performance Optimization
             </InfoCard.Title>

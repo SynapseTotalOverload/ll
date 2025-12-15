@@ -218,7 +218,7 @@ export const data: ProjectConfig = {
       hero: {
         title: "Community lands",
         description:
-          "Community Lands is a platform offering affordable land for purchase across the United States, catering to individuals interested in nature, sustainability, and off-grid living. The site provides a marketplace for diverse land options, resources for prospective landowners, and a community space to connect with others passionate about land ownership and outdoor lifestyles.",
+          "Platform offering affordable land for purchase across the United States. Provides marketplace for diverse land options and resources for prospective landowners.",
         type: "Web App",
         backgroundUrl: "/assets/dynamic/comunity_lands/bg_hero.png",
         mainImage: "/assets/dynamic/comunity_lands/img_hero.png",
@@ -226,7 +226,7 @@ export const data: ProjectConfig = {
       },
       aboutProject: {
         description:
-          "Community Lands is an innovative platform designed to connect users with real estate opportunities in a seamless and engaging way. Our project focuses on providing an intuitive and user-friendly interface for browsing, interacting, and managing property listings. Featuring advanced search functionality, real-time status indicators, and streamlined processes for handling orders, Community Lands is built to meet the evolving needs of both buyers and sellers in the real estate market.",
+          "Platform connecting users with real estate opportunities. Features intuitive interface, advanced search, real-time status indicators, and streamlined order processes.",
         image: "/assets/dynamic/comunity_lands/img_about_project.png",
         backgroundUrl: "/assets/dynamic/comunity_lands/bg_about_project.png",
       },
@@ -245,7 +245,7 @@ export const data: ProjectConfig = {
           "Node.js",
         ],
         description:
-          "We used Svelte on the frontend to create adaptable interfaces with optimized UX, adding features like dialogue boxes for agent interaction and active view indicators on object pages. We updated filter designs and implemented status indicators like 'reserved.' On the backend, we worked with FastAPI and SQLAlchemy for reliable CRUD operations, developed functionality for offers, and integrated Google authentication via Keycloak. Additionally, we enhanced email formatting, added attachments, improved search logic, and set up data filtering for a smoother user experience.",
+          "Frontend: Svelte for adaptable interfaces, dialogue boxes, and status indicators. Backend: FastAPI and SQLAlchemy for CRUD operations, offers functionality, and Google authentication via Keycloak.",
       },
       stats: [
         {
@@ -284,7 +284,7 @@ export const data: ProjectConfig = {
       portfolioCard: {
         mainImage: "/assets/dynamic/comunity_lands/img_home_page.png",
         description:
-          "Community Lands is an innovative platform designed to connect users with real estate opportunities in a seamless and engaging way. Our project focuses on providing an intuitive and user-friendly interface for browsing, interacting, and managing property listings.",
+          "Platform connecting users with real estate opportunities. Features intuitive interface for browsing and managing property listings.",
         backgroundUrl: "/assets/dynamic/comunity_lands/bg_home_page.png",
       },
       smallProjectCards: [
@@ -294,17 +294,14 @@ export const data: ProjectConfig = {
             {
               title: "Functions",
               description: [
-                "Welcome banner with a brief description of the company's mission",
-                "Button 'View available land plots' for quick access to the catalogue",
-                "Sections with the benefits of land ownership, company services and customer reviews",
+                "Welcome banner with company mission",
+                "Button 'View available land plots'",
+                "Sections with benefits, services and reviews",
               ],
             },
             {
               title: "Features",
-              description: [
-                "Restrained and professional design with an emphasis on photos of land plots",
-                "Convenient navigation with buttons to get to the main sections",
-              ],
+              description: ["Professional design with land plot photos", "Convenient navigation to main sections"],
             },
           ],
           backgroundUrl: "/assets/dynamic/comunity_lands/bg_home_page_1_block.png",
@@ -316,16 +313,16 @@ export const data: ProjectConfig = {
             {
               title: "Functions",
               description: [
-                "List of available plots with filters by price, size, location",
-                "Possibility to sort by popularity, novelty or price",
-                "Interactive map to visualise the location of plots",
+                "List of plots with filters by price, size, location",
+                "Sort by popularity, novelty or price",
+                "Interactive map for plot locations",
               ],
             },
             {
               title: "Features",
               description: [
-                "Cards with information: price, area, photo and basic description of each plot",
-                "'More details' button to go to the page of a specific plot",
+                "Cards with price, area, photo and description",
+                "'More details' button for specific plot",
               ],
             },
           ],
@@ -340,11 +337,11 @@ export const data: ProjectConfig = {
         },
         {
           sign: "2. Simplify the purchase process",
-          goal: "Simplify the process of buying land through an online platform.",
+          goal: "Simplify buying land through an online platform.",
         },
         {
           sign: "3. Educate clients",
-          goal: "Educate clients on the benefits of land ownership and the processes involved.",
+          goal: "Educate clients on land ownership benefits and processes.",
         },
         {
           sign: "4. Compete with other providers",
@@ -356,7 +353,7 @@ export const data: ProjectConfig = {
         },
         {
           sign: "6. Provide detailed information",
-          goal: "Providing detailed information about each plot to help customers make an informed decision.",
+          goal: "Providing detailed information about each plot for informed decisions.",
         },
       ],
       startProject: {
@@ -369,7 +366,7 @@ export const data: ProjectConfig = {
       hero: {
         title: "TrackMyJobs",
         description:
-          "Track My Jobs is a platform designed to help users manage and track their job applications, organize job search activities, and stay updated on application statuses. It supports job seekers in streamlining their job search process for greater efficiency and success.",
+          "Platform helping users manage and track job applications, organize job search activities, and stay updated on application statuses.",
         type: "Web App",
         backgroundUrl: "/assets/dynamic/trackmyjobs/bg_hero.png",
         mainImage: "/assets/dynamic/trackmyjobs/img_hero.png",
@@ -377,7 +374,7 @@ export const data: ProjectConfig = {
       },
       aboutProject: {
         description:
-          "TrackMyJobs is an all-in-one platform designed to streamline job search management and career progress tracking. With tools for organizing applications, setting reminders, and monitoring interview schedules, it keeps users on top of their job search journey. The platform offers insights into application status, personalized tips, and progress analytics to help users stay focused and achieve their career goals efficiently.",
+          "All-in-one platform for job search management. Features tools for organizing applications, setting reminders, monitoring interviews, and tracking progress.",
         image: "/assets/dynamic/trackmyjobs/img_about_project.png",
         backgroundUrl: "/assets/dynamic/trackmyjobs/bg_about_project.png",
       },
@@ -396,7 +393,7 @@ export const data: ProjectConfig = {
           "Node.js",
         ],
         description:
-          "We used React on the frontend to create the interface, adding Registration/Login functionality and an interactive Drag&Drop feature for managing job card statuses. Additionally, we developed a Google Chrome extension enabling Registration/Login and the ability to add job cards directly from LinkedIn. We used Nest.js on the backend to build a reliable CRUD and RESTful API, enabling card management and registration via cookies. User and card interactions are handled through REST requests. The project integrates with the RocketReach API to enhance networking capabilities, supporting precise job searches.",
+          "Frontend: React with Registration/Login and Drag&Drop for job cards. Chrome extension for adding cards from LinkedIn. Backend: Nest.js for CRUD and RESTful API. Integrates with RocketReach API.",
       },
       stats: [
         {
@@ -434,7 +431,7 @@ export const data: ProjectConfig = {
       portfolioCard: {
         mainImage: "/assets/dynamic/trackmyjobs/img_home_page.png",
         description:
-          "TrackMyJobs is an all-in-one platform designed to streamline job search management and career progress tracking. With tools for organizing applications, setting reminders, and monitoring interview schedules, it keeps users on top of their job search journey.",
+          "All-in-one platform for job search management. Features tools for organizing applications, setting reminders, and monitoring interviews.",
         backgroundUrl: "/assets/dynamic/trackmyjobs/bg_home_page.png",
       },
       smallProjectCards: [
@@ -444,18 +441,18 @@ export const data: ProjectConfig = {
             {
               title: "Functions",
               description: [
-                "Dashboard Overview: Summarizes job applications and tasks",
-                "Quick Actions: Add or update job cards easily",
-                "Job Tracker: Manage application statuses with drag-and-drop",
-                "Insights: View activity trends and analytics",
+                "Dashboard overview of applications and tasks",
+                "Quick actions to add or update job cards",
+                "Drag-and-drop job tracker",
+                "Activity trends and analytics",
               ],
             },
             {
               title: "Features",
               description: [
-                "Chrome Extension: Add job cards directly from LinkedIn",
-                "Networking Integration: Use RocketReach API for targeted job searches",
-                "Custom Notifications: Get reminders for deadlines and follow-ups",
+                "Chrome extension for LinkedIn integration",
+                "RocketReach API for targeted searches",
+                "Custom notifications and reminders",
               ],
             },
           ],
@@ -468,18 +465,18 @@ export const data: ProjectConfig = {
             {
               title: "Functions",
               description: [
-                "Connect with team members involved in the hiring process",
-                "Save time by focusing on valuable and relevant contacts",
-                "Expand professional connections beyond your current network",
-                "Boost job search efficiency and increase chances of success",
+                "Connect with hiring team members",
+                "Focus on valuable contacts",
+                "Expand professional network",
+                "Boost job search efficiency",
               ],
             },
             {
               title: "Features",
               description: [
-                "Selective networking to identify relevant LinkedIn contacts",
-                "Suggests potential contacts outside your network for expanded reach",
-                "Targeted approach to streamline and enhance networking efforts",
+                "Selective LinkedIn networking",
+                "Suggestions for network expansion",
+                "Targeted networking approach",
               ],
             },
           ],
@@ -492,16 +489,16 @@ export const data: ProjectConfig = {
             {
               title: "Functions",
               description: [
-                "Quickly add job listings from any website to your job board",
-                "Save time and effort with automated data entry",
-                "Keep your job search organized and focused on applications and interviews",
+                "Add job listings from any website",
+                "Automated data entry",
+                "Organized job search focus",
               ],
             },
             {
               title: "Features",
               description: [
-                "Streamlined Chrome extension for easy job board integration",
-                "Auto-fills key job details like title, company, and location",
+                "Chrome extension integration",
+                "Auto-fills job details",
               ],
             },
           ],
@@ -512,27 +509,27 @@ export const data: ProjectConfig = {
       projectGoals: [
         {
           sign: "1. Simplify job listing process",
-          goal: "Simplify the process of adding job listings to the job board from any website.",
+          goal: "Simplify adding job listings from any website.",
         },
         {
           sign: "2. Automate data entry",
-          goal: "Automate key data entry (job title, company, location) to save time and reduce errors.",
+          goal: "Automate data entry to save time and reduce errors.",
         },
         {
           sign: "3. Improve job search efficiency",
-          goal: "Improve the efficiency of the job search process, allowing users to focus on applying and preparing for interviews.",
+          goal: "Improve efficiency, allowing focus on applications and interviews.",
         },
         {
           sign: "4. Enhance user experience",
-          goal: "Enhance user experience by seamlessly integrating the Chrome extension with the job board.",
+          goal: "Enhance UX with seamless Chrome extension integration.",
         },
         {
           sign: "5. Ensure accurate data extraction",
-          goal: "Ensuring accurate data extraction from various websites with different layouts.",
+          goal: "Ensuring accurate extraction from various websites.",
         },
         {
           sign: "6. Maintain consistent functionality",
-          goal: "Maintaining consistent functionality across different browsers and platforms.",
+          goal: "Maintaining consistent functionality across browsers.",
         },
       ],
       startProject: {
@@ -545,7 +542,7 @@ export const data: ProjectConfig = {
       hero: {
         title: "Boat Export Usa",
         description:
-          "Boat Export USA is an online platform that specializes in the sale and export of used American boats and yachts worldwide. They offer a wide range of vessels, including motor boats, fishing boats, cabin cruisers, deck boats, bow boats, cabin boats, center console boats, trawlers, and ski boats.",
+          "Online platform specializing in sale and export of used American boats and yachts worldwide. Offers wide range of vessels.",
         type: "Web App",
         backgroundUrl: "/assets/dynamic/boat_export/bg_hero.png",
         mainImage: "/assets/dynamic/boat_export/img_hero.png",
@@ -553,7 +550,7 @@ export const data: ProjectConfig = {
       },
       aboutProject: {
         description:
-          "Boat Export USA is a platform that specializes in the sale and export of used boats and yachts from the United States to customers around the world. The project combines a user-friendly interface, functional solutions, and international logistics to create a full-fledged service that simplifies the process of purchasing and delivering vessels.",
+          "Platform specializing in sale and export of used boats and yachts worldwide. Combines user-friendly interface, functional solutions, and international logistics.",
         image: "/assets/dynamic/boat_export/img_about_project.png",
         backgroundUrl: "/assets/dynamic/boat_export/bg_about_project.png",
       },
@@ -573,7 +570,7 @@ export const data: ProjectConfig = {
           "Adobe XD",
         ],
         description:
-          "In creating and maintaining the Boat Export USA platform, modern services and technologies were used to ensure efficiency, speed and ease of use for both the company and customers. When creating the design for the Boat Export USA platform, a variety of tools and services could be used to help at every stage of development - from concept to implementation.",
+          "Modern services and technologies for efficiency and ease of use. Tools and services used throughout development from concept to implementation.",
       },
       stats: [
         {
@@ -612,7 +609,7 @@ export const data: ProjectConfig = {
       portfolioCard: {
         mainImage: "/assets/dynamic/boat_export/img_home_page.png",
         description:
-          "Boat Export USA is a platform that specializes in the sale and export of used boats and yachts from the United States to customers around the world. The project combines a user-friendly interface, functional solutions, and international logistics.",
+          "Platform specializing in sale and export of used boats and yachts worldwide. Combines user-friendly interface and international logistics.",
         backgroundUrl: "/assets/dynamic/boat_export/bg_home_page.png",
       },
       smallProjectCards: [
@@ -622,17 +619,17 @@ export const data: ProjectConfig = {
             {
               title: "Functions",
               description: [
-                "Search bar and filters: Boat type (motorboats, fishing boats, trawlers, etc.). Price. Year of manufacture. Condition (new or used)",
-                "Delivery calculator: The interactive widget is located in the middle of the page",
-                "Interactive map: A world map with interactive markers that show ports of destination and main delivery routes",
+                "Search bar and filters by boat type, price, year, condition",
+                "Delivery calculator widget",
+                "Interactive map with ports and routes",
               ],
             },
             {
               title: "Features",
               description: [
-                "Responsiveness: Optimized for mobile devices, tablets, and desktops",
-                "Modern marine palette: White, blue and gray tones are associated with the sea and trust",
-                "Easy UX: Simple navigation, placing the main functions in a visible area for easy use",
+                "Responsive design for all devices",
+                "Modern marine color palette",
+                "Simple navigation and UX",
               ],
             },
           ],
@@ -676,19 +673,19 @@ export const data: ProjectConfig = {
       projectGoals: [
         {
           sign: "1. Expand global reach",
-          goal: "Expand the reach and allow customers from all over the world to find and buy boats.",
+          goal: "Allow customers worldwide to find and buy boats.",
         },
         {
           sign: "2. Provide comprehensive catalog",
-          goal: "Provide a huge catalog of boat options in different categories and price ranges for different customer needs.",
+          goal: "Provide large catalog of boats in different categories and price ranges.",
         },
         {
           sign: "3. Simplify purchase process",
-          goal: "To make the process of searching, selecting, and buying a boat as intuitive and convenient as possible.",
+          goal: "Make searching, selecting, and buying boats intuitive and convenient.",
         },
         {
           sign: "4. Ensure trust and reliability",
-          goal: "Provide customers with confidence that the company conducts safe and reliable transactions and that the boats offered meet quality requirements and standards.",
+          goal: "Provide confidence in safe transactions and quality standards.",
         },
       ],
       startProject: {
@@ -701,7 +698,7 @@ export const data: ProjectConfig = {
       hero: {
         title: "Truth or dare",
         description:
-          '"Truth or Dare" is an exciting mobile game where players challenge each other by completing daring tasks or answering candid questions. Choose between truth to reveal your secrets or dare to perform fun and unpredictable tasks.',
+          'Mobile game where players challenge each other by completing tasks or answering questions. Choose truth to reveal secrets or dare for fun tasks.',
         type: "Mobile App",
         backgroundUrl: "/assets/dynamic/truth_or_dare/bg_hero.png",
         mainImage: "/assets/dynamic/truth_or_dare/img_hero.png",
@@ -709,7 +706,7 @@ export const data: ProjectConfig = {
       },
       aboutProject: {
         description:
-          'Our project aims to revive the popular game in a new digital format that allows players to enjoy it anytime, anywhere. With an interactive interface, customization options, and regular content updates, "Truth or Dare" will become an essential element of your gatherings, providing unforgettable emotions and strengthening friendly bonds.',
+          'Revives the popular game in digital format. Features interactive interface, customization options, and regular content updates for gatherings.',
         image: "/assets/dynamic/truth_or_dare/img_about_project.png",
         backgroundUrl: "/assets/dynamic/truth_or_dare/bg_about_project.png",
       },
@@ -725,7 +722,7 @@ export const data: ProjectConfig = {
           "Creating a prototype",
         ],
         description:
-          "Truth or Dare is a mobile game for groups of friends or couples with different modes: classic, romantic, and party. The app automatically generates tasks and questions, allows you to add your own, customize the difficulty, and keep a score. The app is available on iOS and Android, works offline, and the premium version unlocks additional features without ads.",
+          "Mobile game for groups with modes: classic, romantic, and party. Auto-generates tasks, allows custom content, difficulty settings, and scoring. Available on iOS and Android.",
       },
       stats: [
         {
@@ -763,7 +760,7 @@ export const data: ProjectConfig = {
       portfolioCard: {
         mainImage: "/assets/dynamic/truth_or_dare/img_home_page.png",
         description:
-          'Our project aims to revive the popular game in a new digital format that allows players to enjoy it anytime, anywhere. With an interactive interface, customization options, and regular content updates, "Truth or Dare" will become an essential element of your gatherings.',
+          'Revives the popular game in digital format. Features interactive interface, customization options, and regular content updates.',
         backgroundUrl: "/assets/dynamic/truth_or_dare/bg_home_page.png",
       },
       smallProjectCards: [
@@ -788,16 +785,16 @@ export const data: ProjectConfig = {
             {
               title: "Functions",
               description: [
-                "Variety of modes: Classic, romantic, party/adult",
-                "Setting the difficulty",
-                "Customize the game by adding your own tasks and questions",
+                "Modes: Classic, romantic, party/adult",
+                "Difficulty settings",
+                "Custom tasks and questions",
               ],
             },
             {
               title: "Features",
               description: [
-                "The game's flexibility means that it can be adapted to any company or situation",
-                "Interactivity - automatic alternation of tasks for a dynamic process",
+                "Flexible for any situation",
+                "Automatic task alternation",
               ],
             },
           ],
@@ -808,15 +805,15 @@ export const data: ProjectConfig = {
       projectGoals: [
         {
           sign: "1. Entertainment and socialization",
-          goal: "Provide users with a fun and engaging way to communicate, improving social interactions during parties, meetings, or online games with friends.",
+          goal: "Provide fun way to communicate and improve social interactions during parties and meetings.",
         },
         {
           sign: "2. User engagement",
-          goal: "Use interactive elements, levels, tasks, or rewards to increase user retention and engage them in regular play.",
+          goal: "Use interactive elements to increase retention and regular play.",
         },
         {
           sign: "3. Personalizing the experience",
-          goal: "Introduce the ability to add your own questions and tasks, as well as adapt the game to age groups and difficulty levels to meet the diverse needs of users.",
+          goal: "Allow custom questions and tasks, adapt to age groups and difficulty levels.",
         },
       ],
       startProject: {
@@ -829,7 +826,7 @@ export const data: ProjectConfig = {
       hero: {
         title: "DigiBdr",
         description:
-          "is a company that specialises in automating the process of attracting qualified B2B customers using artificial intelligence. Their solutions are designed to increase the efficiency of sales teams by automating routine tasks such as lead generation, personalised outreach, and meeting management.",
+          "Company specializing in automating B2B customer acquisition using AI. Solutions increase sales team efficiency through automated lead generation and outreach.",
         type: "Web App",
         backgroundUrl: "/assets/dynamic/digibdr/bg_hero.png",
         mainImage: "/assets/dynamic/digibdr/img_hero.png",
@@ -837,7 +834,7 @@ export const data: ProjectConfig = {
       },
       aboutProject: {
         description:
-          "AI-powered, fully autonomous digital workforce, specialized in the core BDR functions of identifying, engaging, and qualifying high-potential prospects for accelerated sales growth. DigiBDR offers innovative solutions for automating customer acquisition processes, enabling companies to increase the efficiency of sales teams and achieve significant business growth",
+          "AI-powered autonomous digital workforce for BDR functions: identifying, engaging, and qualifying prospects. Automates customer acquisition for sales growth.",
         image: "/assets/dynamic/digibdr/img_about_project.png",
         backgroundUrl: "/assets/dynamic/digibdr/bg_about_project.png",
       },
@@ -856,7 +853,7 @@ export const data: ProjectConfig = {
           "Node.js",
         ],
         description:
-          "Autonomous AI agents: Artificial intelligence that works 24/7 to find, research, and qualify leads, ensuring that you get more meetings with qualified leads. Process automation: A full cycle of interaction with potential customers, from prospecting and research to personalising messages and setting up meetings. Integration with existing tools: DigiBDR systems integrate seamlessly with other sales and marketing tools, allowing you to seamlessly integrate them into your existing processes.",
+          "Autonomous AI agents work 24/7 to find, research, and qualify leads. Full cycle automation from prospecting to personalized messages and meetings. Integrates with existing sales and marketing tools.",
       },
       stats: [
         {
@@ -894,7 +891,7 @@ export const data: ProjectConfig = {
       portfolioCard: {
         mainImage: "/assets/dynamic/digibdr/img_home_page.png",
         description:
-          "AI-powered, fully autonomous digital workforce, specialized in the core BDR functions of identifying, engaging, and qualifying high-potential prospects for accelerated sales growth.",
+          "AI-powered autonomous digital workforce for BDR functions: identifying, engaging, and qualifying prospects for sales growth.",
         backgroundUrl: "/assets/dynamic/digibdr/bg_home_page.png",
       },
       smallProjectCards: [
@@ -904,17 +901,17 @@ export const data: ProjectConfig = {
             {
               title: "Functions",
               description: [
-                "Presentation of the product and its benefits",
-                "Button to quickly record new audio (for Information on how the DigiBDR solution increases the efficiency of sales departments",
-                "CTA buttons: 'Learn more', 'Submit a request' or 'Contact us'",
+                "Product presentation and benefits",
+                "Information on DigiBDR efficiency",
+                "CTA buttons: Learn more, Submit request, Contact us",
               ],
             },
             {
               title: "Features",
               description: [
-                "Structured presentation with catchy headlines and interactive elements",
-                "Video or animation to demonstrate how the product works",
-                "Customer reviews in the format of sliders",
+                "Structured presentation with headlines",
+                "Product demonstration video",
+                "Customer reviews slider",
               ],
             },
           ],
@@ -927,15 +924,15 @@ export const data: ProjectConfig = {
             {
               title: "Functions",
               description: [
-                "A detailed description of autonomous AI agents and their functions",
-                "Information about the processes automated by DigiBDR (lead prospecting, personalisation, meeting organisation)",
-                "Diagrams or infographics to explain how the system works",
+                "Description of AI agents and functions",
+                "Automated processes: prospecting, personalization, meetings",
+                "Diagrams explaining system workflow",
               ],
             },
             {
               title: "Features",
               description: [
-                "Tabs for different aspects of the product: 'How does it work?', 'Functions', 'Integration'",
+                "Tabs: How it works, Functions, Integration",
               ],
             },
           ],
@@ -946,27 +943,27 @@ export const data: ProjectConfig = {
       projectGoals: [
         {
           sign: "1. Create intuitive platform",
-          goal: "Create an intuitive platform to connect businesses with potential customers, optimizing the digital advertising and lead generation process.",
+          goal: "Create platform connecting businesses with customers, optimizing advertising and lead generation.",
         },
         {
           sign: "2. Implement advanced tracking",
-          goal: "Implement advanced features for tracking advertising campaigns, allowing businesses to easily measure and improve performance.",
+          goal: "Implement tracking features for campaigns to measure and improve performance.",
         },
         {
           sign: "3. Provide scalable solutions",
-          goal: "Provide scalable solutions to accommodate business growth and increasing user demands.",
+          goal: "Provide scalable solutions for business growth and increasing demands.",
         },
         {
           sign: "4. Design user-friendly interface",
-          goal: "Designing a user-friendly interface that caters to both businesses and customers with varying levels of tech knowledge.",
+          goal: "Design user-friendly interface for businesses and customers of all tech levels.",
         },
         {
           sign: "5. Ensure seamless integration",
-          goal: "Ensuring seamless integration with third-party analytics tools while maintaining an easy-to-navigate dashboard.",
+          goal: "Ensure seamless integration with third-party analytics tools.",
         },
         {
           sign: "6. Develop robust system",
-          goal: "Developing a system that is both flexible and robust enough to handle large volumes of data and users without compromising performance.",
+          goal: "Develop flexible system handling large data volumes without performance issues.",
         },
       ],
       startProject: {
@@ -979,7 +976,7 @@ export const data: ProjectConfig = {
       hero: {
         title: "TELEDYNE ISCO FlowCalc",
         description:
-          "This app calculates flow rates in open channels and partially filled pipes, making it easy for water and wastewater professionals to convert measured data, such as head (and sometimes velocity), into accurate flow rates. Ideal for spot-checking existing systems or verifying the accuracy of newly installed flow meters, this tool streamlines flow assessment with precision and ease.",
+          "App calculates flow rates in open channels and pipes. Converts measured data into accurate flow rates for water professionals.",
         type: "Mobile App",
         backgroundUrl: "/assets/dynamic/teledyne_isco_flowcalc/bg_hero.png",
         mainImage: "/assets/dynamic/teledyne_isco_flowcalc/img_hero.png",
@@ -987,7 +984,7 @@ export const data: ProjectConfig = {
       },
       aboutProject: {
         description:
-          "Our project aims to revive the popular game in a new digital format that allows players to enjoy it anytime, anywhere. With an interactive interface, customization options, and regular content updates, 'Truth or Dare' will become an essential element of your gatherings, providing unforgettable emotions and strengthening friendly bonds.",
+          "App for calculating flow rates in open channels and partially filled pipes. Helps water professionals convert measured data into accurate flow rates.",
         image: "/assets/dynamic/teledyne_isco_flowcalc/img_about_project.png",
         backgroundUrl: "/assets/dynamic/teledyne_isco_flowcalc/bg_about_project.png",
       },
@@ -1005,7 +1002,7 @@ export const data: ProjectConfig = {
           "For Android",
         ],
         description:
-          "For the development and design of the TELEDYNE ISCO FlowCalc application, we utilized a comprehensive suite of tools and services to ensure efficiency and quality: Development Tools: Frontend Development: React Native was employed to create a cross-platform interface, ensuring a seamless user experience on both iOS and Android devices. Backend Development: Node.js and Express.js provided a robust framework for API development, ensuring reliable data processing and communication between the app and server. Database Management: MongoDB was chosen for its scalability and flexibility, ideal for managing flow calculation data and user profiles. Design Services: Prototyping: Figma was used for wireframing and prototyping, allowing iterative improvements to the app's design. User Interface Design: Figma helped craft an intuitive and visually appealing UI tailored to user needs in flow analysis. User Testing: UsabilityHub was utilized to validate design decisions and gather user feedback during the design process.",
+          "Frontend: React Native for cross-platform iOS and Android. Backend: Node.js and Express.js for API. Database: MongoDB for flow calculation data. Design: Figma for prototyping and UI design.",
       },
       stats: [
         {
@@ -1043,7 +1040,7 @@ export const data: ProjectConfig = {
       portfolioCard: {
         mainImage: "/assets/dynamic/teledyne_isco_flowcalc/img_home_page.png",
         description:
-          "This app calculates flow rates in open channels and partially filled pipes, making it easy for water and wastewater professionals to convert measured data, such as head (and sometimes velocity), into accurate flow rates.",
+          "App calculates flow rates in open channels and pipes. Converts measured data into accurate flow rates for water professionals.",
         backgroundUrl: "/assets/dynamic/teledyne_isco_flowcalc/bg_home_page.png",
       },
       smallProjectCards: [
@@ -1053,20 +1050,20 @@ export const data: ProjectConfig = {
             {
               title: "Functions",
               description: [
-                "Flow Rate Calculation",
-                "Data Input & Configuration",
-                "Unit Conversion",
-                "Save & Export Results",
+                "Flow rate calculation",
+                "Data input and configuration",
+                "Unit conversion",
+                "Save and export results",
               ],
             },
             {
               title: "Features",
               description: [
-                "Intuitive Dashboard",
-                "Interactive Graphs",
-                "Preloaded Templates",
-                "Offline Functionality",
-                "Integration with ISCO Devices",
+                "Intuitive dashboard",
+                "Interactive graphs",
+                "Preloaded templates",
+                "Offline functionality",
+                "ISCO device integration",
               ],
             },
           ],
@@ -1078,15 +1075,15 @@ export const data: ProjectConfig = {
           points: [
             {
               title: "Functions",
-              description: ["Flume Type Selection", "Flow Rate Calculation", "Water Level Data Input"],
+              description: ["Flume type selection", "Flow rate calculation", "Water level data input"],
             },
             {
               title: "Features",
               description: [
-                "Preloaded Flume Templates",
-                "Interactive Diagrams",
-                "Result Export Options",
-                "Integration with ISCO Devices",
+                "Preloaded flume templates",
+                "Interactive diagrams",
+                "Result export options",
+                "ISCO device integration",
               ],
             },
           ],
@@ -1097,19 +1094,19 @@ export const data: ProjectConfig = {
       projectGoals: [
         {
           sign: "1. Simplify Flow Calculations",
-          goal: "Provide users with a straightforward tool to calculate flow rates accurately without manual computations.",
+          goal: "Provide straightforward tool for accurate flow rate calculations.",
         },
         {
           sign: "2. Enhance Usability",
-          goal: "Offer an intuitive interface for quick data entry and results visualization.",
+          goal: "Offer intuitive interface for data entry and visualization.",
         },
         {
           sign: "3. Integrate Real-Time Data",
-          goal: "Enable seamless connection with ISCO sensors for live flow measurement.",
+          goal: "Enable seamless connection with ISCO sensors for live measurements.",
         },
         {
           sign: "4. Support Industry Standards",
-          goal: "Ensure compliance with standard flume and area velocity measurement practices.",
+          goal: "Ensure compliance with standard measurement practices.",
         },
       ],
       startProject: {
@@ -1122,7 +1119,7 @@ export const data: ProjectConfig = {
       hero: {
         title: "Sxipher.ai",
         description:
-          "Sxipher.ai provides cybersecurity solutions focused on advanced penetration testing and security assessments to uncover and address digital vulnerabilities. The platform helps organizations protect their infrastructures by delivering custom security evaluations and risk mitigation strategies.",
+          "Cybersecurity platform for penetration testing and security assessments. Helps organizations protect infrastructures with custom evaluations and risk mitigation.",
         type: "Web App",
         backgroundUrl: "/assets/dynamic/sxipher_ai/bg_hero.png",
         mainImage: "/assets/dynamic/sxipher_ai/img_hero.png",
@@ -1130,7 +1127,7 @@ export const data: ProjectConfig = {
       },
       aboutProject: {
         description:
-          "At Sxipher.ai, we focused on creating a modern, interactive user interface that provides a seamless interaction with the platform's AI-powered security testing tools. Our role was to design and optimise the user interface to facilitate access to various penetration testing modules, visualise security reports, and integrate the platform's artificial intelligence capabilities, including Genesis AI, which is designed to improve penetration testing using machine learning.",
+          "Modern interactive interface for AI-powered security testing tools. Design facilitates access to penetration testing modules, security reports, and Genesis AI integration.",
         image: "/assets/dynamic/sxipher_ai/img_about_project.png",
         backgroundUrl: "/assets/dynamic/sxipher_ai/bg_about_project.png",
       },
@@ -1149,7 +1146,7 @@ export const data: ProjectConfig = {
           "Node.js",
         ],
         description:
-          "We were responsible for creating responsive and user-friendly layouts, integrating APIs for real-time data visualisation, and ensuring the platform's usability in line with Sxipher's mission to improve digital security through cutting-edge technology. Our work focused on providing users with an intuitive experience that helps them easily navigate complex cybersecurity solutions",
+          "Responsive layouts, API integration for real-time data visualization, and usability aligned with Sxipher's mission. Intuitive experience for navigating cybersecurity solutions.",
       },
       stats: [
         {
@@ -1186,7 +1183,7 @@ export const data: ProjectConfig = {
       portfolioCard: {
         mainImage: "/assets/dynamic/sxipher_ai/img_home_page.png",
         description:
-          "At Sxipher.ai, we focused on creating a modern, interactive user interface that provides a seamless interaction with the platform's AI-powered security testing tools.",
+          "Modern interactive interface for AI-powered security testing tools. Seamless interaction with penetration testing modules.",
         backgroundUrl: "/assets/dynamic/sxipher_ai/bg_home_page.png",
       },
       smallProjectCards: [
@@ -1196,13 +1193,13 @@ export const data: ProjectConfig = {
             {
               title: "Functions",
               description: [
-                "Introduction to the company's services, such as penetration testing, security and ransomware protection",
-                "Product demonstrations are also available",
+                "Introduction to services: penetration testing, security, ransomware protection",
+                "Product demonstrations",
               ],
             },
             {
               title: "Features",
-              description: ["Professional cybersecurity interface", "Service overview and demonstrations"],
+              description: ["Professional cybersecurity interface", "Service overview"],
             },
           ],
           backgroundUrl: "/assets/dynamic/sxipher_ai/bg_home_page_1_block.png",
@@ -1213,11 +1210,11 @@ export const data: ProjectConfig = {
           points: [
             {
               title: "Functions",
-              description: ["A section with the latest articles and news about cybersecurity trends"],
+              description: ["Latest articles and news about cybersecurity trends"],
             },
             {
               title: "Features",
-              description: ["Content management system", "Cybersecurity news and insights"],
+              description: ["Content management system", "Cybersecurity insights"],
             },
           ],
           backgroundUrl: "/assets/dynamic/sxipher_ai/bg_home_page_2_block.png",
@@ -1228,7 +1225,7 @@ export const data: ProjectConfig = {
           points: [
             {
               title: "Functions",
-              description: ["A page showcasing partnerships and integrations with other companies such as Acronis"],
+              description: ["Showcase partnerships and integrations with companies like Acronis"],
             },
             {
               title: "Features",
@@ -1242,23 +1239,23 @@ export const data: ProjectConfig = {
       projectGoals: [
         {
           sign: "1. Creating a professional brand",
-          goal: "Ensure a positive first impression for customers and partners. Demonstrate technical expertise in cybersecurity",
+          goal: "Ensure positive first impression and demonstrate cybersecurity expertise.",
         },
         {
           sign: "2. Ease of use",
-          goal: "Easy access to key services and information for customers. Ensure clear navigation and fast loading times",
+          goal: "Easy access to services with clear navigation and fast loading.",
         },
         {
           sign: "3. Information security",
-          goal: "Protecting the website from cyber attacks, especially taking into account the specifics of the company's activities",
+          goal: "Protect website from cyber attacks considering company specifics.",
         },
         {
           sign: "4. Flexibility and scalability",
-          goal: "The ability to expand functionality in the future (new services, integrations).",
+          goal: "Ability to expand functionality with new services and integrations.",
         },
         {
           sign: "5. Customer engagement",
-          goal: "Using a blog to promote the brand through high-quality content. Creating forms and CTAs (Call-to-Action) that encourage cooperation.",
+          goal: "Use blog for brand promotion and CTAs to encourage cooperation.",
         },
       ],
       startProject: {
@@ -1271,7 +1268,7 @@ export const data: ProjectConfig = {
       hero: {
         title: "ReachFi.Ai",
         description:
-          "ReachFi.ai is a platform designed to automate personal finance management. It helps users track expenses, debts, manage taxes, and optimize financial tasks, making it easier to stay organized and in control of their finances.",
+          "Platform automating personal finance management. Helps track expenses, debts, manage taxes, and optimize financial tasks.",
         type: "Web App",
         backgroundUrl: "/assets/dynamic/reachfi/bg_hero.png",
         mainImage: "/assets/dynamic/reachfi/img_hero.png",
@@ -1279,7 +1276,7 @@ export const data: ProjectConfig = {
       },
       aboutProject: {
         description:
-          "The platform assists in tracking debts and expenses, creating tailored plans for debt repayment, and estimating timelines for becoming debt-free. It evaluates the impact of major financial decisions—such as purchasing a house or car, or changing jobs—on long-term goals, allowing users to adjust income, purchases, and expenses to see how each choice shapes their financial future.",
+          "Tracks debts and expenses, creates repayment plans, estimates debt-free timelines. Evaluates impact of major financial decisions on long-term goals.",
         image: "/assets/dynamic/reachfi/img_about_project.png",
         backgroundUrl: "/assets/dynamic/reachfi/bg_about_project.png",
       },
@@ -1296,7 +1293,7 @@ export const data: ProjectConfig = {
           "Adobe XD",
         ],
         description:
-          "Development Tools: Frontend Development: Built using React.js to create an intuitive and responsive user interface. Ensured seamless navigation and real-time data visualization for financial projections and asset tracking. Backend Development: Developed with Node.js and Express.js for robust server-side operations. Enabled secure API integrations, financial calculations, and data management. Database Management: PostgreSQL was used to store and manage financial data, ensuring security, scalability, and data integrity. Optimized database queries for high performance with large datasets. Design Services: Created intuitive user flows and financial dashboards using Figma and Adobe XD. Focused on a clean, user-friendly design to improve the overall user experience.",
+          "Frontend: React.js for intuitive responsive interface with real-time data visualization. Backend: Node.js and Express.js for secure API integrations and calculations. Database: PostgreSQL for secure financial data management. Design: Figma and Adobe XD for user flows and dashboards.",
       },
       stats: [
         {
@@ -1335,7 +1332,7 @@ export const data: ProjectConfig = {
       portfolioCard: {
         mainImage: "/assets/dynamic/reachfi/img_home_page.png",
         description:
-          "ReachFi.ai is a platform designed to automate personal finance management. It helps users track expenses, debts, manage taxes, and optimize financial tasks.",
+          "Platform automating personal finance management. Tracks expenses, debts, manages taxes, and optimizes financial tasks.",
         backgroundUrl: "/assets/dynamic/reachfi/bg_home_page.png",
       },
       smallProjectCards: [
@@ -1345,18 +1342,18 @@ export const data: ProjectConfig = {
             {
               title: "Functions",
               description: [
-                "User Dashboard: Provides an overview of key financial metrics and insights",
-                "Quick Access Tools: Easy navigation to core platform features for seamless financial management",
-                "Data Synchronization: Real-time updates for accurate financial tracking",
+                "User dashboard with financial metrics",
+                "Quick access to core features",
+                "Real-time data synchronization",
               ],
             },
             {
               title: "Features",
               description: [
-                "Financial Overview: Displays key financial summaries and performance indicators",
-                "Interactive Charts: Visualize financial data with dynamic graphs and analytics",
-                "Personalized Insights: Tailored recommendations based on user activity and financial goals",
-                "Secure Login: Ensures user data protection with advanced authentication methods",
+                "Financial overview and summaries",
+                "Interactive charts and analytics",
+                "Personalized insights and recommendations",
+                "Secure login and authentication",
               ],
             },
           ],
@@ -1369,17 +1366,17 @@ export const data: ProjectConfig = {
             {
               title: "Functions",
               description: [
-                "Expense Tracking: Log and categorize expenses effortlessly",
-                "Budget Management: Set spending limits and monitor real-time progress",
-                "Expense Analysis: Gain insights into spending patterns and trends",
+                "Log and categorize expenses",
+                "Set spending limits and monitor progress",
+                "Analyze spending patterns and trends",
               ],
             },
             {
               title: "Features",
               description: [
-                "Categorized Expenses: Organize spending into predefined or custom categories",
-                "Visual Reports: Interactive charts for clear expense breakdowns",
-                "Real-Time Updates: Immediate reflection of added or edited expenses",
+                "Categorized expenses",
+                "Interactive expense charts",
+                "Real-time expense updates",
               ],
             },
           ],
@@ -1390,7 +1387,7 @@ export const data: ProjectConfig = {
       projectGoals: [
         {
           sign: "1. Simplify Financial Management",
-          goal: "Provide users with an intuitive way to track and manage expenses, contributions, and savings.",
+          goal: "Provide intuitive way to track expenses, contributions, and savings.",
         },
         {
           sign: "2. Enhance Financial Transparency",
@@ -1398,7 +1395,7 @@ export const data: ProjectConfig = {
         },
         {
           sign: "3. Promote User Engagement",
-          goal: "Encourage consistent financial contributions through reminders and progress tracking.",
+          goal: "Encourage consistent contributions through reminders and tracking.",
         },
       ],
       startProject: {
@@ -1411,7 +1408,7 @@ export const data: ProjectConfig = {
       hero: {
         title: "Chill Bill",
         description:
-          "Chill Bill is a mobile app designed to simplify the management of restaurant loyalty cards. Users can collect and store their cards digitally, and the app provides real-time updates on discounts from participating restaurants, keeping users informed about savings opportunities.",
+          "Mobile app simplifying restaurant loyalty card management. Users collect digital cards and receive real-time discount updates from participating restaurants.",
         type: "Mobile App",
         backgroundUrl: "/assets/dynamic/chillbill/bg_hero.png",
         mainImage: "/assets/dynamic/chillbill/img_hero.png",
@@ -1419,7 +1416,7 @@ export const data: ProjectConfig = {
       },
       aboutProject: {
         description:
-          "ChillBill is a mobile app designed to enhance the restaurant experience by providing users with exclusive offers and personalized rewards. After registering, users receive special discounts and can earn bonus points by inviting friends. These points can be redeemed for discounts at partner restaurants. The app allows users to explore detailed restaurant profiles, browse menus, make reservations, and discover unique loyalty programs tailored to each restaurant. ChillBill simplifies the journey to lunch, making it more profitable and convenient for each user.",
+          "Mobile app enhancing restaurant experience with exclusive offers and rewards. Users earn bonus points, explore restaurant profiles, browse menus, make reservations, and access loyalty programs.",
         image: "/assets/dynamic/chillbill/img_about_project.png",
         backgroundUrl: "/assets/dynamic/chillbill/bg_about_project.png",
       },

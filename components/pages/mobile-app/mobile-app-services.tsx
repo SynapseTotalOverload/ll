@@ -27,9 +27,8 @@ export default function MobileAppServices() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 sm:gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-8">
           {/* Service Card 1 */}
           <InfoCard className="w-full">
-            <LampEffect>
-              <Smartphone className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <Smartphone className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Custom application development services
             </InfoCard.Title>
@@ -42,9 +41,8 @@ export default function MobileAppServices() {
 
           {/* Service Card 2 */}
           <InfoCard className="w-full">
-            <LampEffect>
-              <Apple className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <Apple className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Native iOS and Android app development
             </InfoCard.Title>
@@ -59,9 +57,8 @@ export default function MobileAppServices() {
 
           {/* Service Card 3 */}
           <InfoCard className="w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
-            <LampEffect>
-              <Wrench className="text-night-blue size-6 sm:size-7 md:size-8" />
-            </LampEffect>
+            <Wrench className="text-night-blue size-6 sm:size-7 md:size-8" />
+
             <InfoCard.Title className="mt-4 text-lg sm:mt-6 sm:text-xl md:text-2xl lg:text-3xl">
               Application management services
             </InfoCard.Title>

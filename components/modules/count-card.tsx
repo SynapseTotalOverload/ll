@@ -3,7 +3,7 @@ import { HTMLAttributes } from "react";
 import { Separator } from "../ui/separator";
 function CountCardRoot({ children, className, ...props }: HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={cn("flex max-h-[250px] min-h-[200px] max-w-[50%] flex-row gap-8", className)} {...props}>
+    <div className={cn("flex max-h-[250px] min-h-[200px] max-w-[50%] flex-row gap-6", className)} {...props}>
       {children}
     </div>
   );
@@ -19,7 +19,11 @@ function CountCardIndex({ children, className, ...props }: HTMLAttributes<HTMLSp
 
 function CountCardSeparator({ className, ...props }: Omit<HTMLAttributes<HTMLSpanElement>, "children">) {
   return (
-    <Separator orientation="vertical" className={cn("bg-plastic h-full min-h-[200px] w-[2px]", className)} {...props} />
+    <Separator
+      orientation="vertical"
+      className={cn("bg-plastic h-full min-h-[200px] w-[2px] opacity-50", className)}
+      {...props}
+    />
   );
 }
 
@@ -33,7 +37,7 @@ function CountCardTitle({ children, className, ...props }: HTMLAttributes<HTMLSp
 
 function CountCardDescription({ children, className, ...props }: HTMLAttributes<HTMLSpanElement>) {
   return (
-    <span className={cn("font-[400] text-white capitalize", className)} {...props}>
+    <span className={cn("text-white capitalize", className)} {...props}>
       {children}
     </span>
   );
