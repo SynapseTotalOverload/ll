@@ -29,7 +29,7 @@ export default function CalculatorCard({
       )}
       {...props}
     >
-      {icon && <LampEffect className="sm:mb-1">{icon}</LampEffect>}
+      {icon && <div className="sm:mb-1">{icon}</div>}
       <span className="text-sm font-bold sm:text-base">{title}</span>
       {active && <TickCircle className="text-night-blue absolute top-0 right-0 size-5 sm:size-6 md:size-7 lg:size-8" />}
     </div>

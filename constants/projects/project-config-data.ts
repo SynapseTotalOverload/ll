@@ -320,10 +320,7 @@ export const data: ProjectConfig = {
             },
             {
               title: "Features",
-              description: [
-                "Cards with price, area, photo and description",
-                "'More details' button for specific plot",
-              ],
+              description: ["Cards with price, area, photo and description", "'More details' button for specific plot"],
             },
           ],
           backgroundUrl: "/assets/dynamic/comunity_lands/bg_home_page_2_block.png",
@@ -488,18 +485,11 @@ export const data: ProjectConfig = {
           points: [
             {
               title: "Functions",
-              description: [
-                "Add job listings from any website",
-                "Automated data entry",
-                "Organized job search focus",
-              ],
+              description: ["Add job listings from any website", "Automated data entry", "Organized job search focus"],
             },
             {
               title: "Features",
-              description: [
-                "Chrome extension integration",
-                "Auto-fills job details",
-              ],
+              description: ["Chrome extension integration", "Auto-fills job details"],
             },
           ],
           backgroundUrl: "/assets/dynamic/trackmyjobs/bg_home_page_3_block.png",
@@ -698,7 +688,7 @@ export const data: ProjectConfig = {
       hero: {
         title: "Truth or dare",
         description:
-          'Mobile game where players challenge each other by completing tasks or answering questions. Choose truth to reveal secrets or dare for fun tasks.',
+          "Mobile game where players challenge each other by completing tasks or answering questions. Choose truth to reveal secrets or dare for fun tasks.",
         type: "Mobile App",
         backgroundUrl: "/assets/dynamic/truth_or_dare/bg_hero.png",
         mainImage: "/assets/dynamic/truth_or_dare/img_hero.png",
@@ -706,7 +696,7 @@ export const data: ProjectConfig = {
       },
       aboutProject: {
         description:
-          'Revives the popular game in digital format. Features interactive interface, customization options, and regular content updates for gatherings.',
+          "Revives the popular game in digital format. Features interactive interface, customization options, and regular content updates for gatherings.",
         image: "/assets/dynamic/truth_or_dare/img_about_project.png",
         backgroundUrl: "/assets/dynamic/truth_or_dare/bg_about_project.png",
       },
@@ -760,7 +750,7 @@ export const data: ProjectConfig = {
       portfolioCard: {
         mainImage: "/assets/dynamic/truth_or_dare/img_home_page.png",
         description:
-          'Revives the popular game in digital format. Features interactive interface, customization options, and regular content updates.',
+          "Revives the popular game in digital format. Features interactive interface, customization options, and regular content updates.",
         backgroundUrl: "/assets/dynamic/truth_or_dare/bg_home_page.png",
       },
       smallProjectCards: [
@@ -792,10 +782,7 @@ export const data: ProjectConfig = {
             },
             {
               title: "Features",
-              description: [
-                "Flexible for any situation",
-                "Automatic task alternation",
-              ],
+              description: ["Flexible for any situation", "Automatic task alternation"],
             },
           ],
           backgroundUrl: "/assets/dynamic/truth_or_dare/bg_home_page_2_block.png",
@@ -931,9 +918,7 @@ export const data: ProjectConfig = {
             },
             {
               title: "Features",
-              description: [
-                "Tabs: How it works, Functions, Integration",
-              ],
+              description: ["Tabs: How it works, Functions, Integration"],
             },
           ],
           backgroundUrl: "/assets/dynamic/digibdr/bg_home_page_2_block.png",
@@ -1373,11 +1358,7 @@ export const data: ProjectConfig = {
             },
             {
               title: "Features",
-              description: [
-                "Categorized expenses",
-                "Interactive expense charts",
-                "Real-time expense updates",
-              ],
+              description: ["Categorized expenses", "Interactive expense charts", "Real-time expense updates"],
             },
           ],
           backgroundUrl: "/assets/dynamic/reachfi/bg_home_page_2_block.png",
