@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import ArrowRight from "@/public/assets/svg/arrow-right.svg";
+import { MoveRightIcon } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import Image from "next/image";

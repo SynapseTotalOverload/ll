@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Palette, Brush, Code, Database, TestTube, MoveRightIcon } from "lucide-react";
+import { Palette, Brush, Code, Database, TestTube, ArrowRight } from "lucide-react";
 import SignTitle from "@/components/modules/sign-title";
 import InfoCard from "@/components/modules/info-card";
 import { LampEffect } from "@/components/ui/lamp-effect";
