@@ -50,7 +50,7 @@ export default function ContactUs() {
           <span className="bricolage text-[28px] leading-[120%] tracking-[-2px] normal-case sm:text-[36px] md:text-[42px] lg:text-[50px]">
             Contact Us
           </span>
-          <span className="text-[18px] text-white sm:text-[20px] md:text-[22px] lg:text-[24px]">
+          <span className="text-[18px] font-normal text-white sm:text-[20px] md:text-[22px] lg:text-[24px]">
             Don&apos;t be left behind
           </span>
           <span className="text-white">Stay up to date with the latest news and offers from LogicCraft!</span>

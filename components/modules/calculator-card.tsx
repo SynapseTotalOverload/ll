@@ -23,14 +23,15 @@ export default function CalculatorCard({
     <div
       onClick={onClick}
       className={cn(
-        "border-charcole bg-opacity-60-black relative flex min-h-[160px] flex-col items-center justify-center gap-2 rounded-[20px] border p-6",
+        "border-charcole bg-opacity-60-black relative flex min-h-[120px] flex-row items-center justify-center gap-2 rounded-[20px] border p-4 sm:min-h-[140px] sm:flex-col sm:gap-2 sm:p-5 md:min-h-[160px] md:p-6",
         className,
         active && "bg-opacity-100-black",
       )}
       {...props}
     >
-      <span className="text-base font-bold">{title}</span>
-      {active && <TickCircle className="text-night-blue absolute top-0 right-0 size-6 sm:size-7 md:size-8" />}
+      {icon && <LampEffect className="sm:mb-1">{icon}</LampEffect>}
+      <span className="text-sm font-bold sm:text-base">{title}</span>
+      {active && <TickCircle className="text-night-blue absolute top-0 right-0 size-5 sm:size-6 md:size-7 lg:size-8" />}
     </div>
   );
   return active ? <BackgroundGradient rounded="rounded-[20px]"> {content} </BackgroundGradient> : content;

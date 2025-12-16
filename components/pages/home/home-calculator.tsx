@@ -572,7 +572,7 @@ export default function HomeCalculator() {
                 {/* Platform Selection */}
                 <div className="bg-opacity-100-black/95 border-charcole flex items-center gap-2 rounded-[20px] border p-2.5 sm:gap-3 sm:p-3 md:p-4">
                   <span className="text-sm text-white/70 sm:text-base md:text-lg">Platform:</span>
-                  <span className="flex items-center gap-2 text-sm font-bold text-white sm:text-base md:text-lg">
+                  <span className="flex items-center gap-2 text-sm font-medium text-white sm:text-base md:text-lg">
                     {getIconByName(activeSwitcher)} {activeSwitcher}
                   </span>
                 </div>
@@ -580,7 +580,7 @@ export default function HomeCalculator() {
                 {/* App Size Selection */}
                 <div className="bg-opacity-100-black/95 border-charcole flex items-center gap-2 rounded-[20px] border p-2.5 sm:gap-3 sm:p-3 md:p-4">
                   <span className="text-sm text-white/70 sm:text-base md:text-lg">App Size:</span>
-                  <span className="text-sm font-bold text-white sm:text-base md:text-lg">{activeCard}</span>
+                  <span className="text-sm font-medium text-white sm:text-base md:text-lg">{activeCard}</span>
                 </div>
 
                 {/* Selected Features */}
@@ -604,7 +604,7 @@ export default function HomeCalculator() {
                           key={category}
                           className="bg-opacity-100-black/95 border-charcole rounded-[20px] border p-2.5 sm:p-3 md:p-4"
                         >
-                          <span className="mb-2 block text-xs font-bold text-white/80 sm:text-sm md:text-base">
+                          <span className="mb-2 block text-xs font-medium text-white/80 sm:text-sm md:text-base">
                             {category}
                           </span>
                           <div className="flex flex-col gap-1.5">

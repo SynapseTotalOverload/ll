@@ -28,30 +28,30 @@ export default function Footer() {
         <div className="order-3 flex flex-1 flex-col items-center lg:order-2">
           <div className="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-12 lg:gap-16">
             <div className="flex flex-col gap-3 sm:gap-4">
-              <Link href="/" className="text-[16px] font-[700] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]">
+              <Link href="/" className="text-[16px] font-[500] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]">
                 Home
               </Link>
               <Link
                 href="/business"
-                className="text-[16px] font-[700] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]"
+                className="text-[16px] font-[500] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]"
               >
                 For businesses
               </Link>
               <Link
                 href="/case-studies"
-                className="text-[16px] font-[700] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]"
+                className="text-[16px] font-[500] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]"
               >
                 Case studies
               </Link>
               <Link
                 href="/about-us"
-                className="text-[16px] font-[700] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]"
+                className="text-[16px] font-[500] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]"
               >
                 About Us
               </Link>
             </div>
             <div className="flex flex-col gap-3 sm:gap-4">
-              <span className="text-[16px] font-[700] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]">
+              <span className="text-[16px] font-[500] text-white sm:text-[18px] md:text-[20px] lg:text-[22px]">
                 Services
               </span>
               <Link href="/ui-ux-design" className="text-[12px] font-[400] text-white sm:text-[13px] lg:text-[14px]">
