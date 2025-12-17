@@ -1,4 +1,4 @@
-import Test from "@/public/assets/bgs/start-project-bg.png";
+import Test from "@/public/assets/design_new.png";
 import { Button } from "@/components/ui/button";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import Link from "next/link";

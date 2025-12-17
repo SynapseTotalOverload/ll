@@ -20,10 +20,7 @@ export default function DynamicHeroSection({
   fullLink: string;
 }) {
   return (
-    <div
-      style={{ backgroundImage: `url(${backgroundUrl})` }}
-      className="flex h-screen w-full flex-col justify-between bg-cover bg-center px-4 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 lg:px-20 lg:py-10"
-    >
+    <div className="flex h-screen w-full flex-col justify-between bg-cover bg-center px-4 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 lg:px-20 lg:py-10">
       {/* Header Navigation */}
       <header className="flex flex-row items-center justify-between">
         <Logo className="h-[5vh] origin-top-left scale-[-30%] rotate-180 pt-20 md:scale-[-10%]" />

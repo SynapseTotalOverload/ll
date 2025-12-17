@@ -40,7 +40,7 @@ export const BackgroundGradient = ({
         }
         style={{
           backgroundSize: animate ? "400% 400%" : undefined,
-          background: "linear-gradient(96.01deg, #4BBFE9 16.66%, #4BBFE9 52.05%, #007AFF 84.06%)",
+          background: "linear-gradient(95.42deg, rgba(78, 78, 80, 0.5) -2.3%, rgba(177, 177, 182, 0.4) 94.77%)",
         }}
         className={cn("absolute inset-0 z-[1] opacity-60 transition duration-500 will-change-transform", rounded)}
       />
@@ -59,12 +59,12 @@ export const BackgroundGradient = ({
         }
         style={{
           backgroundSize: animate ? "400% 400%" : undefined,
-          background: "linear-gradient(96.01deg, #4BBFE9 16.66%, #4BBFE9 52.05%, #007AFF 84.06%)",
+          background: "linear-gradient(95.42deg, rgba(78, 78, 80, 0.5) -2.3%, rgba(177, 177, 182, 0.4) 94.77%)",
         }}
         className={cn("absolute inset-0 z-[1] will-change-transform", rounded)}
       />
 
-      <div className={cn("relative h-full z-10", className)}>{children}</div>
+      <div className={cn("relative z-10 h-full", className)}>{children}</div>
     </div>
   );
 };

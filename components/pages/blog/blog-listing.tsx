@@ -85,7 +85,7 @@ export default function BlogListing() {
             </div>
 
             <div className="p-6">
-              <div className="mb-3 flex items-center gap-4 text-sm text-white/60">
+              <div className="mb-3 flex flex-col gap-2 text-xs text-white/60 sm:flex-row sm:items-center sm:gap-4 sm:text-sm">
                 <span className="rounded-full bg-blue-500/20 px-3 py-1 text-blue-300">{post.category}</span>
                 <div className="flex items-center gap-1">
                   <Calendar className="h-4 w-4" />
@@ -101,11 +101,11 @@ export default function BlogListing() {
                 </div>
               </div>
 
-              <h3 className="mb-3 text-xl font-semibold text-white transition-colors group-hover:text-blue-300">
+              <h3 className="mb-3 text-lg font-medium text-white transition-colors group-hover:text-blue-300 sm:text-xl sm:font-semibold">
                 {post.title}
               </h3>
 
-              <p className="mb-4 line-clamp-3 text-white/70">{post.excerpt}</p>
+              <p className="mb-4 line-clamp-3 text-sm text-white/70 sm:text-base">{post.excerpt}</p>
 
               <Link href={`/blog/${post.id}`}>
                 <Button

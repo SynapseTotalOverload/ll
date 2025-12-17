@@ -4,14 +4,13 @@ export default function DynamicProjectGoals({ goals }: { goals: { sign: string; 
       <span className="bricolage text-[32px] font-[700] text-white sm:text-[40px] md:text-[48px] lg:text-[56px]">
         Project goals
       </span>
-      <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
+      <ul className="flex list-inside list-disc flex-col gap-3 sm:gap-4 md:gap-5">
         {goals.map((goal, index) => (
-          <div className="flex flex-col gap-1 sm:gap-2" key={index}>
-            <span className="text-plastic text-[14px] font-[700] sm:text-[16px]">{goal.sign}</span>
-            <span className="text-[12px] font-[400] text-gray-300 sm:text-[14px] md:text-[16px]">{goal.goal}</span>
-          </div>
+          <li className="text-[12px] text-white sm:text-[14px] md:text-[16px]" key={index}>
+            {goal.goal}
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }
