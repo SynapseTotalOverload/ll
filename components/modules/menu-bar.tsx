@@ -294,7 +294,7 @@ export default function MenuBar({ className }: { className?: string }) {
           <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
             <DrawerTrigger asChild>
               <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
-                <Menu className="h-6 w-6" />
+                <Menu className="h-8 w-8" />
               </Button>
             </DrawerTrigger>
             <DrawerContent className="border-charcole border-t bg-transparent backdrop-blur-lg">

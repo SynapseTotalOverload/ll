@@ -24,7 +24,7 @@ export default function GoButton({
         onClick={onClick}
       >
         <span className={textClassName}>{text}</span>
-        <Button size="icon" className="blue-grad">
+        <Button size="icon" className="blue-grad p-1">
           <ArrowRight className="text-night-blue flex size-6 items-center justify-center" />
         </Button>
       </div>

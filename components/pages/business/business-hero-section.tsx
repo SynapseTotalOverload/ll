@@ -18,15 +18,15 @@ export default function HeroSection() {
       {/* Hero Content */}
       <div className="flex flex-1 flex-col items-center justify-center px-2 sm:px-4 md:px-6 lg:px-8">
         <div className="flex w-full max-w-[95%] flex-col items-center justify-center gap-4 text-center sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[75%]">
-          <h1 className="brig custom-font-bricolage text-2xl leading-tight font-bold tracking-tight sm:text-3xl sm:leading-snug md:text-4xl lg:text-5xl xl:text-6xl">
+          <h1 className="brig custom-font-bricolage text-xl leading-tight font-bold tracking-tight sm:text-3xl sm:leading-snug md:text-4xl lg:text-5xl xl:text-6xl">
             Software team extension services for scaling projects never seen before!
           </h1>
-          <p className="text-sm leading-relaxed font-normal sm:text-base md:text-lg lg:text-lg">
+          <p className="text-xs leading-relaxed font-normal sm:text-base md:text-lg lg:text-lg">
             Yes, running a business can be overwhelming. Especially when your company has reached a pivotal point and
             needs to extend its business model. Digital transformation can help you make headway, while successful
             scaling will fulfill your organization&apos;s potential.
           </p>
-          <p className="text-xs leading-relaxed font-normal sm:text-sm md:text-base lg:text-base">
+          <p className="hidden text-xs leading-relaxed font-normal sm:block sm:text-sm md:text-base lg:text-base">
             To focus on your growing business, you&apos;ll need a proficient technology partner to delegate your
             software woes. We at LogicCraft are experts in product design, web, and mobile development. Additionally, we
             empower your endeavors by providing a fractional CTO service, ensuring strategic technical leadership. So
