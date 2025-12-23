@@ -36,12 +36,6 @@ export default function DynamicHeroSection({
             <span className="bricolage text-[28px] font-[700] sm:text-[36px] md:text-[42px]">{title}</span>
           </div>
           <span className="text-[14px] font-[300] text-white sm:text-[16px] md:text-[20px]">{description}</span>
-          <Link
-            href={fullLink}
-            className="flex flex-row items-center justify-center rounded-full bg-black px-6 py-3 text-sm sm:px-8 sm:py-4"
-          >
-            {fullLink}
-          </Link>
         </div>
         <div className="flex w-full flex-1 items-center justify-center md:justify-end">
           {/* eslint-disable-next-line @next/next/no-img-element */}

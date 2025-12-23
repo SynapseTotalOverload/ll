@@ -5,11 +5,11 @@ import DynamicAboutProject from "@/components/pages/dynamic/dynamic-about-projec
 import DynamicServices from "@/components/pages/dynamic/dynamic-services";
 import DynamicStats from "@/components/pages/dynamic/dynamic-stats";
 import StartProject from "./start-project";
-import DynamicSmallProjectCard from "./dynamic-small-project-card";
 import DynamicProjectGoals from "./dynamic-project-goals";
 import DynamicCreationProcess from "./dynamic-creation-process";
 import PortfolioCard from "./dynamic-portfolio-card";
 import { Project } from "@/constants/projects/project-config.types";
+import DynamicSmallAlternate from "./dynamic-small-alternate";
 
 export default function DynamicMain({ project }: { project: Project }) {
   return (
@@ -40,13 +40,13 @@ export default function DynamicMain({ project }: { project: Project }) {
         />
 
         <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 md:gap-8 lg:gap-10">
-          <DynamicSmallProjectCard
+          <DynamicSmallAlternate
             title={project.smallProjectCards[0].title}
             points={project.smallProjectCards[0].points}
             backgroundUrl={project.smallProjectCards[0].backgroundUrl}
             image={project.smallProjectCards[0].image}
           />
-          <DynamicSmallProjectCard
+          <DynamicSmallAlternate
             title={project.smallProjectCards[1].title}
             points={project.smallProjectCards[1].points}
             backgroundUrl={project.smallProjectCards[1].backgroundUrl}

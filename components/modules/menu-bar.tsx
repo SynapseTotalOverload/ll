@@ -19,7 +19,7 @@ export default function MenuBar({ className }: { className?: string }) {
     | "about-us"
     | "case-studies"
     | "blog"
-    | "team"
+    // | "team"
   >("home");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -57,9 +57,10 @@ export default function MenuBar({ className }: { className?: string }) {
         setActive("blog");
       } else if (pathSlugs.includes("case-studies")) {
         setActive("case-studies");
-      } else if (lastSlug === "our-team") {
-        setActive("team");
       }
+      // } else if (lastSlug === "our-team") {
+      //   setActive("team");
+      // }
     }
   }, []);
 
@@ -165,7 +166,7 @@ export default function MenuBar({ className }: { className?: string }) {
               </MenubarCheckboxItem>
             </MenubarContent>
           </MenubarMenu>{" "}
-          <MenubarMenu>
+          {/* <MenubarMenu>
             <Link href="/our-team" className="block">
               <MenubarTrigger
                 data-active={active === "team"}
@@ -174,7 +175,7 @@ export default function MenuBar({ className }: { className?: string }) {
                 Team
               </MenubarTrigger>
             </Link>
-          </MenubarMenu>
+          </MenubarMenu> */}
           <MenubarMenu>
             <Link href="/blog" className="block">
               <MenubarTrigger
