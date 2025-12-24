@@ -37,17 +37,18 @@ export default function DynamicMain({ project }: { project: Project }) {
           mainImage={project.portfolioCard.mainImage}
           description={project.portfolioCard.description}
           backgroundUrl={project.portfolioCard.backgroundUrl}
+          title={project.hero.title}
         />
 
         <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 md:gap-8 lg:gap-10">
           <DynamicSmallAlternate
-            title={project.smallProjectCards[0].title}
+            title={project.hero.title}
             points={project.smallProjectCards[0].points}
             backgroundUrl={project.smallProjectCards[0].backgroundUrl}
             image={project.smallProjectCards[0].image}
           />
           <DynamicSmallAlternate
-            title={project.smallProjectCards[1].title}
+            title={project.hero.title}
             points={project.smallProjectCards[1].points}
             backgroundUrl={project.smallProjectCards[1].backgroundUrl}
             image={project.smallProjectCards[1].image}

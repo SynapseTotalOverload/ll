@@ -160,6 +160,7 @@ export default function CaseStudiesPageClient() {
                       description={project.portfolioCard.description}
                       backgroundUrl={project.portfolioCard.backgroundUrl}
                       mainImage={project.portfolioCard.mainImage}
+                      title={project.hero.title}
                     />
                   </Link>
                 );
@@ -181,7 +182,7 @@ export default function CaseStudiesPageClient() {
                     }`}
                   >
                     <DynamicSmallProjectCard
-                      title={cardData.title}
+                      title={project.hero.title}
                       points={cardData.points}
                       image={cardData.image}
                       backgroundUrl={cardData.backgroundUrl}
